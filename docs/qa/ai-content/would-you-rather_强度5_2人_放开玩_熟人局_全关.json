@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 33,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 5,
+    "players": 2,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：熟人局；氛围：放开玩；最高强度：5。\n可用玩法：would-you-rather。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 31472,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-01",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "以后每次聚餐都只能吃火锅，但锅底和配菜随便点。 VS 以后每次聚餐都只能吃烧烤，但肉串和蔬菜随便点。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-02",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "接下来一周每天早起一小时，但晚上能多玩一小时。 VS 接下来一周每天晚睡一小时，但早上能多睡一小时。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-03",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "旅行只能住顶级酒店，但全程没有网络。 VS 旅行只能住普通青旅，但网速快到飞起。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "旅行",
+          "脑洞"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-04",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "拥有瞬间移动，但每次落点随机偏差十米。 VS 拥有时间暂停，但每次只能暂停三秒。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "超能力",
+          "脑洞"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-05",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在熟人局里，你说话永远自带搞笑BGM。 VS 在熟人局里，你走路永远自带夸张特效。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "搞笑",
+          "熟人局"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-06",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "所有饮料都变成你最喜欢的口味，但只能喝常温。 VS 所有饮料都保持最佳温度，但口味每天随机。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "选择",
+          "日常"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-07",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "以后和朋友聊天只能发语音，不能打字。 VS 以后和朋友聊天只能打字，不能发语音。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "沟通",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-08",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "你能记住所有朋友的生日，但记不住自己的生日。 VS 所有朋友能记住你的生日，但你记不住任何朋友的生日。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 4,
+        "tags": [
+          "记忆",
+          "友情"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-09",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "今晚所有游戏都由你定规则，但你必须第一个上场。 VS 今晚所有游戏都由大家定规则，但你可以最后一个上场。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 4,
+        "tags": [
+          "聚会",
+          "规则"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-10",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在聚会结束前，你要用最夸张的方式夸在场每个人一句。 VS 在聚会结束前，你要让在场每个人用最夸张的方式夸你一句。",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 5,
+        "tags": [
+          "互动",
+          "高能"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

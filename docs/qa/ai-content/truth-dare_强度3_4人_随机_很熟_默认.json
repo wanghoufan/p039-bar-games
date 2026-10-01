@@ -1,0 +1,235 @@
+{
+  "cell": {
+    "index": 4,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "close",
+      "label": "很熟"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "很熟",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：很熟；氛围：随机；最高强度：3。\n可用玩法：truth-dare。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 19183,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pn-001",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "说出你最近一次笑到停不下来的事情，不需要透露任何人的隐私。",
+        "instruction": "用30秒讲完；不想说或觉得不舒服可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-002",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用最夸张的语气夸赞左手边的人一句，内容要具体，但不要评价外貌。",
+        "instruction": "说完后对方只需说谢谢；可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-003",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "每人说出一种自己无法接受的食物搭配，并解释一句原因。",
+        "instruction": "轮流回答，不能重复；不想回答可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "轮流"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pn-004",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "模仿一种动物的叫声三声，让其他人猜是什么动物。",
+        "instruction": "可以跳过；其他人不得强迫或嘲笑。",
+        "intensity": 2,
+        "tags": [
+          "模仿"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-005",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "说出你曾经坚持超过一周的一个小习惯，以及后来为什么停下来。",
+        "instruction": "用一两句话说明即可；不想说可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "分享"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-006",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和一位嘉宾进行无声你画我猜：你比划一个日常动作，对方来猜，过程中不要有身体接触。",
+        "instruction": "两人自愿组队；任何一方都可以随时跳过。",
+        "intensity": 2,
+        "tags": [
+          "双人"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "pn-007",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "轮流说出一件最近让你感到幸运的小事，不能重复。",
+        "instruction": "每人一句，轮流进行；不想说可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "轮流"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pn-008",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用新闻播报口吻朗读一段你现场编的今日天气，时长20秒，不能提到真实人名或隐私。",
+        "instruction": "可以跳过；其他人不得打断或起哄。",
+        "intensity": 3,
+        "tags": [
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-009",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "讲一个你小时候相信过的奇怪说法，并说明后来怎么发现它不是真的。",
+        "instruction": "只讲自己的经历；不想说可以跳过。",
+        "intensity": 3,
+        "tags": [
+          "回忆"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-010",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "全体一起选一句简单歌词或口号，每人依次加一个动作，组成一段10秒的集体表演。",
+        "instruction": "动作以不接触他人为原则；任何人都可以随时退出或跳过。",
+        "intensity": 3,
+        "tags": [
+          "集体"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

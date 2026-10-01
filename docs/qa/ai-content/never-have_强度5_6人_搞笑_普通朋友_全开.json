@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 26,
+    "packId": "never-have",
+    "packName": "我从来没有",
+    "origin": "base",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "never-have"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：搞笑；最高强度：5。\n可用玩法：never-have。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 30460,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "never-have-001",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未把袜子穿反一整天都没发现。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-002",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未把盐当成糖放进饮料里。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 2,
+        "tags": [
+          "厨房翻车",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-003",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未对着镜子给自己加油打气。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-004",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未因为追剧或看小说熬到天亮。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 2,
+        "tags": [
+          "熬夜",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-005",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未把洗发水当成沐浴露用完一次澡。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 2,
+        "tags": [
+          "浴室翻车",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-006",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在唱歌时忘词，然后继续哼完整首歌。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 2,
+        "tags": [
+          "K歌",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-007",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未假装听懂别人讲的专业话题，还点头点得像捣蒜。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 3,
+        "tags": [
+          "社交尴尬",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-008",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未对自动门、电梯或红绿灯说过“谢谢”。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-009",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未给家里的植物或玩偶起名字，还认真跟它聊天。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 1,
+        "tags": [
+          "可爱",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "never-have-010",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未把闹钟按掉后继续睡，醒来发现已经迟到。",
+        "instruction": "读出卡片上的句子。如果你其实做过，就跳过这张换下一张；其他做过的人放下一根手指或记一分。任何人可随时说“跳过”。",
+        "intensity": 2,
+        "tags": [
+          "早起困难",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

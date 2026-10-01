@@ -1,45 +1,35 @@
-# 依赖与构建产物
 node_modules/
-dist/
-build/
+.pnpm-store/
 .next/
-.out/
-.cache/
+.next-export/
+out/
 coverage/
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
-target/
-.gradle/
-Pods/
-DerivedData/
-
-# 环境与凭据（永不入库）
+playwright-report/
+test-results/
 .env
 .env.*
 !.env.example
-!.env.template
-*.pem
-*.key
-*.p12
-*.pfx
-*.keystore
-id_rsa
-id_ed25519
-credentials.json
-secrets.*
-*.token
-
-# 本地数据与缓存
-*.log
-*.sqlite
-*.sqlite3
-*.db
-.tmp/
-.cache_busting/
-
-# 系统文件
+*.tsbuildinfo
 .DS_Store
-Thumbs.db
+.arts/
+.vercel
+# 自包含 Release 构建期间 app/api 的临时暂存位（build:export 用完即放回）
+.static-export-stash/
+# 签名材料：android/.gitignore 里这两行是注释状态，而 release signingConfig 尚待补（见 RG-01-NEWRC-SMOKE 遗留项），先在本仓兜住密钥
+*.jks
+*.keystore
+*.p12
+# 治理软链（指母版，跨机器悬空）：本地保留，不入仓
+USER_MODEL_OVERRIDE.md
+
+# 项目临时材料（不入仓、不参与后续处理）
+temp/
+# 根目录转送提示词记录：内容与 temp/ 内 MD 同源，且逐轮过期，只放 temp/ 不入仓
+/agent.md
+
+# ORCA 迁移备份（回滚用，勿入库）
+*.旧版-2026-09-29
+.env*
+
+# 本地 Expo Go 手机验收壳（与 Next.js 发布源码分开）
+mobile-preview/

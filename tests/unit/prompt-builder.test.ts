@@ -1,0 +1,74 @@
+import { describe, expect, it } from "vitest";
+import promptV10Fixture from "../fixtures/ai-prompt-v1.0.json";
+import { buildDeckPrompt } from "@/lib/ai/prompt-builder";
+import { DEFAULT_BOUNDARIES } from "@/lib/domain/constants";
+import type { GamePackDefinition, SessionConfig } from "@/lib/domain/schemas";
+import { BUILTIN_GAME_PACKS } from "@/lib/game-packs/registry";
+import { RANDOM_LAUNCHER_PACK_ID } from "@/lib/game-packs/random-launcher";
+
+/** V1.4 R-047 后仍在题库里的 V1.0 玩法；`ai-improv` 已退役，只留迁移锚。 */
+const V1_PACK_IDS = ["truth-dare", "most-likely", "never-have"];
+const NEW_PACK_IDS = ["would-you-rather", "pointing-game", "compatibility-test"];
+
+const packsFor = (ids: string[]): GamePackDefinition[] => BUILTIN_GAME_PACKS.filter((pack) => ids.includes(pack.id));
+
+const config = (overrides: Partial<SessionConfig> = {}): SessionConfig => ({
+  players: ["a", "b"].map((id) => ({ id, displayName: id, active: true, createdAt: "x", lastUsedAt: "x" })),
+  relationship: "friends", vibes: ["funny"], intensity: 3,
+  boundaries: { ...DEFAULT_BOUNDARIES, noPhysicalContact: true, customText: "不讨论家庭住址" },
+  enabledPackIds: V1_PACK_IDS, mode: "mixed", ...overrides,
+});
+
+describe("AI deck prompt", () => {
+  it("constrains boundaryTags to schema enums and keeps custom text out of tags", () => {
+    const prompt = buildDeckPrompt(config({ enabledPackIds: ["truth-dare"] }), 10, packsFor(["truth-dare"]));
+    expect(prompt).toContain("physical-contact");
+    expect(prompt).toContain("不得把自定义文字写入 boundaryTags");
+    expect(prompt).toContain("禁止输出中文说明或其他值");
+  });
+
+  // Phase18（T202 / FR-046）在 V1.0 prompt 里加入固定安全行（未成年/露骨性内容禁令）后重新冻结 fixture；
+  // V1.4 退役 `ai-improv` 后按保留的三包重冻（R-047）。除 packId 枚举外，格式仍逐字不变。
+  it("keeps the retained V1.0 packs' prompt byte-identical to the frozen regression fixture", () => {
+    expect(buildDeckPrompt(config(), 10, packsFor(V1_PACK_IDS))).toBe(promptV10Fixture.prompt);
+  });
+
+  it("asks for structured batch cards only when a new AI pack is enabled", () => {
+    const prompt = buildDeckPrompt(config({ enabledPackIds: [...V1_PACK_IDS, ...NEW_PACK_IDS] }), 24, packsFor([...V1_PACK_IDS, ...NEW_PACK_IDS]));
+    expect(prompt).toContain('"optionA"');
+    expect(prompt).toContain('"optionB"');
+    expect(prompt).toContain('"type":"pointing"');
+    expect(prompt).toContain('"answerMode":"open|binary|choice"');
+    expect(prompt).toContain('"options"');
+    expect(prompt).toContain("生成 24 张中文游戏卡");
+  });
+
+  it("does not leak structured guidance into a V1.0-only deck", () => {
+    const prompt = buildDeckPrompt(config(), 10, packsFor(V1_PACK_IDS));
+    expect(prompt).not.toContain("optionA");
+    expect(prompt).not.toContain("answerMode");
+    expect(prompt).not.toContain('"type":"pointing"');
+  });
+
+  it("carries the session relationship, vibe, intensity and boundary context into the batch prompt", () => {
+    const prompt = buildDeckPrompt(config({ relationship: "couple", vibes: ["flirty", "wild"], intensity: 4 }), 12, packsFor(["would-you-rather"]));
+    expect(prompt).toContain("关系：couple");
+    expect(prompt).toContain("氛围：flirty、wild");
+    expect(prompt).toContain("最高强度：4");
+    expect(prompt).toContain("已开启的结构化雷区：physical-contact");
+  });
+
+  it("restricts the packId enum to the packs actually enabled", () => {
+    const prompt = buildDeckPrompt(config({ enabledPackIds: ["would-you-rather", "pointing-game"] }), 8, packsFor(["would-you-rather", "pointing-game"]));
+    expect(prompt).toContain('"packId":"would-you-rather|pointing-game"');
+    expect(prompt).not.toContain("truth-dare");
+  });
+
+  /** V1.4 R-047：动作型入口不出题卡，即使它的 id 还在启用集合里也不许进 AI 的出题枚举。 */
+  it("never offers the retired launcher to the provider, even when its id is enabled", () => {
+    const prompt = buildDeckPrompt(config({ enabledPackIds: [...V1_PACK_IDS, RANDOM_LAUNCHER_PACK_ID] }), 10, packsFor([...V1_PACK_IDS, RANDOM_LAUNCHER_PACK_ID]));
+    expect(prompt).not.toContain(RANDOM_LAUNCHER_PACK_ID);
+    expect(prompt).not.toContain("random-launcher");
+    expect(prompt).toContain('"packId":"truth-dare|most-likely|never-have"');
+  });
+});

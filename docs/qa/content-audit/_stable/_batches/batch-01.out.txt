@@ -1,0 +1,19 @@
+[0m
+> build · muse-spark-1.3-contributor-free
+[0m
+正在读取题库，明示五轴判定输出。
+[0m→ [0mRead docs/qa/content-audit/_stable/_batches/batch-01.jsonl
+{"cardId":"PN-DARE-001","infoGain":"低","semanticType":"自我披露","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-002","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-003","infoGain":"低","semanticType":"自我披露","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-004","infoGain":"低","semanticType":"现场评价/猜测","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-DARE-005","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-006","infoGain":"低","semanticType":"相互了解","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-DARE-007","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-008","infoGain":"低","semanticType":"自我披露","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-009","infoGain":"低","semanticType":"现场评价/猜测","topic":"现场化学反应","socialEnergy":"高","relationshipProgression":"中"}
+{"cardId":"PN-DARE-010","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-011","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"高","relationshipProgression":"低"}
+{"cardId":"PN-DARE-012","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-013","infoGain":"中","semanticType":"自我披露","topic":"生活方式","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-DARE-014","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"高","relationshipProgression":"低"}

@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 43,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "base",
+    "intensity": 5,
+    "players": 4,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：刚认识；氛围：放开玩；最高强度：5。\n可用玩法：pointing-game。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 25739,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pointing-001",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向今天让你第一印象最亲切的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-002",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向此刻你觉得笑容最放松的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-003",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向如果组队玩游戏，你最想选为队友的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "组队",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-004",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向今天穿搭颜色最让你眼前一亮的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "观察",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-005",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向刚才发言时你最想接话的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "聊天",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-006",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向此刻坐姿最有派对感觉的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "气氛",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-007",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向你觉得能带动全场气氛的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "气氛",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-008",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向今天说话声音最让你觉得舒服的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "感受",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-009",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向你觉得最有幽默感的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [
+          "幽默",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-010",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时用手指向如果今晚要选一位最想进一步认识的人，你会选谁。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 5,
+        "tags": [
+          "社交",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

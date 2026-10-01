@@ -1,0 +1,31 @@
+Vercel CLI 59.0.0 (Node.js 24.19.0)
+Fetching deployment "p039-bar-games.vercel.app" in houfan
+> Fetched deployment "p039-bar-games-4aamyu06v-houfan.vercel.app" in houfan [438ms]
+
+  General
+
+    id		dpl_7D5B3poDMNwk1iT4sRBXqVToBxoD
+    name	p039-bar-games
+    target	production
+    status	● Ready
+    url		https://p039-bar-games-4aamyu06v-houfan.vercel.app
+    created	Thu Oct 01 2026 19:16:40 GMT+0800 (China Standard Time) [3m ago]
+
+
+  Aliases
+
+    ╶ https://p039-bar-games.vercel.app
+    ╶ https://p039-bar-games-houfan.vercel.app
+    
+
+  Builds
+
+    ┌ .        [0ms]
+    ├── λ index (885.84KB) [iad1]
+    ├── λ _global-error (885.84KB) [iad1]
+    ├── λ _global-error.rsc (885.84KB) [iad1]
+    ├── λ _global-error.segments/_full.segment.rsc (885.84KB) [iad1]
+    ├── λ _global-error.segments/_global-error/__PAGE__.segment.rsc (885.84KB) [iad1]
+    └── 108 output items hidden
+    
+

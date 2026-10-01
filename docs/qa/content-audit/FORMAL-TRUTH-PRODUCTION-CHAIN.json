@@ -1,0 +1,654 @@
+{
+  "generator": "scripts/audit-formal-truth-production-chain.ts",
+  "requirement": "§十八：Formal Truth → Router 可出 → metadata 进入 production event → effective count 推进 → （待验证：Heat 能否逐档 H1→H2→H3→H4；实测结果如实见各 scenario 的 firstReachRoundByHeat / finalHeat / note，本字段不是结论）",
+  "chain": [
+    "startRound（唯一出题入口 → drawDeckCard → createDeckRouter 生产 Router 三层计数）",
+    "resolveRoundAndReduce(session,'complete',roundDisclosureSignal({selfDisclosed, disclosedPlayerIds}))",
+    "eventForRoundTerminal（卡侧 metadata 由 metadataForCard 读生产 sidecar；轮侧披露由正式信号提供）",
+    "reduceV2SessionEvents → relationshipEffectiveCardCount / heatForEffectiveCount"
+  ],
+  "disclosure": "本文件与 integration 测试均不注入 metadata override；Formal 53 张（其中含 A3 KEEP 保留的 5 张）与已退出 Formal 的 26 张旧卡的 informationGain/topic 都来自生产 sidecar 真实投影；无 §7.2 metadata 的 SSOT 旧卡 sidecar 恒 null（fail-closed 不计有效轮）。",
+  "seed": 1,
+  "table": "2男2女（a男/b女/c男/d女，合法 pair 全程可用）",
+  "scenarioFullPack": {
+    "deck": "mainlineSsotCardsByPack('truth-dare')（153 张，含 Formal 53 + legacy 100）",
+    "rounds": [
+      {
+        "round": 1,
+        "cardId": "PN-TRUTH-032",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 2,
+        "cardId": "PN-DARE-035",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 3,
+        "cardId": "PN-DARE-037",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 4,
+        "cardId": "PN-TRUTH-036",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 5,
+        "cardId": "PN-TRUTH-035",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 6,
+        "cardId": "PN-TRUTH-037",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 7,
+        "cardId": "PN-DARE-032",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 8,
+        "cardId": "PN-DARE-040",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 9,
+        "cardId": "PN-TRUTH-040",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 10,
+        "cardId": "PN-DARE-039",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 11,
+        "cardId": "PN-DARE-033",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 12,
+        "cardId": "PN-TRUTH-033",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 13,
+        "cardId": "PN-DARE-038",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 14,
+        "cardId": "PN-DARE-034",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 15,
+        "cardId": "PN-TRUTH-039",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 16,
+        "cardId": "PN-DARE-036",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 17,
+        "cardId": "PN-TRUTH-038",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 18,
+        "cardId": "PN-TRUTH-034",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 19,
+        "cardId": "PN-TRUTH-031",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 20,
+        "cardId": "PN-DARE-031",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      }
+    ],
+    "finalHeat": "H1",
+    "finalEffective": 0,
+    "terminal": {
+      "afterRound": 20,
+      "outcome": null
+    },
+    "firstReachRoundByHeat": {
+      "H1": 1,
+      "H2": null,
+      "H3": null,
+      "H4": null
+    },
+    "note": "mainlineSsotCardsByPack('truth-dare')（153 张，含 Formal 53 + legacy 100）：实际到达的档：H1（首达第 1 轮）；未到达的档：H2、H3、H4。最终 Heat=H1、有效信息轮=0。未到达原因：H2 —— 非「库存不足」：H1 及以下档可计数卡 14 张 ≥ H2 门槛 4，但本次仅累计有效轮 0（共 20 轮）⇒ 未达门槛来自牌堆耗尽／intensity 过滤／软去重／抽卡排序，而非冷启库存；H3 —— 受上游 H2 门所限（H2 未解锁 ⇒ 恒不可达）；H4 —— 受上游 H2 门所限（H2 未解锁 ⇒ 恒不可达）。"
+  },
+  "scenarioFormalOnly": {
+    "deck": "仅 Formal（manifest 轨）53 张（PN-TRUTH-203~283，真实生产卡）",
+    "rounds": [
+      {
+        "round": 1,
+        "cardId": "PN-TRUTH-227",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "兴趣爱好",
+        "effectiveCount": 1,
+        "heat": "H1"
+      },
+      {
+        "round": 2,
+        "cardId": "PN-TRUTH-248",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "相处规则",
+        "effectiveCount": 2,
+        "heat": "H1"
+      },
+      {
+        "round": 3,
+        "cardId": "PN-TRUTH-229",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "兴趣爱好",
+        "effectiveCount": 3,
+        "heat": "H1"
+      },
+      {
+        "round": 4,
+        "cardId": "PN-TRUTH-262",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "性格·习惯·小癖好",
+        "effectiveCount": 4,
+        "heat": "H2"
+      },
+      {
+        "round": 5,
+        "cardId": "PN-TRUTH-237",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "择偶偏好",
+        "effectiveCount": 5,
+        "heat": "H2"
+      },
+      {
+        "round": 6,
+        "cardId": "PN-TRUTH-264",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "性格·习惯·小癖好",
+        "effectiveCount": 6,
+        "heat": "H2"
+      },
+      {
+        "round": 7,
+        "cardId": "PN-TRUTH-247",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "择偶偏好",
+        "effectiveCount": 7,
+        "heat": "H2"
+      },
+      {
+        "round": 8,
+        "cardId": "PN-TRUTH-235",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "择偶偏好",
+        "effectiveCount": 8,
+        "heat": "H3"
+      },
+      {
+        "round": 9,
+        "cardId": "PN-TRUTH-239",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "live_chemistry",
+        "effectiveCount": 9,
+        "heat": "H3"
+      },
+      {
+        "round": 10,
+        "cardId": "PN-TRUTH-253",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "live_chemistry",
+        "effectiveCount": 10,
+        "heat": "H3"
+      },
+      {
+        "round": 11,
+        "cardId": "PN-TRUTH-259",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "相处规则",
+        "effectiveCount": 11,
+        "heat": "H3"
+      },
+      {
+        "round": 12,
+        "cardId": "PN-TRUTH-246",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "择偶偏好",
+        "effectiveCount": 12,
+        "heat": "H3"
+      },
+      {
+        "round": 13,
+        "cardId": "PN-TRUTH-278",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "live_chemistry",
+        "effectiveCount": 13,
+        "heat": "H4"
+      },
+      {
+        "round": 14,
+        "cardId": "PN-TRUTH-241",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "亲密边界",
+        "effectiveCount": 14,
+        "heat": "H4"
+      },
+      {
+        "round": 15,
+        "cardId": "PN-TRUTH-269",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "亲密边界",
+        "effectiveCount": 15,
+        "heat": "H4"
+      },
+      {
+        "round": 16,
+        "cardId": "PN-TRUTH-242",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "择偶偏好",
+        "effectiveCount": 16,
+        "heat": "H4"
+      },
+      {
+        "round": 17,
+        "cardId": "PN-TRUTH-243",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "亲密边界",
+        "effectiveCount": 17,
+        "heat": "H4"
+      },
+      {
+        "round": 18,
+        "cardId": "PN-TRUTH-267",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "亲密边界",
+        "effectiveCount": 18,
+        "heat": "H4"
+      },
+      {
+        "round": 19,
+        "cardId": "PN-TRUTH-268",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "亲密边界",
+        "effectiveCount": 19,
+        "heat": "H4"
+      },
+      {
+        "round": 20,
+        "cardId": "PN-TRUTH-260",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "live_chemistry",
+        "effectiveCount": 20,
+        "heat": "H4"
+      }
+    ],
+    "finalHeat": "H4",
+    "finalEffective": 20,
+    "terminal": {
+      "afterRound": 20,
+      "outcome": null
+    },
+    "firstReachRoundByHeat": {
+      "H1": 1,
+      "H2": 4,
+      "H3": 8,
+      "H4": 13
+    },
+    "note": "仅 Formal（manifest 轨）53 张（PN-TRUTH-203~283，真实生产卡）：实际到达的档：H1（首达第 1 轮）、H2（首达第 4 轮）、H3（首达第 8 轮）、H4（首达第 13 轮）；未到达的档：无。最终 Heat=H4、有效信息轮=20。"
+  },
+  "scenarioBootstrapOnly": {
+    "deck": "仅 Bootstrap 2 张（PN-TRUTH-227~229；其中仅 227/229 属 Formal，其余 5 张已退出 Formal）",
+    "rounds": [
+      {
+        "round": 1,
+        "cardId": "PN-TRUTH-229",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "兴趣爱好",
+        "effectiveCount": 1,
+        "heat": "H1"
+      },
+      {
+        "round": 2,
+        "cardId": "PN-TRUTH-227",
+        "formal": true,
+        "informationGain": "medium",
+        "topic": "兴趣爱好",
+        "effectiveCount": 2,
+        "heat": "H1"
+      }
+    ],
+    "finalHeat": "H1",
+    "finalEffective": 2,
+    "terminal": {
+      "afterRound": 2,
+      "outcome": "AWAITING_HOST_EXHAUSTION_DECISION"
+    },
+    "firstReachRoundByHeat": {
+      "H1": 1,
+      "H2": null,
+      "H3": null,
+      "H4": null
+    },
+    "note": "仅 Bootstrap 2 张（PN-TRUTH-227~229；其中仅 227/229 属 Formal，其余 5 张已退出 Formal）：实际到达的档：H1（首达第 1 轮）；未到达的档：H2、H3、H4。最终 Heat=H1、有效信息轮=2。未到达原因：H2 —— 冷启门库存不足：H1 及以下档可计数卡 2 张 < H2 门槛 4（缺口 2 张）⇒ 即便把这些卡全部抽满，最多也只累积有效轮 2，结构上到不了 H2（更高档的卡因 Heat 未升档被硬过滤，牌堆因此提前耗尽）；本次实测累计有效轮 2／共 2 轮；H3 —— 受上游 H2 门所限（H2 未解锁 ⇒ 恒不可达）；H4 —— 受上游 H2 门所限（H2 未解锁 ⇒ 恒不可达）。"
+  },
+  "scenarioLegacyOnly": {
+    "deck": "仅 legacy 卡（100 张，无 Formal）",
+    "rounds": [
+      {
+        "round": 1,
+        "cardId": "PN-TRUTH-032",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 2,
+        "cardId": "PN-DARE-035",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 3,
+        "cardId": "PN-DARE-037",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 4,
+        "cardId": "PN-TRUTH-036",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 5,
+        "cardId": "PN-TRUTH-035",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 6,
+        "cardId": "PN-TRUTH-037",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 7,
+        "cardId": "PN-DARE-032",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 8,
+        "cardId": "PN-DARE-040",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 9,
+        "cardId": "PN-TRUTH-040",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 10,
+        "cardId": "PN-DARE-039",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 11,
+        "cardId": "PN-DARE-033",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 12,
+        "cardId": "PN-TRUTH-033",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 13,
+        "cardId": "PN-DARE-038",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 14,
+        "cardId": "PN-DARE-034",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 15,
+        "cardId": "PN-TRUTH-039",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 16,
+        "cardId": "PN-DARE-036",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 17,
+        "cardId": "PN-TRUTH-038",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 18,
+        "cardId": "PN-TRUTH-034",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 19,
+        "cardId": "PN-TRUTH-031",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      },
+      {
+        "round": 20,
+        "cardId": "PN-DARE-031",
+        "formal": false,
+        "informationGain": null,
+        "topic": null,
+        "effectiveCount": 0,
+        "heat": "H1"
+      }
+    ],
+    "finalHeat": "H1",
+    "finalEffective": 0,
+    "terminal": {
+      "afterRound": 20,
+      "outcome": null
+    },
+    "firstReachRoundByHeat": {
+      "H1": 1,
+      "H2": null,
+      "H3": null,
+      "H4": null
+    },
+    "note": "仅 legacy 卡（100 张，无 Formal）：实际到达的档：H1（首达第 1 轮）；未到达的档：H2、H3、H4。最终 Heat=H1、有效信息轮=0。未到达原因：H2 —— 牌堆内可计数卡 0 张（无 §7.2 metadata ⇒ isEffectiveInformationRound fail-closed 恒不计有效轮）；H3 —— 受上游 H2 门所限（H2 未解锁 ⇒ 恒不可达）；H4 —— 受上游 H2 门所限（H2 未解锁 ⇒ 恒不可达）。"
+  },
+  "fullPackSeedSweep": {
+    "sessions": 200,
+    "reachedH2": 0,
+    "reachedH3": 0,
+    "reachedH4": 0,
+    "effectiveSum": 0,
+    "heatDistribution": {
+      "H1": 200
+    },
+    "effectiveMean": 0
+  }
+}

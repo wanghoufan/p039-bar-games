@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 62,
+    "packId": "spin-bottle",
+    "packName": "转瓶子",
+    "origin": "base",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "spin-bottle"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：暧昧；最高强度：5。\n可用玩法：spin-bottle。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 61743,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "spin-01",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就用一个emoji形容今晚的气氛，并解释为什么。",
+        "instruction": "旋转瓶子；瓶口指向的人完成；可随时跳过。",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "气氛"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-02",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就说一件今天亲眼见到的小确幸。",
+        "instruction": "旋转瓶子；瓶口指向的人分享；可随时跳过。",
+        "intensity": 1,
+        "tags": [
+          "轻松",
+          "分享"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-03",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就选一位嘉宾，说出对方给你的第一印象；只限正面或中性，不得评价外貌。",
+        "instruction": "旋转瓶子；瓶口指向的人选择一位嘉宾回答；可随时跳过。",
+        "intensity": 2,
+        "tags": [
+          "印象",
+          "赞美"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-04",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就和转动瓶子的人各说一个“如果今晚是一部电影，它的片名是……”。",
+        "instruction": "旋转瓶子；瓶口指向的人与转动瓶子的人各说一句；可随时跳过。",
+        "intensity": 2,
+        "tags": [
+          "合作",
+          "电影"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-05",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就回答：你最容易对哪种小细节产生好感？不必举例具体人。",
+        "instruction": "旋转瓶子；瓶口指向的人回答；可随时跳过。",
+        "intensity": 3,
+        "tags": [
+          "提问",
+          "好感"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-06",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就邀请一位嘉宾，一起用“深夜、路灯、偶遇”三个词编一个不超过三句话的微故事。",
+        "instruction": "旋转瓶子；瓶口指向的人邀请一位嘉宾共同完成；可随时跳过。",
+        "intensity": 3,
+        "tags": [
+          "合作",
+          "故事"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-07",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就对一位嘉宾说：“今晚你有一个瞬间让我好奇。”被点到的嘉宾只能回问一次“哪个瞬间”，对方可回答或跳过。",
+        "instruction": "旋转瓶子；瓶口指向的人选择一位嘉宾互动；可随时跳过。",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "好奇"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-08",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就看向一位同意参与的嘉宾，认真说：“如果今晚只能记住一个画面，我可能会选你刚才笑的样子。”说完立刻补一句玩笑化解。",
+        "instruction": "旋转瓶子；瓶口指向的人选择一位同意参与的嘉宾；可随时跳过。",
+        "intensity": 4,
+        "tags": [
+          "暧昧",
+          "表达"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-09",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就向全场提问：在场谁最像“让人放下戒备的深夜电台”？只能选一人并说一个理由，不能重复。",
+        "instruction": "旋转瓶子；瓶口指向的人向全场提问并选一人；可随时跳过。",
+        "intensity": 4,
+        "tags": [
+          "群问",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-10",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "瓶口指向谁，谁就选一位嘉宾，用最认真的语气说：“今晚你让我有点分心。”停顿三秒后补充：“因为你的接梗速度太快了。”说完可跳过。",
+        "instruction": "旋转瓶子；瓶口指向的人选择一位嘉宾表达；可随时跳过。",
+        "intensity": 5,
+        "tags": [
+          "暧昧",
+          "玩笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

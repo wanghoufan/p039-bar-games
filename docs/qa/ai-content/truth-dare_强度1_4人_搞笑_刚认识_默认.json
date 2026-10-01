@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 1,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 1,
+    "players": 4,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：刚认识；氛围：搞笑；最高强度：1。\n可用玩法：truth-dare。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 25987,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "td-01",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你觉得自己最像哪种动物？请给出三个越离谱越好的理由。",
+        "instruction": "由嘉宾1开始，轮流回答；不想回答可以直接跳过，其他人不得追问或强迫。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-02",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用最正式的播音腔，向大家介绍你今天的“隐藏身份”，例如“早餐鉴赏家”“沙发观察员”。",
+        "instruction": "限时30秒，可以自由编造；如果不想做，说“跳过”即可。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-03",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果给你一个只能在聚会上使用的超能力，你会选什么？请现场说一句使用它的台词。",
+        "instruction": "每人依次回答；可以夸张演绎，也可以直接跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "想象"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-04",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "模仿一种日常提示音，例如微波炉、电梯或门铃，让大家猜是什么声音。",
+        "instruction": "最多猜三次；模仿者不想继续可以随时跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "模仿"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-05",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最近一次因为很小的事笑出声是什么？请用新闻播报的方式讲出来。",
+        "instruction": "讲述不超过1分钟；不想讲可以直接跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "分享"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-06",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三个表情或动作表演“假装很熟但叫错名字”的尴尬瞬间。",
+        "instruction": "只做表情和动作，不需要碰到任何人；不想表演可跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-07",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果必须给自己取一个搞笑的江湖称号，你会叫什么？为什么？",
+        "instruction": "轮流回答；其他人只能鼓掌或笑，不能贬低。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-08",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用唱歌的方式说出“我今天晚饭想吃什么”，至少唱两句。",
+        "instruction": "可以跑调，大家可打拍子；不想唱可跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "唱歌"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-09",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和左边的人一起用外星语演一段“初次见面”的对话，不能使用正常语言。",
+        "instruction": "两人只用自创外星语和手势交流，不能触碰对方；任何一方可随时跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "双人"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-10",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用夸张的天气预报风格，播报你此刻的心情，例如“局部地区有点饿，偶发想笑”。",
+        "instruction": "限时20秒，可自由发挥；不想做可跳过。",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "表达"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

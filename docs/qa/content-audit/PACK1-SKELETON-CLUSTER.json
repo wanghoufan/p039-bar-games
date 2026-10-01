@@ -1,0 +1,680 @@
+{
+  "source": "truth-dare 生产牌堆 ∩ manifest formalFixedIdSet()（当前 Formal 全池）",
+  "scope": "current-formal-fixed-pool",
+  "totalFormal": 53,
+  "sourceFingerprint": "936cd4095358226c0110746a94063d5fe6de6cb977b98b97b51a67355761aa60",
+  "rules": {
+    "selectWho": {
+      "label": "「选谁」／点名对象",
+      "pattern": "谁|哪位|哪一位|哪个人|哪个微信",
+      "note": "答案必须点名一个具体对象；`谁都` 为任指（如 233「看谁都顺眼」）不算；「哪种人／哪一类」属类型选择，不算。"
+    },
+    "selectWhoSameFrame": {
+      "label": "「想…谁」同骨架（selectWho 子集）",
+      "pattern": "(想|要|打算)(跟|和|给|拉|陪|点给|等)[^，。？!！]{0,6}谁",
+      "note": "与「你想跟谁……／想拉谁……／想点给谁……」同一句式骨架；连接词（跟/和/给/拉/陪/点给/等）必须显式出现。"
+    },
+    "abChoice": {
+      "label": "A/B 类（封闭选项骨架）",
+      "pattern": "还是",
+      "note": "题面把答案构造成「A 还是 B（／C）」的封闭选项（含两选一与三选一）。"
+    },
+    "bodyPart": {
+      "label": "身体部位／身体接触",
+      "pattern": "手|肩|头发|腰|颈|耳|唇|胸|背|腿|臂|掌|腕|膝|脚|抱|碰|牵|吻|亲|贴",
+      "note": "词表刻意排除「头／眼／脸／嘴／身」等高频歧义词；category=body_preference 亦计入。"
+    },
+    "yesNo": {
+      "label": "yes/no 类",
+      "pattern": "吗？|吗\\?|想不想|有没有|会不会|是不是",
+      "note": "expectedAnswerShape=yes_no 亦计入。"
+    }
+  },
+  "clusters": {
+    "selectWho": [
+      "PN-TRUTH-251",
+      "PN-TRUTH-252",
+      "PN-TRUTH-255",
+      "PN-TRUTH-257",
+      "PN-TRUTH-273",
+      "PN-TRUTH-274",
+      "PN-TRUTH-275",
+      "PN-TRUTH-276",
+      "PN-TRUTH-279",
+      "PN-TRUTH-280",
+      "PN-TRUTH-281"
+    ],
+    "selectWhoSameFrame": [
+      "PN-TRUTH-273",
+      "PN-TRUTH-274",
+      "PN-TRUTH-275",
+      "PN-TRUTH-276",
+      "PN-TRUTH-280",
+      "PN-TRUTH-281"
+    ],
+    "abChoice": [
+      "PN-TRUTH-203",
+      "PN-TRUTH-232",
+      "PN-TRUTH-233",
+      "PN-TRUTH-234",
+      "PN-TRUTH-235",
+      "PN-TRUTH-237",
+      "PN-TRUTH-238",
+      "PN-TRUTH-240",
+      "PN-TRUTH-241",
+      "PN-TRUTH-243",
+      "PN-TRUTH-244",
+      "PN-TRUTH-245",
+      "PN-TRUTH-246",
+      "PN-TRUTH-247",
+      "PN-TRUTH-248",
+      "PN-TRUTH-250",
+      "PN-TRUTH-252",
+      "PN-TRUTH-253",
+      "PN-TRUTH-254",
+      "PN-TRUTH-255",
+      "PN-TRUTH-256",
+      "PN-TRUTH-258",
+      "PN-TRUTH-259",
+      "PN-TRUTH-260",
+      "PN-TRUTH-261",
+      "PN-TRUTH-262",
+      "PN-TRUTH-264",
+      "PN-TRUTH-265",
+      "PN-TRUTH-266",
+      "PN-TRUTH-267",
+      "PN-TRUTH-268",
+      "PN-TRUTH-269",
+      "PN-TRUTH-270",
+      "PN-TRUTH-271",
+      "PN-TRUTH-272",
+      "PN-TRUTH-278",
+      "PN-TRUTH-283"
+    ],
+    "bodyPart": [
+      "PN-TRUTH-203",
+      "PN-TRUTH-241",
+      "PN-TRUTH-242",
+      "PN-TRUTH-243",
+      "PN-TRUTH-267",
+      "PN-TRUTH-268",
+      "PN-TRUTH-269"
+    ],
+    "yesNo": [
+      "PN-TRUTH-239",
+      "PN-TRUTH-257"
+    ]
+  },
+  "counts": {
+    "selectWho": 11,
+    "selectWhoSameFrame": 6,
+    "abChoice": 37,
+    "bodyPart": 7,
+    "yesNo": 2
+  },
+  "rows": [
+    {
+      "cardId": "PN-TRUTH-203",
+      "text": "睡前的最后半小时，你是刷手机，还是直接躺平？",
+      "heatMin": 1,
+      "category": null,
+      "expectedAnswerShape": null,
+      "clusters": [
+        "abChoice",
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-205",
+      "text": "说一个小习惯，是熟人相处久了才会发现的。",
+      "heatMin": 1,
+      "category": null,
+      "expectedAnswerShape": null,
+      "clusters": []
+    },
+    {
+      "cardId": "PN-TRUTH-209",
+      "text": "你会被哪种人吸引？说一个具体行为，别只给形容词。",
+      "heatMin": 2,
+      "category": null,
+      "expectedAnswerShape": null,
+      "clusters": []
+    },
+    {
+      "cardId": "PN-TRUTH-227",
+      "text": "说一样你最近反复安利给朋友的东西，再用一句话说服我们。",
+      "heatMin": 1,
+      "category": null,
+      "expectedAnswerShape": null,
+      "clusters": []
+    },
+    {
+      "cardId": "PN-TRUTH-229",
+      "text": "哪一类电影或音乐你怎样都提不起兴趣？说说你试过的那次。",
+      "heatMin": 1,
+      "category": null,
+      "expectedAnswerShape": null,
+      "clusters": []
+    },
+    {
+      "cardId": "PN-TRUTH-232",
+      "text": "今晚你更想认识新人，还是放松一下？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-233",
+      "text": "微醺之后，你是看谁都顺眼，还是越来越挑？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-234",
+      "text": "你今晚是自己来的，还是被人拉来的？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-235",
+      "text": "第一眼更容易抓到你的是穿着还是气质？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-237",
+      "text": "你更容易被话多的人吸引，还是安静的人？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-238",
+      "text": "对方一直看你，你会回看还是装没看到？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-239",
+      "text": "今晚遇到有感觉的人，你会主动要联系方式吗？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "yes_no",
+      "clusters": [
+        "yesNo"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-240",
+      "text": "有人主动坐你旁边，你是加分还是有压力？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-241",
+      "text": "跟喜欢的人独处，你是越靠越近，还是越坐越远？",
+      "heatMin": 4,
+      "category": "body_preference",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice",
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-242",
+      "text": "第一眼，你最容易注意异性的哪里？",
+      "heatMin": 4,
+      "category": "body_preference",
+      "expectedAnswerShape": "one_word",
+      "clusters": [
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-243",
+      "text": "对有感觉的人，拥抱还是牵手更让你心动？",
+      "heatMin": 4,
+      "category": "body_preference",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice",
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-244",
+      "text": "今晚到现在，有人约你去下一场，你是当场答应，还是说再看？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-245",
+      "text": "在场你更像哪种：先开口的，还是等人来聊的？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-246",
+      "text": "你更吃哪种人：像你的，还是跟你完全不一样的？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-247",
+      "text": "你的心动是看一眼就来，还是越聊越有？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-248",
+      "text": "刚认识的人，你最受不了哪种：查户口、太热情，还是爱答不理？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-250",
+      "text": "这一周攒的劲，你打算今晚一次放完，还是留着明天再放？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-251",
+      "text": "这桌上，你第一眼先注意到的是谁？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-252",
+      "text": "哪种局你会比平时放得开：全是熟人、半熟不熟，还是谁也不认识？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "selectWho",
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-253",
+      "text": "有人当场要加你微信，你会直接给、先聊聊，还是推掉？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-254",
+      "text": "你更容易对哪种人上头：让你心跳的，还是让你安心的？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-255",
+      "text": "这桌谁最不能惹，他惹到你，你是当场说开还是先冷一冷？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "selectWho",
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-256",
+      "text": "哪种搭讪最容易让你没兴趣：太油、太急，还是一本正经？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-257",
+      "text": "你想不想凑近谁，说句悄悄话？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "yes_no",
+      "clusters": [
+        "selectWho",
+        "yesNo"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-258",
+      "text": "你搭话一般怎么开：先自曝今晚干嘛，还是先抛个问题？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-259",
+      "text": "异性朋友半夜发消息，你多久回：马上、隔一会儿，还是第二天？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-260",
+      "text": "看到喜欢的人在跟别人聊，你会过去，还是忍着？",
+      "heatMin": 3,
+      "category": "flirt",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-261",
+      "text": "现在是单身，还是已经有主了？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-262",
+      "text": "被人夸的时候，你更吃哪种：夸到点上，还是夸得夸张？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-264",
+      "text": "拿你哪一点开玩笑最容易翻车：记性、口味，还是脾气？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-265",
+      "text": "今晚剩下的时间，你最想怎么用：再换一家、找人聊，还是回家睡？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-266",
+      "text": "你最近一直想抽空做的，是补觉、散步，还是看剧？",
+      "heatMin": 1,
+      "category": "quick_know",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-267",
+      "text": "亲密里哪样最加分：先问一句、慢一点，还是抱久一点？",
+      "heatMin": 4,
+      "category": "body_preference",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice",
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-268",
+      "text": "喜欢的人碰你哪一下最心动：手、肩，还是头发？",
+      "heatMin": 4,
+      "category": "body_preference",
+      "expectedAnswerShape": "ternary",
+      "clusters": [
+        "abChoice",
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-269",
+      "text": "亲密里你更想当主动的那个，还是等对方先？",
+      "heatMin": 4,
+      "category": "body_preference",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice",
+        "bodyPart"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-270",
+      "text": "今晚你更想接着干杯，还是改喝点软的？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-271",
+      "text": "今晚要是换个地方，你想去安静的，还是更吵的？",
+      "heatMin": 2,
+      "category": "quick_know",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-272",
+      "text": "下一轮你想接着聊的，是刚坐过来的那位，还是你原本就在聊的那位？",
+      "heatMin": 2,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-273",
+      "text": "这桌散了，你最想跟谁一起走？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho",
+        "selectWhoSameFrame"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-274",
+      "text": "要是分两组玩，你想跟谁一队？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho",
+        "selectWhoSameFrame"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-275",
+      "text": "下一轮你最想跟谁比一局飞镖？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho",
+        "selectWhoSameFrame"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-276",
+      "text": "你想拉谁陪你出去透口气？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho",
+        "selectWhoSameFrame"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-278",
+      "text": "最后一圈，你想先溜的是自己，还是等某个人一起溜？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-279",
+      "text": "散场之前，你想把哪个微信当场要过来？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-280",
+      "text": "最后一首歌，你想点给谁听？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho",
+        "selectWhoSameFrame"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-281",
+      "text": "最后一段，你想跟谁把这杯喝完？",
+      "heatMin": 3,
+      "category": "follow_up_hook",
+      "expectedAnswerShape": "short_phrase",
+      "clusters": [
+        "selectWho",
+        "selectWhoSameFrame"
+      ]
+    },
+    {
+      "cardId": "PN-TRUTH-282",
+      "text": "撒娇和嘴硬，你更扛不住哪个？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": []
+    },
+    {
+      "cardId": "PN-TRUTH-283",
+      "text": "你想当逗别人玩的那个，还是被别人逗的那个？",
+      "heatMin": 2,
+      "category": "attraction",
+      "expectedAnswerShape": "binary",
+      "clusters": [
+        "abChoice"
+      ]
+    }
+  ],
+  "note": "对当前 Formal 全池 53 张统计：「选谁／点名对象」11 张（20.8%），其中「想…谁」同骨架 6 张；A/B 类（封闭选项）37 张（69.8%）；身体部位／身体接触 7 张（13.2%）；yes/no 2 张（3.8%）。同骨架「选谁」类占 Formal 全池 20.8%，已构成可感知的题面同质化风险。",
+  "conclusionPolicy": "第二包禁止继续大量堆「选谁」（同骨架点名对象类）——需要新的答案骨架分流。",
+  "diagnosisOnly": "本报告只出诊断：⛔ 不因「选谁」多而推翻这些卡，也不改任何卡片内容 / 准入 / 阈值（内容裁决属后续单）。",
+  "p2SelectWhoConvergence": {
+    "source": "docs/review/RESEARCH_REVIEW-PACK1-FINAL-54.md §专项 2（选谁骨架 cluster）",
+    "verdict": "不退卡（9 张 hook 真值 ＋ 单卡质量均过线；弱卡不保送 ≠ 强行退卡凑数）",
+    "reviewerRegisteredSubset": [
+      "PN-TRUTH-251",
+      "PN-TRUTH-257",
+      "PN-TRUTH-273",
+      "PN-TRUTH-276",
+      "PN-TRUTH-279",
+      "PN-TRUTH-280",
+      "PN-TRUTH-281"
+    ],
+    "mostCertainPairs": [
+      "280 vs 281（点歌 vs 共饮，几乎必同人）",
+      "273 vs 281（一起走 vs 一起喝完，极大概率同人）",
+      "279 vs 251（要微信 vs 第一眼注意，高概率同人）"
+    ],
+    "divertingCards": [
+      "PN-TRUTH-274（队友）",
+      "PN-TRUTH-275（对手）",
+      "PN-TRUTH-255（反向选择，答案天然不同）"
+    ],
+    "limitSuggestion": "第二包禁止继续大量堆「选谁」；建议后续单局内选谁类限流（如单局 ≤2 张）或 280 / 281 / 273 三选一轮换 —— 交编排者裁决，本报告不执行。"
+  },
+  "generatedBy": "scripts/audit-formal-truth-skeleton-cluster.ts"
+}

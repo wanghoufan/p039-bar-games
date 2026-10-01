@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- 原为 @null。BridgeActivity.onCreate 第一件事就是 setTheme 到这个主题，之后才创建
+             WebView 并等首帧；窗口没有底色时这段空窗是设备相关的未定义色（还可能回落到父主题的
+             浅色值），与启动屏/网页首帧的深色不一致。钉死成启动屏同一个 color-bg-night，
+             保证「系统启动屏 → 网页首帧」全程同底色，不会闪白/闪灰。 -->
+        <item name="android:background">@color/pn_splash_background</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <!-- Android 12+ 系统启动屏。原来这两个属性都没设：背景回落到父主题的
+             ?android:colorBackground（浅色系统下即纯白），图标回落到系统默认图标
+             —— 这就是录屏 0.95s~1.83s 那块「纯白、没有 App 图标」的原生启动画面。
+             属性名故意不带 android: 前缀：它是 androidx core-splashscreen 的属性，
+             v31 由库映射到框架的 android:windowSplashScreen*，pre-31 由库的 compat 启动屏
+             drawable 读取 ?attr/windowSplashScreenBackground / ?windowSplashScreenAnimatedIcon，
+             一处声明两种 API 区间都生效。 -->
+        <item name="windowSplashScreenBackground">@color/pn_splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <!-- 启动屏结束后切回真正的 App 主题（Capacitor 的 BridgeActivity 也会 setTheme 到同一个），
+             不把整个 App 生命周期留在 SplashScreen 主题上。 -->
+        <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
+        <!-- 窗口背景不再指向模板自带的纯白 @drawable/splash（该资源已删除），
+             改为「深色底 + 居中 App 图标」的 layer-list。 -->
+        <item name="android:background">@drawable/pn_splash</item>
+    </style>
+</resources>

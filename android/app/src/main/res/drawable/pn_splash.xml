@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 启动窗口背景（layer-list）：底层铺满深色，居中叠 App 自己的图标。
+     底色来源：@color/pn_splash_background（取自 app/globals.css 的 color-bg-night 变量 #080b1a）。
+     图标来源：复用现有自适应图标的前景 @mipmap/ic_launcher_foreground（App 启动图标本体资源），
+     不新画图、不引用外部图片。 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/pn_splash_background" />
+    <item
+        android:drawable="@mipmap/ic_launcher_foreground"
+        android:gravity="center" />
+</layer-list>

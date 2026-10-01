@@ -1,0 +1,3390 @@
+{
+  "generator": "scripts/audit-a1-router-montecarlo.ts",
+  "note": "每桌型前 2 局（MATCH 关闭）完整逐轮 trace，含 seed；所有 dead-end 局记录终止原因（round_limit / pack_exhausted / global_exhausted / awaiting_host / guard_limit）。",
+  "terminationReasons": [
+    "round_limit",
+    "pack_exhausted",
+    "global_exhausted",
+    "awaiting_host",
+    "guard_limit"
+  ],
+  "traces": [
+    {
+      "table": "2m2f",
+      "label": "2男2女",
+      "seed": 20365656,
+      "intensityLimit": 1,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 21,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-004",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-002",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-001",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-003",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-006",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-002",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-003",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-008",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-002",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-007",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-006",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-008",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-007",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-008",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-008",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-007",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-003",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-007",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-003",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-004",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-007",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "2m2f",
+      "label": "2男2女",
+      "seed": 20373575,
+      "intensityLimit": 4,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 25,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-048",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-046",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-050",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-042",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-038",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-046",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-044",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-035",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-035",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-049",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-049",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-044",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-042",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-045",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-043",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-035",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-050",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-047",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-042",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-043",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-041",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-047",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 23,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-049",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 24,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-049",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 25,
+          "packId": "most-likely",
+          "cardId": "PN-MOST-038",
+          "gameType": "most_likely",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "1m3f",
+      "label": "1男3女",
+      "seed": 20470385,
+      "intensityLimit": 2,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 23,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-017",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-016",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-012",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-018",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-010",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-009",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-016",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-009",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-010",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-013",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-018",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-010",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-011",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-012",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 23,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-010",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "1m3f",
+      "label": "1男3女",
+      "seed": 20478304,
+      "intensityLimit": 4,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 24,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-035",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-033",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-034",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-037",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-035",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-039",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-038",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-037",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-032",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-038",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-037",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-039",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-036",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-035",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-040",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-033",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-032",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-040",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-034",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-033",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-032",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-039",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 23,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-031",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 24,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-039",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "2m3f",
+      "label": "2男3女",
+      "seed": 20575114,
+      "intensityLimit": 2,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 23,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-018",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-014",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-017",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-018",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-018",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-012",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-018",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-013",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-014",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-012",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-017",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-016",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-018",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-009",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-014",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-009",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-019",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-009",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-014",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-017",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-013",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "truth-dare",
+          "cardId": "PN-TRUTH-011",
+          "gameType": "truth",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 23,
+          "packId": "truth-dare",
+          "cardId": "PN-DARE-018",
+          "gameType": "dare",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "2m3f",
+      "label": "2男3女",
+      "seed": 20583033,
+      "intensityLimit": 4,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 22,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-037",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-044",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-036",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-038",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-031",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-045",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-035",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-043",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-049",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-033",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-035",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-042",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-044",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-047",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-044",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-046",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-036",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-049",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-036",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-036",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-032",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "never-have",
+          "cardId": "PN-NHIE-033",
+          "gameType": "never_have_i",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": false,
+            "anchorPlayerId": null,
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "1m4f",
+      "label": "1男4女",
+      "seed": 20679843,
+      "intensityLimit": 2,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 26,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-016",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-017",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-018",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-012",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-013",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-011",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-009",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-018",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-013",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-010",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-009",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-013",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-009",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-014",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-013",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 23,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 24,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-012",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 25,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-015",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 26,
+          "packId": "compatibility-test",
+          "cardId": "PN-CHEM-018",
+          "gameType": "chemistry",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    },
+    {
+      "table": "1m4f",
+      "label": "1男4女",
+      "seed": 20687762,
+      "intensityLimit": 5,
+      "matchEnabled": false,
+      "terminationReason": "round_limit",
+      "completedRounds": 20,
+      "guardUsed": 29,
+      "rounds": [
+        {
+          "round": 1,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-040",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 2,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-036",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 3,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-041",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 4,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-038",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 5,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-041",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 6,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-031",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 7,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-035",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 8,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-042",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 9,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-040",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 10,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-031",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 11,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-039",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 12,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-039",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 13,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-034",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 14,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-039",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 15,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-038",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 16,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-035",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 17,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-031",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 18,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-037",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 19,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-031",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 20,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-037",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 21,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-035",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 22,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-035",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 23,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-033",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 24,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-031",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 25,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-035",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 26,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-032",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "skipped",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 27,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-037",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 28,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-037",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        },
+        {
+          "round": 29,
+          "packId": "would-you-rather",
+          "cardId": "PN-EITHER-039",
+          "gameType": "either_or",
+          "heatAtDraw": "H1",
+          "heatAfterTerminal": "H1",
+          "targetPairKey": "f0::m0",
+          "pairRouting": "targeted-pair",
+          "terminal": "completed",
+          "guard": {
+            "singleAnchorTable": true,
+            "anchorPlayerId": "m0",
+            "applied": false,
+            "reason": null
+          }
+        }
+      ]
+    }
+  ]
+}

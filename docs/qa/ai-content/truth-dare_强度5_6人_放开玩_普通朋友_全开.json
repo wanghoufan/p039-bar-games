@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 8,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：放开玩；最高强度：5。\n可用玩法：truth-dare。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 33791,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "td-001",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最想拥有但一直没学会的一项小技能是什么？",
+        "instruction": "由主持人指定一位嘉宾回答，回答限时30秒；不想回答可直接说“跳过”。",
+        "intensity": 1,
+        "tags": [
+          "truth",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-002",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用新闻主播的语气，播报一句你现场编的“今日天气”。",
+        "instruction": "嘉宾坐着或站着完成，内容不得涉及真实隐私；说完后大家可鼓掌。可跳过。",
+        "intensity": 2,
+        "tags": [
+          "dare",
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-003",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "每人说出一个自己最奇怪但无害的饮食搭配。",
+        "instruction": "从一位嘉宾开始，按顺时针轮流回答，每人限时20秒；不想回答可跳过。",
+        "intensity": 2,
+        "tags": [
+          "truth",
+          "全员"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "td-004",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三种不同情绪（开心、愤怒、悲伤）说同一句话：“今晚的节目真精彩。”",
+        "instruction": "嘉宾依次表演三种情绪，每种不超过10秒；可跳过。",
+        "intensity": 3,
+        "tags": [
+          "dare",
+          "情绪表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-005",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "分享一件你曾经非常认真相信、后来发现是误会的搞笑小事。",
+        "instruction": "回答限时45秒，其他人不得追问隐私细节；可跳过。",
+        "intensity": 3,
+        "tags": [
+          "truth",
+          "糗事"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-006",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和另一位嘉宾进行“无声对话”30秒，只能用表情和动作，不能说话。",
+        "instruction": "两人面对面或并排，由主持人计时30秒；不能说话，只能靠表情和动作表达；可随时停止或跳过。",
+        "intensity": 3,
+        "tags": [
+          "dare",
+          "双人"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-007",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果明天醒来你会变成一种动物，你会选什么？请给出一个夸张的理由。",
+        "instruction": "回答要有表演感，限时30秒；可跳过。",
+        "intensity": 4,
+        "tags": [
+          "truth",
+          "想象"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-008",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "全员一起用最夸张的方式，合唱一段经典儿歌副歌，持续15秒。",
+        "instruction": "主持人起头，全体参与；如果有人不想唱可只做口型或跳过。",
+        "intensity": 4,
+        "tags": [
+          "dare",
+          "全员"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "td-009",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "即兴表演一段10秒的“获奖感言”，感谢一位现场嘉宾，但不能说出真实姓名或隐私。",
+        "instruction": "嘉宾自由发挥，用夸张语气表达；不得贬低或泄露他人隐私；可跳过。",
+        "intensity": 5,
+        "tags": [
+          "dare",
+          "即兴"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-010",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最近一次因为一件小事笑到停不下来，是什么事？请用最夸张的方式描述。",
+        "instruction": "回答限时60秒，不得涉及他人隐私；可跳过。",
+        "intensity": 5,
+        "tags": [
+          "truth",
+          "夸张描述"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 0,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "icebreaker",
+      "label": "破冰"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "破冰"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：第一次见 / 拼桌；氛围：破冰；最高强度：1。\n可用玩法：truth-dare。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 2,
+    "latencyMs": 17493,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "td-001",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "最近一周里，哪件小事让你觉得挺开心？",
+        "instruction": "由当前玩家回答，其他人倾听；不想回答可以直接跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-002",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三个词形容你此刻的心情，并解释其中一个词。",
+        "instruction": "说完即可，若感到为难可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-003",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果你可以立刻学会一项轻松的小技能，会选什么？为什么？",
+        "instruction": "简短分享即可；不想回答可以直接跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-004",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用一句像电影台词的话，向嘉宾2介绍你自己。",
+        "instruction": "面向嘉宾2说一句即可；可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-005",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最近单曲循环或反复看的内容是什么？推荐一句理由。",
+        "instruction": "说出一首歌、一部剧或一个片段即可；可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-006",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三个emoji概括你对今晚聚会的期待，并让大家猜一个。",
+        "instruction": "可只展示emoji或直接说答案；可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-007",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果现在多出一小时空闲，你会用来做什么？",
+        "instruction": "按真实想法回答即可；不想回答可以直接跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-008",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和对方隔空击掌，并说一句‘今晚请多指教’。",
+        "instruction": "只做隔空动作，不发生身体接触；可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-009",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你更喜欢计划好的行程，还是临时起意？举一个最近的小例子。",
+        "instruction": "简短回答即可；不想回答可以直接跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-010",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用一句友善的祝福结束本轮，送给在场的人。",
+        "instruction": "可以面向大家说；可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

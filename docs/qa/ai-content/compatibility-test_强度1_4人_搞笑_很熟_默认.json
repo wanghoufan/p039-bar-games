@@ -1,0 +1,255 @@
+{
+  "cell": {
+    "index": 46,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "base",
+    "intensity": 1,
+    "players": 4,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "close",
+      "label": "很熟"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "很熟",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：很熟；氛围：搞笑；最高强度：1。\n可用玩法：compatibility-test。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 22299,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "compat-01",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果现在必须选一种夜宵，你选泡面还是烧烤？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "夜宵"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-02",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：聚会时你最像哪个角色？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "聚会"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-03",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：用三个字形容对方今天的精神状态，可以搞笑但不可以贬损。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "形容"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-04",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：夏天开空调，你选26度还是18度？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "日常"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-05",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果可以拥有一种超能力，你选哪个？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "脑洞"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-06",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：对方最可能忘带的一样东西是什么？比如钥匙、雨伞、纸巾。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "日常"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-07",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：吃火锅蘸料，你是麻酱派还是油碟派？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "火锅"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-08",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果组队参加“无聊大赛”，你们选哪个项目？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "比赛"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-09",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：给对方起一个不带贬义的搞笑称号，越离谱越好。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "称号"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-10",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：看电影前，你必须提前看剧透，还是绝不看剧透？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "搞笑",
+          "电影"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "cell": {
+    "index": 35,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "icebreaker",
+      "label": "破冰"
+    },
+    "relationship": {
+      "key": "couple",
+      "label": "情侣 / 暧昧"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "情侣 / 暧昧",
+      "vibes": [
+        "破冰"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：情侣 / 暧昧；氛围：破冰；最高强度：5。\n可用玩法：would-you-rather。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 34403,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-001",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "先说“今天想和你聊很久” VS 先问“你最近最开心的小事是什么”",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-002",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "一起散步看傍晚的云 VS 一起在家拼一幅拼图",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-003",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "安静地交换歌单 VS 热闹地玩一局桌游",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-004",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天都有轻松分享 VS 隔几天深聊一次",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-005",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "用可爱食物名当昵称 VS 用当天天气名当昵称",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-006",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "一个眼神就懂对方想回家 VS 同时说出同一句话",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-007",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "一起探索没去过的小店 VS 一起窝着看一部老电影",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-008",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "随时能分享废话的松弛感 VS 认真讨论未来的安全感",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-009",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "收到手写便签：“今天也谢谢你出现” VS 收到手写便签：“下次还想和你见面”",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-010",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每晚互道一句今天的小幸运 VS 每周一起解锁一个新口味",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "情侣",
+          "暧昧",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

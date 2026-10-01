@@ -1,0 +1,31 @@
+{
+  "page": 6,
+  "value": {
+    "buttons": [
+      {
+        "bottom": 832,
+        "text": "下一个 ",
+        "top": 776
+      },
+      {
+        "bottom": 832,
+        "text": "换一个",
+        "top": 776
+      },
+      {
+        "bottom": 832,
+        "text": "开始30秒",
+        "top": 776
+      }
+    ],
+    "card": "用慢动作走秀 30 秒。Walk the runway in slow motion for 30 seconds.",
+    "cardId": "sample-2-d",
+    "dots": 5,
+    "overflow": false,
+    "url": "https://p039-bar-games.vercel.app/punishment/play",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  }
+}

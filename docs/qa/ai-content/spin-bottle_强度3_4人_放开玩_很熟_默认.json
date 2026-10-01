@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 58,
+    "packId": "spin-bottle",
+    "packName": "转瓶子",
+    "origin": "base",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "close",
+      "label": "很熟"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "很熟",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "spin-bottle"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：很熟；氛围：放开玩；最高强度：3。\n可用玩法：spin-bottle。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 30157,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "spin-001",
+        "packId": "spin-bottle",
+        "type": "即兴表演",
+        "content": "被转瓶选中的玩家，用20秒表演一个“突然中奖但发现是误会”的短剧。",
+        "instruction": "其他嘉宾可给一个情绪词，表演者必须融入；允许跳过。",
+        "intensity": 3,
+        "tags": [
+          "即兴",
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-002",
+        "packId": "spin-bottle",
+        "type": "真心话",
+        "content": "被选中的玩家回答：最近一次笑到停不下来是因为什么事？",
+        "instruction": "回答不超过1分钟；不想说可以跳过，其他人不得追问隐私。",
+        "intensity": 1,
+        "tags": [
+          "真心话",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-003",
+        "packId": "spin-bottle",
+        "type": "模仿",
+        "content": "被选中的玩家模仿在场任意一位嘉宾的常用语气说一句“我宣布，今晚正式开始”。",
+        "instruction": "被模仿者先猜是谁在模仿；若不愿被模仿可立刻喊停并换人。",
+        "intensity": 2,
+        "tags": [
+          "模仿",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-004",
+        "packId": "spin-bottle",
+        "type": "合作",
+        "content": "瓶口指向两人，两人合作在30秒内用三个动作表演“一起赶末班车”。",
+        "instruction": "不能说话，只能夸张动作；其他嘉宾猜剧情。允许跳过。",
+        "intensity": 3,
+        "tags": [
+          "合作",
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-005",
+        "packId": "spin-bottle",
+        "type": "投票",
+        "content": "全场投票：谁最可能突然组织一次说走就走的旅行？",
+        "instruction": "每人指一个人并说一个理由；被指最多的人不用完成任务，只接受一句夸奖。",
+        "intensity": 1,
+        "tags": [
+          "投票",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-006",
+        "packId": "spin-bottle",
+        "type": "即兴",
+        "content": "被选中的玩家用新闻播报语气，描述刚才10分钟里发生的一件小事。",
+        "instruction": "必须包含“现场记者”和“独家消息”两个词；若没有素材可编一个无害小故事。",
+        "intensity": 1,
+        "tags": [
+          "即兴",
+          "口才"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-007",
+        "packId": "spin-bottle",
+        "type": "挑战",
+        "content": "被选中的玩家在15秒内说出5个适合聚会的无害小任务，不能重复。",
+        "instruction": "说满5个即通过；卡住可选一位嘉宾提示一次，然后跳过。",
+        "intensity": 1,
+        "tags": [
+          "挑战",
+          "脑力"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-008",
+        "packId": "spin-bottle",
+        "type": "互动",
+        "content": "被选中的玩家向右手边玩家提一个二选一问题，例如“火锅还是烧烤”，对方必须快速回答并反问回来。",
+        "instruction": "连续来回3轮，问题不能涉及隐私或敏感话题；可随时停止。",
+        "intensity": 1,
+        "tags": [
+          "互动",
+          "快问快答"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-009",
+        "packId": "spin-bottle",
+        "type": "表演",
+        "content": "被选中的玩家用无声动作表演一个日常场景，让全场猜。",
+        "instruction": "限时30秒，可指定一个难度：简单、普通、离谱；猜中后表演者指定下一轮瓶口方向。",
+        "intensity": 3,
+        "tags": [
+          "表演",
+          "猜谜"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-010",
+        "packId": "spin-bottle",
+        "type": "真心话",
+        "content": "被选中的玩家回答：如果今晚只能保留一个聚会环节，你选什么？为什么？",
+        "instruction": "回答不超过1分钟；其他人不能评价或追问私人选择。",
+        "intensity": 1,
+        "tags": [
+          "真心话",
+          "收尾"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

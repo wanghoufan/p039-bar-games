@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 6,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 5,
+    "players": 2,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：第一次见 / 拼桌；氛围：搞笑；最高强度：5。\n可用玩法：truth-dare。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 26351,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pn-td-01",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果这场拼桌是一部低成本喜剧，你觉得自己拿到的角色名是什么？请配一句出场台词。",
+        "instruction": "由对方指定一人回答；不想答可以跳过，不必解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-02",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用播报天气预报的口气，播报“本桌未来十分钟的情绪天气”。",
+        "instruction": "由对方指定一人完成；不想做可以跳过，不必解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-03",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最近一次笑到停不下来是因为什么？只讲20秒版本，可以省略丢脸细节。",
+        "instruction": "由对方指定一人回答；不想答可以跳过，不必解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-04",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "模仿一位你熟悉的老师或长辈催你交作业，但台词里每个名词都要用食物名代替。",
+        "instruction": "由对方指定一人完成；不想做可以跳过，不必解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-05",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果必须用一种食物形容你现在的社交电量，你是什么食物？为什么？",
+        "instruction": "由对方指定一人回答；不想答可以跳过，不必解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-06",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三个词夸对方，但每个词都要听起来像在夸又像在损，最后补一句真诚的。",
+        "instruction": "由对方指定一人完成；不想做可以跳过，不必解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-07",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最想拥有哪种毫无用处但很酷的超能力？现场演示一下使用它的姿势。",
+        "instruction": "由对方指定一人回答；不想答可以跳过，不必解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-08",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和对方轮流说一个“我从来没做过”的离谱但无害小事，例如“我从来没把袜子穿反出门”。接不上的人做一个夸张的震惊表情。",
+        "instruction": "两人一起完成；任何一方可随时跳过，不必解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-09",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果给对方起一个只在今晚使用的搞笑外号，你会叫什么？为什么？",
+        "instruction": "由对方指定一人回答；不想答可以跳过，不必解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "pn-td-10",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用颁奖典礼的语气，给对方颁发一个“本桌最____奖”，奖项名和理由都要离谱但友好。",
+        "instruction": "由对方指定一人完成；不想做可以跳过，不必解释。",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

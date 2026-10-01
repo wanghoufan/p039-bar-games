@@ -1,0 +1,1106 @@
+$ playwright test --workers=3
+
+Running 122 tests using 3 workers
+
+(node:97276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:97274) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:97275) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    2 [mobile-chromium] › tests/e2e/accessibility.spec.ts:11:5 › 核心操作具有语义、焦点样式与移动端触控面积 (912ms)
+  ✓    3 [mobile-chromium] › tests/e2e/ai-settings.spec.ts:3:5 › DeepSeek 默认，OpenCode Go 仅实验性手动启用 (1.8s)
+  ✓    1 [mobile-chromium] › tests/e2e/api-key-danger-zone.spec.ts:3:5 › 清空密钥必须二次确认，取消后保留，确认后才删除 (2.0s)
+  ✓    4 [mobile-chromium] › tests/e2e/accessibility.spec.ts:26:5 › 减少动画偏好会将卡片动画降至近乎即时 (2.4s)
+  ✘    6 [mobile-chromium] › tests/e2e/compatibility.spec.ts:49:5 › 默契测试：配对 → 5 题（一样/不一样混判）→ 刷新 → 分数与配对恢复 → 继续 (1.5s)
+(node:97343) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    7 [mobile-chromium] › tests/e2e/accessibility.spec.ts:33:5 › 浅色模式下深色游戏卡题目保持高对比度 (950ms)
+  ✘    9 [mobile-chromium] › tests/e2e/custom-pack-regression.spec.ts:22:5 › 游戏包页新增分区后，自定义玩法的增改禁删仍然可用（T166） (1.5s)
+(node:97353) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    8 [mobile-chromium] › tests/e2e/compatibility.spec.ts:91:5 › 默契测试：换 pair 后分数与题数从 0 重计，刷新仍用新配对 (3.0s)
+  ✓   10 [mobile-chromium] › tests/e2e/custom-pack.spec.ts:3:5 › 创建并持久化自定义游戏包 (1.1s)
+  ✘    5 [mobile-chromium] › tests/e2e/ai-settings.spec.ts:14:5 › API Key 加密保存后刷新仍为已配置 (5.5s)
+(node:97361) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   11 [mobile-chromium] › tests/e2e/compatibility.spec.ts:113:5 › 默契测试：不一样不加分，只累加题数；换一个记 swapped (1.3s)
+  ✓   13 [mobile-chromium] › tests/e2e/ai-settings.spec.ts:24:5 › Provider 切换会持久化，Custom OpenAI Compatible 可完整配置 (628ms)
+  ✘   12 [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:60:7 › desktop 1280x800 › 转瓶子 ready/result：座位零遮挡 + 无巨型元素 (1.3s)
+(node:97369) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   14 [mobile-chromium] › tests/e2e/ai-settings.spec.ts:38:5 › 浅色模式切换后跨页面与刷新保持 (575ms)
+(node:97370) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   15 [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:38:7 › 冷启动直开 /setup，文档一解析完就返回：守门已生效、不落 about:blank、并弹出确认框 (299ms)
+  ✘   18 [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:38:7 › 冷启动直开 /settings/ai，文档一解析完就返回：守门已生效、不落 about:blank、并弹出确认框 (472ms)
+(node:97394) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+LONGNAME {"clear":[{"text":"玩家1","gap":36.6},{"text":"小明的超长昵称呢","gap":5.8},{"text":"玩家3","gap":21.2},{"text":"玩家4","gap":36.6},{"text":"玩家5","gap":21.2},{"text":"玩家6","gap":21.2}],"overflow":0}
+  ✓   19 [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:55:5 › 冷启动直开 /setup，React 一行都没跑（JS chunk 全断）时返回：仍留在站内 (613ms)
+  ✘   20 [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:72:5 › 冷启动直开 /setup，等 armed 后再返回：只有一条哨兵、只弹一个确认框 (236ms)
+  ✓   17 [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:96:7 › desktop 1280x800 › 转瓶子长昵称：座位仍不与瓶子重叠 (1.8s)
+(node:97412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   22 [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:90:5 › 冷启动首页连按两次返回：第一下弹框、第二下只关框，始终不退出 (393ms)
+(node:97418) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   21 [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:109:7 › desktop 1280x800 › 指人游戏 counting 态：无巨型按钮 (1.3s)
+(node:97430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   23 [mobile-chromium] › tests/e2e/game-flow.spec.ts:4:5 › 本地整局可完成、换题、跳过并结束总结 (1.3s)
+SHELL / {"shell":{"w":390,"left":445},"overflow":0}
+  ✓   25 [mobile-chromium] › tests/e2e/game-flow.spec.ts:18:5 › Deck 生成后离线与刷新均可继续 (913ms)
+SHELL /packs {"shell":{"w":390,"left":445},"overflow":0}
+  ✘   16 [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:23:5 › 首页按浏览器返回：弹退出确认，点「继续玩」留在原地 (5.4s)
+(node:97439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   26 [mobile-chromium] › tests/e2e/in-game-controls.spec.ts:4:5 › 跳过无惩罚，局中强度、暂停和恢复立即生效 (892ms)
+  ✘   27 [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:36:5 › 确认框里点「退出」：真的离开当前页（Web 口径＝导航离开本站） (257ms)
+(node:97445) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+SHELL /settings {"shell":null,"overflow":0}
+  ✓   24 [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:123:7 › desktop 1280x800 › 其他页面（首页/设置/游戏包）桌面无横向溢出 (3.1s)
+  ✘   29 [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:48:5 › 确认框里按 ESC＝取消，不退出 (270ms)
+(node:97453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   28 [mobile-chromium] › tests/e2e/mainline-recovery.spec.ts:47:5 › 混合旧缓存恢复：剔除 AI 与快照外卡、同步 currentRound、不白屏也不继续未知卡 (1.3s)
+  ✘   31 [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:59:5 › 顶层连点返回：只关框不误退，第三次才重新弹框 (283ms)
+(node:98442) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98443) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   33 [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:76:5 › /setup 这类有上一层的页面返回：不弹确认，正常退回首页 (611ms)
+  ✓   32 [mobile-chromium] › tests/e2e/pack-min-players.spec.ts:22:5 › 2 人局直选「指人游戏」（minPlayers=3）：当场提示至少 3 人，不进生成页 (828ms)
+  ✓   34 [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:86:5 › 多层页面逐级返回都不弹框，退到顶层才弹 (640ms)
+  ✓   35 [mobile-chromium] › tests/e2e/pack-min-players.spec.ts:46:5 › 2 人局直选「谁最可能」（minPlayers=3）：同样被 setup 拦住 (622ms)
+  ✓   37 [mobile-chromium] › tests/e2e/pack-min-players.spec.ts:57:5 › 2 人局的 AI 组局候选不再包含 3 人玩法（人数回收到 3 人后恢复） (527ms)
+  ✓   30 [mobile-chromium] › tests/e2e/offline-pack-switch.spec.ts:8:5 › 断网且目标玩法无缓存时，切换玩法立刻用本地 seed 进入可玩态 (3.2s)
+  ✓   39 [mobile-chromium] › tests/e2e/pack-toggle-scope.spec.ts:19:5 › 首页直出 7 个玩法 + 随机玩一个，三项快捷入口消失、底部仍是 4 个 Tab (561ms)
+  ✓   38 [mobile-chromium] › tests/e2e/pack-min-players.spec.ts:71:5 › 3 人局直选「指人游戏」：照常进生成页并用本地题库出到指人卡 (877ms)
+  ✓   40 [mobile-chromium] › tests/e2e/pack-toggle-scope.spec.ts:42:5 › 快捷工具在首页独立分区里就地可用，不再包在“更多玩法”面板里 (397ms)
+  ✓   36 [mobile-chromium] › tests/e2e/pack-switching.spec.ts:7:5 › 同一局连续切换玩法，Session ID / 配置 / 尺度不变 (2.3s)
+  ✓   41 [mobile-chromium] › tests/e2e/pack-min-players.spec.ts:100:5 › 2 人局关掉所有 2 人玩法：候选归零、当场提示并拦住，不复活任何已关闭玩法 (1.5s)
+  ✓   43 [mobile-chromium] › tests/e2e/pack-switching.spec.ts:44:5 › 已有进行中的局，首页点另一个玩法直接切换并回到主局 (1.1s)
+  ✓   42 [mobile-chromium] › tests/e2e/pack-toggle-scope.spec.ts:58:5 › 游戏包开关只圈 AI 组局：关掉后首页单玩与主局切换照样能选到它 (1.6s)
+  ✓   45 [mobile-chromium] › tests/e2e/pack-switching.spec.ts:57:5 › 没有进行中的局，首页玩法走既有 quick setup 预选，不再开第二套向导 (488ms)
+  ✓   46 [mobile-chromium] › tests/e2e/pack-toggle-scope.spec.ts:79:5 › 内置开关带“关闭则不加入 AI 组局”小字，关掉一个不会挡住它自己的单玩 (656ms)
+  ✓   44 [mobile-chromium] › tests/e2e/pack-min-players.spec.ts:124:5 › 主局切包与 setup 同口径：2 人局面板里没有 3 人玩法，局中加到 3 人恢复 (1.6s)
+  ✘   47 [mobile-chromium] › tests/e2e/party-tools.spec.ts:35:5 › 首页快捷工具分区：随机点名 + 随机分组两行，底部仍是原来的 4 个 Tab (1.4s)
+(node:98563) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   48 [mobile-chromium] › tests/e2e/pack-toggle-scope.spec.ts:92:5 › 至少保留一个玩法：关掉最后一个被拒绝、开关保持开启、有可见提示 (1.4s)
+  ✓   51 [mobile-chromium] › tests/e2e/pack-toggle-scope.spec.ts:106:5 › setup 显示最终 mixed 候选 N（自定义玩法退出 AI 组局，不计入 N） (768ms)
+  -   52 [mobile-chromium] › tests/e2e/production-offline.spec.ts:6:5 › 已访问的当前 Session 可在完全离线后重载恢复
+  ✘   50 [mobile-chromium] › tests/e2e/party-tools.spec.ts:44:5 › 随机点名：复用本局玩家名单，再抽一个不点同一人（T158 / FR-022） (1.3s)
+  ✓   53 [mobile-chromium] › tests/e2e/punishment.spec.ts:8:5 › new entry, saved preferences, clearable new session, old entry preserved (670ms)
+(node:98570) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   55 [mobile-chromium] › tests/e2e/party-tools.spec.ts:60:5 › 随机分组：默认 2 组、可切两人一组，人数差最多 1（T158 / FR-023） (1.3s)
+  ✓   54 [mobile-chromium] › tests/e2e/punishment.spec.ts:9:5 › five exact-level pools, immediate next selection, progress, no adjacent repeat, speed (1.6s)
+(node:98579) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -   57 [mobile-chromium] › tests/e2e/pwa-cache-regression.spec.ts:23:5 › PWA cache：版本化 cache + 旧 cache 清理 + 规则库离线 + AI 接口与密钥不进缓存
+  ✓   58 [mobile-chromium] › tests/e2e/pwa-schema-upgrade.spec.ts:32:5 › 旧 Session fixture 升级后仍可恢复，迁移幂等且不清库 (775ms)
+  ✓   56 [mobile-chromium] › tests/e2e/punishment.spec.ts:24:5 › shields keep current card, fail closed and recover through both empty actions (1.1s)
+  ✓   60 [mobile-chromium] › tests/e2e/punishment.spec.ts:27:5 › languages and all themes preserve card, session and timer (960ms)
+  ✘   59 [mobile-chromium] › tests/e2e/pwa-schema-upgrade.spec.ts:65:5 › 新版本写的数据在旧 bundle 下只读不动，不被迁移也不被清除 (1.3s)
+  ✘   61 [mobile-chromium] › tests/e2e/punishment.spec.ts:40:5 › direct countdown, pause/resume/end/finish same card with feedback and mute (281ms)
+(node:98595) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -   62 [mobile-chromium] › tests/e2e/pwa-schema-upgrade.spec.ts:82:5 › 旧 cache + 新 bundle：版本错位后 Session 仍能恢复
+  ✓   64 [mobile-chromium] › tests/e2e/quick-start.spec.ts:4:5 › 没有进行中的局时，历史偏好允许单模式直接开始 (1.3s)
+  ✘   63 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 360px (1.3s)
+(node:98621) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   66 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 390px (365ms)
+(node:98627) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   65 [mobile-chromium] › tests/e2e/rules-library.spec.ts:9:5 › 从首页到小姐牌详情不超过 3 次点击（T182 / SC-007） (1.3s)
+  ✘   67 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 430px (343ms)
+(node:98634) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   49 [mobile-chromium] › tests/e2e/pointing-game.spec.ts:59:5 › 10 轮指人游戏：指令卡 + 3/2/1 + 指，不输入票数也能一路走完 (10.0s)
+  ✓   68 [mobile-chromium] › tests/e2e/rules-library.spec.ts:20:5 › 首批 8 条规则都能从列表进详情（T182 / FR-030） (1.5s)
+  ✓   71 [mobile-chromium] › tests/e2e/rules-library.spec.ts:35:5 › 详情不给“开始游戏”主 CTA，也不进主局（T181 / FR-033） (192ms)
+  ✘   69 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 1280px (1.3s)
+(node:98648) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   70 [mobile-chromium] › tests/e2e/pointing-game.spec.ts:96:5 › 倒计时按 3 → 2 → 1 走完，并自动落到「指」 (1.3s)
+(node:98650) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   73 [mobile-chromium] › tests/e2e/punishment.spec.ts:56:5 › offline core operates without remote requests (888ms)
+  ✓   74 [mobile-chromium] › tests/e2e/pointing-game.spec.ts:107:5 › 倒计时可以快速跳过，不等它走完 (948ms)
+  ✓   76 [mobile-chromium] › tests/e2e/pointing-game.spec.ts:117:5 › reduced-motion 下不逐秒等待，直接给「指」 (502ms)
+  ✓   75 [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:7:5 › 刷新后恢复切换过的当前玩法与同一张题卡 (1.4s)
+  ✓   77 [mobile-chromium] › tests/e2e/pointing-game.spec.ts:127:5 › 换一个＝拒绝当前题面，记录 swapped 并换出不同指令 (1.4s)
+  ✓   78 [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:25:5 › 刷新后仍停在转瓶子（纯本地玩法没有题卡），不白屏 (1.2s)
+  ✓   79 [mobile-chromium] › tests/e2e/pointing-game.spec.ts:140:5 › 从主局切换玩法进入指人游戏，渲染指人视图而不是通用题卡 (1.3s)
+  ✘   72 [mobile-chromium] › tests/e2e/rules-library.spec.ts:44:5 › 搜不到规则时给空状态，且不调用 AI/网络（T183 / Spec §9） (5.2s)
+  ✘   80 [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:58:5 › 刷新后仍停在没有可玩题卡的玩法上，不白屏也不自动切玩法 (1.3s)
+(node:98692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98693) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   82 [mobile-chromium] › tests/e2e/rules-library.spec.ts:58:5 › 分类 chips 只筛同类，清空搜索恢复全部 8 条（T179） (600ms)
+  ✓   81 [mobile-chromium] › tests/e2e/session-recovery.spec.ts:4:5 › 刷新恢复并动态暂离玩家 (1.3s)
+  ✓   83 [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:88:5 › 空牌堆耗尽态的出口有效：结束本局直接进结算，不再空转 (995ms)
+  ✓   85 [mobile-chromium] › tests/e2e/setup-flow.spec.ts:3:5 › 无账号完成组局并进入生成状态 (963ms)
+  ✓   87 [mobile-chromium] › tests/e2e/setup-flow.spec.ts:17:5 › 雷区开关开启那行显示「已避开」态，关掉即消失（V1.6 开关重设计） (438ms)
+  ✘   86 [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:120:5 › 牌堆还有没用过的卡时，洗牌仍能救回题卡（不给空转，但也不误杀洗牌） (1.3s)
+  ✓   88 [mobile-chromium] › tests/e2e/setup-flow.spec.ts:30:5 › 组局与雷区页面保留主导航且不遮挡下一步 (460ms)
+(node:98725) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   89 [mobile-chromium] › tests/e2e/smoke.spec.ts:3:5 › 首页可访问 (186ms)
+  ✓   91 [mobile-chromium] › tests/e2e/sound.spec.ts:40:5 › 设置页音效开关默认开、可关，关掉后刷新仍然静音（持久化） (576ms)
+  ✓   90 [mobile-chromium] › tests/e2e/setup-regression.spec.ts:21:5 › 关系选项、今晚氛围选项保持现有文案与档位 (628ms)
+  ✓   92 [mobile-chromium] › tests/e2e/sound.spec.ts:61:5 › 局中设置的音效开关与设置页共用同一份偏好 (1.4s)
+  ✘   84 [mobile-chromium] › tests/e2e/settings-regression.spec.ts:13:5 › 外观深浅色可切换并跨页面与刷新保持 (5.4s)
+  ✓   94 [mobile-chromium] › tests/e2e/sound.spec.ts:85:5 › 开着音效走完开局到收局的主链，没有任何报错 (1.3s)
+(node:98762) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   96 [mobile-chromium] › tests/e2e/settings-regression.spec.ts:33:5 › AI Provider / Model / Base URL / API Key 配置入口保持 (537ms)
+  ✘   95 [mobile-chromium] › tests/e2e/sound.spec.ts:111:5 › 转瓶子音效链路：呼呼循环 / 减速 tick / 落定叮 / 链入音全都不报错 (1.2s)
+(node:99754) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   93 [mobile-chromium] › tests/e2e/setup-regression.spec.ts:45:5 › 尺度 slider 保持 1–5 五档与现有档位文案 (5.3s)
+(node:99759) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   99 [mobile-chromium] › tests/e2e/setup-regression.spec.ts:65:5 › 组局草稿继承所选关系、氛围与强度，不改 SessionConfig 字段名 (670ms)
+  ✓  100 [mobile-chromium] › tests/e2e/setup-regression.spec.ts:90:5 › 组局页可逐人录性别（男/女/不填三态），录入随当局草稿传递 (469ms)
+  ✓  101 [mobile-chromium] › tests/e2e/summary.spec.ts:4:5 › 结束总结完整，再来一局复用配置但创建新 Session (964ms)
+  ✘   97 [mobile-chromium] › tests/e2e/settings-regression.spec.ts:64:5 › 清空 API Key 保留危险样式区分与二次确认 (5.3s)
+(node:99782) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   98 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:79:5 › 转瓶子：固定 RNG 命中 Alex → 真心话链入现有 truth-dare（被指到的人作答）→ 完成 → 同一局继续 (4.9s)
+  ✓  102 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:51:5 › 转瓶子：落点落库后刷新直接回到结果页，不停在 ready、也不重播动画 (2.1s)
+  ✘  104 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:128:5 › 转瓶子：连续两转不指同一人；刷新只恢复最终落点；再转一次仍可复现 (1.3s)
+  ✘  103 [mobile-chromium] › tests/e2e/v2-mutual-flow.spec.ts:94:5 › V2负向：legacy 局走满 20 轮、计数全冻结、不弹中途互选、不产生 MATCH (1.3s)
+(node:99789) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:99790) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -  106 [mobile-chromium] › tests/e2e/v2-mutual-flow.spec.ts:185:5 › V2正向：audited metadata → 弹 Mutual → 双选成 MATCH（DEFERRED_BY_HUMAN，本批不做）
+  ✘  107 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:150:5 › 转瓶子：只从在场玩家中选人，大冒险同样链入 dare 卡 (1.3s)
+(node:99806) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  105 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:67:5 › 转瓶子：链入真心话后刷新，仍是同一局、同一被指到的人、同一张真心话 (2.7s)
+  ✘  109 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:167:5 › 转瓶子：空牌堆单开局点真心话也能出题（链自己补位，不再原地无响应） (1.3s)
+(node:99816) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  108 [mobile-chromium] › tests/e2e/visual.spec.ts:3:5 › 生成 7 类核心页面视觉检查截图 (4.1s)
+  ✓  110 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:91:5 › 主局切到二选一：完成与换一个分别落库，刷新后玩法、轮次历史与计数都连续 (2.8s)
+  ✓  111 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:186:5 › 转瓶子：首页单开局（本地题库、牌堆为空）点真心话照样出题，不再原地无响应 (2.8s)
+  ✘  112 [mobile-chromium] › tests/e2e/visual.spec.ts:37:5 › 首页适配 360 / 390 / 430 宽度且无横向溢出（T162 / V1.4 R-050） (2.3s)
+(node:99874) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  114 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:207:5 › 转瓶子：真心话出完 → L1 洗牌接着出（不断游），结果页提示会重复、两个去向都还能进 (1.1s)
+(node:99881) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  115 [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:33:5 › 二选一：出 A/VS/B 题面，下一题记 completed、换一个记 swapped 并留拒绝指纹 (1.1s)
+(node:99888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  116 [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:231:5 › 转瓶子：两类都出完 → L1 洗牌重来，两个去向都还能进（题目会重复，不静默） (1.1s)
+  ✘  117 [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:85:5 › 二选一：连续 10 轮不重题、全部 completed，Session 尺度与配置原样继承 (1.1s)
+(node:99899) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  113 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:130:5 › 默契测试：判分落库后重新打开这一局（冷启动）仍恢复配对与分数 (5.7s)
+(node:99926) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  118 [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:117:5 › 二选一：AI 缺省关闭时如实提示「本次使用本地固定题库」，本地题库仍能开局/换题/下一题 (1.1s)
+(node:99937) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -  120 [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:156:5 › 二选一：AI 启用但断网时回退本地 seed，出题与换题都不卡
+  ✓  119 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:175:5 › 坏 Session：反序列化失败的记录被隔离，页面安全回首页而不是白屏 (1.0s)
+  ✓  121 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:191:5 › 坏 Session：旁边有效的旧记录仍可继续，首页照常给“继续上一局” (376ms)
+  -  122 [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:208:5 › PWA reload：Service Worker 接管后，切新玩法并转瓶子，落点与当前玩法一并恢复
+
+
+  1) [mobile-chromium] › tests/e2e/ai-settings.spec.ts:14:5 › API Key 加密保存后刷新仍为已配置 ─────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/配置已加密保存|仅本次会话使用/)
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText(/配置已加密保存|仅本次会话使用/) with timeout 5000ms
+      - waiting for getByText(/配置已加密保存|仅本次会话使用/)
+
+
+      16 |   await page.getByRole("textbox", { name: "API Key", exact: true }).fill("sk-e2e-never-log-this-123456");
+      17 |   await page.getByRole("button", { name: "保存配置" }).click();
+    > 18 |   await expect(page.getByText(/配置已加密保存|仅本次会话使用/)).toBeVisible();
+         |                                                   ^
+      19 |   await expect(page.getByRole("button", { name: /清空 API 密钥/ })).toBeEnabled();
+      20 |   await page.reload();
+      21 |   await expect(page.getByRole("button", { name: /清空 API 密钥/ })).toBeEnabled();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/ai-settings.spec.ts:18:51
+
+    Error Context: test-results/ai-settings-API-Key-加密保存后刷新仍为已配置-mobile-chromium/error-context.md
+
+  2) [mobile-chromium] › tests/e2e/compatibility.spec.ts:49:5 › 默契测试：配对 → 5 题（一样/不一样混判）→ 刷新 → 分数与配对恢复 → 继续 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-compatibility-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-compatibility-session", waiting until "load"
+
+
+      43 | async function openSession(page: Page) {
+      44 |   await seedSession(page, compatibilitySession());
+    > 45 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      46 |   await expect(view(page)).toBeVisible();
+      47 | }
+      48 |
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/compatibility.spec.ts:45:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/compatibility.spec.ts:50:3
+
+    Error Context: test-results/compatibility-默契测试：配对-→-5-题（一样-不一样混判）→-刷新-→-分数与配对恢复-→-继续-mobile-chromium/error-context.md
+
+  3) [mobile-chromium] › tests/e2e/compatibility.spec.ts:113:5 › 默契测试：不一样不加分，只累加题数；换一个记 swapped ────
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-compatibility-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-compatibility-session", waiting until "load"
+
+
+      43 | async function openSession(page: Page) {
+      44 |   await seedSession(page, compatibilitySession());
+    > 45 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      46 |   await expect(view(page)).toBeVisible();
+      47 | }
+      48 |
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/compatibility.spec.ts:45:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/compatibility.spec.ts:114:3
+
+    Error Context: test-results/compatibility-默契测试：不一样不加分，只累加题数；换一个记-swapped-mobile-chromium/error-context.md
+
+  4) [mobile-chromium] › tests/e2e/custom-pack-regression.spec.ts:22:5 › 游戏包页新增分区后，自定义玩法的增改禁删仍然可用（T166） 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/packs
+    Call log:
+      - navigating to "http://127.0.0.1:3210/packs", waiting until "load"
+
+
+       8 |
+       9 | async function createPack(page: Page) {
+    > 10 |   await page.goto("/packs");
+         |              ^
+      11 |   await page.getByRole("link", { name: "新建游戏包" }).click();
+      12 |   await expect(page).toHaveURL(/\/packs\/new/);
+      13 |   await page.getByLabel("名称").fill(PACK);
+        at createPack (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/custom-pack-regression.spec.ts:10:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/custom-pack-regression.spec.ts:28:9
+
+    Error Context: test-results/custom-pack-regression-游戏包页新增分区后，自定义玩法的增改禁删仍然可用（T166）-mobile-chromium/error-context.md
+
+  5) [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:60:7 › desktop 1280x800 › 转瓶子 ready/result：座位零遮挡 + 无巨型元素 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=probe-spin-desktop
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=probe-spin-desktop", waiting until "load"
+
+
+      60 |   test("转瓶子 ready/result：座位零遮挡 + 无巨型元素", async ({ page }) => {
+      61 |     await seedSession(page, session(SPIN_ID, ["玩家1", "玩家2", "玩家3", "玩家4", "玩家5", "玩家6"], "spin-bottle"));
+    > 62 |     await page.goto(`/game?session=${SPIN_ID}`);
+         |                ^
+      63 |     await expect(page.locator(".spin-bottle")).toBeVisible();
+      64 |     await page.waitForTimeout(600);
+      65 |
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/desktop-layout.spec.ts:62:16
+
+    Error Context: test-results/desktop-layout-desktop-1280x800-转瓶子-ready-result：座位零遮挡-无巨型元素-mobile-chromium/error-context.md
+
+  6) [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:109:7 › desktop 1280x800 › 指人游戏 counting 态：无巨型按钮 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=probe-point-desktop
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=probe-point-desktop", waiting until "load"
+
+
+      109 |   test("指人游戏 counting 态：无巨型按钮", async ({ page }) => {
+      110 |     await seedSession(page, session(POINT_ID, ["玩家1", "玩家2", "玩家3"], "pointing-game", pointingDeck));
+    > 111 |     await page.goto(`/game?session=${POINT_ID}`);
+          |                ^
+      112 |     await expect(page.locator(".pointing-game")).toBeVisible();
+      113 |     await page.getByRole("button", { name: "准备好了" }).click();
+      114 |     await expect(page.locator(".pointing-game__count")).toBeVisible();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/desktop-layout.spec.ts:111:16
+
+    Error Context: test-results/desktop-layout-desktop-1280x800-指人游戏-counting-态：无巨型按钮-mobile-chromium/error-context.md
+
+  7) [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:38:7 › 冷启动直开 /settings/ai，文档一解析完就返回：守门已生效、不落 about:blank、并弹出确认框 
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+
+      26 |
+      27 | function entryDepth(page: Page) {
+    > 28 |   return page.evaluate((key: string) => (window.history.state as Record<string, unknown> | null)?.[key] ?? null, EXIT_GUARD_STATE_KEY);
+         |               ^
+      29 | }
+      30 |
+      31 | /** 停在「文档刚解析完」这一刻：守门若还靠 hydration，就来不及拦下这一按。 */
+        at entryDepth (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm-cold-start.spec.ts:28:15)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm-cold-start.spec.ts:49:29
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm-cold-start.spec.ts:49:5
+
+    Error Context: test-results/exit-confirm-cold-start-冷启-0e0c1-守门已生效、不落-about-blank、并弹出确认框-mobile-chromium/error-context.md
+
+  8) [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:72:5 › 冷启动直开 /setup，等 armed 后再返回：只有一条哨兵、只弹一个确认框 
+
+    Error: page.goBack: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - waiting for navigation until "load"
+
+
+      76 |   await expect.poll(() => entryDepth(page)).toBe(EXIT_GUARD_SENTINEL_DEPTH);
+      77 |
+    > 78 |   await page.goBack();
+         |              ^
+      79 |   const dialog = page.getByRole("dialog", { name: EXIT_TITLE });
+      80 |   await expect(dialog).toBeVisible();
+      81 |   await expect(page.getByRole("dialog")).toHaveCount(1);
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm-cold-start.spec.ts:78:14
+
+    Error Context: test-results/exit-confirm-cold-start-冷启-642bd-等-armed-后再返回：只有一条哨兵、只弹一个确认框-mobile-chromium/error-context.md
+
+  9) [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:90:5 › 冷启动首页连按两次返回：第一下弹框、第二下只关框，始终不退出 
+
+    Error: page.goBack: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - waiting for navigation until "load"
+
+
+       96 |   await expect(dialog).toBeVisible();
+       97 |
+    >  98 |   await page.goBack();
+          |              ^
+       99 |   await expect(dialog).toHaveCount(0);
+      100 |   await expectAtHomeRoot(page, baseURL);
+      101 |   await expect(page).not.toHaveURL(/^about:blank/);
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm-cold-start.spec.ts:98:14
+
+    Error Context: test-results/exit-confirm-cold-start-冷启动首页连按两次返回：第一下弹框、第二下只关框，始终不退出-mobile-chromium/error-context.md
+
+  10) [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:23:5 › 首页按浏览器返回：弹退出确认，点「继续玩」留在原地 ──────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('dialog', { name: '要退出 Party Night 吗？' })
+    Expected substring: "不小心点到返回了？点「继续玩」就留在这里。"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('dialog', { name: '要退出 Party Night 吗？' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '要退出 Party Night 吗？' })
+        - waiting for "http://127.0.0.1:3210/" navigation to finish...
+        - navigated to "http://127.0.0.1:3210/"
+
+
+      27 |   const dialog = page.getByRole("dialog", { name: EXIT_TITLE });
+      28 |   await expect(dialog).toBeVisible();
+    > 29 |   await expect(dialog).toContainText("不小心点到返回了？点「继续玩」就留在这里。");
+         |                        ^
+      30 |
+      31 |   await dialog.getByRole("button", { name: "继续玩" }).click();
+      32 |   await expect(dialog).toHaveCount(0);
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm.spec.ts:29:24
+
+    Error Context: test-results/exit-confirm-首页按浏览器返回：弹退出确认，点「继续玩」留在原地-mobile-chromium/error-context.md
+
+  11) [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:36:5 › 确认框里点「退出」：真的离开当前页（Web 口径＝导航离开本站） ───
+
+    Error: page.goBack: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - waiting for navigation until "load"
+
+
+      36 | test("确认框里点「退出」：真的离开当前页（Web 口径＝导航离开本站）", async ({ page }) => {
+      37 |   await gotoArmed(page);
+    > 38 |   await page.goBack();
+         |              ^
+      39 |
+      40 |   const dialog = page.getByRole("dialog", { name: EXIT_TITLE });
+      41 |   await expect(dialog).toBeVisible();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm.spec.ts:38:14
+
+    Error Context: test-results/exit-confirm-确认框里点「退出」：真的离开当前页（Web-口径＝导航离开本站）-mobile-chromium/error-context.md
+
+  12) [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:48:5 › 确认框里按 ESC＝取消，不退出 ───────────────────
+
+    Error: page.goBack: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - waiting for navigation until "load"
+
+
+      48 | test("确认框里按 ESC＝取消，不退出", async ({ page, baseURL }) => {
+      49 |   await gotoArmed(page);
+    > 50 |   await page.goBack();
+         |              ^
+      51 |   const dialog = page.getByRole("dialog", { name: EXIT_TITLE });
+      52 |   await expect(dialog).toBeVisible();
+      53 |
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm.spec.ts:50:14
+
+    Error Context: test-results/exit-confirm-确认框里按-ESC＝取消，不退出-mobile-chromium/error-context.md
+
+  13) [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:59:5 › 顶层连点返回：只关框不误退，第三次才重新弹框 ─────────────
+
+    Error: page.goBack: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - waiting for navigation until "load"
+
+
+      64 |
+      65 |   // 第二次返回＝关掉确认框（防连点误退）
+    > 66 |   await page.goBack();
+         |              ^
+      67 |   await expect(dialog).toHaveCount(0);
+      68 |   await expectAtHomeRoot(page, baseURL);
+      69 |
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/exit-confirm.spec.ts:66:14
+
+    Error Context: test-results/exit-confirm-顶层连点返回：只关框不误退，第三次才重新弹框-mobile-chromium/error-context.md
+
+  14) [mobile-chromium] › tests/e2e/mainline-recovery.spec.ts:47:5 › 混合旧缓存恢复：剔除 AI 与快照外卡、同步 currentRound、不白屏也不继续未知卡 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-mainline-mixed-cache
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-mainline-mixed-cache", waiting until "load"
+
+
+      53 |
+      54 |   await seedSession(page, session);
+    > 55 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      56 |
+      57 |   // 不白屏：正常出题卡（迁移后仍有 PN-* 与自定义卡可出）
+      58 |   await expect(page.locator(".game-card")).toBeVisible();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/mainline-recovery.spec.ts:55:14
+
+    Error Context: test-results/mainline-recovery-混合旧缓存恢复：-3bc6f-、同步-currentRound、不白屏也不继续未知卡-mobile-chromium/error-context.md
+
+  15) [mobile-chromium] › tests/e2e/party-tools.spec.ts:35:5 › 首页快捷工具分区：随机点名 + 随机分组两行，底部仍是原来的 4 个 Tab 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      29 | async function openHomeToolsWithSession(page: Page) {
+      30 |   await seedSession(page, toolsSession());
+    > 31 |   await page.goto("/");
+         |              ^
+      32 |   await expect(tools(page)).toBeVisible();
+      33 | }
+      34 |
+        at openHomeToolsWithSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/party-tools.spec.ts:31:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/party-tools.spec.ts:36:3
+
+    Error Context: test-results/party-tools-首页快捷工具分区：随机点名-随机分组两行，底部仍是原来的-4-个-Tab-mobile-chromium/error-context.md
+
+  16) [mobile-chromium] › tests/e2e/party-tools.spec.ts:44:5 › 随机点名：复用本局玩家名单，再抽一个不点同一人（T158 / FR-022） 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      29 | async function openHomeToolsWithSession(page: Page) {
+      30 |   await seedSession(page, toolsSession());
+    > 31 |   await page.goto("/");
+         |              ^
+      32 |   await expect(tools(page)).toBeVisible();
+      33 | }
+      34 |
+        at openHomeToolsWithSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/party-tools.spec.ts:31:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/party-tools.spec.ts:45:3
+
+    Error Context: test-results/party-tools-随机点名：复用本局玩家名单，再抽一个不点同一人（T158-FR-022）-mobile-chromium/error-context.md
+
+  17) [mobile-chromium] › tests/e2e/party-tools.spec.ts:60:5 › 随机分组：默认 2 组、可切两人一组，人数差最多 1（T158 / FR-023） 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      29 | async function openHomeToolsWithSession(page: Page) {
+      30 |   await seedSession(page, toolsSession());
+    > 31 |   await page.goto("/");
+         |              ^
+      32 |   await expect(tools(page)).toBeVisible();
+      33 | }
+      34 |
+        at openHomeToolsWithSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/party-tools.spec.ts:31:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/party-tools.spec.ts:61:3
+
+    Error Context: test-results/party-tools-随机分组：默认-2-组、可切两人一组，人数差最多-1（T158-FR-023）-mobile-chromium/error-context.md
+
+  18) [mobile-chromium] › tests/e2e/pointing-game.spec.ts:96:5 › 倒计时按 3 → 2 → 1 走完，并自动落到「指」 ────────
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-pointing-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-pointing-session", waiting until "load"
+
+
+      46 | async function openSession(page: Page) {
+      47 |   await seedSession(page, pointingSession());
+    > 48 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      49 |   await expect(card(page)).toBeVisible();
+      50 | }
+      51 |
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/pointing-game.spec.ts:48:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/pointing-game.spec.ts:97:3
+
+    Error Context: test-results/pointing-game-倒计时按-3-→-2-→-1-走完，并自动落到「指」-mobile-chromium/error-context.md
+
+  19) [mobile-chromium] › tests/e2e/punishment.spec.ts:40:5 › direct countdown, pause/resume/end/finish same card with feedback and mute 
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+
+      38 |     expect(await page.locator(".punishment-actions button").count()).toBe(3);
+      39 | } });
+    > 40 | test("direct countdown, pause/resume/end/finish same card with feedback and mute", async ({ page }) => { test.setTimeout(45000); await timed(page); await page.evaluate(() => { const w = window as unknown as {
+         |                                                                                                                                                                ^
+      41 |     vibrations: number;
+      42 |     tones: number;
+      43 | }; w.vibrations = 0; w.tones = 0; Object.defineProperty(navigator, "vibrate", { value: () => { w.vibrations++; return true; }, configurable: true }); const old = AudioContext.prototype.createOscillator; AudioContext.prototype.createOscillator = function () { w.tones++; return old.call(this); }; }); const id = await current(page); const started = Date.now(); await page.getByText("开始15秒", { exact: true }).click(); await expect(page.getByRole("timer")).toBeVisible(); expect(Date.now() - started).toBeLessThan(500); await expect(page.getByRole("timer")).toContainText("15"); await expect(page.getByText("再来一次", { exact: true })).toHaveCount(0); await expect(page.locator(".punishment-copy")).toBeVisible(); await page.getByText("暂停", { exact: true }).click(); const paused = await page.getByRole("timer").textContent(); await page.waitForTimeout(1100); expect(await page.getByRole("timer").textContent()).toBe(paused); await page.getByText("继续", { exact: true }).click(); await page.getByText("结束", { exact: true }).click(); expect(await current(page)).toBe(id); await expect(page.getByText("开始15秒", { exact: true })).toBeVisible(); await page.getByText("开始15秒", { exact: true }).click(); await expect(page.getByText("时间到！", { exact: true })).toBeVisible({ timeout: 17000 }); expect(await current(page)).toBe(id); expect(await page.evaluate(() => (window as unknown as {
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:40:160
+
+    Error Context: test-results/punishment-direct-countdow-6c5cc-card-with-feedback-and-mute-mobile-chromium/error-context.md
+
+  20) [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 360px ──
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/punishment/play
+    Call log:
+      - navigating to "http://127.0.0.1:3210/punishment/play", waiting until "load"
+
+
+      4 | const key = "party-night-punishment-session-v1";
+      5 | async function current(page: Page) { return page.locator(".punishment-card").getAttribute("data-card-id"); }
+    > 6 | async function timed(page: Page) { await page.goto("/punishment"); await page.evaluate(({ key, s }) => sessionStorage.setItem(key, JSON.stringify(s)), { key, s: { ...newSession(), selectedLevel: 2 as const, currentCardId: "sample-2-a" } }); await page.goto("/punishment/play"); await expect(page.getByText("开始15秒")).toBeVisible(); }
+        |                                                                                                                                                                                                                                                             ^
+      7 | async function settings(page: Page) { await page.getByRole("button", { name: "设置与盾牌" }).click(); await expect(page.getByRole("dialog")).toBeVisible(); }
+      8 | test("new entry, saved preferences, clearable new session, old entry preserved", async ({ page }) => { await page.goto("/"); await page.getByRole("link", { name: "大冒险", exact: true }).click(); await page.getByRole("button", { name: "English", exact: true }).click(); await page.getByRole("checkbox", { name: "亲吻", exact: true }).uncheck(); await page.getByRole("button", { name: "开始", exact: true }).click(); await expect(page).toHaveURL(/punishment\/play/); await expect(page.locator("[lang=en]")).toBeVisible(); await expect(page.locator(".punishment-zh")).toHaveCount(0); await page.goto("/punishment"); await expect(page.getByRole("button", { name: "English", exact: true })).toHaveAttribute("aria-pressed", "true"); await expect(page.getByRole("checkbox", { name: "亲吻", exact: true })).not.toBeChecked(); await page.goto("/"); await page.getByRole("link", { name: /真心话大冒险/ }).click(); await expect(page).toHaveURL(/setup\?pack=truth-dare/); });
+      9 | test("five exact-level pools, immediate next selection, progress, no adjacent repeat, speed", async ({ page }) => { await page.goto("/punishment/play"); for (const level of [2, 4, 2, 5, 3, 1]) {
+        at timed (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:6:253)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:55:128
+
+    Error Context: test-results/punishment-layout-and-actual-controls-at-360px-mobile-chromium/error-context.md
+
+  21) [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 390px ──
+
+    Error: locator.evaluateAll: Execution context was destroyed, most likely because of a navigation
+
+      53 | }).tones)).toBe(tones); });
+      54 | for (const width of [360, 390, 430, 1280])
+    > 55 |     test(`layout and actual controls at ${width}px`, async ({ page }) => { await page.setViewportSize({ width, height: 844 }); await timed(page); const buttons = await page.locator(".punishment-actions button").evaluateAll(nodes => nodes.map(n => { const r = n.getBoundingClientRect(); return { y: r.y, bottom: r.bottom }; })); expect(new Set(buttons.map(b => b.y)).size).toBe(1); expect(buttons.every(b => b.bottom <= 844)).toBe(true); const size = await page.locator(".punishment-en").evaluate(n => parseFloat(getComputedStyle(n).fontSize)); expect(size).toBeGreaterThanOrEqual(28); expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true); await page.screenshot({ path: `docs/qa/punishment/idle-${width}.png` }); await page.getByText("开始15秒", { exact: true }).click(); await page.screenshot({ path: `docs/qa/punishment/timer-${width}.png` }); await page.getByText("结束", { exact: true }).click(); });
+         |                                                                                                                                                                                                                    ^
+      56 | test("offline core operates without remote requests", async ({ page, context }) => { await timed(page); const requests: string[] = []; page.on("request", r => { if (r.url().includes("/api/"))
+      57 |     requests.push(r.url()); }); await context.setOffline(true); await page.getByLabel("选择 4", { exact: true }).click(); await page.getByText("换一个", { exact: true }).click(); let cardId = await current(page); expect(challenges.find(c => c.id === cardId)?.level).toBe(4); await page.getByLabel("切换语言", { exact: true }).click(); await page.getByText("English", { exact: true }).click(); await page.getByText("完成", { exact: true }).click(); await settings(page); await page.getByRole("checkbox", { name: "亲吻", exact: true }).uncheck(); await page.getByText("完成", { exact: true }).click(); for (let i = 0; i < 4; i++) {
+      58 |     await page.getByText("换一个", { exact: true }).click();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:55:212
+
+    Error Context: test-results/punishment-layout-and-actual-controls-at-390px-mobile-chromium/error-context.md
+
+  22) [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 430px ──
+
+    Error: locator.evaluateAll: Execution context was destroyed, most likely because of a navigation
+
+      53 | }).tones)).toBe(tones); });
+      54 | for (const width of [360, 390, 430, 1280])
+    > 55 |     test(`layout and actual controls at ${width}px`, async ({ page }) => { await page.setViewportSize({ width, height: 844 }); await timed(page); const buttons = await page.locator(".punishment-actions button").evaluateAll(nodes => nodes.map(n => { const r = n.getBoundingClientRect(); return { y: r.y, bottom: r.bottom }; })); expect(new Set(buttons.map(b => b.y)).size).toBe(1); expect(buttons.every(b => b.bottom <= 844)).toBe(true); const size = await page.locator(".punishment-en").evaluate(n => parseFloat(getComputedStyle(n).fontSize)); expect(size).toBeGreaterThanOrEqual(28); expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true); await page.screenshot({ path: `docs/qa/punishment/idle-${width}.png` }); await page.getByText("开始15秒", { exact: true }).click(); await page.screenshot({ path: `docs/qa/punishment/timer-${width}.png` }); await page.getByText("结束", { exact: true }).click(); });
+         |                                                                                                                                                                                                                    ^
+      56 | test("offline core operates without remote requests", async ({ page, context }) => { await timed(page); const requests: string[] = []; page.on("request", r => { if (r.url().includes("/api/"))
+      57 |     requests.push(r.url()); }); await context.setOffline(true); await page.getByLabel("选择 4", { exact: true }).click(); await page.getByText("换一个", { exact: true }).click(); let cardId = await current(page); expect(challenges.find(c => c.id === cardId)?.level).toBe(4); await page.getByLabel("切换语言", { exact: true }).click(); await page.getByText("English", { exact: true }).click(); await page.getByText("完成", { exact: true }).click(); await settings(page); await page.getByRole("checkbox", { name: "亲吻", exact: true }).uncheck(); await page.getByText("完成", { exact: true }).click(); for (let i = 0; i < 4; i++) {
+      58 |     await page.getByText("换一个", { exact: true }).click();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:55:212
+
+    Error Context: test-results/punishment-layout-and-actual-controls-at-430px-mobile-chromium/error-context.md
+
+  23) [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 1280px ─
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/punishment/play
+    Call log:
+      - navigating to "http://127.0.0.1:3210/punishment/play", waiting until "load"
+
+
+      4 | const key = "party-night-punishment-session-v1";
+      5 | async function current(page: Page) { return page.locator(".punishment-card").getAttribute("data-card-id"); }
+    > 6 | async function timed(page: Page) { await page.goto("/punishment"); await page.evaluate(({ key, s }) => sessionStorage.setItem(key, JSON.stringify(s)), { key, s: { ...newSession(), selectedLevel: 2 as const, currentCardId: "sample-2-a" } }); await page.goto("/punishment/play"); await expect(page.getByText("开始15秒")).toBeVisible(); }
+        |                                                                                                                                                                                                                                                             ^
+      7 | async function settings(page: Page) { await page.getByRole("button", { name: "设置与盾牌" }).click(); await expect(page.getByRole("dialog")).toBeVisible(); }
+      8 | test("new entry, saved preferences, clearable new session, old entry preserved", async ({ page }) => { await page.goto("/"); await page.getByRole("link", { name: "大冒险", exact: true }).click(); await page.getByRole("button", { name: "English", exact: true }).click(); await page.getByRole("checkbox", { name: "亲吻", exact: true }).uncheck(); await page.getByRole("button", { name: "开始", exact: true }).click(); await expect(page).toHaveURL(/punishment\/play/); await expect(page.locator("[lang=en]")).toBeVisible(); await expect(page.locator(".punishment-zh")).toHaveCount(0); await page.goto("/punishment"); await expect(page.getByRole("button", { name: "English", exact: true })).toHaveAttribute("aria-pressed", "true"); await expect(page.getByRole("checkbox", { name: "亲吻", exact: true })).not.toBeChecked(); await page.goto("/"); await page.getByRole("link", { name: /真心话大冒险/ }).click(); await expect(page).toHaveURL(/setup\?pack=truth-dare/); });
+      9 | test("five exact-level pools, immediate next selection, progress, no adjacent repeat, speed", async ({ page }) => { await page.goto("/punishment/play"); for (const level of [2, 4, 2, 5, 3, 1]) {
+        at timed (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:6:253)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:55:128
+
+    Error Context: test-results/punishment-layout-and-actual-controls-at-1280px-mobile-chromium/error-context.md
+
+  24) [mobile-chromium] › tests/e2e/pwa-schema-upgrade.spec.ts:65:5 › 新版本写的数据在旧 bundle 下只读不动，不被迁移也不被清除 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+       at helpers.ts:82
+
+      80 |  */
+      81 | export async function seedSession(page: Page, session: GameSession): Promise<void> {
+    > 82 |   await page.goto("/");
+         |              ^
+      83 |   await page.evaluate((record) => new Promise<void>((resolve, reject) => {
+      84 |     // 不删库：以与 App 相同的版本打开（当前 v2，见 lib/storage/db.ts），
+      85 |     // 缺 store 时走 onupgradeneeded 补齐；同步异常全部转为 reject，15s 无结果直接报错不悬挂。
+        at seedSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/helpers.ts:82:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/pwa-schema-upgrade.spec.ts:68:20
+
+    Error Context: test-results/pwa-schema-upgrade-新版本写的数据在旧-bundle-下只读不动，不被迁移也不被清除-mobile-chromium/error-context.md
+
+  25) [mobile-chromium] › tests/e2e/rules-library.spec.ts:44:5 › 搜不到规则时给空状态，且不调用 AI/网络（T183 / Spec §9） 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '没有找到规则' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '没有找到规则' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: '没有找到规则' })
+        - waiting for "http://127.0.0.1:3210/packs?tab=rules" navigation to finish...
+        - navigated to "http://127.0.0.1:3210/packs?tab=rules"
+
+
+      51 |   await page.getByRole("searchbox", { name: "搜索规则" }).fill("绝不存在的玩法xyz");
+      52 |
+    > 53 |   await expect(page.getByRole("heading", { name: "没有找到规则" })).toBeVisible();
+         |                                                               ^
+      54 |   await expect(page.getByRole("link", { name: /小姐牌/ })).toHaveCount(0);
+      55 |   expect(apiCalls).toEqual([]);
+      56 | });
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/rules-library.spec.ts:53:63
+
+    Error Context: test-results/rules-library-搜不到规则时给空状态，且不调用-AI-网络（T183-Spec-§9）-mobile-chromium/error-context.md
+
+  26) [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:58:5 › 刷新后仍停在没有可玩题卡的玩法上，不白屏也不自动切玩法 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-empty-deck-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-empty-deck-session", waiting until "load"
+
+
+      58 | test("刷新后仍停在没有可玩题卡的玩法上，不白屏也不自动切玩法", async ({ page }) => {
+      59 |   await seedSession(page, emptyDeckSession());
+    > 60 |   await page.goto("/game?session=e2e-empty-deck-session");
+         |              ^
+      61 |
+      62 |   // 牌堆真空（deckSnapshot=[]）经正常出卡链被判为 AWAITING_HOST_EXHAUSTION_DECISION（三层皆 0）；
+      63 |   // Host 洗牌实测也救不回 → 渲染「可玩的题都出完了」＋中性说明，只给「结束本局」一条明确出路：
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/session-current-pack-recovery.spec.ts:60:14
+
+    Error Context: test-results/session-current-pack-recovery-刷新后仍停在没有可玩题卡的玩法上，不白屏也不自动切玩法-mobile-chromium/error-context.md
+
+  27) [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:120:5 › 牌堆还有没用过的卡时，洗牌仍能救回题卡（不给空转，但也不误杀洗牌） 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-used-up-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-used-up-session", waiting until "load"
+
+
+      120 | test("牌堆还有没用过的卡时，洗牌仍能救回题卡（不给空转，但也不误杀洗牌）", async ({ page }) => {
+      121 |   await seedSession(page, usedUpDeckSession());
+    > 122 |   await page.goto("/game?session=e2e-used-up-session");
+          |              ^
+      123 |
+      124 |   await expect(page.locator("h1")).toHaveText("可玩的题都出完了");
+      125 |   await expect(page.getByRole("button", { name: "洗牌再玩" })).toBeVisible();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/session-current-pack-recovery.spec.ts:122:14
+
+    Error Context: test-results/session-current-pack-recov-70d9b-过的卡时，洗牌仍能救回题卡（不给空转，但也不误杀洗牌）-mobile-chromium/error-context.md
+
+  28) [mobile-chromium] › tests/e2e/settings-regression.spec.ts:13:5 › 外观深浅色可切换并跨页面与刷新保持 ───────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('html')
+    Expected: "light"
+    Received: "dark"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('html') with timeout 5000ms
+      - waiting for locator('html')
+        - locator resolved to <html lang="zh-CN" data-pn-exit-guard-armed="1">…</html>
+        - unexpected value "null"
+        13 × locator resolved to <html lang="zh-CN" data-theme="dark" data-pn-exit-guard-armed="1">…</html>
+           - unexpected value "dark"
+
+
+      20 |
+      21 |   await light.click();
+    > 22 |   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+         |                                      ^
+      23 |   await page.goto("/setup");
+      24 |   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
+      25 |   await page.reload();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/settings-regression.spec.ts:22:38
+
+    Error Context: test-results/settings-regression-外观深浅色可切换并跨页面与刷新保持-mobile-chromium/error-context.md
+
+  29) [mobile-chromium] › tests/e2e/settings-regression.spec.ts:64:5 › 清空 API Key 保留危险样式区分与二次确认 ────
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: /清空 API 密钥/ })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: /清空 API 密钥/ }) with timeout 5000ms
+      - waiting for getByRole('button', { name: /清空 API 密钥/ })
+        14 × locator resolved to <button disabled type="button" class="button button--danger ">…</button>
+           - unexpected value "disabled"
+
+
+      73 |   await page.getByRole("textbox", { name: "API Key", exact: true }).fill("sk-regression-never-log-123456");
+      74 |   await save.click();
+    > 75 |   await expect(clear).toBeEnabled();
+         |                       ^
+      76 |
+      77 |   // 危险样式：危险按钮与普通主按钮必须有可见区分（背景/边框/文字色至少一项不同）。
+      78 |   await expect(clear).toHaveClass(/button--danger/);
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/settings-regression.spec.ts:75:23
+
+    Error Context: test-results/settings-regression-清空-API-Key-保留危险样式区分与二次确认-mobile-chromium/error-context.md
+
+  30) [mobile-chromium] › tests/e2e/setup-regression.spec.ts:45:5 › 尺度 slider 保持 1–5 五档与现有档位文案 ─────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.intensity-label').locator('strong')
+    Expected: "1 · 安全破冰"
+    Received: "3 · 有点刺激"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.intensity-label').locator('strong') with timeout 5000ms
+      - waiting for locator('.intensity-label').locator('strong')
+        14 × locator resolved to <strong>…</strong>
+           - unexpected value "3 · 有点刺激"
+
+
+      59 |     await slider.fill(String(value));
+      60 |     await expect(slider).toHaveValue(String(value));
+    > 61 |     await expect(label.locator("strong")).toHaveText(`${value} · ${text}`);
+         |                                           ^
+      62 |   }
+      63 | });
+      64 |
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/setup-regression.spec.ts:61:43
+
+    Error Context: test-results/setup-regression-尺度-slider-保持-1–5-五档与现有档位文案-mobile-chromium/error-context.md
+
+  31) [mobile-chromium] › tests/e2e/sound.spec.ts:111:5 › 转瓶子音效链路：呼呼循环 / 减速 tick / 落定叮 / 链入音全都不报错 ──
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-sound-spin-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-sound-spin-session", waiting until "load"
+
+
+      113 |
+      114 |   await seedSession(page, spinSession());
+    > 115 |   await page.goto(`/game?session=${SPIN_SESSION_ID}`);
+          |              ^
+      116 |   await expect(page.locator(".spin-bottle")).toBeVisible();
+      117 |
+      118 |   await page.getByRole("button", { name: "开始旋转" }).click();
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/sound.spec.ts:115:14
+
+    Error Context: test-results/sound-转瓶子音效链路：呼呼循环-减速-tick-落定叮-链入音全都不报错-mobile-chromium/error-context.md
+
+  32) [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:128:5 › 转瓶子：连续两转不指同一人；刷新只恢复最终落点；再转一次仍可复现 ───
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-spin-bottle-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-spin-bottle-session", waiting until "load"
+
+
+      49 | async function openSession(page: Page, session: GameSession) {
+      50 |   await seedSession(page, session);
+    > 51 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      52 |   await expect(view(page)).toBeVisible();
+      53 | }
+      54 |
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:51:14)
+        at openSpinSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:56:3)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:129:3
+
+    Error Context: test-results/spin-bottle-转瓶子：连续两转不指同一人；刷新只恢复最终落点；再转一次仍可复现-mobile-chromium/error-context.md
+
+  33) [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:150:5 › 转瓶子：只从在场玩家中选人，大冒险同样链入 dare 卡 ───────
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+
+       at helpers.ts:83
+
+      81 | export async function seedSession(page: Page, session: GameSession): Promise<void> {
+      82 |   await page.goto("/");
+    > 83 |   await page.evaluate((record) => new Promise<void>((resolve, reject) => {
+         |              ^
+      84 |     // 不删库：以与 App 相同的版本打开（当前 v2，见 lib/storage/db.ts），
+      85 |     // 缺 store 时走 onupgradeneeded 补齐；同步异常全部转为 reject，15s 无结果直接报错不悬挂。
+      86 |     let settled = false;
+        at seedSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/helpers.ts:83:14)
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:50:3)
+        at openSpinSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:56:3)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:151:3
+
+    Error Context: test-results/spin-bottle-转瓶子：只从在场玩家中选人，大冒险同样链入-dare-卡-mobile-chromium/error-context.md
+
+  34) [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:167:5 › 转瓶子：空牌堆单开局点真心话也能出题（链自己补位，不再原地无响应） ──
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-spin-bottle-session
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-spin-bottle-session", waiting until "load"
+
+
+      49 | async function openSession(page: Page, session: GameSession) {
+      50 |   await seedSession(page, session);
+    > 51 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      52 |   await expect(view(page)).toBeVisible();
+      53 | }
+      54 |
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:51:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:168:3
+
+    Error Context: test-results/spin-bottle-转瓶子：空牌堆单开局点真心话也能出题（链自己补位，不再原地无响应）-mobile-chromium/error-context.md
+
+  35) [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:207:5 › 转瓶子：真心话出完 → L1 洗牌接着出（不断游），结果页提示会重复、两个去向都还能进 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+       at helpers.ts:82
+
+      80 |  */
+      81 | export async function seedSession(page: Page, session: GameSession): Promise<void> {
+    > 82 |   await page.goto("/");
+         |              ^
+      83 |   await page.evaluate((record) => new Promise<void>((resolve, reject) => {
+      84 |     // 不删库：以与 App 相同的版本打开（当前 v2，见 lib/storage/db.ts），
+      85 |     // 缺 store 时走 onupgradeneeded 补齐；同步异常全部转为 reject，15s 无结果直接报错不悬挂。
+        at seedSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/helpers.ts:82:14)
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:50:20)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:212:9
+
+    Error Context: test-results/spin-bottle-转瓶子：真心话出完-→-L1-洗牌接着出（不断游），结果页提示会重复、两个去向都还能进-mobile-chromium/error-context.md
+
+  36) [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:231:5 › 转瓶子：两类都出完 → L1 洗牌重来，两个去向都还能进（题目会重复，不静默） 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+       at helpers.ts:82
+
+      80 |  */
+      81 | export async function seedSession(page: Page, session: GameSession): Promise<void> {
+    > 82 |   await page.goto("/");
+         |              ^
+      83 |   await page.evaluate((record) => new Promise<void>((resolve, reject) => {
+      84 |     // 不删库：以与 App 相同的版本打开（当前 v2，见 lib/storage/db.ts），
+      85 |     // 缺 store 时走 onupgradeneeded 补齐；同步异常全部转为 reject，15s 无结果直接报错不悬挂。
+        at seedSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/helpers.ts:82:14)
+        at openSession (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:50:20)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/spin-bottle.spec.ts:238:9
+
+    Error Context: test-results/spin-bottle-转瓶子：两类都出完-→-L1-洗牌重来，两个去向都还能进（题目会重复，不静默）-mobile-chromium/error-context.md
+
+  37) [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:130:5 › 默契测试：判分落库后重新打开这一局（冷启动）仍恢复配对与分数 ───
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/game/
+    Received string:  "chrome-error://chromewebdata/"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        2 × locator resolved to <html lang="zh-CN" data-theme="dark" data-pn-exit-guard-armed="1">…</html>
+          - unexpected value "http://127.0.0.1:3210/generating?session=3bd62498-30b2-4b58-8542-567a2d3947f6"
+        12 × locator resolved to <html>…</html>
+           - unexpected value "chrome-error://chromewebdata/"
+
+
+       at helpers.ts:27
+
+      25 |   await expect(page).toHaveURL(/\/generating/);
+      26 |   await page.getByRole("button", { name: /使用本地题库开始/ }).click();
+    > 27 |   await expect(page).toHaveURL(/\/game/);
+         |                      ^
+      28 |   await expect(page.getByRole("button", { name: /切换玩法/ })).toBeVisible();
+      29 | }
+      30 |
+        at startPackGame (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/helpers.ts:27:22)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/v1-1-recovery.spec.ts:131:3
+
+    Error Context: test-results/v1-1-recovery-默契测试：判分落库后重新打开这一局（冷启动）仍恢复配对与分数-mobile-chromium/error-context.md
+
+  38) [mobile-chromium] › tests/e2e/v2-mutual-flow.spec.ts:94:5 › V2负向：legacy 局走满 20 轮、计数全冻结、不弹中途互选、不产生 MATCH 
+
+    Error: page.goto: net::ERR_ABORTED at http://127.0.0.1:3210/game?session=e2e-v2-mutual-flow-negative
+    Call log:
+      - navigating to "http://127.0.0.1:3210/game?session=e2e-v2-mutual-flow-negative", waiting until "load"
+
+
+      94 | test("V2负向：legacy 局走满 20 轮、计数全冻结、不弹中途互选、不产生 MATCH", async ({ page }) => {
+      95 |   await seedSession(page, legacySession());
+    > 96 |   await page.goto(`/game?session=${SESSION_ID}`);
+         |              ^
+      97 |
+      98 |   // 前置：本局真的是 legacy 轨（旧 seed-* 卡，全部不在冻结 manifest 的 Formal 集内）。
+      99 |   // 没有这条，下面的「计数恒 0」可能只是抽到了别的轨的卡。
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/v2-mutual-flow.spec.ts:96:14
+
+    Error Context: test-results/v2-mutual-flow-V2负向：legacy-局走满-20-轮、计数全冻结、不弹中途互选、不产生-MATCH-mobile-chromium/error-context.md
+
+  39) [mobile-chromium] › tests/e2e/visual.spec.ts:37:5 › 首页适配 360 / 390 / 430 宽度且无横向溢出（T162 / V1.4 R-050） 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      38 |   for (const width of [360, 390, 430]) {
+      39 |     await page.setViewportSize({ width, height: 844 });
+    > 40 |     await page.goto("/");
+         |                ^
+      41 |     await expect(page.getByRole("link", { name: /今晚开局/ })).toBeVisible();
+      42 |     await expect(page.getByRole("region", { name: "快捷工具" })).toBeVisible();
+      43 |     // 7 个玩法 + 随机玩一个全部直出，且没有因为多出的卡片把首页撑出横向滚动
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/visual.spec.ts:40:16
+
+    Error Context: test-results/visual-首页适配-360-390-430-宽度且无横向溢出（T162-V1-4-R-050）-mobile-chromium/error-context.md
+
+  40) [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:33:5 › 二选一：出 A/VS/B 题面，下一题记 completed、换一个记 swapped 并留拒绝指纹 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      13 |  */
+      14 | async function prepareWouldYouRather(page: Page, intensity = "5") {
+    > 15 |   await page.goto("/");
+         |              ^
+      16 |   await page.getByRole("link", { name: /二选一/ }).click();
+      17 |   await expect(page).toHaveURL(/\/setup\?pack=would-you-rather/);
+      18 |   await page.getByLabel("游戏强度").fill(intensity);
+        at prepareWouldYouRather (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/would-you-rather.spec.ts:15:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/would-you-rather.spec.ts:34:9
+
+    Error Context: test-results/would-you-rather-二选一：出-A-V-13ba4-mpleted、换一个记-swapped-并留拒绝指纹-mobile-chromium/error-context.md
+
+  41) [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:85:5 › 二选一：连续 10 轮不重题、全部 completed，Session 尺度与配置原样继承 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      13 |  */
+      14 | async function prepareWouldYouRather(page: Page, intensity = "5") {
+    > 15 |   await page.goto("/");
+         |              ^
+      16 |   await page.getByRole("link", { name: /二选一/ }).click();
+      17 |   await expect(page).toHaveURL(/\/setup\?pack=would-you-rather/);
+      18 |   await page.getByLabel("游戏强度").fill(intensity);
+        at prepareWouldYouRather (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/would-you-rather.spec.ts:15:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/would-you-rather.spec.ts:86:9
+
+    Error Context: test-results/would-you-rather-二选一：连续-10-3f072-completed，Session-尺度与配置原样继承-mobile-chromium/error-context.md
+
+  42) [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:117:5 › 二选一：AI 缺省关闭时如实提示「本次使用本地固定题库」，本地题库仍能开局/换题/下一题 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3210/
+    Call log:
+      - navigating to "http://127.0.0.1:3210/", waiting until "load"
+
+
+      13 |  */
+      14 | async function prepareWouldYouRather(page: Page, intensity = "5") {
+    > 15 |   await page.goto("/");
+         |              ^
+      16 |   await page.getByRole("link", { name: /二选一/ }).click();
+      17 |   await expect(page).toHaveURL(/\/setup\?pack=would-you-rather/);
+      18 |   await page.getByLabel("游戏强度").fill(intensity);
+        at prepareWouldYouRather (/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/would-you-rather.spec.ts:15:14)
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/would-you-rather.spec.ts:118:9
+
+    Error Context: test-results/would-you-rather-二选一：AI-缺省-47ff4-本次使用本地固定题库」，本地题库仍能开局-换题-下一题-mobile-chromium/error-context.md
+
+  42 failed
+    [mobile-chromium] › tests/e2e/ai-settings.spec.ts:14:5 › API Key 加密保存后刷新仍为已配置 ──────────────────
+    [mobile-chromium] › tests/e2e/compatibility.spec.ts:49:5 › 默契测试：配对 → 5 题（一样/不一样混判）→ 刷新 → 分数与配对恢复 → 继续 
+    [mobile-chromium] › tests/e2e/compatibility.spec.ts:113:5 › 默契测试：不一样不加分，只累加题数；换一个记 swapped ─────
+    [mobile-chromium] › tests/e2e/custom-pack-regression.spec.ts:22:5 › 游戏包页新增分区后，自定义玩法的增改禁删仍然可用（T166） 
+    [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:60:7 › desktop 1280x800 › 转瓶子 ready/result：座位零遮挡 + 无巨型元素 
+    [mobile-chromium] › tests/e2e/desktop-layout.spec.ts:109:7 › desktop 1280x800 › 指人游戏 counting 态：无巨型按钮 
+    [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:38:7 › 冷启动直开 /settings/ai，文档一解析完就返回：守门已生效、不落 about:blank、并弹出确认框 
+    [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:72:5 › 冷启动直开 /setup，等 armed 后再返回：只有一条哨兵、只弹一个确认框 
+    [mobile-chromium] › tests/e2e/exit-confirm-cold-start.spec.ts:90:5 › 冷启动首页连按两次返回：第一下弹框、第二下只关框，始终不退出 
+    [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:23:5 › 首页按浏览器返回：弹退出确认，点「继续玩」留在原地 ────────────
+    [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:36:5 › 确认框里点「退出」：真的离开当前页（Web 口径＝导航离开本站） ─────
+    [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:48:5 › 确认框里按 ESC＝取消，不退出 ─────────────────────
+    [mobile-chromium] › tests/e2e/exit-confirm.spec.ts:59:5 › 顶层连点返回：只关框不误退，第三次才重新弹框 ───────────────
+    [mobile-chromium] › tests/e2e/mainline-recovery.spec.ts:47:5 › 混合旧缓存恢复：剔除 AI 与快照外卡、同步 currentRound、不白屏也不继续未知卡 
+    [mobile-chromium] › tests/e2e/party-tools.spec.ts:35:5 › 首页快捷工具分区：随机点名 + 随机分组两行，底部仍是原来的 4 个 Tab 
+    [mobile-chromium] › tests/e2e/party-tools.spec.ts:44:5 › 随机点名：复用本局玩家名单，再抽一个不点同一人（T158 / FR-022） 
+    [mobile-chromium] › tests/e2e/party-tools.spec.ts:60:5 › 随机分组：默认 2 组、可切两人一组，人数差最多 1（T158 / FR-023） 
+    [mobile-chromium] › tests/e2e/pointing-game.spec.ts:96:5 › 倒计时按 3 → 2 → 1 走完，并自动落到「指」 ──────────
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:40:5 › direct countdown, pause/resume/end/finish same card with feedback and mute 
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 360px ────
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 390px ────
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 430px ────
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 1280px ───
+    [mobile-chromium] › tests/e2e/pwa-schema-upgrade.spec.ts:65:5 › 新版本写的数据在旧 bundle 下只读不动，不被迁移也不被清除 
+    [mobile-chromium] › tests/e2e/rules-library.spec.ts:44:5 › 搜不到规则时给空状态，且不调用 AI/网络（T183 / Spec §9） 
+    [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:58:5 › 刷新后仍停在没有可玩题卡的玩法上，不白屏也不自动切玩法 
+    [mobile-chromium] › tests/e2e/session-current-pack-recovery.spec.ts:120:5 › 牌堆还有没用过的卡时，洗牌仍能救回题卡（不给空转，但也不误杀洗牌） 
+    [mobile-chromium] › tests/e2e/settings-regression.spec.ts:13:5 › 外观深浅色可切换并跨页面与刷新保持 ─────────────
+    [mobile-chromium] › tests/e2e/settings-regression.spec.ts:64:5 › 清空 API Key 保留危险样式区分与二次确认 ──────
+    [mobile-chromium] › tests/e2e/setup-regression.spec.ts:45:5 › 尺度 slider 保持 1–5 五档与现有档位文案 ───────
+    [mobile-chromium] › tests/e2e/sound.spec.ts:111:5 › 转瓶子音效链路：呼呼循环 / 减速 tick / 落定叮 / 链入音全都不报错 ────
+    [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:128:5 › 转瓶子：连续两转不指同一人；刷新只恢复最终落点；再转一次仍可复现 ─────
+    [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:150:5 › 转瓶子：只从在场玩家中选人，大冒险同样链入 dare 卡 ─────────
+    [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:167:5 › 转瓶子：空牌堆单开局点真心话也能出题（链自己补位，不再原地无响应） ────
+    [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:207:5 › 转瓶子：真心话出完 → L1 洗牌接着出（不断游），结果页提示会重复、两个去向都还能进 
+    [mobile-chromium] › tests/e2e/spin-bottle.spec.ts:231:5 › 转瓶子：两类都出完 → L1 洗牌重来，两个去向都还能进（题目会重复，不静默） 
+    [mobile-chromium] › tests/e2e/v1-1-recovery.spec.ts:130:5 › 默契测试：判分落库后重新打开这一局（冷启动）仍恢复配对与分数 ─────
+    [mobile-chromium] › tests/e2e/v2-mutual-flow.spec.ts:94:5 › V2负向：legacy 局走满 20 轮、计数全冻结、不弹中途互选、不产生 MATCH 
+    [mobile-chromium] › tests/e2e/visual.spec.ts:37:5 › 首页适配 360 / 390 / 430 宽度且无横向溢出（T162 / V1.4 R-050） 
+    [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:33:5 › 二选一：出 A/VS/B 题面，下一题记 completed、换一个记 swapped 并留拒绝指纹 
+    [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:85:5 › 二选一：连续 10 轮不重题、全部 completed，Session 尺度与配置原样继承 
+    [mobile-chromium] › tests/e2e/would-you-rather.spec.ts:117:5 › 二选一：AI 缺省关闭时如实提示「本次使用本地固定题库」，本地题库仍能开局/换题/下一题 
+  6 skipped
+  74 passed (1.1m)
+[ELIFECYCLE] Command failed with exit code 1.

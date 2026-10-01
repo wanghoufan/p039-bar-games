@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 45,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "base",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "icebreaker",
+      "label": "破冰"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "破冰"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：熟人局；氛围：破冰；最高强度：1。\n可用玩法：compatibility-test。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 17877,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "compat-ice-01",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果今晚只能选一种零食分享给全场，你会选什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-02",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果朋友临时约你今晚出门，你会立刻答应吗？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-03",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "下面哪种天气最适合宅家聚会？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-04",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你最近一次笑到停不下来，是因为什么？不用透露隐私。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-05",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你是否愿意尝试没吃过的奇怪口味零食？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-06",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果给今晚的聚会配一首主题曲，你会选哪种风格？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-07",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "用三个词形容你现在的心情，并解释其中一个词。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-08",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时选：以下哪种超能力最实用？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-09",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你会在看电影前先看影评吗？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-ice-10",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果明天放假一天，你会怎么安排？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

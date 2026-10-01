@@ -1,0 +1,19 @@
+[0m
+> build · muse-spark-1.3-contributor-free
+[0m
+正在读取题库做独立标注。
+[0m→ [0mRead docs/qa/content-audit/_stable/_batches/batch-04.jsonl
+{"cardId":"PN-DARE-049","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"高","relationshipProgression":"高"}
+{"cardId":"PN-DARE-050","infoGain":"高","semanticType":"自我披露","topic":"亲密/性观念","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-001","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-002","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-004","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-005","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-006","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-007","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-008","infoGain":"中","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-009","infoGain":"中","semanticType":"自我披露","topic":"择偶偏好/吸引力","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-010","infoGain":"中","semanticType":"自我披露","topic":"择偶偏好/吸引力","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-011","infoGain":"中","semanticType":"自我披露","topic":"择偶偏好/吸引力","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-012","infoGain":"中","semanticType":"自我披露","topic":"择偶偏好/吸引力","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-013","infoGain":"中","semanticType":"自我披露","topic":"生活方式","socialEnergy":"中","relationshipProgression":"中"}

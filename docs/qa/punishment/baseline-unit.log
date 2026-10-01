@@ -1,0 +1,174 @@
+$ vitest run
+
+ RUN  v3.2.7 /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏
+
+ ✓ tests/unit/v2-mutual-check.test.ts (50 tests) 18ms
+ ✓ tests/unit/v2-b10-event-reduce.test.ts (21 tests) 42ms
+ ✓ tests/integration/v2-mid-mutual-abandoned.test.ts (15 tests) 62ms
+ ✓ tests/unit/golden-12.test.ts (24 tests) 40ms
+ ✓ tests/unit/pack1-replaces.test.ts (35 tests) 151ms
+ ✓ tests/unit/pack1-supplements.test.ts (39 tests) 162ms
+ ✓ tests/unit/v2-single-anchor.test.ts (20 tests) 125ms
+ ✓ tests/unit/fixed-content-manifest.test.ts (25 tests) 218ms
+ ✓ tests/unit/v2-session.test.ts (16 tests) 15ms
+ ✓ tests/unit/v2-reducer.test.ts (30 tests) 25ms
+ ✓ tests/unit/bar-fit.test.ts (44 tests) 198ms
+ ✓ tests/integration/v2-production-chain-recognition-mutual.test.ts (4 tests) 67ms
+ ✓ tests/unit/pack1-rewrites.test.ts (24 tests) 142ms
+ ✓ tests/unit/formal-truth-bootstrap-pack.test.ts (23 tests) 102ms
+ ✓ tests/unit/bar-fit-review-input.test.ts (30 tests) 471ms
+ ✓ tests/unit/direct-provider.test.ts (33 tests) 620ms
+ ✓ tests/unit/v2-card-metadata.test.ts (28 tests) 94ms
+ ✓ tests/unit/formal-truth-heat-labels.test.ts (9 tests) 206ms
+ ✓ tests/unit/spin-bottle-chain.test.ts (24 tests) 225ms
+ ✓ tests/unit/v2-b8-game-mainline.test.ts (15 tests) 93ms
+ ✓ tests/unit/v2-privacy-regression.test.ts (9 tests) 97ms
+ ✓ tests/integration/v2-formal-truth-production-chain.test.ts (5 tests) 241ms
+ ✓ tests/unit/formal-truth-pipeline.test.ts (6 tests) 50ms
+ ✓ tests/unit/formal-truth-production-chain-note.test.ts (7 tests) 5ms
+ ✓ tests/unit/ai-key-persistence.test.ts (13 tests) 147ms
+ ✓ tests/unit/v2-router-fair-exposure.test.ts (19 tests) 5690ms
+   ✓ P1#2①｜truth-dare 包内 dare / truth 曝光不再由 cardId 字典序垄断 > 60 局 × 20 轮后两种 gameType 曝光收入同一量级（±18%）  2188ms
+   ✓ P1#2⑥｜跨 session 曝光公平性（sessionId 盐生效后） > 64 局 × 20 轮：truth / dare 曝光收入同一量级（±18%，沿用既有阈值）  3242ms
+ ✓ tests/unit/mutual-check-sheet.test.tsx (15 tests) 1500ms
+   ✓ MutualCheckSheet（RG-01 每人只点一次） > 单候选：标题点名对方昵称（不再有裸「TA」），点「愿意」一次即提交  477ms
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 truth > truth：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] truth(truth-dare) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 dare > dare：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] dare(truth-dare) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 most_likely > most_likely：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] most_likely(most-likely) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 never_have_i > never_have_i：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] never_have_i(never-have) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 either_or > either_or：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] either_or(would-you-rather) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 pointing > pointing：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] pointing(pointing-game) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+stdout | tests/integration/v2-legacy-seven-modes-20-rounds.test.ts > B3-15｜七种单玩法 legacy 局 × 20 轮（QA-COV-01 覆盖） > 玩法 chemistry > chemistry：legacy 局走满 20 轮、不耗尽、不推进关系、不弹 Mutual、整局同轨
+[B3-15] chemistry(compatibility-test) 完成轮数=20/20 牌堆=50 出卡=20 effective=0 heat=H1 evidence=0 midDue=false finalDue=false matches=0 awaiting=false lastLevel=BUCKET_OK
+
+ ✓ tests/integration/v2-legacy-seven-modes-20-rounds.test.ts (8 tests) 84ms
+ ✓ tests/unit/v2-routing.test.ts (16 tests) 17ms
+ ✓ tests/unit/retired-truth-archive.test.ts (13 tests) 151ms
+ ✓ tests/unit/content-track-gate.test.ts (16 tests) 55ms
+ ✓ tests/unit/v2-b7-content-switch.test.ts (7 tests) 103ms
+ ✓ tests/unit/session-migration.test.ts (22 tests) 40ms
+ ✓ tests/unit/v2-b7-pair-gender.test.ts (15 tests) 54ms
+ ✓ tests/unit/formal-truth-mc-report-derivation.test.ts (15 tests) 7ms
+ ✓ tests/unit/v2-b7-router-single.test.ts (10 tests) 40ms
+ ✓ tests/unit/custom-track-separation.test.ts (12 tests) 142ms
+ ✓ tests/unit/retired-pack1-archive.test.ts (11 tests) 22ms
+ ✓ tests/unit/session-switch.test.ts (18 tests) 223ms
+ ✓ tests/unit/bar-fit-canonical-input.test.ts (9 tests) 59ms
+ ✓ tests/unit/pack-switcher.test.ts (18 tests) 80ms
+ ✓ tests/unit/pack1-semantic-axes.test.ts (12 tests) 12ms
+ ✓ tests/unit/retired-pack1-r7-archive.test.ts (11 tests) 15ms
+ ✓ tests/unit/fixed-mainline-admission.test.ts (12 tests) 83ms
+ ✓ tests/unit/ai-mainline-isolation.test.ts (14 tests) 78ms
+ ✓ tests/unit/built-in-seeds.test.ts (16 tests) 37ms
+ ✓ tests/unit/v2-router-card-source-consistency.test.ts (4 tests) 12ms
+ ✓ tests/unit/direct-provider-native.test.ts (14 tests) 67ms
+ ✓ tests/unit/home-entries.test.ts (13 tests) 10ms
+ ✓ tests/unit/pack1-admission-prep.test.ts (5 tests) 21ms
+ ✓ tests/unit/party-tools.test.ts (17 tests) 32ms
+ ✓ tests/unit/v2-relationship-state.test.ts (16 tests) 18ms
+ ✓ tests/unit/generation-source.test.ts (15 tests) 104ms
+ ✓ tests/unit/pack-minplayers-floor.test.ts (8 tests) 67ms
+ ✓ tests/unit/generate-session-filter.test.ts (4 tests) 25ms
+ ✓ tests/unit/setup-mixed-empty-pool.test.ts (6 tests) 35ms
+ ✓ tests/unit/service-worker-cache.test.ts (4 tests) 64ms
+ ✓ tests/unit/single-scale-source.test.ts (7 tests) 82ms
+ ✓ tests/unit/packs-page.test.tsx (9 tests) 1452ms
+   ✓ 我的游戏包 · 规则分区（T179/T181） > 切到规则：玩法分区整体退场，改为可搜索的规则列表  396ms
+ ✓ tests/unit/exit-guard-init.test.ts (7 tests) 3ms
+ ✓ tests/unit/exit-guard.test.ts (18 tests) 6ms
+ ✓ tests/unit/audio-engine.test.ts (7 tests) 35ms
+ ✓ tests/unit/compatibility-state.test.ts (15 tests) 47ms
+ ✓ tests/unit/safe-content-rendering.test.tsx (9 tests) 373ms
+ ✓ tests/unit/pack-enablement.test.ts (9 tests) 73ms
+ ✓ tests/unit/rule-catalog.test.ts (16 tests) 50ms
+ ✓ tests/unit/random-launcher.test.ts (10 tests) 58ms
+ ✓ tests/unit/card-id-space.test.ts (6 tests) 10ms
+ ✓ tests/unit/pack-refill.test.ts (7 tests) 25ms
+ ✓ tests/unit/pack-view-host.test.tsx (7 tests) 370ms
+ ✓ tests/unit/compatibility-view.test.tsx (9 tests) 463ms
+ ✓ tests/unit/pointing-game-view.test.tsx (8 tests) 394ms
+ ✓ tests/unit/spin-bottle-view.test.tsx (7 tests) 446ms
+ ✓ tests/unit/pack1-physical-contact-scope.test.ts (5 tests) 22ms
+ ✓ tests/unit/session-autosave.test.ts (4 tests) 65ms
+ ✓ tests/unit/party-tools-view.test.tsx (10 tests) 905ms
+   ✓ RandomPlayerTool（T158 / US7） > 点名后显示结果，按钮变成“再抽一个”且连续两次不点同一人  316ms
+ ✓ tests/unit/session-maintenance.test.ts (6 tests) 70ms
+ ✓ tests/unit/credential-leak-audit.test.ts (8 tests) 29ms
+ ✓ tests/unit/v2-d8-strict-a.test.ts (8 tests) 17ms
+ ✓ tests/unit/rejection-dedupe.test.ts (9 tests) 32ms
+ ✓ tests/unit/session-quarantine.test.ts (5 tests) 70ms
+ ✓ tests/unit/v2-exhaustion.test.ts (9 tests) 2ms
+ ✓ tests/unit/audio-presets.test.ts (9 tests) 13ms
+ ✓ tests/unit/spin-bottle-selector.test.ts (6 tests) 106ms
+ ✓ tests/unit/v2-guarantee.test.ts (9 tests) 2ms
+ ✓ tests/unit/v2-content-adapter.test.ts (9 tests) 8ms
+ ✓ tests/unit/prompt-builder.test.ts (7 tests) 5ms
+ ✓ tests/unit/safety-redteam.test.ts (18 tests) 17ms
+ ✓ tests/unit/v2-d8-awaiting-view.test.tsx (3 tests) 331ms
+ ✓ tests/unit/ai-card-schema.test.ts (12 tests) 52ms
+ ✓ tests/unit/would-you-rather-view.test.tsx (9 tests) 310ms
+ ✓ tests/unit/ai-deck-regression.test.ts (7 tests) 30ms
+ ✓ tests/integration/v1-1-generation-fallback.test.ts (6 tests) 44ms
+ ✓ tests/unit/v2-private.test.ts (8 tests) 6ms
+ ✓ tests/unit/game-pack-registry.test.ts (8 tests) 6ms
+ ✓ tests/unit/ai-credential-boundary.test.ts (5 tests) 21ms
+ ✓ tests/unit/card-selector.test.ts (6 tests) 3ms
+ ✓ tests/unit/v2-ssot-gate.test.ts (4 tests) 20ms
+ ✓ tests/unit/rule-detail.test.tsx (7 tests) 434ms
+ ✓ tests/unit/e2e-port-config.test.ts (5 tests) 1054ms
+   ✓ playwright.config 端口唯一真源（PLAYWRIGHT_BASE_URL） > 默认（未设置 PLAYWRIGHT_BASE_URL）保持 3000，use.baseURL 与 webServer.url 同源  1031ms
+ ✓ tests/unit/deck-round-robin.test.ts (4 tests) 69ms
+ ✓ tests/unit/disabled-pack-selection.test.ts (4 tests) 109ms
+ ✓ tests/unit/ai-mainline-generating-page.test.tsx (1 test) 261ms
+ ✓ tests/unit/would-you-rather-pack.test.ts (7 tests) 9ms
+ ✓ tests/unit/provider-errors.test.ts (13 tests) 2ms
+ ✓ tests/unit/rule-list.test.tsx (5 tests) 599ms
+ ✓ tests/unit/pointing-game-pack.test.ts (7 tests) 11ms
+ ✓ tests/unit/v2-r3-constants-gate.test.ts (4 tests) 7ms
+ ✓ tests/unit/pack-switcher-sheet.test.tsx (7 tests) 450ms
+ ✓ tests/unit/rule-filter.test.ts (9 tests) 4ms
+ ✓ tests/unit/mixed-session.test.ts (2 tests) 27ms
+ ✓ tests/unit/ai-provider-repository.test.ts (2 tests) 19ms
+ ✓ tests/unit/compatibility-test-pack.test.ts (5 tests) 6ms
+ ✓ tests/unit/domain-schema.test.ts (4 tests) 5ms
+ ✓ tests/unit/sound-mute-preference.test.ts (4 tests) 68ms
+ ✓ tests/unit/spin-bottle-pack.test.ts (4 tests) 7ms
+ ✓ tests/unit/pack-segmented-tabs.test.tsx (4 tests) 224ms
+ ✓ tests/unit/session-engine.test.ts (5 tests) 35ms
+ ✓ tests/unit/session-repository.test.ts (2 tests) 16ms
+ ✓ tests/integration/generation-fallback.test.ts (3 tests) 71ms
+ ✓ tests/unit/session-summary.test.ts (1 test) 47ms
+ ✓ tests/unit/ai-provider-presets.test.ts (4 tests) 12ms
+ ✓ tests/unit/intensity-update.test.ts (1 test) 31ms
+ ✓ tests/unit/custom-pack-snapshot.test.ts (1 test) 30ms
+ ✓ tests/unit/game-pack-repository.test.ts (1 test) 12ms
+ ✓ tests/unit/ai-pipeline.test.ts (3 tests) 6ms
+ ✓ tests/unit/ai-secret-crypto.test.ts (2 tests) 7ms
+ ✓ tests/unit/ssrf-guard.test.ts (20 tests) 18ms
+ ✓ tests/unit/session-config.test.ts (1 test) 3ms
+ ✓ tests/unit/create-id.test.ts (2 tests) 2ms
+ ✓ tests/unit/player-selector.test.ts (3 tests) 3ms
+ ✓ tests/unit/quick-start.test.ts (2 tests) 3ms
+ ✓ tests/unit/redaction.test.ts (3 tests) 2ms
+ ✓ tests/unit/server-request.test.ts (2 tests) 2ms
+ ✓ tests/unit/clear-secret-state.test.ts (3 tests) 1ms
+ ✓ tests/unit/boundary-matrix.test.ts (10 tests) 2ms
+ ✓ tests/unit/setup.test.ts (1 test) 2ms
+
+ Test Files  137 passed (137)
+      Tests  1453 passed (1453)
+   Start at  18:52:40
+   Duration  21.32s (transform 3.60s, setup 13.67s, collect 32.29s, tests 22.30s, environment 85.20s, prepare 13.65s)
+

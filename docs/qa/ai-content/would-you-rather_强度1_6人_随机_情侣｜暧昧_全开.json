@@ -1,0 +1,235 @@
+{
+  "cell": {
+    "index": 29,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 1,
+    "players": 6,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "couple",
+      "label": "情侣 / 暧昧"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "情侣 / 暧昧",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：情侣 / 暧昧；氛围：随机；最高强度：1。\n可用玩法：would-you-rather。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 28444,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-001",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在家一起做一顿简单的饭，然后慢慢吃完 VS 去安静的公园散步，边走边聊到日落",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-002",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "出发前把路线和想做的事都安排好 VS 只定一个大方向，到了再随心决定",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-003",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "直接告诉对方“我今天很想你” VS 默默记住对方提过的小事并找机会回应",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-004",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "睡到自然醒，然后悠闲地吃一顿早午餐 VS 早起去人少的地方走一走，呼吸新鲜空气",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-005",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在家看一部老电影，边看边讨论 VS 一起拼一幅拼图，放点轻音乐",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-006",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天分享一件今天发生的小事 VS 每周留一次时间认真聊近况和感受",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-007",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "收到一封手写信，写满平常不好意思说的话 VS 收到一段专门录下的语音，讲一件开心的小事",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-008",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "看轻松喜剧，笑完就睡 VS 看温和悬疑，一起猜结局",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-009",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "养一盆需要一起照顾的绿植 VS 学做一道新菜，每周试一次",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-010",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "有分歧时先各自冷静一会儿再聊 VS 有分歧时马上把感受说清楚，不让情绪过夜",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

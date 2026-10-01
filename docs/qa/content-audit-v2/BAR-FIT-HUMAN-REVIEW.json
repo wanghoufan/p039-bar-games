@@ -1,0 +1,1007 @@
+{
+  "source": "product-reviewer(Research Reviewer, AI 角色) 第一包 24 张逐卡审查；第二轮复判 4 张重写卡（PN-TRUTH-204/207/220/223，builder 已按上一轮建议重写 text 与 informationGoal，其余质量字段未变）；第三轮复判 223（builder 采 208 式量化重写 text 与 informationGoal，intensity/heatMax/topic/informationGain/relationshipProgression/intimacyClass/informationGoalType/boundaryTags/consentMode 未变） ｜ 【R3 追加】Bootstrap 7 张（PN-TRUTH-225~231）经两轮独立审查（第一轮 PASS 4 / BORDERLINE 3 → 按建议重写 3 张 → 复判 PASS 7，报告见 temp/REVIEW-BOOTSTRAP-7.md 与 temp/REVIEW-BOOTSTRAP-7-RECHECK.md），结论已如实回填（PN-TRUTH-226/228/230 由 BORDERLINE 升 PASS，PN-TRUTH-225/227/229/231 维持第一轮 PASS）；既有 24 条结论来自第一包三轮审查，原文一字未改（历史归档指纹锁定见 FROZEN_REVIEW_HISTORY_SHA256）。【A3 状态推进】Human 冻结的酒吧新内容基线逐卡审计判 26 张（7 REWRITE + 19 REPLACE）旧版本不合格 ⇒ 活跃 entry 置 UNREVIEWED / reviewed=false 退出 Formal，KEEP 5（203/205/209/227/229）保持 PASS；原独立审查结论逐字归档在 history，未删除。 ｜ 【A9 admission】第一包重构批 52 张（PN-TRUTH-232~PN-TRUTH-283）经内容主审 Round-1/2/3 三轮 ＋ A4b~A8 四轮返工后逐卡判 PASS，已由本脚本按既有准入路径写入活跃 entry（reviewed=true / humanBarFit=PASS）；审计来源 temp/BAR-AUDIT-PACK1-31.md，分批构成见逐卡 note。KEEP 5 与 26 张退役历史结论一字未改。 ｜ 【A9-R6 内容裁决】3 张（PN-TRUTH-236 / PN-TRUTH-263 / PN-TRUTH-277）经内容裁决退役（277 内容弱；263 与 278 重复去重；236 与 235 同轴）⇒ 已移出运行时卡源、逐字归档在 lib/v2-content/archive/retired-pack1-r6-2026-09-29.ts；其活跃 entry 置 UNREVIEWED / reviewed=false 退出 Formal，原 A9 admission 结论逐字保留在 history 归档（未删除）。KEEP 5 与 A9 其余 48 张仍 Formal。 ｜ 【A9-R7 内容返工】Product Reviewer 对裁决后终池（Formal 54）独立重审（docs/review/RESEARCH_REVIEW-PACK1-FINAL-54.md，PASS 48 / BORDERLINE 6 / FAIL 0）⇒ 6 张 BORDERLINE 返工：203 / 241 / 252 / 262 / 266 按审查处方**改写题面**（题面同源的 category / followUpHook / expectedAnswerShape / topic / intimacyClass / informationGoal 同步更新，241 保留 H4 定档、改注入亲密元素；203 属 KEEP 包）；1 张（PN-TRUTH-249）经裁决**退役**（与 250 同轴，二选一留 250）⇒ 移出运行时卡源、逐字归档在 lib/v2-content/archive/retired-pack1-r7-2026-09-29.ts；其活跃 entry 置 UNREVIEWED /reviewed=false 退出 Formal，原 A9 admission 结论逐字保留在 history 归档（未删除）。其余 48 张仍 Formal。 ｜ 【A9-R8 记录层修正】Product Reviewer 复核（docs/review/RESEARCH_REVIEW-PACK1-FINAL-53.md 专项 3）指出两处记录层事实漂移：① PN-TRUTH-203 活跃 note 仍描述已退役旧题面 ⇒ 已随改写后新题面（封闭二选一）重写，history 旧结论逐字保留未删；② packMachineVerdictSummary 分组 note 手写「全部 PASS」与同组实测 SUSPECT=1 矛盾 ⇒ 三个分组 note 改由逐卡机器档位实测派生（lib/v2-content/bar-fit-review-input.ts#deriveMachineVerdictNoteFragment），并新增 group-note-consistent 防回归自校验（非 0 非 PASS 不许写「全部 PASS」；非 PASS 必须点名卡号）。203 的 humanBarFit=PASS 维持不变（BR-DEVICE-STEP「刷手机」命中经独立复核判为误报：答案选项内容、不要求设备动作），内容零改动。",
+  "reviewedAt": "2026-09-28T15:10:00Z（R3 追加：第一包 24 条结论时间不变；Bootstrap 7 张经两轮独立审查（第一轮 PASS 4 / BORDERLINE 3 → 按建议重写 3 张 → 复判 PASS 7），结论已如实回填）（A9 追加：第一包重构批 52 张 PN-TRUTH-232~PN-TRUTH-283 经内容主审 Round-1/2/3 ＋ A4b~A8 返工后逐卡 PASS，结论已回填；KEEP 5 与 26 张退役结论时间不变）（A9-R6 追加：内容裁决退役 3 张，活跃 entry 退出 Formal、history 归档未删）（A9-R7 追加：内容返工 5 张改写 ＋ 退役 1 张，活跃 entry 退出 Formal、history 归档未删）（A9-R8 追加：记录层 note 修正——203 活跃 note 随新题面重写、分组汇总 note 派生化；审查结论与定档时间均不变）",
+  "reviewerKind": "ai-role",
+  "note": "本文件已由 product-reviewer（Research Reviewer，AI 角色，非真人物品审）逐卡填写 24 条人审结论。判定依据三条：①安全红线（无露骨性描写／无强迫惩罚灌酒／无隐私脱衣非自愿；I1 不触亲密性内容，I4/I5 才触及态度与边界，且全部 consentMode=skip-anytime 可无惩罚跳过）；②BAR-FIT（题面是否像人话、有无尴尬/冒犯/说教/审讯腔/AI 腔）；③信息增量（答完能否真的更了解对方本人，是否会落到现场评价/猜测/空话/套话）。机器档位（machineVerdict）只作分流参考，未作为任何一条结论的依据。第二轮复判（2026-09-28T12:48:29Z）：对 builder 按建议重写的 4 张（204/207/220/223）重走同一套三条标准，204/207/220 由 BORDERLINE 升 PASS，223 维持 BORDERLINE（题面腔调已改好但信息增量仍偏薄，属封闭式二选一只换一个标签）。第三轮复判（2026-09-28T15:10:00Z）：仅对 223 重走同一套三条标准——builder 采 208 式量化重写为「亲密里，对方主动和自己留空间各占几成？说说你为什么这么分。」，二轮指出的封闭式单标签与易滑成辩论两个缺陷均已消除，信息增量达标，223 由 BORDERLINE 升 PASS（其余 23 条结论一字未动）。结论：PASS 24 / BORDERLINE 0 / FAIL 0；按 satisfiesFormalAdmission 四条件，预期 formal fixed = 24 张。审查报告：docs/review/RESEARCH_REVIEW-FORMAL-TRUTH-PACK-1.md。 【R3 追加】R2 Truth H1 Bootstrap 候选 7 张（PN-TRUTH-225~231）已完成两轮独立审查：第一轮 4 PASS / 3 BORDERLINE / 0 FAIL（temp/REVIEW-BOOTSTRAP-7.md），builder 按 reviewer 建议重写 226/228/230 题面（并调整 228 的 heatMax 4→3、230 的 3→2），复判 7 张全部 PASS（temp/REVIEW-BOOTSTRAP-7-RECHECK.md），结论已回填 humanBarFit=PASS / reviewed=true。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，**不是**本次定档的依据 —— 7 张的 PASS 来自独立 reviewer 的逐卡复判报告，机器预筛只是恰好同档。任何汇总数字都由逐卡机器档位行计算（见 lib/v2-content/bar-fit-review-input.ts#tallyVerdicts），不得手填。⚠️ 上文（人写的原文）里的「预期 formal fixed = 24 张」是**第一包单独**口径；连同 Bootstrap 7 张后本文件曾有 31 条 PASS 结论，formal 张数由构建器按本审查输入动态计算（见 manifest 产物 tracks.formalFixed.counts.total），不得按 24 或 31 手写。⛔ UNREVIEWED 不等于 PASS，也不等于 FAIL —— 缺口由独立 reviewer 补写，不得把机器档位当正式定档。 【A3 状态推进】Human 冻结的酒吧新内容基线逐卡审计（KEEP 5 / REWRITE 7 / REPLACE 19）判 26 张旧版本不合格 ⇒ 其活跃 entry 置 humanBarFit=UNREVIEWED / reviewed=false 退出 Formal（原独立审查结论逐字归档在 history，未删除）；KEEP 5（PN-TRUTH-203/205/209/227/229）保持 humanBarFit=PASS / reviewed=true。退出只改活跃状态，不改历史结论，也不改准入四条件与任何阈值。 【A9 admission】第一包重构批 52 张（PN-TRUTH-232~PN-TRUTH-283）经内容主审 Round-1/2/3 三轮 ＋ A4b~A8 四轮返工后逐卡判 PASS，已按既有准入路径回填活跃 entry（reviewed=true / humanBarFit=PASS）；审计来源 temp/BAR-AUDIT-PACK1-31.md，分批构成与 ID 清单载于逐卡 note。【A9-R7 内容返工】终池重审（docs/review/RESEARCH_REVIEW-PACK1-FINAL-54.md）判 6 张 BORDERLINE ⇒ 5 张改写题面（203/241/252/262/266）＋ 1 张退役（249，与 250 同轴）；改写卡活跃 entry 仍 reviewed=true / humanBarFit=PASS（内容已换、准入结论不变），退役卡活跃 entry 退出 Formal；原结论逐字保留在 history 归档。【A9-R8 记录层修正】203 活跃 note 随改写后新题面重写（history 旧结论逐字保留未删）；packMachineVerdictSummary 三个分组 note 改由逐卡机器档位实测派生（deriveMachineVerdictNoteFragment）并新增 group-note-consistent 防回归自校验；humanBarFit 结论零改动。",
+  "entries": {
+    "PN-TRUTH-201": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-202": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-203": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "题面已按内容返工审查处方由开放回忆题改为封闭二选一：「睡前的最后半小时，你是刷手机，还是直接躺平？」（原开放回忆题「下班或放学到睡前，你一个人最固定的一段安排是什么？」已退役；针对旧题面的原审查结论逐字保留在本文件 history 归档，未删除）。改写后 3 秒可答、封闭二选一，答案仍是可核对的睡前习惯偏好，信息增量实；I1 不涉亲密话题，H1 定档维持。机器预筛 SUSPECT（BR-DEVICE-STEP，字面命中「刷手机」）经独立复核判为误报——「刷手机」是答案选项内容、口头作答、不要求任何设备动作，未命中该规则立意；humanBarFit=PASS 维持（docs/review/RESEARCH_REVIEW-PACK1-FINAL-53.md 专项 3）。"
+    },
+    "PN-TRUTH-204": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-205": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "限定为「熟人相处久了才会发现」的小习惯，指向真实且不易套话的细节，现场自然不尴尬。"
+    },
+    "PN-TRUTH-206": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-207": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-208": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-209": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「说一个具体行为，别只给形容词」直接封死形容词式套话，能落到看得见的具体行为；无尴尬。"
+    },
+    "PN-TRUTH-210": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-211": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-212": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-213": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-214": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-215": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-216": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-217": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-218": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-219": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-220": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-221": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-222": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-223": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-224": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-225": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-226": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-227": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第一轮即 PASS（复判确认：本轮未改题面）；topic 由 live_chemistry 改为「兴趣爱好」经 reviewer 复判确认为恰当（依据 temp/REVIEW-BOOTSTRAP-7-RECHECK.md §2）。改 topic 的三条依据（复判原文）：依据 1（硬）live_chemistry 不在真源 V2_TOPICS 内，原值本身就是非法枚举，改为「兴趣爱好」是把非法值拉回合法集；依据 2（语义）题面问的是他真心喜欢并想分享的东西，落在「兴趣爱好」比任何其它枚举都贴；依据 3（次主题置空）原 secondaryTopics 与新主 topic 重复，secondaryTopics 真源为可选字段，置 [] 合规。topic 标注属可修的元数据缺陷、不构成内容质量缺陷，故不影响 PASS：题面 10 秒可懂、「说服我们」是明确的表演型钩子、信息增量具体（他的口味与投入偏好，非标签）。heatMin=1 成立、heatMax=3 诚实。"
+    },
+    "PN-TRUTH-228": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-229": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第一轮即 PASS（复判确认：本轮未改题面）。依据 temp/REVIEW-BOOTSTRAP-7.md 第一轮逐卡理由：10 秒可懂，主问＋「说说你试过的那次」是天然的一句话钩子，能引出具体轶事；信息增量落到「明确排斥的内容类别＋试过后为什么不感冒的实例」（具体经历＋拒绝理由，非空洞标签）；「提不起兴趣」指向内容类别而非对人，不构成评判他人。安全：非亲密类，intimacyClass=none、consentMode=skip-anytime。Heat：口味排斥是安全破冰话题，H1 自然；到 H3 仍是有趣细节、H4 属过浅 ⇒ heatMin=1／heatMax=3 成立。"
+    },
+    "PN-TRUTH-230": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-231": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "Human 新酒吧基线判定不合格，已退出 Formal，待重构后重新审查（原独立审查结论见本文件 history 归档，未删除）。"
+    },
+    "PN-TRUTH-232": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-233": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-234": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-235": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-236": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "A9-R6 内容裁决判定不合格（内容弱 或 与既有卡重复），已退出本轮 Formal 并移出运行时卡源；原独立审查结论见本文件 history 归档，未删除。"
+    },
+    "PN-TRUTH-237": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-238": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-239": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-240": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-241": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-242": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-243": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-244": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-245": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-246": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-247": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-248": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-249": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "A9-R7 内容返工判定不合格（与既有卡同轴，二选一保留另一张），已退出本轮 Formal 并移出运行时卡源；原独立审查结论见本文件 history 归档，未删除。"
+    },
+    "PN-TRUTH-250": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-251": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-252": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-253": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-254": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-255": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-256": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-257": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-258": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-259": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-260": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-261": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-262": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-263": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "A9-R6 内容裁决判定不合格（内容弱 或 与既有卡重复），已退出本轮 Formal 并移出运行时卡源；原独立审查结论见本文件 history 归档，未删除。"
+    },
+    "PN-TRUTH-264": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-265": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-266": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-267": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-268": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-269": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-270": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-271": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-272": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-273": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-274": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-275": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-276": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-277": {
+      "reviewed": false,
+      "humanBarFit": "UNREVIEWED",
+      "note": "A9-R6 内容裁决判定不合格（内容弱 或 与既有卡重复），已退出本轮 Formal 并移出运行时卡源；原独立审查结论见本文件 history 归档，未删除。"
+    },
+    "PN-TRUTH-278": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-279": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-280": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-281": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-282": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    "PN-TRUTH-283": {
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    }
+  },
+  "history": [
+    {
+      "cardId": "PN-TRUTH-201",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "题面口语自然、只要求一件具体小事，不评价不引导，能问出真实生活细节；机器档位 PASS 与本判定独立得出。"
+    },
+    {
+      "cardId": "PN-TRUTH-202",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "长期爱好＋它当下还在给自己什么，指向可复述的具体生活内容，不是性格形容词；无尴尬与说教。"
+    },
+    {
+      "cardId": "PN-TRUTH-203",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "问每日固定的一段安排，答案必然是可核对的作息细节，信息增量实；I1 不涉亲密话题，分档正确。"
+    },
+    {
+      "cardId": "PN-TRUTH-204",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第二轮复判（由 BORDERLINE 升 PASS）：重写后题面为一次具体事件的决策复盘，「你照做了还是没照」是二值具体行为、「当时怎么决定的」要的是决策过程与理由，答案必然落到可复述的一次真实决定（如老板让加班／朋友让帮忙／家里让相亲），不再有原版「哪些是自己选的、哪些是顺着别人期待」的二元价值审视框架，也不易再答成「我要做自己」式套话。安全红线无破（I2 不触亲密性内容），口语自然不尴尬、无线上教。informationGain=high 与 deepen 与新题面自洽。残留小瑕疵（不影响入库）：「抱有期待」略书面、句尾用句号而非问号。"
+    },
+    {
+      "cardId": "PN-TRUTH-205",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "限定为「熟人相处久了才会发现」的小习惯，指向真实且不易套话的细节，现场自然不尴尬。"
+    },
+    {
+      "cardId": "PN-TRUTH-206",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「说一个最近发生的事」把抽象状态落成具体事件，答案可复述；虽有心理分析味但不构成说教或冒犯。"
+    },
+    {
+      "cardId": "PN-TRUTH-207",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第二轮复判（由 BORDERLINE 升 PASS）：重写后删掉了心理咨询腔的「安全感」抽象词与冗余半句，改为一个可观察的触发场景＋具体行为（追问／反复看手机／先去忙自己的事／先睡），答案天然是行为描述而非「怕被冷落」式情绪套话，informationGain=high 站得住。口语度与尴尬度明显改善，无说教无线上教。I2 档位现在合适（比原题轻）。残留小瑕疵（不影响入库）：隐含假设对方有伴侣，单身/丧偶/不愿谈前任者会答不出，虽有 skip-anytime 兜底但现场仍可能扫兴；本卡可考虑后续把「伴侣」放宽为「重要的人」。"
+    },
+    {
+      "cardId": "PN-TRUTH-208",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「各占几成＋为什么这么分」用可量化口吻逼出真实取舍与理由，不是空泛恋爱观口号；有轻微辩论感但仍在可玩范围。"
+    },
+    {
+      "cardId": "PN-TRUTH-209",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「说一个具体行为，别只给形容词」直接封死形容词式套话，能落到看得见的具体行为；无尴尬。"
+    },
+    {
+      "cardId": "PN-TRUTH-210",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "冲突处理方式＋对对方的具体期待，两问都指向可复述的行为模式；主题与「相处规则」一致，无审讯感。"
+    },
+    {
+      "cardId": "PN-TRUTH-211",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "问的是本人硬边界而非评判他人，说清一条即可；安全、无冒犯，信息增量实。"
+    },
+    {
+      "cardId": "PN-TRUTH-212",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「说一件真发生过的、别用看情况带过」明确排除猜测与套话，能问出真实吃醋触发点；无强迫、可跳过。"
+    },
+    {
+      "cardId": "PN-TRUTH-213",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「到哪一步／你的分界」要的是可执行边界而非态度，指向具体规则；异性朋友边界属 Plan 明列缺失维度，安全且有价值。"
+    },
+    {
+      "cardId": "PN-TRUTH-214",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "先问有无关系很好的异性朋友、再问会聊到什么，能问出真实交往边界；「深度」略抽象但答得出来，不构成套话卡。"
+    },
+    {
+      "cardId": "PN-TRUTH-215",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "假设情境压出真实取舍（会照做／会拒绝／会吵），能听到具体做法；「说实话」略带轻微压力但未构成强迫，未触碰红线。"
+    },
+    {
+      "cardId": "PN-TRUTH-216",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "问的是他自己总结出的那条结论，答案具体且不可套话；已标 ex-partner 雷区标签，符合 Plan §4 前任题要求。"
+    },
+    {
+      "cardId": "PN-TRUTH-217",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「说说那种时刻的样子」要画面而非态度，指向真实情绪触发场景；I4 与前任主题匹配，未越出可谈边界。"
+    },
+    {
+      "cardId": "PN-TRUTH-218",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "问的是他愿意直接终止关系的那条硬线，答案具体、不评判他人；I2 承担此类话题在酒吧可行，无尴尬。"
+    },
+    {
+      "cardId": "PN-TRUTH-219",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "自我敏感点＋明确不许被拿来开玩笑的边界，属真实可复述的本人信息；不涉他人隐私，无冒犯。"
+    },
+    {
+      "cardId": "PN-TRUTH-220",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第二轮复判（由 BORDERLINE 升 PASS）：重写后答案长度由「从早到晚说」压到「哪三段」，解决了原判的核心缺陷——酒吧现场不再要求长答案、不易冷场也不会漂成理想生活作文。「最想保住」是取舍口径而非罗列理想，答出的三段即他真实的生活优先级排序，可复述、难套话。量化口吻（要三段）与已判 PASS 的 208「各占几成」同一手法，风格一致。安全红线无破，无尴尬无线上教。"
+    },
+    {
+      "cardId": "PN-TRUTH-221",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「已经为它做过的一步」把目标拉回可核对的行动，能问出是否真在动；自然口语，无说教。"
+    },
+    {
+      "cardId": "PN-TRUTH-222",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "I5／intimacyClass=attitude，问的是要求对方先征得同意的边界，安全且正是 Plan 缺失的亲密边界维度；consentMode=skip-anytime 可无惩罚跳过，符合分档要求。"
+    },
+    {
+      "cardId": "PN-TRUTH-223",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第三轮复判（升 PASS）。当前题面为「亲密里，对方主动和自己留空间各占几成？说说你为什么这么分。」①安全红线：只让对方陈述自己在亲密节奏上的偏好与理由，不点名要求露骨细节、不引导具体行为描述，intensity=I4、heatMax=4、intimacyClass=attitude、consentMode=skip-anytime、boundaryTags=[] 未变，越分档风险与二轮同档无恶化，PASS。②BAR-FIT：「各占几成」＋「为什么这么分」把二轮的封闭式二选一改成开放量化题，无尴尬、无说教、无 AI 腔；同时因量化本身要求给出配比，两项不再是互斥对立，现场不会滑成「谁对谁错」的辩论。③信息增量：现场可听到具体配比＋归因，例如「三七开，因为对方主动我才确定他想要我」或「五五开，看当时状态」——答案之间存在可区分的行为倾向与心理动因，听完多知道的是对方的相处节奏与边界逻辑，而不再只是一个标签；这正是二轮指出缺失的那一层。本卡 informationGain 由作者标为 medium（低于 208 的 high），与题面实际要求的「配比＋理由」相称，informationGoal 已同步为「听到他在亲密里给『对方主动』和『自己留空间』各分几成，以及他为什么这么分」，与题面一致，不存在目标与题面脱节。机器档位 PASS 与本判定独立得出。"
+    },
+    {
+      "cardId": "PN-TRUTH-224",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "「你会怎么开口谈？说一句」要的是实际会说出的话，指向真实沟通习惯与边界表达；I5 但只触及态度与节奏分歧，不越红线，可无惩罚跳过。"
+    },
+    {
+      "cardId": "PN-TRUTH-225",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第一轮即 PASS（复判确认：本轮未改题面）。依据 temp/REVIEW-BOOTSTRAP-7.md 第一轮逐卡理由：主问＋「让你上头的第一个瞬间」两拍都能一句话答，第二拍是具体钩子不是长篇作文；信息增量落点是具体事件而非标签，「非猜测、非『看情况』」；安全：非亲密类，intimacyClass=none、consentMode=skip-anytime，无露骨/无强迫惩罚灌酒/无隐私非自愿。Heat：「最近才开始」是时效新鲜题，刚认识就有素材 ⇒ heatMin=1 成立；到 H4 仍是轻兴趣题、不构成深层话题 ⇒ heatMax=3 诚实。"
+    },
+    {
+      "cardId": "PN-TRUTH-226",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第二轮复判：由 BORDERLINE 升 PASS（依据 temp/REVIEW-BOOTSTRAP-7-RECHECK.md §1）。原 BORDERLINE 主因「题面本身是纯三选一标签题，没有『为什么/说说』钩子」已消除——选项后直接跟「为什么？」，三选一＋一句理由 10 秒内可答；次因「informationGoal 超题面」已修，目标＝「知道他真实的周末节奏更像哪一种，以及他为什么偏这一种」，复判确认「两问（选哪类 / 为什么偏这类）都在题面上，无超题面信息」。信息增量 medium 成立（三选项是可被推翻的具体行为选项＋成因，不是价值观口号）。安全：日常作息题，intimacyClass=none、consentMode=skip-anytime。heatMax 维持 2（复判：到 H4 属过浅）。残留瑕疵不挡 PASS（复判原文）：三选项中「临时决定」偏软，实战可能被答成「看情况」，但带「为什么」仍有增量。"
+    },
+    {
+      "cardId": "PN-TRUTH-227",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第一轮即 PASS（复判确认：本轮未改题面）；topic 由 live_chemistry 改为「兴趣爱好」经 reviewer 复判确认为恰当（依据 temp/REVIEW-BOOTSTRAP-7-RECHECK.md §2）。改 topic 的三条依据（复判原文）：依据 1（硬）live_chemistry 不在真源 V2_TOPICS 内，原值本身就是非法枚举，改为「兴趣爱好」是把非法值拉回合法集；依据 2（语义）题面问的是他真心喜欢并想分享的东西，落在「兴趣爱好」比任何其它枚举都贴；依据 3（次主题置空）原 secondaryTopics 与新主 topic 重复，secondaryTopics 真源为可选字段，置 [] 合规。topic 标注属可修的元数据缺陷、不构成内容质量缺陷，故不影响 PASS：题面 10 秒可懂、「说服我们」是明确的表演型钩子、信息增量具体（他的口味与投入偏好，非标签）。heatMin=1 成立、heatMax=3 诚实。"
+    },
+    {
+      "cardId": "PN-TRUTH-228",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第二轮复判：由 BORDERLINE 升 PASS（依据 temp/REVIEW-BOOTSTRAP-7-RECHECK.md §1）。题面补「你认吗？」后与 informationGoal「听他讲出自己在朋友圈里被默认的那个角色，以及他认不认这个说法」两问对齐，复判确认不再超题面；heatMax 已按建议 4→3 落地（复判原文：H4 才该给的深度，这张停在 H3；「张罗/捧场/失踪」自带笑点与自嘲，撑到 H4 会开始挖人际关系评价，H3 是正确上限）；heatMin=1 维持。信息增量 medium 成立——「被默认的角色＋本人认不认」是有具体内容的行为观察，不是「你是什么性格」。安全：问的是自我认知、不是让他评价别人，无前任/吃醋/边界审判色彩。"
+    },
+    {
+      "cardId": "PN-TRUTH-229",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第一轮即 PASS（复判确认：本轮未改题面）。依据 temp/REVIEW-BOOTSTRAP-7.md 第一轮逐卡理由：10 秒可懂，主问＋「说说你试过的那次」是天然的一句话钩子，能引出具体轶事；信息增量落到「明确排斥的内容类别＋试过后为什么不感冒的实例」（具体经历＋拒绝理由，非空洞标签）；「提不起兴趣」指向内容类别而非对人，不构成评判他人。安全：非亲密类，intimacyClass=none、consentMode=skip-anytime。Heat：口味排斥是安全破冰话题，H1 自然；到 H3 仍是有趣细节、H4 属过浅 ⇒ heatMin=1／heatMax=3 成立。"
+    },
+    {
+      "cardId": "PN-TRUTH-230",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第二轮复判：由 BORDERLINE 升 PASS（依据 temp/REVIEW-BOOTSTRAP-7-RECHECK.md §1）。原 BORDERLINE 主因「现场框架偏边界元问题」已消除——新题面从现场框架改为「一条具体规矩＋说说它怎么来的」，复判原文：落点从「你怎么定义相处边界」变成「你有一个具体做法，且有故事来源」，仍是浅关系话题但不再像边界问卷；heatMax 已按建议 3→2 落地（题面自带「刚认识的人」锚点，深度被钉死在浅关系）；informationGoal 与题面两问（有没有规矩 / 怎么来的）一致，无超题面。信息增量 medium 成立，且是本包唯一 informationGoalType=relationship_rule 的卡，维度上不与其他 6 张重复。安全：问的是本人的一条规矩，不是越界问题，非亲密类、可跳过。复判如实点出的残留观察（不挡 PASS、不作为卡点）：这是全包最容易答空的一张（对方可能答「没什么规矩」），但题面已用「说说它怎么来的」兜底、答不出可 skip-card 跳过，Bar 场中不会卡场。"
+    },
+    {
+      "cardId": "PN-TRUTH-231",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "第一轮即 PASS（复判确认：本轮未改题面）。依据 temp/REVIEW-BOOTSTRAP-7.md 第一轮逐卡理由：「什么时候＋那段时间在做什么」两拍都能一句话答且第二拍强制具体（规避了抽象化），温和、不尴尬、不说教、非 AI 腔、不要求作文；信息增量原文记「存在轻微抽象化风险（如答『深夜独处时』偏虚），但『通常在做什么』这一追问问的是可复述的日常仪式，实测可落具体」。heatMin=1 自然；heatMax=4 是本包唯一被判诚实的 4——「什么时候最像你自己」是会随关系加深而自然加深的自陈题（从「我在干嘛」到「那段时间我在想什么」），不属机械拉 4，故维持。安全：非亲密类，intimacyClass=none、consentMode=skip-anytime。"
+    },
+    {
+      "cardId": "PN-TRUTH-232",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-233",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-234",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-235",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-236",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-237",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-238",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-239",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-240",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-241",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-242",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-243",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-244",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-245",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-246",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-247",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-248",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-249",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-250",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-251",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-252",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-253",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-254",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-255",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-256",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-257",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-258",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-259",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-260",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-261",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-262",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-263",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-264",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-265",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-266",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-267",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-268",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-269",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-270",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-271",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-272",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-273",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-274",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-275",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-276",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-277",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-278",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-279",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-280",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-281",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-282",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    },
+    {
+      "cardId": "PN-TRUTH-283",
+      "reviewed": true,
+      "humanBarFit": "PASS",
+      "note": "A9 admission（内容主审结论，逐卡 PASS）：主审轮次 —— Round-1（temp/PACK1-NEW26-REVIEW-1.md：244 FAIL / 249·250 BORDERLINE）→ Round-2（temp/PACK1-ROUND2-REVIEW.md：CONDITIONAL PASS 13/52）→ Round-3（temp/PACK1-ROUND3-REVIEW.md：PASS 15 / BORDERLINE 8 / FAIL 0，23 张可进 Formal 候选）；A4b~A8 四轮 builder 返工（A4b/A4c 承接与修复、A5 方向回退、A6 归类改判与重复消解、A7 逐卡整改、A8 8 张 BORDERLINE 收尾 ＋ 语义级同轴判据）后全部收敛。审计来源 temp/BAR-AUDIT-PACK1-31.md（Human 冻结酒吧新内容基线逐卡审计：KEEP 5 / REWRITE 7 / REPLACE 19；A6 归类改判后批次口径 REWRITE 5 ＋ REPLACE 21，含旧 202/225 由 REWRITE 改判 REPLACE）。现役分批构成（现役 48 张；A9 admission 时 52 张，A9-R6 内容裁决退役 3 张 = PN-TRUTH-236 PN-TRUTH-263 PN-TRUTH-277；A9-R7 内容返工退役 1 张 = PN-TRUTH-249）：Golden 12 样板卡 11 张（PN-TRUTH-232 PN-TRUTH-233 PN-TRUTH-234 PN-TRUTH-235 PN-TRUTH-237 PN-TRUTH-238 PN-TRUTH-239 PN-TRUTH-240 PN-TRUTH-241 PN-TRUTH-242 PN-TRUTH-243）；REWRITE 7 重写批（旧 201/202/225/226/228/230/231 方向） 6 张（PN-TRUTH-244 PN-TRUTH-245 PN-TRUTH-246 PN-TRUTH-247 PN-TRUTH-248 PN-TRUTH-250）；REPLACE 19 新 ID 批（旧 204/206~224 方向） 18 张（PN-TRUTH-251 PN-TRUTH-252 PN-TRUTH-253 PN-TRUTH-254 PN-TRUTH-255 PN-TRUTH-256 PN-TRUTH-257 PN-TRUTH-258 PN-TRUTH-259 PN-TRUTH-260 PN-TRUTH-261 PN-TRUTH-262 PN-TRUTH-264 PN-TRUTH-265 PN-TRUTH-266 PN-TRUTH-267 PN-TRUTH-268 PN-TRUTH-269）；补卡 14（H1/H2/H3 库存补位） 13 张（PN-TRUTH-270 PN-TRUTH-271 PN-TRUTH-272 PN-TRUTH-273 PN-TRUTH-274 PN-TRUTH-275 PN-TRUTH-276 PN-TRUTH-278 PN-TRUTH-279 PN-TRUTH-280 PN-TRUTH-281 PN-TRUTH-282 PN-TRUTH-283）。reviewerKind=ai-role 如实标注审查者身份（AI 角色，非真人）；机器档位（machineVerdict）只作分流参考，不是本次定档依据。"
+    }
+  ],
+  "retirement": {
+    "retiredAt": "2026-09-29",
+    "cardIds": [
+      "PN-TRUTH-201",
+      "PN-TRUTH-202",
+      "PN-TRUTH-204",
+      "PN-TRUTH-206",
+      "PN-TRUTH-207",
+      "PN-TRUTH-208",
+      "PN-TRUTH-210",
+      "PN-TRUTH-211",
+      "PN-TRUTH-212",
+      "PN-TRUTH-213",
+      "PN-TRUTH-214",
+      "PN-TRUTH-215",
+      "PN-TRUTH-216",
+      "PN-TRUTH-217",
+      "PN-TRUTH-218",
+      "PN-TRUTH-219",
+      "PN-TRUTH-220",
+      "PN-TRUTH-221",
+      "PN-TRUTH-222",
+      "PN-TRUTH-223",
+      "PN-TRUTH-224",
+      "PN-TRUTH-225",
+      "PN-TRUTH-226",
+      "PN-TRUTH-228",
+      "PN-TRUTH-230",
+      "PN-TRUTH-231",
+      "PN-TRUTH-236",
+      "PN-TRUTH-249",
+      "PN-TRUTH-263",
+      "PN-TRUTH-277"
+    ],
+    "reason": "A3：Human 冻结的酒吧新内容基线逐卡审计（KEEP 5 / REWRITE 7 / REPLACE 19）判定 26 张旧版本不合格（方向不适合酒吧主线或题面需重写）⇒ 退出 Formal，待在后续批次重构或新开 ID 后重新审查。A9-R6（2026-09-29 内容裁决）：3 张（PN-TRUTH-236 / PN-TRUTH-263 / PN-TRUTH-277）判定不合格（277 内容弱；263 与 278 重复去重；236 与 235 同轴）⇒ 移出运行时卡源并退出 Formal，逐字归档在 lib/v2-content/archive/retired-pack1-r6-2026-09-29.ts。A9-R7（2026-09-29 内容返工）：1 张（PN-TRUTH-249）判定与既有卡同轴（249 与 250 二选一，留 250）⇒ 退役并移出运行时卡源、退出 Formal，逐字归档在 lib/v2-content/archive/retired-pack1-r7-2026-09-29.ts。KEEP 5 与 A9 其余 48 张保持 Formal。"
+  },
+  "packMachineVerdictSummary": {
+    "scope": "TRUTH 内容包（第一包 3 张 PN-TRUTH-201~224 + Bootstrap 2 张 PN-TRUTH-225~231 + A9 现役重构批 48 张 PN-TRUTH-232~283 内未退役者 = 53 张）",
+    "total": 53,
+    "PASS": 52,
+    "SUSPECT": 1,
+    "HARD_FAIL_PATTERN": 0,
+    "source": "docs/qa/content-audit-v2/BAR-FIT-AUDIT.json#sets.frozenFixed414.rows 逐卡 machineVerdict 实读（canonical 口径：正文 + instruction）",
+    "note": "父级数字 = 各子组逐项之和（不单独手填）。机器档位仅作分流参考，未作为任何一条 humanBarFit 的依据。",
+    "groups": {
+      "truthFirstPack": {
+        "scope": "TRUTH 第一包 3 张（PN-TRUTH-201~224；已由 reviewer 三轮审查定档）",
+        "total": 3,
+        "PASS": 2,
+        "SUSPECT": 1,
+        "HARD_FAIL_PATTERN": 0,
+        "source": "docs/qa/content-audit-v2/BAR-FIT-AUDIT.json#sets.frozenFixed414.rows 逐卡 machineVerdict 实读（canonical 口径：正文 + instruction）",
+        "note": "机器档位 PASS 2/3，非 PASS 1 张（PN-TRUTH-203=SUSPECT，逐卡实读）；机器档位仅作分流参考，与 humanBarFit 独立得出。非 PASS 命中须经人工复核：本轮命中（BR-DEVICE-STEP「刷手机」字面命中）经独立复核判为误报——答案选项内容、不要求设备动作（docs/review/RESEARCH_REVIEW-PACK1-FINAL-53.md 专项 3），故 humanBarFit 仍 PASS；机器事实与人工结论两层分记、互不掩盖。"
+      },
+      "truthBootstrap": {
+        "scope": "Truth H1 Bootstrap 2 张（PN-TRUTH-225~231；已由 reviewer 两轮独立审查定档）",
+        "total": 2,
+        "PASS": 2,
+        "SUSPECT": 0,
+        "HARD_FAIL_PATTERN": 0,
+        "source": "docs/qa/content-audit-v2/BAR-FIT-AUDIT.json#sets.frozenFixed414.rows 逐卡 machineVerdict 实读（canonical 口径：正文 + instruction）",
+        "note": "机器档位全部 PASS（2/2，逐卡实读）；与独立 reviewer 的复判结论各自独立得出（机器档位未作为定档依据）。"
+      },
+      "truthPack1Admission": {
+        "scope": "第一包重构批 48 张（PN-TRUTH-232~283；Golden 12 + REWRITE 7 + REPLACE 19 + 补卡 14，已由内容主审 Round-1/2/3 逐卡判 PASS）",
+        "total": 48,
+        "PASS": 48,
+        "SUSPECT": 0,
+        "HARD_FAIL_PATTERN": 0,
+        "source": "docs/qa/content-audit-v2/BAR-FIT-AUDIT.json#sets.frozenFixed414.rows 逐卡 machineVerdict 实读（canonical 口径：正文 + instruction）",
+        "note": "机器档位全部 PASS（48/48，逐卡实读）；机器档位仅作分流参考，**不是**本批定档依据（定档来自内容主审三轮逐卡结论与 A4b~A8 返工）。"
+      }
+    }
+  },
+  "libraryMachineVerdictSummary": {
+    "scope": "整库（冻结固定库全量 443 张 = SSOT 390 + 第一包 24 + Bootstrap 7 + A9 现役重构批 48，退役 26（A3）＋ 3（A9-R6）＋ 1（A9-R7）已退出运行时卡源）",
+    "total": 443,
+    "PASS": 216,
+    "SUSPECT": 223,
+    "HARD_FAIL_PATTERN": 4,
+    "source": "docs/qa/content-audit-v2/BAR-FIT-AUDIT.json#sets.frozenFixed414（实读；该集标识为稳定键名，张数以 cardCount 为准）",
+    "note": "整库真实分布（实读自 BAR-FIT-AUDIT.json，非估算）。HARD_FAIL_PATTERN 为整库口径（PN-DARE-005/016/027 + PN-EXPAND-036），与 TRUTH 内容包无关。机器档位仅作分流参考，未作为任何一条 humanBarFit 的依据。"
+  },
+  "generatedBy": "scripts/audit-bar-fit-human-review-skeleton.ts（骨架）＋ scripts/audit-bar-fit-human-review-extend.ts（R3 追加 Bootstrap 7 条 / B5 保留已定档结论 / A3 按 Human 冻结分类推进活跃状态并归档历史 / A9 第一包重构批逐卡按既有准入路径回填 / A9-R6 内容裁决退役 236·263·277 / A9-R7 内容返工：5 张改写题面 + 249 退役；汇总由逐卡数据计算）＋ product-reviewer 逐卡填写（第一包结论）＋ product-reviewer 复判回填（Bootstrap 7 张，见 temp/REVIEW-BOOTSTRAP-7.md / temp/REVIEW-BOOTSTRAP-7-RECHECK.md）＋ Human 冻结酒吧新内容基线逐卡审计（KEEP 5 / REWRITE 7 / REPLACE 19）＋ 内容主审 Round-1/2/3 与 A4b~A8 返工（temp/PACK1-ROUND3-REVIEW.md / temp/BAR-AUDIT-PACK1-31.md）＋ 内容返工主审（docs/review/RESEARCH_REVIEW-PACK1-FINAL-54.md）＋ A9-R8 记录层修正（203 活跃 note 随改写后新题面重写；packMachineVerdictSummary 各组 note 改由逐卡机器档位实测派生 deriveMachineVerdictNoteFragment ＋ 新增 group-note-consistent 防回归自校验）"
+}

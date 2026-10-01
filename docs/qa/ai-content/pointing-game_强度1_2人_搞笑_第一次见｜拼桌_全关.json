@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 36,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "base",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：第一次见 / 拼桌；氛围：搞笑；最高强度：1。\n可用玩法：pointing-game。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 24602,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pointing-001",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向今晚最像“气氛组组长”的人，并说一句夸张的颁奖词。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-002",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向此刻看起来最想加菜的人，并报一个离谱但无害的菜名。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-003",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向你觉得最会接梗的人，并用一个搞笑形容词夸夸他或她。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-004",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向那位最像会随身带纸巾的人，并隔空递出一张假想纸巾。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-005",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向坐姿最端正的人，并给他或她配一个一本正经的搞笑头衔。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-006",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向今晚的救场候选人，并用播音腔说“救场成功”。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-007",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向你觉得最会点饮料的人，并报一个无酒精饮品名。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-008",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向此刻最像“聚会导航员”的人，并说“往这边请”。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-009",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向你觉得最会讲冷笑话的人，并让对方用眼神领奖。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-010",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "所有人一起指向今晚最像会主动收拾桌面的人，并颁发“虚拟抹布奖”。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

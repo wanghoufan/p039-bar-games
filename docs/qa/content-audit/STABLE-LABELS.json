@@ -1,0 +1,4614 @@
+{
+  "generator": "scripts/audit-a1-drift-stable.ts",
+  "date": "2026-09-27",
+  "coefficientSpec": {
+    "orderedAxes": [
+      "infoGain",
+      "promotesUnderstanding",
+      "socialEnergy",
+      "relationshipProgression"
+    ],
+    "orderedMetric": "linear weighted kappa",
+    "orderedFormula": "κ_w = 1 − Σ_ij w_ij·O_ij / Σ_ij w_ij·E_ij，w_ij = |i−j|/(K−1)（K=该轴类别数）",
+    "orderedRanks": {
+      "infoGain": {
+        "0": 0,
+        "低": 1,
+        "中": 2,
+        "高": 3
+      },
+      "promotesUnderstanding": {
+        "否": 0,
+        "弱": 1,
+        "是": 2
+      },
+      "socialEnergy": {
+        "低": 0,
+        "中": 1,
+        "高": 2
+      },
+      "relationshipProgression": {
+        "低": 0,
+        "中": 1,
+        "高": 2
+      }
+    },
+    "categoricalAxes": [
+      "semanticType",
+      "topic"
+    ],
+    "categoricalMetric": "Cohen's kappa",
+    "categoricalFormula": "κ = (Po − Pe)/(1 − Pe)"
+  },
+  "gates": {
+    "kappaMinForDecision": 0.4,
+    "kappaSource": "Landis & Koch 区间：<0.40 为 fair/poor，0.41–0.60 为 moderate",
+    "neverHaveIRedeviationRateMax": 0.3,
+    "neverHaveIGainConsensusRateMin": 0.7,
+    "note": "门槛在跑数前固定；never_have_i 无盲审样本，只能用 A.1 实测值做前置筛查。"
+  },
+  "axesReviewed": [
+    "infoGain",
+    "semanticType",
+    "topic",
+    "socialEnergy",
+    "relationshipProgression"
+  ],
+  "axesNotReviewed": [
+    "promotesUnderstanding",
+    "verdict",
+    "duplicateCluster"
+  ],
+  "axesNotReviewedReason": "盲审 BLIND-*.jsonl 未判这些字段，无第二个独立来源可交叉，故不做稳定化；仍为 A.1 单源。",
+  "sourceFiles": {
+    "orig": "_reviews-a1/{dare,either_or,chemistry}.jsonl（各 50）",
+    "blind": "_recheck/BLIND-{dare,either_or,chemistry}.jsonl（各 50，未见任何已有标签）",
+    "calibrationBlind": "_calib/r1.jsonl, _calib/r2.jsonl（仅 70 题校准样本，含每玩法 10 题）",
+    "arbitration": "_stable/arbitration.jsonl（第三方独立仲裁）"
+  },
+  "sourceNote": "全部题 50 张为双源（orig + BLIND）；校准样本内的 10 张/玩法另有 r1、r2 两个盲审来源，共 4 源。复审标签按各卡**实际可用来源数**取严格多数票。",
+  "drift": [
+    {
+      "gameType": "dare",
+      "label": "大冒险",
+      "n": 50,
+      "axes": [
+        {
+          "axis": "infoGain",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 24,
+          "total": 50,
+          "rawAgreement": "48.0%",
+          "kappa": 0.3109,
+          "po": 0.48,
+          "n": 50
+        },
+        {
+          "axis": "semanticType",
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "agree": 26,
+          "total": 50,
+          "rawAgreement": "52.0%",
+          "kappa": 0.3737,
+          "po": 0.52,
+          "n": 50
+        },
+        {
+          "axis": "topic",
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "agree": 22,
+          "total": 50,
+          "rawAgreement": "44.0%",
+          "kappa": 0.2235,
+          "po": 0.44,
+          "n": 50
+        },
+        {
+          "axis": "socialEnergy",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 32,
+          "total": 50,
+          "rawAgreement": "64.0%",
+          "kappa": 0.3525,
+          "po": 0.64,
+          "n": 50
+        },
+        {
+          "axis": "relationshipProgression",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 24,
+          "total": 50,
+          "rawAgreement": "48.0%",
+          "kappa": 0.4103,
+          "po": 0.48,
+          "n": 50
+        }
+      ],
+      "weakAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "meanKappa": 0.3342,
+      "allAxesAgree": 2,
+      "allAxesAgreeRate": "4.0%"
+    },
+    {
+      "gameType": "either_or",
+      "label": "二选一",
+      "n": 50,
+      "axes": [
+        {
+          "axis": "infoGain",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 16,
+          "total": 50,
+          "rawAgreement": "32.0%",
+          "kappa": 0.0793,
+          "po": 0.32,
+          "n": 50
+        },
+        {
+          "axis": "semanticType",
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "agree": 33,
+          "total": 50,
+          "rawAgreement": "66.0%",
+          "kappa": 0.32,
+          "po": 0.66,
+          "n": 50
+        },
+        {
+          "axis": "topic",
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "agree": 35,
+          "total": 50,
+          "rawAgreement": "70.0%",
+          "kappa": 0.6175,
+          "po": 0.7,
+          "n": 50
+        },
+        {
+          "axis": "socialEnergy",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 35,
+          "total": 50,
+          "rawAgreement": "70.0%",
+          "kappa": 0.2021,
+          "po": 0.7,
+          "n": 50
+        },
+        {
+          "axis": "relationshipProgression",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 39,
+          "total": 50,
+          "rawAgreement": "78.0%",
+          "kappa": 0.6191,
+          "po": 0.78,
+          "n": 50
+        }
+      ],
+      "weakAxes": [
+        "infoGain",
+        "semanticType",
+        "socialEnergy"
+      ],
+      "meanKappa": 0.3676,
+      "allAxesAgree": 6,
+      "allAxesAgreeRate": "12.0%"
+    },
+    {
+      "gameType": "chemistry",
+      "label": "默契测试",
+      "n": 50,
+      "axes": [
+        {
+          "axis": "infoGain",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 42,
+          "total": 50,
+          "rawAgreement": "84.0%",
+          "kappa": 0.8138,
+          "po": 0.84,
+          "n": 50
+        },
+        {
+          "axis": "semanticType",
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "agree": 50,
+          "total": 50,
+          "rawAgreement": "100.0%",
+          "kappa": 1,
+          "po": 1,
+          "n": 50
+        },
+        {
+          "axis": "topic",
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "agree": 46,
+          "total": 50,
+          "rawAgreement": "92.0%",
+          "kappa": 0.8998,
+          "po": 0.92,
+          "n": 50
+        },
+        {
+          "axis": "socialEnergy",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 35,
+          "total": 50,
+          "rawAgreement": "70.0%",
+          "kappa": 0,
+          "po": 0.7,
+          "n": 50
+        },
+        {
+          "axis": "relationshipProgression",
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "agree": 40,
+          "total": 50,
+          "rawAgreement": "80.0%",
+          "kappa": 0.664,
+          "po": 0.8,
+          "n": 50
+        }
+      ],
+      "weakAxes": [
+        "socialEnergy"
+      ],
+      "meanKappa": 0.6755,
+      "allAxesAgree": 19,
+      "allAxesAgreeRate": "38.0%"
+    }
+  ],
+  "weakAxisSummary": [
+    {
+      "axis": "infoGain",
+      "perGameType": [
+        {
+          "gameType": "dare",
+          "kappa": 0.3109
+        },
+        {
+          "gameType": "either_or",
+          "kappa": 0.0793
+        },
+        {
+          "gameType": "chemistry",
+          "kappa": 0.8138
+        }
+      ],
+      "worstKappa": 0.0793,
+      "usableForDecision": false
+    },
+    {
+      "axis": "semanticType",
+      "perGameType": [
+        {
+          "gameType": "dare",
+          "kappa": 0.3737
+        },
+        {
+          "gameType": "either_or",
+          "kappa": 0.32
+        },
+        {
+          "gameType": "chemistry",
+          "kappa": 1
+        }
+      ],
+      "worstKappa": 0.32,
+      "usableForDecision": false
+    },
+    {
+      "axis": "topic",
+      "perGameType": [
+        {
+          "gameType": "dare",
+          "kappa": 0.2235
+        },
+        {
+          "gameType": "either_or",
+          "kappa": 0.6175
+        },
+        {
+          "gameType": "chemistry",
+          "kappa": 0.8998
+        }
+      ],
+      "worstKappa": 0.2235,
+      "usableForDecision": false
+    },
+    {
+      "axis": "socialEnergy",
+      "perGameType": [
+        {
+          "gameType": "dare",
+          "kappa": 0.3525
+        },
+        {
+          "gameType": "either_or",
+          "kappa": 0.2021
+        },
+        {
+          "gameType": "chemistry",
+          "kappa": 0
+        }
+      ],
+      "worstKappa": 0,
+      "usableForDecision": false
+    },
+    {
+      "axis": "relationshipProgression",
+      "perGameType": [
+        {
+          "gameType": "dare",
+          "kappa": 0.4103
+        },
+        {
+          "gameType": "either_or",
+          "kappa": 0.6191
+        },
+        {
+          "gameType": "chemistry",
+          "kappa": 0.664
+        }
+      ],
+      "worstKappa": 0.4103,
+      "usableForDecision": true
+    }
+  ],
+  "arbitration": {
+    "inputCount": 111,
+    "pendingCount": 0,
+    "resolvedCount": 111,
+    "note": "凡某轴无严格多数票，即抽入 _stable/arbitration-input.jsonl 交第三方独立仲裁；仲裁者只看题面，不看 orig/BLIND/r1/r2 任何结论。"
+  },
+  "reviewedLabelScope": {
+    "reviewed": [
+      {
+        "gameType": "dare",
+        "label": "大冒险",
+        "cardCount": 50,
+        "labelStatus": "REVIEWED_ADJUDICATED",
+        "arbitratedCards": 44,
+        "pendingCards": 0,
+        "weakAxes": [
+          "infoGain",
+          "semanticType",
+          "topic",
+          "socialEnergy"
+        ]
+      },
+      {
+        "gameType": "either_or",
+        "label": "二选一",
+        "cardCount": 50,
+        "labelStatus": "REVIEWED_ADJUDICATED",
+        "arbitratedCards": 40,
+        "pendingCards": 0,
+        "weakAxes": [
+          "infoGain",
+          "semanticType",
+          "socialEnergy"
+        ]
+      },
+      {
+        "gameType": "chemistry",
+        "label": "默契测试",
+        "cardCount": 50,
+        "labelStatus": "REVIEWED_ADJUDICATED",
+        "arbitratedCards": 27,
+        "pendingCards": 0,
+        "weakAxes": [
+          "socialEnergy"
+        ]
+      }
+    ],
+    "singleSource": [
+      {
+        "gameType": "truth",
+        "label": "真心话",
+        "reliability": "A.1 单源、可靠性较低"
+      },
+      {
+        "gameType": "most_likely",
+        "label": "谁最可能",
+        "reliability": "A.1 单源、可靠性较低"
+      },
+      {
+        "gameType": "never_have_i",
+        "label": "我从来没有",
+        "reliability": "A.1 单源、可靠性较低"
+      },
+      {
+        "gameType": "pointing",
+        "label": "指人游戏",
+        "reliability": "A.1 单源、可靠性较低"
+      }
+    ],
+    "statement": "dare / either_or / chemistry 的标签——已完成双源复审与分歧仲裁，可用于主题/候选定位；低可靠轴不得作为单题自动保留/删除依据。truth / most_likely / never_have_i / pointing 仍为「A.1 单源、可靠性较低」。"
+  },
+  "neverHaveIDecision": {
+    "gameType": "never_have_i",
+    "needsFullReaudit": false,
+    "verdict": "未达升级门槛，不复审：A.1 实测值同时满足两条门槛（原 reviewer 偏离率 < 30% 且 infoGain 共识率 ≥ 70%）",
+    "basis": {
+      "gameType": "never_have_i",
+      "label": "我从来没有",
+      "a1OrigDeviationRate": "10.0%",
+      "a1GainConsensusRate": "70.0%",
+      "a1SemanticConsensusRate": "60.0%",
+      "a1SampleSize": 10,
+      "passDeviationGate": true,
+      "passGainGate": true,
+      "pass": true
+    },
+    "thresholds": {
+      "origDeviationRateMax": 0.3,
+      "gainConsensusRateMin": 0.7
+    }
+  },
+  "labelStatusNote": "dare / either_or / chemistry：已完成双源复审与分歧仲裁，可用于主题/候选定位；低可靠轴不得作为单题自动保留/删除依据。",
+  "usageLimit": "若某轴 κ 仍明显不足（κ < 0.4），该轴**只能用于候选排序，不得自动决定保留/删除**。当前不达标的轴见 weakAxisSummary（usableForDecision=false 的行）。",
+  "reviewedCards": [
+    {
+      "cardId": "PN-DARE-001",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "自我披露",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-002",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-003",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "自我披露",
+        "topic": "现场化学反应",
+        "socialEnergy": "低",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-004",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "现场评价/猜测",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "semanticType",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-005",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-006",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "自我披露",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-007",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-008",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "自我披露",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-009",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "现场评价/猜测",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-010",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-011",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "纯看戏/低信息",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-012",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-013",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-014",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "行动互动",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-015",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "自我披露",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-016",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-017",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-018",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-019",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-020",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-021",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "低",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-022",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "纯看戏/低信息",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "topic",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-023",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-024",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-025",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-026",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-027",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-028",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-029",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-030",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-031",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-032",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-033",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-034",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-035",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "行动互动",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-036",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "现场评价/猜测",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "semanticType"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-037",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-038",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-039",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "现场评价/猜测",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-040",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-041",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "暧昧推进",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-042",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "暧昧推进",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-043",
+      "gameType": "dare",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-044",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-045",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "暧昧推进",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-046",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-047",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "0",
+        "semanticType": "暧昧推进",
+        "topic": "无明确人物信息增量",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-048",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "行动互动",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-049",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-DARE-050",
+      "gameType": "dare",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "亲密/性观念",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "semanticType"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-001",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-002",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-003",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-004",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-005",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-006",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-007",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-008",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-009",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "socialEnergy",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-010",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-011",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-012",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-013",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-014",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-015",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-016",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-017",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-018",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-019",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-020",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-021",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-022",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-023",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-024",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-025",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-026",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-027",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-028",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "亲密/性观念",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-029",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-030",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-031",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-032",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-033",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "自我披露",
+        "topic": "亲密/性观念",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-034",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-035",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "暧昧推进",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-036",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-037",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-038",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "semanticType",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-039",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-040",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-041",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-042",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-043",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-044",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-045",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-046",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-047",
+      "gameType": "either_or",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-048",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "自我披露",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-049",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "暧昧推进",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-EITHER-050",
+      "gameType": "either_or",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-001",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "相互了解",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-002",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-003",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-004",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-005",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-006",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "高",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-007",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-008",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "topic",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-009",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-010",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "兴趣爱好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-011",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-012",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-013",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "topic",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-014",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-015",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-016",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-017",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-018",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-019",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-020",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-021",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-022",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-023",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-024",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "中",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-025",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-026",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-027",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-028",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "择偶偏好/吸引力",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-029",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-030",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-031",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-032",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-033",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-034",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-035",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-036",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-037",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "行动互动",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": false,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "semanticType",
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-038",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-039",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-040",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-041",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-042",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": false,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "topic"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-043",
+      "gameType": "chemistry",
+      "sources": 4,
+      "sourceNames": [
+        "orig",
+        "blind",
+        "r1",
+        "r2"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-044",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "性格/习惯/小癖好",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-045",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-046",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "生活方式",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-047",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-048",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "相互了解",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "低"
+      },
+      "majority": {
+        "infoGain": false,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": false
+      },
+      "arbitratedAxes": [
+        "infoGain",
+        "relationshipProgression"
+      ],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-049",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "高",
+        "semanticType": "相互了解",
+        "topic": "恋爱观",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": true,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [],
+      "pendingAxes": []
+    },
+    {
+      "cardId": "PN-CHEM-050",
+      "gameType": "chemistry",
+      "sources": 2,
+      "sourceNames": [
+        "orig",
+        "blind"
+      ],
+      "values": {
+        "infoGain": "低",
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "majority": {
+        "infoGain": true,
+        "semanticType": true,
+        "topic": true,
+        "socialEnergy": false,
+        "relationshipProgression": true
+      },
+      "arbitratedAxes": [
+        "socialEnergy"
+      ],
+      "pendingAxes": []
+    }
+  ]
+}

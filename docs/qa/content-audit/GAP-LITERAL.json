@@ -1,0 +1,105 @@
+{
+  "generator": "scripts/audit-a1-literal-semantic.ts",
+  "cardCount": 350,
+  "scope": "literalHits 仅统计显式词面命中；semanticHits 必须由独立语义复核回填，不得由本脚本臆造。",
+  "themes": [
+    {
+      "theme": "前任/过去关系",
+      "note": "显式词面：前任、前男友、前女友、上一段、过去那段。词面为 0 不等于没有前任话题，语义复核见 semanticHits。",
+      "patternsProbed": 3,
+      "patternsWithHit": 0,
+      "literalHits": 0,
+      "literalHitRatio": 0,
+      "cardIds": [],
+      "matchedPatterns": []
+    },
+    {
+      "theme": "吃醋/占有",
+      "note": "显式词面：吃醋、醋意、在意别人看、占有欲。",
+      "patternsProbed": 3,
+      "patternsWithHit": 0,
+      "literalHits": 0,
+      "literalHitRatio": 0,
+      "cardIds": [],
+      "matchedPatterns": []
+    },
+    {
+      "theme": "异性朋友/异性友谊边界",
+      "note": "显式词面：异性朋友、男性朋友、女性朋友、闺蜜、好兄弟。",
+      "patternsProbed": 3,
+      "patternsWithHit": 0,
+      "literalHits": 0,
+      "literalHitRatio": 0,
+      "cardIds": [],
+      "matchedPatterns": []
+    },
+    {
+      "theme": "底线/雷区",
+      "note": "显式词面：底线、雷区、不能接受、碰不得、绝对不。",
+      "patternsProbed": 4,
+      "patternsWithHit": 0,
+      "literalHits": 0,
+      "literalHitRatio": 0,
+      "cardIds": [],
+      "matchedPatterns": []
+    },
+    {
+      "theme": "人生目标/理想生活",
+      "note": "显式词面：未来、梦想、人生目标、五年、十年、以后想过。",
+      "patternsProbed": 4,
+      "patternsWithHit": 0,
+      "literalHits": 0,
+      "literalHitRatio": 0,
+      "cardIds": [],
+      "matchedPatterns": []
+    },
+    {
+      "theme": "具体兴趣爱好",
+      "note": "显式词面：具体爱好项目（打球/乐器/摄影/露营/做饭/游戏等）。注意「共同兴趣」「有兴趣」属元话，不算具体爱好。",
+      "patternsProbed": 7,
+      "patternsWithHit": 2,
+      "literalHits": 2,
+      "literalHitRatio": 0.0057,
+      "cardIds": [
+        "PN-DARE-048",
+        "PN-MOST-031"
+      ],
+      "matchedPatterns": [
+        {
+          "label": "乐器",
+          "count": 1
+        },
+        {
+          "label": "摄影/影像",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "theme": "亲密/性观念",
+      "note": "显式词面：亲密、暧昧、身体接触、以及具体尺度词。",
+      "patternsProbed": 4,
+      "patternsWithHit": 2,
+      "literalHits": 6,
+      "literalHitRatio": 0.0171,
+      "cardIds": [
+        "PN-DARE-037",
+        "PN-DARE-042",
+        "PN-DARE-043",
+        "PN-DARE-050",
+        "PN-EITHER-033",
+        "PN-EITHER-038"
+      ],
+      "matchedPatterns": [
+        {
+          "label": "暧昧",
+          "count": 2
+        },
+        {
+          "label": "身体接触",
+          "count": 4
+        }
+      ]
+    }
+  ]
+}

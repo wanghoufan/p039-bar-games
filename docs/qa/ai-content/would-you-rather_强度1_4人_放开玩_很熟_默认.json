@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 28,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 1,
+    "players": 4,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "close",
+      "label": "很熟"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "很熟",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：很熟；氛围：放开玩；最高强度：1。\n可用玩法：would-you-rather。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 24453,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-01",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天早起看日出 VS 每天熬夜看星空",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-02",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "瞬间学会任何乐器 VS 瞬间学会任何语言",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-03",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "旅行只带一个背包 VS 带大行李箱但不用自己搬",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-04",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "吃火锅永远只能选清汤 VS 吃烧烤永远不能加辣",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-05",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "住在大城市的小公寓 VS 住在小城市的大房子",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-06",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在聚会上负责选游戏 VS 在聚会上负责计时和提醒",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-07",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "拥有一只会说话的宠物 VS 拥有一辆会自动找车位的车",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-08",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每次点外卖都准时但只能吃同一家 VS 偶尔迟到但每天都能换新店",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-09",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在团队游戏里当指挥官 VS 在团队游戏里当关键救场者",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-10",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "拥有过目不忘的记忆 VS 随时能删除不想要的记忆",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

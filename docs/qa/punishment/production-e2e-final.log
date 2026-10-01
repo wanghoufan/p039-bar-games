@@ -1,0 +1,12 @@
+$ playwright test tests/e2e/punishment-production.spec.ts tests/e2e/production-offline.spec.ts
+
+Running 2 tests using 2 workers
+
+(node:32428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile-chromium] › tests/e2e/production-offline.spec.ts:6:5 › 已访问的当前 Session 可在完全离线后重载恢复 (815ms)
+  ✓  1 [mobile-chromium] › tests/e2e/punishment-production.spec.ts:3:5 › production offline reload preserves independent session and all core controls (1.3s)
+
+  2 passed (1.8s)

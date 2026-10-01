@@ -1,0 +1,19 @@
+[0m
+> build · muse-spark-1.3-contributor-free
+[0m
+只看题面独立判定——正在读取卡片。
+[0m→ [0mRead docs/qa/content-audit/_stable/_batches/batch-06.jsonl
+{"cardId":"PN-EITHER-036","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-037","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-038","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-039","infoGain":"高","semanticType":"自我披露","topic":"择偶偏好/吸引力","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-040","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-041","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-042","infoGain":"低","semanticType":"自我披露","topic":"现场化学反应","socialEnergy":"低","relationshipProgression":"中"}
+{"cardId":"PN-EITHER-043","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-044","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"高","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-045","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-046","infoGain":"高","semanticType":"自我披露","topic":"生活方式","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-048","infoGain":"高","semanticType":"自我披露","topic":"性格/习惯/小癖好","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-049","infoGain":"高","semanticType":"自我披露","topic":"恋爱观","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-EITHER-050","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"高","relationshipProgression":"高"}

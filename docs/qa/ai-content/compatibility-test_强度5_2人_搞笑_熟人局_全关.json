@@ -1,0 +1,255 @@
+{
+  "cell": {
+    "index": 51,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "base",
+    "intensity": 5,
+    "players": 2,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：熟人局；氛围：搞笑；最高强度：5。\n可用玩法：compatibility-test。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 22683,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "compat-001",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果咱俩突然被扔进一档搞笑综艺，导演第一个安排去扮丑的人会是谁？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "熟人局",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-002",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "对方讲冷笑话时，你通常会在第几秒开始假装笑？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "反应",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-003",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果咱俩合伙开一家只卖一种菜的店，会卖什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "脑洞",
+          "开放"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-004",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "对方最可能因为什么在聚会上突然消失五分钟？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "熟人局",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-005",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果必须给对方起一个搞笑外号，你会叫TA什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "互损",
+          "开放"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-006",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "聚会游戏输了，对方最可能找的借口是什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "游戏",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-007",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "咱俩一起点外卖，最后一定会多出来的一样东西是什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "日常",
+          "开放"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-008",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果咱俩的聊天记录被做成表情包，出镜率最高的一句话是什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 3,
+        "tags": [
+          "搞笑",
+          "熟人局",
+          "开放"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-009",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "对方在KTV里最可能做出哪种操作？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "KTV",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-010",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "只能回答是或不是：对方比我更会砍价。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "默契",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

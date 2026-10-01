@@ -1,0 +1,9 @@
+TASK-MODEL-LOG.jsonl#37: WARN bad model="deepseek-v4.1-flash" (须 provider/model 精确写法，见白名单)
+TASK-MODEL-LOG.jsonl#38: WARN bad model="deepseek-v4.1-flash" (须 provider/model 精确写法，见白名单)
+TASK-MODEL-LOG.jsonl#60: WARN result=PASS 但备注含未闭环字样，建议 chain_status=OPEN
+TASK-MODEL-LOG.jsonl#127: WARN result=PASS 但备注含未闭环字样，建议 chain_status=OPEN
+TASK-MODEL-LOG.jsonl#136: WARN bad model="external/third-party-static-review" (须 provider/model 精确写法，见白名单)
+DISPATCH-LOG.jsonl#29: WARN bad model="deepseek-v4.1-flash" (须 provider/model 精确写法，见白名单)
+DISPATCH-LOG.jsonl#33: WARN bad model="deepseek-v4.1-flash" (须 provider/model 精确写法，见白名单)
+DISPATCH-LOG.jsonl#195: WARN bad model="external/third-party-static-review" (须 provider/model 精确写法，见白名单)
+LEDGER-OK (含 WARN)

@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 19,
+    "packId": "never-have",
+    "packName": "我从来没有",
+    "origin": "base",
+    "intensity": 1,
+    "players": 4,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "never-have"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：刚认识；氛围：随机；最高强度：1。\n可用玩法：never-have。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 20919,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "nh-001",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在电影院看电影时睡着。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-002",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未为了追一部剧熬夜到天亮。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-003",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在旅行中彻底迷路。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-004",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未吃过榴莲。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-005",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未养过宠物。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-006",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在雨天忘带伞。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-007",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未连续玩同一款游戏超过四小时。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-008",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未学过一门乐器。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-009",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在图书馆或书店里睡着。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-010",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未把一件衣服穿到破洞还舍不得扔。",
+        "instruction": "轮到你时说出这句话；做过的人举手或说“我做过”，无需解释，也可以随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

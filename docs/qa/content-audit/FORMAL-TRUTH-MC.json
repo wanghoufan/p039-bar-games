@@ -1,0 +1,645 @@
+{
+  "generator": "scripts/audit-formal-truth-montecarlo.ts",
+  "pack": "truth-dare",
+  "packLabel": "真心话（truth-dare）",
+  "router": "createV2MainlineRouter（审计 / MC 侧）— C1-8 起与生产 createDeckRouter 共享桥接卡源 mainlineRuntimeCards()",
+  "cardSource": {
+    "description": "mainlineSsotCardsByPack('truth-dare')（SSOT 主线 + 第一包正式内容）",
+    "packTotal": 153,
+    "formalTotal": 53,
+    "legacyTotal": 100
+  },
+  "config": {
+    "sessionsPerTable": 1000,
+    "targetCompletedRounds": 20,
+    "guardLimit": 1000,
+    "completedProbability": 0.85,
+    "softDedupWindow": 5,
+    "tables": [
+      {
+        "key": "2m2f",
+        "label": "2男2女",
+        "players": 4
+      },
+      {
+        "key": "1m3f",
+        "label": "1男3女",
+        "players": 4
+      },
+      {
+        "key": "2m3f",
+        "label": "2男3女",
+        "players": 5
+      },
+      {
+        "key": "1m4f",
+        "label": "1男4女",
+        "players": 5
+      }
+    ],
+    "seedFormula": "20260928 + i*7919 + (tableIndex+1)*104729",
+    "totalSessionsPerMode": 4000,
+    "modes": {
+      "A": "生产实况：不给披露信号 ⇒ Heat 恒 H1（disclosure 通道未落地）",
+      "B": "disclosure 生产链口径：每 completed 轮给 selfDisclosed + disclosedPlayerIds ⇒ Formal 卡推进有效计数与 Heat"
+    }
+  },
+  "staticHeatAvailability": [
+    {
+      "heat": "H1",
+      "packTotal": 153,
+      "legalCount": 114,
+      "formalLegal": 14,
+      "formalLegalIds": [
+        "PN-TRUTH-203",
+        "PN-TRUTH-205",
+        "PN-TRUTH-227",
+        "PN-TRUTH-229",
+        "PN-TRUTH-232",
+        "PN-TRUTH-233",
+        "PN-TRUTH-234",
+        "PN-TRUTH-244",
+        "PN-TRUTH-245",
+        "PN-TRUTH-248",
+        "PN-TRUTH-250",
+        "PN-TRUTH-261",
+        "PN-TRUTH-262",
+        "PN-TRUTH-266"
+      ],
+      "legacyLegal": 100
+    },
+    {
+      "heat": "H2",
+      "packTotal": 153,
+      "legalCount": 131,
+      "formalLegal": 31,
+      "formalLegalIds": [
+        "PN-TRUTH-203",
+        "PN-TRUTH-205",
+        "PN-TRUTH-209",
+        "PN-TRUTH-227",
+        "PN-TRUTH-229",
+        "PN-TRUTH-232",
+        "PN-TRUTH-233",
+        "PN-TRUTH-234",
+        "PN-TRUTH-235",
+        "PN-TRUTH-237",
+        "PN-TRUTH-244",
+        "PN-TRUTH-245",
+        "PN-TRUTH-246",
+        "PN-TRUTH-247",
+        "PN-TRUTH-248",
+        "PN-TRUTH-250",
+        "PN-TRUTH-252",
+        "PN-TRUTH-254",
+        "PN-TRUTH-255",
+        "PN-TRUTH-256",
+        "PN-TRUTH-259",
+        "PN-TRUTH-261",
+        "PN-TRUTH-262",
+        "PN-TRUTH-264",
+        "PN-TRUTH-265",
+        "PN-TRUTH-266",
+        "PN-TRUTH-270",
+        "PN-TRUTH-271",
+        "PN-TRUTH-272",
+        "PN-TRUTH-282",
+        "PN-TRUTH-283"
+      ],
+      "legacyLegal": 100
+    },
+    {
+      "heat": "H3",
+      "packTotal": 153,
+      "legalCount": 147,
+      "formalLegal": 47,
+      "formalLegalIds": [
+        "PN-TRUTH-203",
+        "PN-TRUTH-205",
+        "PN-TRUTH-209",
+        "PN-TRUTH-227",
+        "PN-TRUTH-229",
+        "PN-TRUTH-232",
+        "PN-TRUTH-233",
+        "PN-TRUTH-234",
+        "PN-TRUTH-235",
+        "PN-TRUTH-237",
+        "PN-TRUTH-238",
+        "PN-TRUTH-239",
+        "PN-TRUTH-240",
+        "PN-TRUTH-244",
+        "PN-TRUTH-245",
+        "PN-TRUTH-246",
+        "PN-TRUTH-247",
+        "PN-TRUTH-248",
+        "PN-TRUTH-250",
+        "PN-TRUTH-251",
+        "PN-TRUTH-252",
+        "PN-TRUTH-253",
+        "PN-TRUTH-254",
+        "PN-TRUTH-255",
+        "PN-TRUTH-256",
+        "PN-TRUTH-257",
+        "PN-TRUTH-258",
+        "PN-TRUTH-259",
+        "PN-TRUTH-260",
+        "PN-TRUTH-261",
+        "PN-TRUTH-262",
+        "PN-TRUTH-264",
+        "PN-TRUTH-265",
+        "PN-TRUTH-266",
+        "PN-TRUTH-270",
+        "PN-TRUTH-271",
+        "PN-TRUTH-272",
+        "PN-TRUTH-273",
+        "PN-TRUTH-274",
+        "PN-TRUTH-275",
+        "PN-TRUTH-276",
+        "PN-TRUTH-278",
+        "PN-TRUTH-279",
+        "PN-TRUTH-280",
+        "PN-TRUTH-281",
+        "PN-TRUTH-282",
+        "PN-TRUTH-283"
+      ],
+      "legacyLegal": 100
+    },
+    {
+      "heat": "H4",
+      "packTotal": 153,
+      "legalCount": 133,
+      "formalLegal": 33,
+      "formalLegalIds": [
+        "PN-TRUTH-209",
+        "PN-TRUTH-235",
+        "PN-TRUTH-238",
+        "PN-TRUTH-239",
+        "PN-TRUTH-240",
+        "PN-TRUTH-241",
+        "PN-TRUTH-242",
+        "PN-TRUTH-243",
+        "PN-TRUTH-246",
+        "PN-TRUTH-251",
+        "PN-TRUTH-252",
+        "PN-TRUTH-253",
+        "PN-TRUTH-254",
+        "PN-TRUTH-256",
+        "PN-TRUTH-257",
+        "PN-TRUTH-258",
+        "PN-TRUTH-260",
+        "PN-TRUTH-265",
+        "PN-TRUTH-267",
+        "PN-TRUTH-268",
+        "PN-TRUTH-269",
+        "PN-TRUTH-270",
+        "PN-TRUTH-271",
+        "PN-TRUTH-273",
+        "PN-TRUTH-274",
+        "PN-TRUTH-275",
+        "PN-TRUTH-276",
+        "PN-TRUTH-278",
+        "PN-TRUTH-279",
+        "PN-TRUTH-280",
+        "PN-TRUTH-281",
+        "PN-TRUTH-282",
+        "PN-TRUTH-283"
+      ],
+      "legacyLegal": 100
+    }
+  ],
+  "formalProfiles": {
+    "byIntensity": {
+      "1": 15,
+      "2": 30,
+      "3": 8
+    },
+    "byHeatMax": {
+      "3": 20,
+      "4": 33
+    },
+    "byTopic": {
+      "生活方式": 9,
+      "性格·习惯·小癖好": 6,
+      "择偶偏好": 10,
+      "兴趣爱好": 2,
+      "live_chemistry": 16,
+      "亲密边界": 5,
+      "相处规则": 4,
+      "恋爱观": 1
+    }
+  },
+  "h1Formal": {
+    "count": 14,
+    "ids": [
+      "PN-TRUTH-203",
+      "PN-TRUTH-205",
+      "PN-TRUTH-227",
+      "PN-TRUTH-229",
+      "PN-TRUTH-232",
+      "PN-TRUTH-233",
+      "PN-TRUTH-234",
+      "PN-TRUTH-244",
+      "PN-TRUTH-245",
+      "PN-TRUTH-248",
+      "PN-TRUTH-250",
+      "PN-TRUTH-261",
+      "PN-TRUTH-262",
+      "PN-TRUTH-266"
+    ],
+    "byIntensity": {
+      "1": 11,
+      "2": 3
+    },
+    "byHeatMax": {
+      "3": 14
+    },
+    "byTopic": {
+      "生活方式": 6,
+      "性格·习惯·小癖好": 4,
+      "兴趣爱好": 2,
+      "相处规则": 1,
+      "恋爱观": 1
+    }
+  },
+  "formalHeatMinDistribution": {
+    "1": 14,
+    "2": 17,
+    "3": 16,
+    "4": 6
+  },
+  "formalCountableUpTo": {
+    "heatMinLe1": 14,
+    "heatMinLe2": 31,
+    "heatMinLe3": 47,
+    "heatMinLe4": 53
+  },
+  "modeA": {
+    "mode": "A",
+    "sessions": 4000,
+    "sessionsCompleted20": 3994,
+    "sessionRate": 0.9985,
+    "completedRoundsMean": 20,
+    "deadEndSessions": 6,
+    "deadEndRate": 0.0015,
+    "termination": {
+      "round_limit": 3994,
+      "pack_exhausted": 6,
+      "global_exhausted": 0,
+      "awaiting_host": 0,
+      "guard_limit": 0
+    },
+    "truncatedSessions": 0,
+    "guardUsedMax": 33,
+    "totalDraws": 94242,
+    "drawsPerSession": 23.56,
+    "formalDraws": 9649,
+    "formalShare": 0.1024,
+    "formalExposedDistinct": 14,
+    "formalExposedIds": [
+      "PN-TRUTH-203",
+      "PN-TRUTH-205",
+      "PN-TRUTH-227",
+      "PN-TRUTH-229",
+      "PN-TRUTH-232",
+      "PN-TRUTH-233",
+      "PN-TRUTH-234",
+      "PN-TRUTH-244",
+      "PN-TRUTH-245",
+      "PN-TRUTH-248",
+      "PN-TRUTH-250",
+      "PN-TRUTH-261",
+      "PN-TRUTH-262",
+      "PN-TRUTH-266"
+    ],
+    "formalTotal": 53,
+    "legacyTotal": 100,
+    "heatAtDraw": {
+      "H1": 94242,
+      "H2": 0,
+      "H3": 0,
+      "H4": 0
+    },
+    "heatAtDrawShare": {
+      "H1": 1,
+      "H2": 0,
+      "H3": 0,
+      "H4": 0
+    },
+    "heatAfterTerminal": {
+      "H1": 94242,
+      "H2": 0,
+      "H3": 0,
+      "H4": 0
+    },
+    "sessionsReachingH2": 0,
+    "sessionsReachingH3": 0,
+    "sessionsReachingH4": 0,
+    "repeatedDraws": 0,
+    "effectiveRoundsTotal": 0,
+    "effectivePerSession": 0,
+    "effectiveByGain": {},
+    "effectiveTopics": {},
+    "distinctTopicsCovered": 0,
+    "topicsPerSessionMean": 0,
+    "highEffectivePerSession": 0,
+    "longestLowZeroRunMean": 20,
+    "sessionsZeroFormal": 2302,
+    "sessionsZeroEffective": 4000,
+    "sessionsMediumPlus5": 0,
+    "sessionsHighAtLeast1": 0,
+    "sessionsTopicsAtLeast3": 0,
+    "distinctFirstFive": 3998,
+    "topFirstFiveShare": 0.0005,
+    "mutualWindowReached": 0
+  },
+  "modeB": {
+    "mode": "B",
+    "sessions": 4000,
+    "sessionsCompleted20": 4000,
+    "sessionRate": 1,
+    "completedRoundsMean": 20,
+    "deadEndSessions": 0,
+    "deadEndRate": 0,
+    "termination": {
+      "round_limit": 4000,
+      "pack_exhausted": 0,
+      "global_exhausted": 0,
+      "awaiting_host": 0,
+      "guard_limit": 0
+    },
+    "truncatedSessions": 0,
+    "guardUsedMax": 33,
+    "totalDraws": 94253,
+    "drawsPerSession": 23.56,
+    "formalDraws": 10695,
+    "formalShare": 0.1135,
+    "formalExposedDistinct": 31,
+    "formalExposedIds": [
+      "PN-TRUTH-203",
+      "PN-TRUTH-205",
+      "PN-TRUTH-209",
+      "PN-TRUTH-227",
+      "PN-TRUTH-229",
+      "PN-TRUTH-232",
+      "PN-TRUTH-233",
+      "PN-TRUTH-234",
+      "PN-TRUTH-235",
+      "PN-TRUTH-237",
+      "PN-TRUTH-244",
+      "PN-TRUTH-245",
+      "PN-TRUTH-246",
+      "PN-TRUTH-247",
+      "PN-TRUTH-248",
+      "PN-TRUTH-250",
+      "PN-TRUTH-252",
+      "PN-TRUTH-254",
+      "PN-TRUTH-255",
+      "PN-TRUTH-256",
+      "PN-TRUTH-259",
+      "PN-TRUTH-261",
+      "PN-TRUTH-262",
+      "PN-TRUTH-264",
+      "PN-TRUTH-265",
+      "PN-TRUTH-266",
+      "PN-TRUTH-270",
+      "PN-TRUTH-271",
+      "PN-TRUTH-272",
+      "PN-TRUTH-282",
+      "PN-TRUTH-283"
+    ],
+    "formalTotal": 53,
+    "legacyTotal": 100,
+    "heatAtDraw": {
+      "H1": 85214,
+      "H2": 6769,
+      "H3": 2270,
+      "H4": 0
+    },
+    "heatAtDrawShare": {
+      "H1": 0.9041,
+      "H2": 0.0718,
+      "H3": 0.0241,
+      "H4": 0
+    },
+    "heatAfterTerminal": {
+      "H1": 84331,
+      "H2": 7048,
+      "H3": 2871,
+      "H4": 3
+    },
+    "sessionsReachingH2": 883,
+    "sessionsReachingH3": 604,
+    "sessionsReachingH4": 3,
+    "repeatedDraws": 0,
+    "effectiveRoundsTotal": 9053,
+    "effectivePerSession": 2.26,
+    "effectiveByGain": {
+      "medium": 9053
+    },
+    "effectiveTopics": {
+      "生活方式": 4085,
+      "性格·习惯·小癖好": 2003,
+      "兴趣爱好": 1348,
+      "相处规则": 703,
+      "恋爱观": 515,
+      "live_chemistry": 349,
+      "择偶偏好": 50
+    },
+    "distinctTopicsCovered": 7,
+    "topicsPerSessionMean": 1.04,
+    "highEffectivePerSession": 0,
+    "longestLowZeroRunMean": 15.02,
+    "sessionsZeroFormal": 2302,
+    "sessionsZeroEffective": 2329,
+    "sessionsMediumPlus5": 822,
+    "sessionsHighAtLeast1": 0,
+    "sessionsTopicsAtLeast3": 774,
+    "distinctFirstFive": 3998,
+    "topFirstFiveShare": 0.0005,
+    "mutualWindowReached": 14
+  },
+  "ceilingCohorts": [
+    {
+      "mode": "A",
+      "intensityLimit": 1,
+      "sessions": 771,
+      "deadEndSessions": 6,
+      "deadEndRate": 0.0078,
+      "completedRoundsMean": 19.99,
+      "formalShare": 0.3823,
+      "formalDrawsOnFinished": 8.98,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 765,
+        "pack_exhausted": 6,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "A",
+      "intensityLimit": 2,
+      "sessions": 760,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0.1409,
+      "formalDrawsOnFinished": 3.32,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 760,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "A",
+      "intensityLimit": 3,
+      "sessions": 780,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0.0103,
+      "formalDrawsOnFinished": 0.24,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 780,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "A",
+      "intensityLimit": 4,
+      "sessions": 856,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0,
+      "formalDrawsOnFinished": 0,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 856,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "A",
+      "intensityLimit": 5,
+      "sessions": 833,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0,
+      "formalDrawsOnFinished": 0,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 833,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "B",
+      "intensityLimit": 1,
+      "sessions": 771,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0.4348,
+      "formalDrawsOnFinished": 10.24,
+      "effectivePerSession": 8.69,
+      "termination": {
+        "round_limit": 771,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "B",
+      "intensityLimit": 2,
+      "sessions": 760,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0.1458,
+      "formalDrawsOnFinished": 3.44,
+      "effectivePerSession": 2.89,
+      "termination": {
+        "round_limit": 760,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "B",
+      "intensityLimit": 3,
+      "sessions": 780,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0.0103,
+      "formalDrawsOnFinished": 0.24,
+      "effectivePerSession": 0.2,
+      "termination": {
+        "round_limit": 780,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "B",
+      "intensityLimit": 4,
+      "sessions": 856,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0,
+      "formalDrawsOnFinished": 0,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 856,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    },
+    {
+      "mode": "B",
+      "intensityLimit": 5,
+      "sessions": 833,
+      "deadEndSessions": 0,
+      "deadEndRate": 0,
+      "completedRoundsMean": 20,
+      "formalShare": 0,
+      "formalDrawsOnFinished": 0,
+      "effectivePerSession": 0,
+      "termination": {
+        "round_limit": 833,
+        "pack_exhausted": 0,
+        "global_exhausted": 0,
+        "awaiting_host": 0,
+        "guard_limit": 0
+      }
+    }
+  ],
+  "worstTraceFile": "docs/qa/content-audit/FORMAL-TRUTH-MC-WORST-TRACE.json",
+  "readingGuide": "Formal 曝光占比＝抽到 Formal（manifest 轨 tracks.formalFixed；A3 后为 KEEP 5）的次数 / 总抽卡次数；退出 Formal 的旧卡与 SSOT 旧卡都按 legacy 口径处理（不受 Heat 硬过滤）。 Mode A 的 heatAtDraw 恒 H1 是「无披露通道」的确定性结果，不是 Router 抖动。 Mode B 的有效信息轮只取决于抽到的卡是否带 Plan §3 metadata（informationGain/topic，走生产 sidecar），与是否仍在 Formal 无关——A3 退出的 26 张仍带 metadata，抽到仍计有效轮；真正无 metadata 的 SSOT 旧卡 sidecar 为 null ⇒ fail-closed 不计数。 所有数字由本脚本机械产出，报告侧不得手写。"
+}

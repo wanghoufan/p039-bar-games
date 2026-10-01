@@ -1,0 +1,9 @@
+{
+  "rules_version": "2026-09-29-产品验收",
+  "synced_at": "2026-09-30",
+  "project_phase_field": "DEVELOP",
+  "task_ledger_rows": 223,
+  "agents_block_injected": true,
+  "product_acceptance_ac_added": true,
+  "dispatch_ledger_rows": 280
+}

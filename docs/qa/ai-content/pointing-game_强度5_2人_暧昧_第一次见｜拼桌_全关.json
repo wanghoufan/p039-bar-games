@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 42,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "base",
+    "intensity": 5,
+    "players": 2,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：第一次见 / 拼桌；氛围：暧昧；最高强度：5。\n可用玩法：pointing-game。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 37656,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pointing-01",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向今晚你觉得最亲切的人，指完保持三秒，然后放下。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-02",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向今晚你最想先认识的人，不需要说明理由。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-03",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向你觉得笑容最让你放松的人，被指到的人只需微笑回应。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-04",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向今晚你愿意多聊两句的人，然后轮流说一个想聊的安全话题。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-05",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向你觉得最有神秘感的人，并用一句话形容这种神秘感。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-06",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向今晚让你有一点好奇心的人，再说出一个你想问但对方可以不答的问题。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-07",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向你觉得和你气场最合的人，并说出一个你们可能合拍的共同点。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-08",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向今晚你最想继续了解的人，然后说出一个不涉及隐私的原因。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-09",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向今晚最让你心动的人，如果不想指可以指向天花板，并说一个安全原因。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 5,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-10",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向你觉得今晚最想再见一面的人，并说出一个想再见的安全理由。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 5,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

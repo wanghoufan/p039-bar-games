@@ -1,0 +1,2192 @@
+{
+  "N": 350,
+  "gainDist": [
+    [
+      "高",
+      40
+    ],
+    [
+      "中",
+      82
+    ],
+    [
+      "低",
+      215
+    ],
+    [
+      "0",
+      13
+    ]
+  ],
+  "semDist": [
+    [
+      "现场评价/猜测",
+      132
+    ],
+    [
+      "暧昧推进",
+      86
+    ],
+    [
+      "自我披露",
+      74
+    ],
+    [
+      "相互了解",
+      44
+    ],
+    [
+      "行动互动",
+      12
+    ],
+    [
+      "纯看戏/低信息",
+      2
+    ]
+  ],
+  "topicDist": [
+    [
+      "现场化学反应",
+      182
+    ],
+    [
+      "择偶偏好/吸引力",
+      52
+    ],
+    [
+      "性格/习惯/小癖好",
+      40
+    ],
+    [
+      "恋爱观",
+      27
+    ],
+    [
+      "生活方式",
+      19
+    ],
+    [
+      "亲密/性观念",
+      16
+    ],
+    [
+      "无明确人物信息增量",
+      12
+    ],
+    [
+      "兴趣爱好",
+      2
+    ]
+  ],
+  "socialDist": [
+    [
+      "高",
+      153
+    ],
+    [
+      "中",
+      185
+    ],
+    [
+      "低",
+      12
+    ]
+  ],
+  "progDist": [
+    [
+      "高",
+      197
+    ],
+    [
+      "中",
+      139
+    ],
+    [
+      "低",
+      14
+    ]
+  ],
+  "verdictDist": [
+    [
+      "保留",
+      282
+    ],
+    [
+      "改写候选",
+      66
+    ],
+    [
+      "删除候选",
+      2
+    ]
+  ],
+  "promoteDist": [
+    [
+      "是",
+      41
+    ],
+    [
+      "弱",
+      296
+    ],
+    [
+      "否",
+      13
+    ]
+  ],
+  "disposition": {
+    "order": [
+      "PRIORITY_KEEP",
+      "KEEP_CANDIDATE",
+      "SOCIAL_BUFFER_POOL",
+      "REWRITE_CANDIDATE",
+      "DELETE_CANDIDATE"
+    ],
+    "dist": [
+      [
+        "PRIORITY_KEEP",
+        40
+      ],
+      [
+        "KEEP_CANDIDATE",
+        82
+      ],
+      [
+        "SOCIAL_BUFFER_POOL",
+        166
+      ],
+      [
+        "REWRITE_CANDIDATE",
+        60
+      ],
+      [
+        "DELETE_CANDIDATE",
+        2
+      ]
+    ],
+    "ratios": [
+      [
+        "PRIORITY_KEEP",
+        0.1143
+      ],
+      [
+        "KEEP_CANDIDATE",
+        0.2343
+      ],
+      [
+        "SOCIAL_BUFFER_POOL",
+        0.4743
+      ],
+      [
+        "REWRITE_CANDIDATE",
+        0.1714
+      ],
+      [
+        "DELETE_CANDIDATE",
+        0.0057
+      ]
+    ],
+    "rules": [
+      {
+        "when": "infoGain=高",
+        "to": "PRIORITY_KEEP"
+      },
+      {
+        "when": "infoGain=中 且（社交能量 或 关系推进 ∈ {中,高}）",
+        "to": "KEEP_CANDIDATE"
+      },
+      {
+        "when": "infoGain∈{低,0} 且（社交能量=高 或 关系推进=高）",
+        "to": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "when": "infoGain∈{低,0} 且 社交能量=低 且 关系推进=低",
+        "to": "DELETE_CANDIDATE"
+      },
+      {
+        "when": "infoGain∈{低,0} 且两轴都∈{中,低}（非全低）",
+        "to": "REWRITE_CANDIDATE"
+      },
+      {
+        "when": "infoGain=中 但两轴都为低",
+        "to": "REWRITE_CANDIDATE"
+      }
+    ],
+    "note": "处置口径已收紧：不再「任意一轴为高即保留」。SOCIAL_BUFFER_POOL 是候选池，不等于正式保留。",
+    "verdictToDisposition": {
+      "改写候选": {
+        "REWRITE_CANDIDATE": 60,
+        "KEEP_CANDIDATE": 6
+      },
+      "保留": {
+        "KEEP_CANDIDATE": 76,
+        "PRIORITY_KEEP": 40,
+        "SOCIAL_BUFFER_POOL": 166
+      },
+      "删除候选": {
+        "DELETE_CANDIDATE": 2
+      }
+    },
+    "byType": [
+      {
+        "gameType": "truth",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 5
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 9
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 26
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 10
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "gameType": "dare",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 1
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 15
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 19
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 13
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "gameType": "most_likely",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 0
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 0
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 48
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 2
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "gameType": "never_have_i",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 1
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 12
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 11
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 26
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "gameType": "either_or",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 14
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 27
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 8
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 1
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "gameType": "pointing",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 0
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 0
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 44
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 6
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "gameType": "chemistry",
+        "count": 50,
+        "byDisposition": [
+          {
+            "disposition": "PRIORITY_KEEP",
+            "count": 19
+          },
+          {
+            "disposition": "KEEP_CANDIDATE",
+            "count": 19
+          },
+          {
+            "disposition": "SOCIAL_BUFFER_POOL",
+            "count": 10
+          },
+          {
+            "disposition": "REWRITE_CANDIDATE",
+            "count": 2
+          },
+          {
+            "disposition": "DELETE_CANDIDATE",
+            "count": 0
+          }
+        ]
+      }
+    ],
+    "bufferQuota": {
+      "poolSize": 166,
+      "shareOfAllCards": 0.4743,
+      "lowZeroTotal": 228,
+      "shareOfLowZero": 0.7281,
+      "skeletonN": 122,
+      "ifWholePoolKeptShareOfFormal": 0.5764,
+      "maxWithoutMajority": 122,
+      "recommendedCap": 61,
+      "recommendedCapRatioOfFormal": 0.3333,
+      "recommendedCapShareOfPool": 0.3675
+    },
+    "priorityKeepN": 40,
+    "keepCandidateN": 82,
+    "socialBufferN": 166,
+    "rewriteN": 60,
+    "deleteN": 2
+  },
+  "duplicate": {
+    "taggedCount": 323,
+    "actualDupCount": 323,
+    "taggedGroupRate": 0.9229,
+    "actualDuplicateCandidateRate": 0.9229,
+    "semanticClusterCoverage": 0.9229,
+    "clusterSizeBuckets": [
+      {
+        "label": "size=1",
+        "clusters": 0,
+        "cards": 0
+      },
+      {
+        "label": "size=2",
+        "clusters": 34,
+        "cards": 68
+      },
+      {
+        "label": "size=3-5",
+        "clusters": 27,
+        "cards": 93
+      },
+      {
+        "label": "size=6-10",
+        "clusters": 12,
+        "cards": 93
+      },
+      {
+        "label": "size=>10",
+        "clusters": 5,
+        "cards": 69
+      }
+    ],
+    "clusterCount": 78,
+    "singletonClusters": [],
+    "multiClusters": [
+      [
+        "mutual-guess-reveal",
+        18
+      ],
+      [
+        "want-to-stay-close",
+        15
+      ],
+      [
+        "guess-then-reveal",
+        12
+      ],
+      [
+        "either-romance-stance",
+        12
+      ],
+      [
+        "either-flirt-choice",
+        12
+      ],
+      [
+        "either-attraction-cue",
+        10
+      ],
+      [
+        "private-mutual-continue",
+        9
+      ],
+      [
+        "match-next-meet-guess",
+        9
+      ],
+      [
+        "flirt-signal-check",
+        9
+      ],
+      [
+        "either-social-style",
+        8
+      ],
+      [
+        "either-match-commit",
+        8
+      ],
+      [
+        "first-impression-vibe",
+        8
+      ],
+      [
+        "mirror-mimic-act",
+        7
+      ],
+      [
+        "touch-escalation",
+        7
+      ],
+      [
+        "easy-talk-pick",
+        6
+      ],
+      [
+        "curiosity-pick",
+        6
+      ],
+      [
+        "partner-for-next-round",
+        6
+      ],
+      [
+        "eye-contact-stare",
+        5
+      ],
+      [
+        "chat-chemistry",
+        5
+      ],
+      [
+        "attraction-cue",
+        5
+      ],
+      [
+        "reunion-interest",
+        5
+      ],
+      [
+        "sit-next-to",
+        4
+      ],
+      [
+        "easy-to-talk-to",
+        4
+      ],
+      [
+        "pair-meet-again",
+        4
+      ],
+      [
+        "want-more",
+        4
+      ],
+      [
+        "tonight-mood",
+        3
+      ],
+      [
+        "simultaneous-choice-reveal",
+        3
+      ],
+      [
+        "duo-pose-photo",
+        3
+      ],
+      [
+        "comfortable-distance-step",
+        3
+      ],
+      [
+        "whisper-close-talk",
+        3
+      ],
+      [
+        "noticed-by-opposite-sex",
+        3
+      ],
+      [
+        "takes-initiative-to-talk",
+        3
+      ],
+      [
+        "crushing-behavior-tells",
+        3
+      ],
+      [
+        "pair-chat-flow",
+        3
+      ],
+      [
+        "impression-shift",
+        3
+      ],
+      [
+        "stay-for-someone",
+        3
+      ],
+      [
+        "noticing-crush",
+        3
+      ],
+      [
+        "coy-signal",
+        3
+      ],
+      [
+        "next-step-invitation",
+        3
+      ],
+      [
+        "noticed-detail-moment",
+        3
+      ],
+      [
+        "chat-appeal-trait",
+        3
+      ],
+      [
+        "unasked-curiosity",
+        3
+      ],
+      [
+        "appreciated-comfort-trait",
+        3
+      ],
+      [
+        "interest-gained-moment",
+        3
+      ],
+      [
+        "draw-guess-act",
+        2
+      ],
+      [
+        "compliment-line",
+        2
+      ],
+      [
+        "slogan-cipher",
+        2
+      ],
+      [
+        "venue-afterparty-pref",
+        2
+      ],
+      [
+        "social-connector",
+        2
+      ],
+      [
+        "slow-burn-charm",
+        2
+      ],
+      [
+        "chat-comfort-charm",
+        2
+      ],
+      [
+        "want-to-know-more",
+        2
+      ],
+      [
+        "keeps-thinking-of-someone",
+        2
+      ],
+      [
+        "impression-glow-up",
+        2
+      ],
+      [
+        "remembers-little-details",
+        2
+      ],
+      [
+        "visible-reaction",
+        2
+      ],
+      [
+        "fixated-on-someone",
+        2
+      ],
+      [
+        "pair-emergent-spark",
+        2
+      ],
+      [
+        "pair-audience-wants-more",
+        2
+      ],
+      [
+        "pair-texts-after",
+        2
+      ],
+      [
+        "pair-familiarity-now",
+        2
+      ],
+      [
+        "social-ease",
+        2
+      ],
+      [
+        "proactive-move",
+        2
+      ],
+      [
+        "nervous-around-crush",
+        2
+      ],
+      [
+        "eye-contact",
+        2
+      ],
+      [
+        "mutual-noticing",
+        2
+      ],
+      [
+        "proximity-seat",
+        2
+      ],
+      [
+        "tonight-game-expectation",
+        2
+      ],
+      [
+        "impression-keyword",
+        2
+      ],
+      [
+        "first-impression-personality",
+        2
+      ],
+      [
+        "active-vs-shy-guess",
+        2
+      ],
+      [
+        "want-to-talk-topic",
+        2
+      ],
+      [
+        "pick-to-continue-chat",
+        2
+      ],
+      [
+        "date-intent-pick",
+        2
+      ],
+      [
+        "mutual-attention-signal",
+        2
+      ],
+      [
+        "date-spot-preference",
+        2
+      ],
+      [
+        "continue-interest-reason",
+        2
+      ],
+      [
+        "match-impression-shift",
+        2
+      ]
+    ]
+  },
+  "heatAvailability": [
+    {
+      "heat": "H1",
+      "legalCount": 58,
+      "legalRatio": 0.1657,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 1
+        },
+        {
+          "gain": "中",
+          "count": 15
+        },
+        {
+          "gain": "低",
+          "count": 38
+        },
+        {
+          "gain": "0",
+          "count": 4
+        }
+      ],
+      "midPlus": 16,
+      "personTopic": 24
+    },
+    {
+      "heat": "H2",
+      "legalCount": 128,
+      "legalRatio": 0.3657,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 7
+        },
+        {
+          "gain": "中",
+          "count": 40
+        },
+        {
+          "gain": "低",
+          "count": 72
+        },
+        {
+          "gain": "0",
+          "count": 9
+        }
+      ],
+      "midPlus": 47,
+      "personTopic": 59
+    },
+    {
+      "heat": "H3",
+      "legalCount": 160,
+      "legalRatio": 0.4571,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 24
+        },
+        {
+          "gain": "中",
+          "count": 43
+        },
+        {
+          "gain": "低",
+          "count": 84
+        },
+        {
+          "gain": "0",
+          "count": 9
+        }
+      ],
+      "midPlus": 67,
+      "personTopic": 74
+    },
+    {
+      "heat": "H4",
+      "legalCount": 222,
+      "legalRatio": 0.6343,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 33
+        },
+        {
+          "gain": "中",
+          "count": 42
+        },
+        {
+          "gain": "低",
+          "count": 143
+        },
+        {
+          "gain": "0",
+          "count": 4
+        }
+      ],
+      "midPlus": 75,
+      "personTopic": 97
+    }
+  ],
+  "crossHeatCards": 218,
+  "exactHeatCards": 132,
+  "intensityDist": [
+    {
+      "intensity": 1,
+      "count": 58,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 1
+        },
+        {
+          "gain": "中",
+          "count": 15
+        },
+        {
+          "gain": "低",
+          "count": 38
+        },
+        {
+          "gain": "0",
+          "count": 4
+        }
+      ],
+      "midPlus": 16
+    },
+    {
+      "intensity": 2,
+      "count": 70,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 6
+        },
+        {
+          "gain": "中",
+          "count": 25
+        },
+        {
+          "gain": "低",
+          "count": 34
+        },
+        {
+          "gain": "0",
+          "count": 5
+        }
+      ],
+      "midPlus": 31
+    },
+    {
+      "intensity": 3,
+      "count": 90,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 18
+        },
+        {
+          "gain": "中",
+          "count": 18
+        },
+        {
+          "gain": "低",
+          "count": 50
+        },
+        {
+          "gain": "0",
+          "count": 4
+        }
+      ],
+      "midPlus": 36
+    },
+    {
+      "intensity": 4,
+      "count": 92,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 2
+        },
+        {
+          "gain": "中",
+          "count": 14
+        },
+        {
+          "gain": "低",
+          "count": 76
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 16
+    },
+    {
+      "intensity": 5,
+      "count": 40,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 13
+        },
+        {
+          "gain": "中",
+          "count": 10
+        },
+        {
+          "gain": "低",
+          "count": 17
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 23
+    }
+  ],
+  "typeDist": [
+    {
+      "gameType": "truth",
+      "label": "真心话",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 5
+        },
+        {
+          "gain": "中",
+          "count": 9
+        },
+        {
+          "gain": "低",
+          "count": 36
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 14,
+      "judge": 31,
+      "noPersonInfo": 0,
+      "socialHigh": 20,
+      "progHigh": 29,
+      "personTopic": 15,
+      "keep": 37,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 5
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 9
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 26
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 10
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "gameType": "dare",
+      "label": "大冒险",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 1
+        },
+        {
+          "gain": "中",
+          "count": 15
+        },
+        {
+          "gain": "低",
+          "count": 21
+        },
+        {
+          "gain": "0",
+          "count": 13
+        }
+      ],
+      "midPlus": 16,
+      "judge": 1,
+      "noPersonInfo": 12,
+      "socialHigh": 19,
+      "progHigh": 30,
+      "personTopic": 19,
+      "keep": 35,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 1
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 15
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 19
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 13
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "gameType": "most_likely",
+      "label": "谁最可能",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 0
+        },
+        {
+          "gain": "中",
+          "count": 0
+        },
+        {
+          "gain": "低",
+          "count": 50
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 0,
+      "judge": 50,
+      "noPersonInfo": 0,
+      "socialHigh": 48,
+      "progHigh": 48,
+      "personTopic": 0,
+      "keep": 48,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 0
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 0
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 48
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 2
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "gameType": "never_have_i",
+      "label": "我从来没有",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 1
+        },
+        {
+          "gain": "中",
+          "count": 12
+        },
+        {
+          "gain": "低",
+          "count": 37
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 13,
+      "judge": 0,
+      "noPersonInfo": 0,
+      "socialHigh": 12,
+      "progHigh": 10,
+      "personTopic": 25,
+      "keep": 24,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 1
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 12
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 11
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 26
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "gameType": "either_or",
+      "label": "二选一",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 14
+        },
+        {
+          "gain": "中",
+          "count": 27
+        },
+        {
+          "gain": "低",
+          "count": 9
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 41,
+      "judge": 0,
+      "noPersonInfo": 0,
+      "socialHigh": 15,
+      "progHigh": 25,
+      "personTopic": 41,
+      "keep": 46,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 14
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 27
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 8
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 1
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "gameType": "pointing",
+      "label": "指人游戏",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 0
+        },
+        {
+          "gain": "中",
+          "count": 0
+        },
+        {
+          "gain": "低",
+          "count": 50
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 0,
+      "judge": 50,
+      "noPersonInfo": 0,
+      "socialHigh": 39,
+      "progHigh": 22,
+      "personTopic": 18,
+      "keep": 44,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 0
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 0
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 44
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 6
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "gameType": "chemistry",
+      "label": "默契测试",
+      "count": 50,
+      "byGain": [
+        {
+          "gain": "高",
+          "count": 19
+        },
+        {
+          "gain": "中",
+          "count": 19
+        },
+        {
+          "gain": "低",
+          "count": 12
+        },
+        {
+          "gain": "0",
+          "count": 0
+        }
+      ],
+      "midPlus": 38,
+      "judge": 0,
+      "noPersonInfo": 0,
+      "socialHigh": 0,
+      "progHigh": 33,
+      "personTopic": 38,
+      "keep": 48,
+      "byDisposition": [
+        {
+          "disposition": "PRIORITY_KEEP",
+          "count": 19
+        },
+        {
+          "disposition": "KEEP_CANDIDATE",
+          "count": 19
+        },
+        {
+          "disposition": "SOCIAL_BUFFER_POOL",
+          "count": 10
+        },
+        {
+          "disposition": "REWRITE_CANDIDATE",
+          "count": 2
+        },
+        {
+          "disposition": "DELETE_CANDIDATE",
+          "count": 0
+        }
+      ]
+    }
+  ],
+  "threeAxis": [
+    [
+      "低 / 社交高 / 推进高",
+      92
+    ],
+    [
+      "低 / 社交中 / 推进中",
+      42
+    ],
+    [
+      "中 / 社交中 / 推进中",
+      42
+    ],
+    [
+      "低 / 社交高 / 推进中",
+      33
+    ],
+    [
+      "高 / 社交中 / 推进高",
+      30
+    ],
+    [
+      "低 / 社交中 / 推进高",
+      29
+    ],
+    [
+      "中 / 社交中 / 推进高",
+      17
+    ],
+    [
+      "中 / 社交高 / 推进高",
+      13
+    ],
+    [
+      "低 / 社交低 / 推进高",
+      10
+    ],
+    [
+      "0 / 社交中 / 推进中",
+      9
+    ],
+    [
+      "低 / 社交中 / 推进低",
+      9
+    ],
+    [
+      "中 / 社交高 / 推进中",
+      7
+    ],
+    [
+      "高 / 社交高 / 推进高",
+      6
+    ],
+    [
+      "高 / 社交中 / 推进中",
+      4
+    ],
+    [
+      "中 / 社交中 / 推进低",
+      3
+    ],
+    [
+      "0 / 社交低 / 推进低",
+      2
+    ],
+    [
+      "0 / 社交高 / 推进中",
+      2
+    ]
+  ],
+  "lowInfoButUseful": {
+    "count": 166,
+    "sample": [
+      {
+        "cardId": "PN-CHEM-031",
+        "gameType": "chemistry",
+        "number": 31,
+        "text": "私密同时选择：如果下一轮可以自由选搭档，你会继续选对方 VS 交给系统随机。只有双方都选“继续选对方”时才显示“默契命中”。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方此刻想不想下一轮继续选自己做搭档，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-032",
+        "gameType": "chemistry",
+        "number": 32,
+        "text": "私密同时选择：如果现在还能单独聊十分钟，你愿意 VS 看情况。只有双方都选“愿意”时才显示。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方此刻愿不愿意和自己再单独聊十分钟，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-033",
+        "gameType": "chemistry",
+        "number": 33,
+        "text": "私密同时选择：散场以后如果对方继续找你聊天，你愿意继续 VS 今晚到这里就好。只显示双方共同结果。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方散场后愿不愿意继续和自己聊天，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-034",
+        "gameType": "chemistry",
+        "number": 34,
+        "text": "私密同时选择：假设一周内收到对方一次轻松邀约，你会选“愿意去” VS “先看情况”；只在双方都选“愿意去”时显示共同结果。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了一周内收到对方轻松邀约时对方愿不愿意去，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-035",
+        "gameType": "chemistry",
+        "number": 35,
+        "text": "私密同时选择：如果系统后面再次把你们配到一起，你会开心 VS 都可以。只有双方都选“开心”时才显示。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方是否开心下次再被系统配到一起，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-036",
+        "gameType": "chemistry",
+        "number": 36,
+        "text": "私密同时选择：如果对方主动交换联系方式，你欢迎 VS 随缘。只有双方都选“欢迎”时才显示。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方欢不欢迎和自己交换联系方式，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-037",
+        "gameType": "chemistry",
+        "number": 37,
+        "text": "私密同时选择：下次又在同一场合见面，你会主动打招呼 VS 等对方。答案一致时显示“节奏一致”。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方下次见面会主动打招呼还是等对方，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-038",
+        "gameType": "chemistry",
+        "number": 38,
+        "text": "私密同时选择：如果出现一个双人任务，你更愿意继续和对方 VS 随机换人。只有双方都选对方时才显示。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方有双人任务时更愿意继续和自己还是随机换人，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-039",
+        "gameType": "chemistry",
+        "number": 39,
+        "text": "私密同时选择：如果今晚还有下一摊，你愿意和对方一起去 VS 各自安排。只有双方都愿意时才显示。",
+        "intensity": 4,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "flirt",
+        "targetMode": "signal-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": false,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方愿不愿意和自己一起去下一摊，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "private-mutual-continue",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-CHEM-050",
+        "gameType": "chemistry",
+        "number": 50,
+        "text": "MATCH终局复核：今晚之后，你还想再见 TA 一次吗？愿意 / 看感觉。",
+        "intensity": 5,
+        "heatMin": 4,
+        "heatMax": 4,
+        "relationStage": "continue",
+        "targetMode": "match-pair",
+        "responseMode": "private-mutual-result",
+        "interactionType": "preference",
+        "consentMode": "private-mutual-only",
+        "matchRequired": true,
+        "boundaryTags": [
+          "relationship-sensitive"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方今晚之后还想不想再见自己一次，只对这对组合这一次有效",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "低",
+        "relationshipProgression": "高",
+        "duplicateCluster": "-",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-DARE-004",
+        "gameType": "dare",
+        "number": 4,
+        "text": "轮流用一句话把对方介绍给全桌，只能根据刚才的聊天，不评价外貌。",
+        "intensity": 1,
+        "heatMin": 1,
+        "heatMax": 2,
+        "relationStage": "notice",
+        "targetMode": "system-opposite-sex",
+        "responseMode": "public",
+        "interactionType": "action",
+        "consentMode": "skip-anytime",
+        "matchRequired": false,
+        "boundaryTags": [],
+        "semanticType": "相互了解",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了这两个人刚才聊到了什么，被对方复述出来了一遍，没有新增",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "中",
+        "relationshipProgression": "高",
+        "duplicateCluster": "-",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-DARE-009",
+        "gameType": "dare",
+        "number": 9,
+        "text": "面对对方，各说一句不涉及外貌的轻松夸奖，可以夸聊天、反应、幽默或气氛感。",
+        "intensity": 2,
+        "heatMin": 2,
+        "heatMax": 3,
+        "relationStage": "know",
+        "targetMode": "system-opposite-sex",
+        "responseMode": "public",
+        "interactionType": "action",
+        "consentMode": "skip-anytime",
+        "matchRequired": false,
+        "boundaryTags": [],
+        "semanticType": "现场评价/猜测",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了对方夸了自己哪一点，比如聊天或反应，是一次临时评价",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "高",
+        "relationshipProgression": "高",
+        "duplicateCluster": "compliment-line",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-DARE-014",
+        "gameType": "dare",
+        "number": 14,
+        "text": "一个人用表情演“开心 / 紧张 / 心动”中的一个，另一个人猜。",
+        "intensity": 2,
+        "heatMin": 2,
+        "heatMax": 3,
+        "relationStage": "know",
+        "targetMode": "system-opposite-sex",
+        "responseMode": "public",
+        "interactionType": "action",
+        "consentMode": "skip-anytime",
+        "matchRequired": false,
+        "boundaryTags": [],
+        "semanticType": "行动互动",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了这个人演的开心还是紧张还是心动被猜没猜中，只是一次现场反应",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "高",
+        "relationshipProgression": "中",
+        "duplicateCluster": "draw-guess-act",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-DARE-016",
+        "gameType": "dare",
+        "number": 16,
+        "text": "交换位置坐一轮，模仿一下刚才对方最典型的动作。",
+        "intensity": 2,
+        "heatMin": 2,
+        "heatMax": 3,
+        "relationStage": "know",
+        "targetMode": "system-opposite-sex",
+        "responseMode": "public",
+        "interactionType": "action",
+        "consentMode": "skip-anytime",
+        "matchRequired": false,
+        "boundaryTags": [],
+        "semanticType": "行动互动",
+        "topic": "无明确人物信息增量",
+        "infoGain": "0",
+        "learned": "没多知道谁的什么，只换位模仿了下对方典型动作",
+        "promotesUnderstanding": "否",
+        "socialEnergy": "高",
+        "relationshipProgression": "中",
+        "duplicateCluster": "mirror-mimic-act",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      },
+      {
+        "cardId": "PN-DARE-020",
+        "gameType": "dare",
+        "number": 20,
+        "text": "双方都愿意的话，选一个人面对面对视5秒，中间不用故意做鬼脸。",
+        "intensity": 3,
+        "heatMin": 3,
+        "heatMax": 4,
+        "relationStage": "signal",
+        "targetMode": "choose-opposite-sex",
+        "responseMode": "public",
+        "interactionType": "action",
+        "consentMode": "mutual-current-consent",
+        "matchRequired": false,
+        "boundaryTags": [
+          "proximity"
+        ],
+        "semanticType": "暧昧推进",
+        "topic": "现场化学反应",
+        "infoGain": "低",
+        "learned": "知道了这两个人敢不敢跟对方对视5秒，是一次临时张力",
+        "promotesUnderstanding": "弱",
+        "socialEnergy": "高",
+        "relationshipProgression": "高",
+        "duplicateCluster": "eye-contact-stare",
+        "verdict": "保留",
+        "disposition": "SOCIAL_BUFFER_POOL"
+      }
+    ]
+  },
+  "socialBufferSample": {
+    "cardIds": [
+      "PN-CHEM-031",
+      "PN-CHEM-032",
+      "PN-CHEM-033",
+      "PN-CHEM-034",
+      "PN-CHEM-035",
+      "PN-CHEM-036",
+      "PN-CHEM-037",
+      "PN-CHEM-038",
+      "PN-CHEM-039",
+      "PN-CHEM-050",
+      "PN-DARE-004",
+      "PN-DARE-009",
+      "PN-DARE-014",
+      "PN-DARE-016",
+      "PN-DARE-020",
+      "PN-DARE-022",
+      "PN-DARE-023",
+      "PN-DARE-028",
+      "PN-DARE-030",
+      "PN-DARE-031"
+    ],
+    "byGameType": [
+      [
+        "chemistry",
+        10
+      ],
+      [
+        "dare",
+        19
+      ],
+      [
+        "either_or",
+        8
+      ],
+      [
+        "most_likely",
+        48
+      ],
+      [
+        "never_have_i",
+        11
+      ],
+      [
+        "pointing",
+        44
+      ],
+      [
+        "truth",
+        26
+      ]
+    ]
+  },
+  "topicByType": [
+    {
+      "topic": "现场化学反应",
+      "total": 182,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 35
+        },
+        {
+          "gameType": "dare",
+          "count": 19
+        },
+        {
+          "gameType": "most_likely",
+          "count": 50
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 25
+        },
+        {
+          "gameType": "either_or",
+          "count": 9
+        },
+        {
+          "gameType": "pointing",
+          "count": 32
+        },
+        {
+          "gameType": "chemistry",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "topic": "择偶偏好/吸引力",
+      "total": 52,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 4
+        },
+        {
+          "gameType": "dare",
+          "count": 5
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 9
+        },
+        {
+          "gameType": "either_or",
+          "count": 11
+        },
+        {
+          "gameType": "pointing",
+          "count": 18
+        },
+        {
+          "gameType": "chemistry",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "topic": "性格/习惯/小癖好",
+      "total": 40,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 6
+        },
+        {
+          "gameType": "dare",
+          "count": 0
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 15
+        },
+        {
+          "gameType": "either_or",
+          "count": 6
+        },
+        {
+          "gameType": "pointing",
+          "count": 0
+        },
+        {
+          "gameType": "chemistry",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "topic": "恋爱观",
+      "total": 27,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 2
+        },
+        {
+          "gameType": "dare",
+          "count": 0
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 1
+        },
+        {
+          "gameType": "either_or",
+          "count": 14
+        },
+        {
+          "gameType": "pointing",
+          "count": 0
+        },
+        {
+          "gameType": "chemistry",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "topic": "生活方式",
+      "total": 19,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 2
+        },
+        {
+          "gameType": "dare",
+          "count": 2
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 0
+        },
+        {
+          "gameType": "either_or",
+          "count": 6
+        },
+        {
+          "gameType": "pointing",
+          "count": 0
+        },
+        {
+          "gameType": "chemistry",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "topic": "亲密/性观念",
+      "total": 16,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 0
+        },
+        {
+          "gameType": "dare",
+          "count": 12
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 0
+        },
+        {
+          "gameType": "either_or",
+          "count": 4
+        },
+        {
+          "gameType": "pointing",
+          "count": 0
+        },
+        {
+          "gameType": "chemistry",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "topic": "无明确人物信息增量",
+      "total": 12,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 0
+        },
+        {
+          "gameType": "dare",
+          "count": 12
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 0
+        },
+        {
+          "gameType": "either_or",
+          "count": 0
+        },
+        {
+          "gameType": "pointing",
+          "count": 0
+        },
+        {
+          "gameType": "chemistry",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "topic": "兴趣爱好",
+      "total": 2,
+      "byType": [
+        {
+          "gameType": "truth",
+          "count": 1
+        },
+        {
+          "gameType": "dare",
+          "count": 0
+        },
+        {
+          "gameType": "most_likely",
+          "count": 0
+        },
+        {
+          "gameType": "never_have_i",
+          "count": 0
+        },
+        {
+          "gameType": "either_or",
+          "count": 0
+        },
+        {
+          "gameType": "pointing",
+          "count": 0
+        },
+        {
+          "gameType": "chemistry",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "derived": {
+    "highN": 40,
+    "midPlusN": 122,
+    "lowZeroN": 228,
+    "judgeN": 132,
+    "personTopicN": 156,
+    "personTopicMidPlusN": 121
+  }
+}

@@ -1,0 +1,21 @@
+import {test,expect} from "@playwright/test";
+test.skip(process.env.PARTY_NIGHT_PRODUCTION_SMOKE!=="true","production build only");
+test("production offline reload preserves independent session and all core controls",async({page,context})=>{
+ await page.goto("/punishment"); await page.getByRole("button",{name:"开始",exact:true}).click();
+ await expect(page).toHaveURL(/punishment\/play/);await expect(page.locator(".punishment-copy")).toBeVisible();
+ await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+ await page.reload(); await expect(page.locator(".punishment-copy")).toBeVisible();
+ const id=await page.locator(".punishment-card").getAttribute("data-card-id");
+ await context.setOffline(true); await page.reload();await expect(page.locator(".punishment-copy")).toBeVisible();
+ expect(await page.locator(".punishment-card").getAttribute("data-card-id")).toBe(id);
+ await page.getByLabel("选择 2",{exact:true}).click();
+ for(let i=0;i<4&&!(await page.getByText("开始15秒",{exact:true}).count());i++)await page.getByText("换一个",{exact:true}).click();
+ await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByRole("timer")).toBeVisible();
+ await page.getByText("暂停",{exact:true}).click();
+ await page.getByLabel("切换语言",{exact:true}).click();await page.getByText("English",{exact:true}).click();await page.getByText("完成",{exact:true}).click();
+ await expect(page.getByRole("timer")).toHaveAttribute("aria-label","已暂停");
+ await page.getByText("继续",{exact:true}).click();await page.getByText("结束",{exact:true}).click();
+ await page.getByLabel("设置与盾牌",{exact:true}).click();await page.getByText("浅色",{exact:true}).click();await page.getByRole("checkbox",{name:"亲吻",exact:true}).uncheck();await page.getByText("完成",{exact:true}).click();
+ await page.getByText("下一个",{exact:true}).click();await expect(page.locator(".punishment-en")).toBeVisible();
+ await page.screenshot({path:"docs/qa/punishment/production-offline-light.png"});await context.setOffline(false);
+});

@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 67,
+    "packId": "most-likely",
+    "packName": "谁最可能",
+    "origin": "extra",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "most-likely"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：刚认识；氛围：搞笑；最高强度：1。\n可用玩法：most-likely。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 15953,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "ml-001",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在自我介绍后三秒就忘记对方的名字？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-002",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能把冷笑话讲得比热咖啡还认真？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-003",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能逛超市时推着空购物车迷路？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-004",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能给宠物取一个特别像人类的名字？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-005",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能看喜剧片时笑到拍自己的大腿？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-006",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能把闹钟按掉十次还怪闹钟太吵？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-007",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能点外卖时纠结半小时，最后选了昨天那家？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-008",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在雨天忘记带伞，却坚称自己是在等雨停？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-009",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能用表情包完成一整段对话？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-010",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能把袜子穿成不同颜色，还说是时尚？",
+        "instruction": "所有人同时指向自己觉得最可能的人；票数最高者用一句话解释，若不想说可以跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

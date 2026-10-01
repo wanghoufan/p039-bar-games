@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 3,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 3,
+    "players": 2,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：熟人局；氛围：放开玩；最高强度：3。\n可用玩法：truth-dare。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 33167,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "td-001",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最近一次笑到停不下来是什么事？请讲出当时的一个画面。",
+        "instruction": "抽到的人回答，其他人可以追问一次；不想答就跳过。",
+        "intensity": 1,
+        "tags": [
+          "真心话",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-002",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用最夸张的语气夸奖右边的人30秒，不能重复同一个形容词。",
+        "instruction": "计时30秒，对方可以随时喊停；不想做就跳过。",
+        "intensity": 1,
+        "tags": [
+          "大冒险",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-003",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "说出你最近最常做的三个休闲活动，并解释其中一个为什么让你放松。",
+        "instruction": "抽到的人回答；不想展开可以只列三个，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "真心话",
+          "日常"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-004",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "模仿一位在场嘉宾的正面特点或口头禅，不能指名，让大家猜是谁。",
+        "instruction": "先声明只是善意玩梗，被模仿者可以随时叫停；不想做就跳过。",
+        "intensity": 2,
+        "tags": [
+          "大冒险",
+          "模仿"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-005",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你做过最冲动但事后不后悔的决定是什么？只说你能接受公开的部分。",
+        "instruction": "抽到的人回答，其他人不能追问细节；不想答就跳过。",
+        "intensity": 2,
+        "tags": [
+          "真心话",
+          "经历"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-006",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "让另一位嘉宾指定一个日常物品，你用即兴广告词推销它60秒，不能笑场。",
+        "instruction": "计时60秒，笑场或卡住就表演一个表情包；也可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "大冒险",
+          "即兴"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-007",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果今晚必须放弃一种娱乐方式，你会选哪个？为什么？",
+        "instruction": "抽到的人回答；不想答就跳过。",
+        "intensity": 2,
+        "tags": [
+          "真心话",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-008",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和左边的人对视10秒，先笑的人喝一口水。",
+        "instruction": "不能碰触对方，计时结束就完成；不想做可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "大冒险",
+          "对视"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-009",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你人生中最尴尬的一次被认错人的经历是什么？",
+        "instruction": "抽到的人回答，其他人可以笑但不要恶意评价；不想答就跳过。",
+        "intensity": 2,
+        "tags": [
+          "真心话",
+          "尴尬"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-010",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "让其他嘉宾一起给你起一个今晚的外号，你必须用这个外号回应直到下一张卡。",
+        "instruction": "外号必须善意、不涉及外貌羞辱；你可以拒绝或随时结束。",
+        "intensity": 3,
+        "tags": [
+          "大冒险",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

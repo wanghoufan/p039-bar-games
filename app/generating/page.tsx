@@ -1,0 +1,112 @@
+"use client";
+
+import Link from "next/link";
+import { Suspense, useEffect, useRef, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { NeonBackground } from "@/components/brand/NeonBackground";
+import { Button } from "@/components/ui/Button";
+import { Icon } from "@/components/ui/Icon";
+import { activateSession } from "@/lib/engine/session-engine";
+import { localSeedDeck, requestDeckWithFallbackResult, requestGeneratedDeck } from "@/lib/ai/generate-deck";
+import { AI_MAINLINE_LOCAL_NOTICE, isAiMainlineEnabled } from "@/lib/ai/mainline-flag";
+import type { DeckBatchProgress } from "@/lib/ai/direct-provider";
+import { aiProviderRepository } from "@/lib/storage/ai-provider-repository";
+import { preferencesRepository } from "@/lib/storage/preferences-repository";
+import { sessionRepository } from "@/lib/storage/session-repository";
+import { gamePackRepository } from "@/lib/storage/game-pack-repository";
+import type { GameSession } from "@/lib/domain/schemas";
+import { providerErrorMessage } from "@/lib/ai/provider-errors";
+import { play } from "@/lib/audio";
+
+const steps = ["分析你的组局信息", "匹配最适合的游戏内容", "执行边界与安全过滤", "生成完整离线游戏"];
+
+/** 自包含安装包（B-1）：没有 /api 代理，改由本机直连 Provider 生成（见 lib/ai/direct-provider），失败自动回退本地题库。 */
+const selfContained = process.env.NEXT_PUBLIC_SELF_CONTAINED === "1";
+
+function GeneratingPageContent() {
+  const router = useRouter();
+  const params = useSearchParams();
+  const id = params.get("session");
+  const started = useRef(false);
+  const [session, setSession] = useState<GameSession>();
+  const [step, setStep] = useState(0);
+  const [state, setState] = useState<"loading" | "unconfigured" | "error" | "ai-disabled">("loading");
+  const [message, setMessage] = useState("");
+  // 自包含直连的分块进度（Change C）：AI 每出一批卡回调一次，用于显示「x 张 · 第 x/y 批」。
+  const [batchProgress, setBatchProgress] = useState<DeckBatchProgress>();
+
+  useEffect(() => { if (!id) return router.replace("/setup"); void sessionRepository.get(id).then((value) => value ? setSession(value) : router.replace("/setup")); }, [id, router]);
+  // Generation is intentionally started once per loaded session; retries are explicit user actions.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { if (!session || started.current) return; started.current = true; void generate(session); }, [session]);
+
+  async function finishWithDeck(current: GameSession, cards: ReturnType<typeof localSeedDeck>, fallback?: { providerName: string; code: string }) {
+    play("generate-done");
+    const active = activateSession(current, cards);
+    // Change A 小改：AI 失败回退本地时记录一句可展示的失败原因（provider 名 + 错误码，不含 Key），
+    // 局内 game 页据此一次性提示用户「当前牌堆来自本地题库」。
+    const next = fallback ? { ...active, generationFallback: { ...fallback, at: new Date().toISOString() } } : active;
+    await sessionRepository.save(next);
+    router.replace(`/game?session=${next.id}`);
+  }
+
+  /**
+   * 自包含版：没有 /api/generate-session。存过 Key 就在本机直连 Provider 生成（requestDeckWithFallback），
+   * 直连失败自动落回本地题库；没存 Key 则引导去配置。两条路都保证开局，不卡现场。
+   */
+  async function generateSelfContained(current: GameSession) {
+    setState("loading"); setStep(0); setMessage(""); setBatchProgress(undefined);
+    const [profiles, customPacks] = await Promise.all([aiProviderRepository.ensurePresets(), gamePackRepository.list()]);
+    const customCards = customPacks.filter((pack) => pack.enabled).flatMap((pack) => pack.cards);
+    const preference = await preferencesRepository.get();
+    const profile = profiles.find((item) => item.id === preference.activeProviderId) ?? profiles.find((item) => item.isDefault);
+    const key = profile ? await aiProviderRepository.getSecret(profile.id) : undefined;
+    if (!profile || !key) return setState("unconfigured");
+    const ticker = window.setInterval(() => { play("generate-tick"); setStep((value) => Math.min(3, value + 1)); }, 700);
+    try {
+      const { cards, fallbackCode, partialCode } = await requestDeckWithFallbackResult({
+        profile, apiKey: key, sessionConfig: current.config, sessionId: current.id, customCards,
+        onProgress: setBatchProgress,
+      });
+      window.clearInterval(ticker); setStep(3); setBatchProgress(undefined);
+      // Change C：全失败回退（fallbackCode）与部分批次失败（partialCode）都把原因记进 generationFallback；
+      // 部分失败时牌堆仍含 AI 卡（generationSource=ai），局内不会弹「已切换本地题库」提示。
+      const failCode = fallbackCode ?? partialCode;
+      await finishWithDeck(current, cards, failCode ? { providerName: profile.name, code: failCode } : undefined);
+    } catch (error) {
+      // 自包含版由本机直连：报错要显示真实 provider 名，不能写死 DeepSeek。
+      window.clearInterval(ticker); setBatchProgress(undefined); setState("error"); setMessage(error instanceof Error ? providerErrorMessage(error.message, profile.name) : "AI 生成暂时失败");
+    }
+  }
+
+  async function generate(current: GameSession) {
+    setState("loading"); setStep(0); setMessage("");
+    // 正式主线 AI 隔离（Plan §13）：开关缺省即关闭，进入 generating 前先守卫，
+    // 不读 Provider/Key、不发起服务端或直连生成；给中性提示并保留「使用本地题库开始」出口，绝不卡在加载态。
+    // 组局页的 resume / 重开（summary replay）与「重试一次」都经本函数，故旧缓存与恢复路径同样被这一处覆盖。
+    if (!isAiMainlineEnabled()) return setState("ai-disabled");
+    if (selfContained) return generateSelfContained(current);
+    const [profiles, customPacks] = await Promise.all([aiProviderRepository.ensurePresets(), gamePackRepository.list()]);
+    const customCards = customPacks.filter((pack) => pack.enabled).flatMap((pack) => pack.cards);
+    const preference = await preferencesRepository.get();
+    const profile = profiles.find((item) => item.id === preference.activeProviderId) ?? profiles.find((item) => item.isDefault);
+    if (!profile) return setState("unconfigured");
+    const key = await aiProviderRepository.getSecret(profile.id);
+    if (!key) return setState("unconfigured");
+    const ticker = window.setInterval(() => { play("generate-tick"); setStep((value) => Math.min(3, value + 1)); }, 700);
+    try {
+      const deck = await requestGeneratedDeck({ profile, apiKey: key, sessionConfig: current.config, sessionId: current.id, customCards });
+      window.clearInterval(ticker); setStep(3); await finishWithDeck(current, deck);
+    } catch (error) {
+      window.clearInterval(ticker); setState("error"); setMessage(error instanceof Error ? providerErrorMessage(error.message) : "AI 生成暂时失败");
+    }
+  }
+
+  if (!session) return <NeonBackground><main className="screen generating-screen"><p>正在读取本局…</p></main></NeonBackground>;
+  const startWithLocalDeck = () => void gamePackRepository.list().then((packs) => finishWithDeck(session, localSeedDeck(session.config, packs.filter((pack) => pack.enabled).flatMap((pack) => pack.cards))));
+  return <NeonBackground><main className="screen generating-screen"><div className="generating-orb" aria-hidden="true"><span>AI</span></div>{state === "loading" ? <><h1>AI 正在为你准备<br />今晚的专属游戏</h1><p>好游戏，值得多一点等待</p><ol>{steps.map((label, index) => <li className={index < step ? "done" : index === step ? "active" : ""} key={label}><span>{index < step ? "✓" : index === step ? "◌" : "○"}</span>{label}</li>)}</ol><div className="generating-progress"><i style={{ width: `${(step + 1) * 25}%` }} /></div>{batchProgress && <p role="status">AI 出题进度 {batchProgress.cardsSoFar} 张 · 第 {batchProgress.doneBatches}/{batchProgress.totalBatches} 批</p>}</> : <section className="generation-recovery"><div className="recovery-icon"><Icon name="settings" /></div><h1>{state === "unconfigured" ? "请先配置 AI 接口" : state === "ai-disabled" ? "本次使用本地固定题库" : "这次生成没有完成"}</h1><p>{state === "ai-disabled" ? AI_MAINLINE_LOCAL_NOTICE : message || "配置 AI 后可生成个性化整局内容；也可以直接使用本地题库开始。"}</p>{state === "unconfigured" && <Link className="button button--primary" href="/settings/ai">去配置 AI 接口</Link>}{state === "error" && <Button variant="secondary" type="button" onClick={() => void generate(session)}>重试一次</Button>}<Button variant="ghost" type="button" onClick={startWithLocalDeck}>使用本地题库开始</Button></section>}</main></NeonBackground>;
+}
+
+export default function GeneratingPage() {
+  return <Suspense fallback={<NeonBackground><main className="screen generating-screen"><p>正在读取本局…</p></main></NeonBackground>}><GeneratingPageContent /></Suspense>;
+}

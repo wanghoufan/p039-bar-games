@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 21,
+    "packId": "never-have",
+    "packName": "我从来没有",
+    "origin": "base",
+    "intensity": 3,
+    "players": 2,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "never-have"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：熟人局；氛围：搞笑；最高强度：3。\n可用玩法：never-have。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 19505,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "nh-01",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未因为想多睡五分钟而把闹钟按掉三次以上。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-02",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未唱歌时破音，还硬着头皮把整首歌唱完。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "表演"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-03",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未假装听懂别人的话，然后偷偷去查到底是什么意思。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 2,
+        "tags": [
+          "社交",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-04",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未在家对着镜子演过一段根本不存在的获奖感言。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 3,
+        "tags": [
+          "脑洞",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-05",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未把同一集综艺或剧集看了三遍以上，只为等一个名场面。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 1,
+        "tags": [
+          "娱乐",
+          "日常"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-06",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未在吃火锅时捞了半天，最后只捞到一片姜。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 1,
+        "tags": [
+          "美食",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-07",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未发消息打错字，发现后立刻撤回，并祈祷没人看见。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 2,
+        "tags": [
+          "社交",
+          "尴尬"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-08",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未立志早睡，结果凌晨还在看“最后一个视频”。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 2,
+        "tags": [
+          "日常",
+          "熬夜"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-09",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未买了新东西却放很久不拆，假装自己一点都不好奇。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-10",
+        "packId": "never-have",
+        "type": "statement",
+        "content": "我从未在朋友面前吹牛说“这个我会”，结果当场翻车。",
+        "instruction": "所有人一起玩：念出卡片后，符合情况的人举手或喊“有”，不符合的人喊“没有”。任何一轮都可跳过，不惩罚、不强迫。",
+        "intensity": 3,
+        "tags": [
+          "熟人局",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

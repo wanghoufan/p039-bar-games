@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 44,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "base",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：随机；最高强度：5。\n可用玩法：pointing-game。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 35230,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pointing-01",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向今天第一个让你觉得气氛轻松起来的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-02",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你认为最会讲冷笑话的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-03",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向如果临时组队做菜，你最愿意让谁掌勺。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-04",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你下次想约着一起逛展或散步的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-05",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你觉得最会活跃聚会气氛的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-06",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你愿意一起看一部烧脑电影并讨论的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-07",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向如果突然要上台发言，你觉得最镇定的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-08",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你认为最会安慰朋友的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-09",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你最想在未来重要时刻第一个分享好消息的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-10",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请指向你如果遇到低谷，最愿意向谁求助的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 5,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

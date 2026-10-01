@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 68,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "extra",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：暧昧；最高强度：5。\n可用玩法：would-you-rather。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 33245,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-001",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "和在场最会照顾人的人交换一天身份 VS 和在场最会逗人笑的人交换一天身份",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "社交",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-002",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "深夜收到一句“睡了吗”，你希望对方只是想聊天 VS 深夜收到一句“睡了吗”，你希望对方是想见你",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "心动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-003",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "和喜欢的人一起逛夜市 VS 和喜欢的人一起看一场安静的电影",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "约会",
+          "偏好"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-004",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "被一直看着你的人吸引 VS 被一直逗你笑的人吸引",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "吸引"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-005",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "对方记得你的小习惯 VS 对方主动制造独处机会",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "心动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-006",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "收到一段长长的匿名告白文字 VS 收到一首只唱给你听的匿名歌",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "告白",
+          "浪漫"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-007",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "在关系未明时直接问清楚 VS 在关系未明时继续享受猜测",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "关系",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-008",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "聚会结束后和最聊得来的人顺路回家 VS 聚会结束后和最让你心跳加速的人顺路回家",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-009",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "暧昧对象在众人面前对你特别 VS 暧昧对象只在私下对你特别",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 4,
+        "tags": [
+          "暧昧",
+          "偏好"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-010",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "让在场某个人知道你对他或她有一点好感 VS 把这点好感完全藏在心里，不让任何人发现",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 5,
+        "tags": [
+          "暧昧",
+          "心意"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

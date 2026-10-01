@@ -1,0 +1,3 @@
+{"cardId":"PN-POINT-015","theme":"具体兴趣爱好","verdict":"NO_HIT","realTopic":false,"reason":"只说想交换推荐，未落到具体爱好内容"}
+{"cardId":"PN-POINT-004","theme":"具体兴趣爱好","verdict":"HIT_EXPLICIT","realTopic":true,"reason":"直接追问最喜欢做什么，落到具体活动内容"}
+{"cardId":"PN-POINT-018","theme":"具体兴趣爱好","verdict":"HIT_EXPLICIT","realTopic":true,"reason":"直接追问休息日怎么过，落到具体活动内容"}

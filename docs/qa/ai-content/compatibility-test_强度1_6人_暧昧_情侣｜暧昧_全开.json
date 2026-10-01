@@ -1,0 +1,253 @@
+{
+  "cell": {
+    "index": 47,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "base",
+    "intensity": 1,
+    "players": 6,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "couple",
+      "label": "情侣 / 暧昧"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "情侣 / 暧昧",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：情侣 / 暧昧；氛围：暧昧；最高强度：1。\n可用玩法：compatibility-test。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 19357,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "compat-001",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：如果今晚只能选一种约会节奏，你们更想要哪一种？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "暧昧",
+          "默契",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-002",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：你们更喜欢的初次约会氛围是？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "暧昧",
+          "初见",
+          "氛围"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-003",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：在一段关系里，默契比浪漫更重要吗？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "默契",
+          "关系观"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-004",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：用三个词形容你希望今晚留下的氛围。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "暧昧",
+          "氛围",
+          "表达"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-005",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：如果现在一起计划周末，你们优先选？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "约会",
+          "默契",
+          "计划"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-006",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：对方最近哪一个小习惯让你觉得加分？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "观察",
+          "好感",
+          "暧昧"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-007",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：你们更喜欢哪种聊天方式？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "沟通",
+          "默契",
+          "暧昧"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-008",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：如果意见不合，你们更愿意怎么做？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "沟通",
+          "关系观"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-009",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：如果给今晚的相处取一个片名，会是什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "创意",
+          "氛围",
+          "暧昧"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-010",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：你们认为维持暧昧感最重要的是？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "暧昧",
+          "默契",
+          "关系观"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

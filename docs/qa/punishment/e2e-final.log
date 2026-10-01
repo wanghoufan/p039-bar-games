@@ -1,0 +1,20 @@
+$ playwright test tests/e2e/punishment.spec.ts
+
+Running 12 tests using 1 worker
+
+(node:13580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [mobile-chromium] › tests/e2e/punishment.spec.ts:8:5 › new entry, saved preferences, clearable new session, old entry preserved (2.3s)
+  ✓   2 [mobile-chromium] › tests/e2e/punishment.spec.ts:9:5 › five exact-level pools, immediate next selection, progress, no adjacent repeat, speed (1.6s)
+  ✓   3 [mobile-chromium] › tests/e2e/punishment.spec.ts:24:5 › shields keep current card, fail closed and recover through both empty actions (955ms)
+  ✓   4 [mobile-chromium] › tests/e2e/punishment.spec.ts:27:5 › languages and all themes preserve card, session and timer (852ms)
+  ✓   5 [mobile-chromium] › tests/e2e/punishment.spec.ts:40:5 › direct countdown, pause/resume/end/finish same card with feedback and mute (33.4s)
+  ✓   6 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 360px (1.2s)
+  ✓   7 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 390px (1.1s)
+  ✓   8 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 430px (1.1s)
+  ✓   9 [mobile-chromium] › tests/e2e/punishment.spec.ts:55:9 › layout and actual controls at 1280px (1.9s)
+  ✓  10 [mobile-chromium] › tests/e2e/punishment.spec.ts:56:5 › offline core operates without remote requests (656ms)
+  ✓  11 [mobile-chromium] › tests/e2e/punishment.spec.ts:63:5 › running timer survives language, shield, theme and system appearance changes (514ms)
+  ✓  12 [mobile-chromium] › tests/e2e/punishment.spec.ts:70:5 › long bilingual content and short screens keep footer reachable (446ms)
+
+  12 passed (46.6s)

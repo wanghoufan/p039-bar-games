@@ -1,0 +1,113 @@
+$ playwright test tests/e2e/punishment.spec.ts
+
+Running 10 tests using 1 worker
+
+(node:88154) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [mobile-chromium] › tests/e2e/punishment.spec.ts:8:5 › new entry, saved preferences, clearable new session, old entry preserved (1.1s)
+  ✓   2 [mobile-chromium] › tests/e2e/punishment.spec.ts:9:5 › five exact-level pools, immediate next selection, progress, no adjacent repeat, speed (1.5s)
+  ✘   3 [mobile-chromium] › tests/e2e/punishment.spec.ts:10:5 › shields keep current card, fail closed and recover through both empty actions (30.0s)
+(node:89335) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 [mobile-chromium] › tests/e2e/punishment.spec.ts:11:5 › languages and all themes preserve card, session and timer (30.0s)
+(node:91091) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [mobile-chromium] › tests/e2e/punishment.spec.ts:12:5 › direct countdown, pause/resume/end/finish same card with feedback and mute (33.8s)
+  ✓   6 [mobile-chromium] › tests/e2e/punishment.spec.ts:13:43 › layout and actual controls at 360px (1.1s)
+  ✓   7 [mobile-chromium] › tests/e2e/punishment.spec.ts:13:43 › layout and actual controls at 390px (1.1s)
+  ✓   8 [mobile-chromium] › tests/e2e/punishment.spec.ts:13:43 › layout and actual controls at 430px (1.1s)
+  ✓   9 [mobile-chromium] › tests/e2e/punishment.spec.ts:13:43 › layout and actual controls at 1280px (1.9s)
+  ✓  10 [mobile-chromium] › tests/e2e/punishment.spec.ts:14:5 › offline core operates without remote requests (629ms)
+
+
+  1) [mobile-chromium] › tests/e2e/punishment.spec.ts:10:5 › shields keep current card, fail closed and recover through both empty actions 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '完成', exact: true })
+        - locator resolved to <button class="button button--primary ">完成</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - element is outside of the viewport
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - element is outside of the viewport
+        - retrying click action
+          - waiting 100ms
+        57 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - element is outside of the viewport
+         - retrying click action
+           - waiting 500ms
+
+
+       8 | test("new entry, saved preferences, clearable new session, old entry preserved",async({page})=>{await page.goto("/");await page.getByRole("link",{name:"大冒险",exact:true}).click();await page.getByRole("button",{name:"English",exact:true}).click();await page.getByRole("checkbox",{name:"亲吻",exact:true}).uncheck();await page.getByRole("button",{name:"开始",exact:true}).click();await expect(page).toHaveURL(/punishment\/play/);await expect(page.locator("[lang=en]")).toBeVisible();await expect(page.locator(".punishment-zh")).toHaveCount(0);await page.goto("/punishment");await expect(page.getByRole("button",{name:"English",exact:true})).toHaveAttribute("aria-pressed","true");await expect(page.getByRole("checkbox",{name:"亲吻",exact:true})).not.toBeChecked();await page.goto("/");await page.getByRole("link",{name:/真心话大冒险/}).click();await expect(page).toHaveURL(/setup\?pack=truth-dare/);});
+       9 | test("five exact-level pools, immediate next selection, progress, no adjacent repeat, speed",async({page})=>{await page.goto("/punishment/play");for(const level of [2,4,2,5,3,1]){const before=await current(page);await page.getByLabel(`选择 ${level}`,{exact:true}).click();expect(await current(page)).toBe(before);let last=before;for(let i=0;i<5;i++){const start=Date.now();await page.getByRole("button",{name:i%2?"换一个":"下一个",exact:true}).click();await expect.poll(()=>current(page)).not.toBe(last);expect(Date.now()-start).toBeLessThan(500);const id=await current(page);expect(challenges.find(c=>c.id===id)?.level).toBe(level);last=id;}}await page.reload();await expect(page.locator(".punishment-card")).toBeVisible();});
+    > 10 | test("shields keep current card, fail closed and recover through both empty actions",async({page})=>{await page.goto("/punishment/play");const id=await current(page);await settings(page);for(const box of await page.getByRole("checkbox").all())await box.uncheck();await page.getByRole("button",{name:"完成",exact:true}).click();expect(await current(page)).toBe(id);await page.getByRole("button",{name:"下一个",exact:true}).click();await expect(page.getByText("暂无可用",{exact:true})).toBeVisible();expect(await page.locator(".punishment-empty button").allTextContents()).toEqual(["切换其他","调整盾牌"]);await page.getByText("切换其他",{exact:true}).click();await expect(page.getByText("暂无可用",{exact:true})).toBeVisible();await page.getByText("调整盾牌",{exact:true}).click();await page.getByRole("checkbox",{name:"表演",exact:true}).check();await page.getByRole("button",{name:"完成",exact:true}).click();for(let i=0;i<5 && !(await page.locator(".punishment-copy").count());i++)await page.getByText("切换其他",{exact:true}).click();await expect(page.locator(".punishment-copy")).toBeVisible();const cardId=await current(page);const card=challenges.find(c=>c.id===cardId);expect(card?.contentTags.every(t=>["performance"].includes(t))).toBe(true);});
+         |                                                                                                                                                                                                                                                                                                                              ^
+      11 | test("languages and all themes preserve card, session and timer",async({page})=>{await timed(page);const id=await current(page);const saved=await page.evaluate(key=>sessionStorage.getItem(key),key);for(const language of ["English","中文","中英双语"]){await page.getByLabel("切换语言",{exact:true}).click();await page.getByRole("button",{name:language,exact:true}).click();await page.getByText("完成",{exact:true}).click();expect(await current(page)).toBe(id);expect(await page.evaluate(key=>sessionStorage.getItem(key),key)).toBe(saved);}for(const theme of ["浅色","深色","跟随系统"]){await settings(page);await page.getByRole("button",{name:theme,exact:true}).click();await page.getByText("完成",{exact:true}).click();expect(await current(page)).toBe(id);expect(await page.locator(".punishment-actions button").count()).toBe(3);}});
+      12 | test("direct countdown, pause/resume/end/finish same card with feedback and mute",async({page})=>{test.setTimeout(45000);await timed(page);await page.evaluate(()=>{const w=window as unknown as {vibrations:number;tones:number};w.vibrations=0;w.tones=0;Object.defineProperty(navigator,"vibrate",{value:()=>{w.vibrations++;return true;},configurable:true});const old=AudioContext.prototype.createOscillator;AudioContext.prototype.createOscillator=function(){w.tones++;return old.call(this);};});const id=await current(page);const started=Date.now();await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByRole("timer")).toBeVisible();expect(Date.now()-started).toBeLessThan(500);await expect(page.getByRole("timer")).toContainText("15");await expect(page.getByText("再来一次",{exact:true})).toHaveCount(0);await expect(page.locator(".punishment-copy")).toBeVisible();await page.getByText("暂停",{exact:true}).click();const paused=await page.getByRole("timer").textContent();await page.waitForTimeout(1100);expect(await page.getByRole("timer").textContent()).toBe(paused);await page.getByText("继续",{exact:true}).click();await page.getByText("结束",{exact:true}).click();expect(await current(page)).toBe(id);await expect(page.getByText("开始15秒",{exact:true})).toBeVisible();await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByText("时间到！",{exact:true})).toBeVisible({timeout:17000});expect(await current(page)).toBe(id);expect(await page.evaluate(()=>(window as unknown as {vibrations:number}).vibrations)).toBe(1);expect(await page.evaluate(()=>(window as unknown as {tones:number}).tones)).toBeGreaterThan(0);await expect(page.getByText("时间到！",{exact:true})).toHaveCount(0);await settings(page);await page.getByRole("checkbox",{name:"声音",exact:true}).uncheck();await page.getByRole("checkbox",{name:"震动",exact:true}).uncheck();await page.getByText("完成",{exact:true}).click();const tones=await page.evaluate(()=>(window as unknown as {tones:number}).tones);await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByText("时间到！",{exact:true})).toBeVisible({timeout:17000});expect(await page.evaluate(()=>(window as unknown as {vibrations:number}).vibrations)).toBe(1);expect(await page.evaluate(()=>(window as unknown as {tones:number}).tones)).toBe(tones);});
+      13 | for(const width of [360,390,430,1280])test(`layout and actual controls at ${width}px`,async({page})=>{await page.setViewportSize({width,height:844});await timed(page);const buttons=await page.locator(".punishment-actions button").evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {y:r.y,bottom:r.bottom};}));expect(new Set(buttons.map(b=>b.y)).size).toBe(1);expect(buttons.every(b=>b.bottom<=844)).toBe(true);const size=await page.locator(".punishment-en").evaluate(n=>parseFloat(getComputedStyle(n).fontSize));expect(size).toBeGreaterThanOrEqual(28);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:`docs/qa/punishment/idle-${width}.png`});await page.getByText("开始15秒",{exact:true}).click();await page.screenshot({path:`docs/qa/punishment/timer-${width}.png`});await page.getByText("结束",{exact:true}).click();});
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:10:318
+
+    Error Context: test-results/punishment-shields-keep-cu-11fe1--through-both-empty-actions-mobile-chromium/error-context.md
+
+  2) [mobile-chromium] › tests/e2e/punishment.spec.ts:11:5 › languages and all themes preserve card, session and timer 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByText('完成', { exact: true })
+        - locator resolved to <button class="button button--primary ">完成</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - element is outside of the viewport
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - element is outside of the viewport
+        - retrying click action
+          - waiting 100ms
+        56 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - element is outside of the viewport
+         - retrying click action
+           - waiting 500ms
+
+
+       9 | test("five exact-level pools, immediate next selection, progress, no adjacent repeat, speed",async({page})=>{await page.goto("/punishment/play");for(const level of [2,4,2,5,3,1]){const before=await current(page);await page.getByLabel(`选择 ${level}`,{exact:true}).click();expect(await current(page)).toBe(before);let last=before;for(let i=0;i<5;i++){const start=Date.now();await page.getByRole("button",{name:i%2?"换一个":"下一个",exact:true}).click();await expect.poll(()=>current(page)).not.toBe(last);expect(Date.now()-start).toBeLessThan(500);const id=await current(page);expect(challenges.find(c=>c.id===id)?.level).toBe(level);last=id;}}await page.reload();await expect(page.locator(".punishment-card")).toBeVisible();});
+      10 | test("shields keep current card, fail closed and recover through both empty actions",async({page})=>{await page.goto("/punishment/play");const id=await current(page);await settings(page);for(const box of await page.getByRole("checkbox").all())await box.uncheck();await page.getByRole("button",{name:"完成",exact:true}).click();expect(await current(page)).toBe(id);await page.getByRole("button",{name:"下一个",exact:true}).click();await expect(page.getByText("暂无可用",{exact:true})).toBeVisible();expect(await page.locator(".punishment-empty button").allTextContents()).toEqual(["切换其他","调整盾牌"]);await page.getByText("切换其他",{exact:true}).click();await expect(page.getByText("暂无可用",{exact:true})).toBeVisible();await page.getByText("调整盾牌",{exact:true}).click();await page.getByRole("checkbox",{name:"表演",exact:true}).check();await page.getByRole("button",{name:"完成",exact:true}).click();for(let i=0;i<5 && !(await page.locator(".punishment-copy").count());i++)await page.getByText("切换其他",{exact:true}).click();await expect(page.locator(".punishment-copy")).toBeVisible();const cardId=await current(page);const card=challenges.find(c=>c.id===cardId);expect(card?.contentTags.every(t=>["performance"].includes(t))).toBe(true);});
+    > 11 | test("languages and all themes preserve card, session and timer",async({page})=>{await timed(page);const id=await current(page);const saved=await page.evaluate(key=>sessionStorage.getItem(key),key);for(const language of ["English","中文","中英双语"]){await page.getByLabel("切换语言",{exact:true}).click();await page.getByRole("button",{name:language,exact:true}).click();await page.getByText("完成",{exact:true}).click();expect(await current(page)).toBe(id);expect(await page.evaluate(key=>sessionStorage.getItem(key),key)).toBe(saved);}for(const theme of ["浅色","深色","跟随系统"]){await settings(page);await page.getByRole("button",{name:theme,exact:true}).click();await page.getByText("完成",{exact:true}).click();expect(await current(page)).toBe(id);expect(await page.locator(".punishment-actions button").count()).toBe(3);}});
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+      12 | test("direct countdown, pause/resume/end/finish same card with feedback and mute",async({page})=>{test.setTimeout(45000);await timed(page);await page.evaluate(()=>{const w=window as unknown as {vibrations:number;tones:number};w.vibrations=0;w.tones=0;Object.defineProperty(navigator,"vibrate",{value:()=>{w.vibrations++;return true;},configurable:true});const old=AudioContext.prototype.createOscillator;AudioContext.prototype.createOscillator=function(){w.tones++;return old.call(this);};});const id=await current(page);const started=Date.now();await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByRole("timer")).toBeVisible();expect(Date.now()-started).toBeLessThan(500);await expect(page.getByRole("timer")).toContainText("15");await expect(page.getByText("再来一次",{exact:true})).toHaveCount(0);await expect(page.locator(".punishment-copy")).toBeVisible();await page.getByText("暂停",{exact:true}).click();const paused=await page.getByRole("timer").textContent();await page.waitForTimeout(1100);expect(await page.getByRole("timer").textContent()).toBe(paused);await page.getByText("继续",{exact:true}).click();await page.getByText("结束",{exact:true}).click();expect(await current(page)).toBe(id);await expect(page.getByText("开始15秒",{exact:true})).toBeVisible();await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByText("时间到！",{exact:true})).toBeVisible({timeout:17000});expect(await current(page)).toBe(id);expect(await page.evaluate(()=>(window as unknown as {vibrations:number}).vibrations)).toBe(1);expect(await page.evaluate(()=>(window as unknown as {tones:number}).tones)).toBeGreaterThan(0);await expect(page.getByText("时间到！",{exact:true})).toHaveCount(0);await settings(page);await page.getByRole("checkbox",{name:"声音",exact:true}).uncheck();await page.getByRole("checkbox",{name:"震动",exact:true}).uncheck();await page.getByText("完成",{exact:true}).click();const tones=await page.evaluate(()=>(window as unknown as {tones:number}).tones);await page.getByText("开始15秒",{exact:true}).click();await expect(page.getByText("时间到！",{exact:true})).toBeVisible({timeout:17000});expect(await page.evaluate(()=>(window as unknown as {vibrations:number}).vibrations)).toBe(1);expect(await page.evaluate(()=>(window as unknown as {tones:number}).tones)).toBe(tones);});
+      13 | for(const width of [360,390,430,1280])test(`layout and actual controls at ${width}px`,async({page})=>{await page.setViewportSize({width,height:844});await timed(page);const buttons=await page.locator(".punishment-actions button").evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {y:r.y,bottom:r.bottom};}));expect(new Set(buttons.map(b=>b.y)).size).toBe(1);expect(buttons.every(b=>b.bottom<=844)).toBe(true);const size=await page.locator(".punishment-en").evaluate(n=>parseFloat(getComputedStyle(n).fontSize));expect(size).toBeGreaterThanOrEqual(28);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:`docs/qa/punishment/idle-${width}.png`});await page.getByText("开始15秒",{exact:true}).click();await page.screenshot({path:`docs/qa/punishment/timer-${width}.png`});await page.getByText("结束",{exact:true}).click();});
+      14 | test("offline core operates without remote requests",async({page,context})=>{await timed(page);const requests:string[]=[];page.on("request",r=>{if(r.url().includes("/api/"))requests.push(r.url());});await context.setOffline(true);await page.getByLabel("选择 4",{exact:true}).click();await page.getByText("换一个",{exact:true}).click();let cardId=await current(page);expect(challenges.find(c=>c.id===cardId)?.level).toBe(4);await page.getByLabel("切换语言",{exact:true}).click();await page.getByText("English",{exact:true}).click();await page.getByText("完成",{exact:true}).click();await settings(page);await page.getByRole("checkbox",{name:"亲吻",exact:true}).uncheck();await page.getByText("完成",{exact:true}).click();for(let i=0;i<4;i++){await page.getByText("换一个",{exact:true}).click();cardId=await current(page);expect(challenges.find(c=>c.id===cardId)?.contentTags).not.toContain("kiss");}expect(requests).toEqual([]);await context.setOffline(false);});
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment.spec.ts:11:690
+
+    Error Context: test-results/punishment-languages-and-a-a63c4-erve-card-session-and-timer-mobile-chromium/error-context.md
+
+  2 failed
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:10:5 › shields keep current card, fail closed and recover through both empty actions 
+    [mobile-chromium] › tests/e2e/punishment.spec.ts:11:5 › languages and all themes preserve card, session and timer 
+  8 passed (1.7m)
+[ELIFECYCLE] Command failed with exit code 1.

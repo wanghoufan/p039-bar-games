@@ -1,0 +1,255 @@
+{
+  "cell": {
+    "index": 31,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：刚认识；氛围：搞笑；最高强度：3。\n可用玩法：would-you-rather。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 16206,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-1",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "会飞，但只能离地一米 VS 能隐身，但每次只有三秒",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-2",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "吃火锅永远只能选清汤 VS 吃烧烤永远只能烤蔬菜",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-3",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天被猫叫醒 VS 每天被狗拽去散步",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-4",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "说话自动押韵 VS 唱歌永远跑调",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-5",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "头发能变彩虹色，但每周随机换色 VS 指甲会发光，但只有蓝色",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-6",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "进电梯自动播放你的专属背景音乐 VS 开门自动喊“欢迎光临”",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-7",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "一辈子只能吃甜粽子 VS 一辈子只能吃咸粽子",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-8",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "有用不完的纸巾 VS 有用不完的充电线，但每根只有一米",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-9",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "走路自带弹簧音效 VS 坐下自带掌声",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-10",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每次打哈欠自动放烟花音效 VS 每次笑自动放猫叫音效",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

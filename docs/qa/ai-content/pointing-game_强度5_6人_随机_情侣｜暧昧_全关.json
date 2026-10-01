@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 65,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "extra",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "couple",
+      "label": "情侣 / 暧昧"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "情侣 / 暧昧",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：情侣 / 暧昧；氛围：随机；最高强度：5。\n可用玩法：pointing-game。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 30206,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pointing-01",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向今晚你最想先和TA打招呼的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-02",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向你觉得笑容最让自己放松的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "好感"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-03",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向在你眼中最会照顾大家情绪的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "默契",
+          "观察"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-04",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向如果组队玩游戏你最想搭档的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "默契",
+          "组队"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-05",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向今晚让你产生一点好奇心的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "好奇"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-06",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向你觉得最会悄悄制造暧昧气氛的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "暧昧",
+          "气氛"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-07",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向如果你要发一条匿名心动消息，最想发给的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [
+          "心动",
+          "匿名"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-08",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向你愿意和TA分享一件无关隐私的小秘密的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [
+          "信任",
+          "暧昧"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-09",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向今晚最想和TA单独走一段路聊天的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 4,
+        "tags": [
+          "暧昧",
+          "独处"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-10",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向如果只能选一个人一起看夜景，你会选的人；不想参与就指向天花板。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 5,
+        "tags": [
+          "浪漫",
+          "心动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

@@ -1,0 +1,613 @@
+{
+  "sampleSize": 70,
+  "coefficientSpec": {
+    "orderedAxes": [
+      "infoGain",
+      "promotesUnderstanding",
+      "socialEnergy",
+      "relationshipProgression"
+    ],
+    "orderedMetric": "linear weighted kappa",
+    "orderedFormula": "κ_w = 1 − Σ_ij w_ij·O_ij / Σ_ij w_ij·E_ij，w_ij = |i−j|/(K−1)（K=该轴类别数）",
+    "orderedRanks": {
+      "infoGain": {
+        "0": 0,
+        "低": 1,
+        "中": 2,
+        "高": 3
+      },
+      "promotesUnderstanding": {
+        "否": 0,
+        "弱": 1,
+        "是": 2
+      },
+      "socialEnergy": {
+        "低": 0,
+        "中": 1,
+        "高": 2
+      },
+      "relationshipProgression": {
+        "低": 0,
+        "中": 1,
+        "高": 2
+      }
+    },
+    "categoricalAxes": [
+      "semanticType",
+      "topic"
+    ],
+    "categoricalMetric": "Cohen's kappa",
+    "categoricalFormula": "κ = (Po − Pe)/(1 − Pe)"
+  },
+  "pairResults": [
+    {
+      "pair": "orig↔r1",
+      "n": 70,
+      "allSixAgree": 14,
+      "allSixAgreeRate": "20.0%",
+      "allSixAgreeNote": "参考项（不再是 Gate 主指标）；口径敏感，不得当作标签准确率",
+      "perAxisRate": {
+        "semanticType": {
+          "agree": 54,
+          "total": 70,
+          "rate": "77.1%"
+        },
+        "topic": {
+          "agree": 52,
+          "total": 70,
+          "rate": "74.3%"
+        },
+        "infoGain": {
+          "agree": 51,
+          "total": 70,
+          "rate": "72.9%"
+        },
+        "promotesUnderstanding": {
+          "agree": 42,
+          "total": 70,
+          "rate": "60.0%"
+        },
+        "socialEnergy": {
+          "agree": 46,
+          "total": 70,
+          "rate": "65.7%"
+        },
+        "relationshipProgression": {
+          "agree": 47,
+          "total": 70,
+          "rate": "67.1%"
+        }
+      },
+      "perAxisCoefficient": {
+        "semanticType": {
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "value": 0.6964,
+          "po": 0.7714,
+          "pe": 0.2471,
+          "n": 70
+        },
+        "topic": {
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "value": 0.6161,
+          "po": 0.7429,
+          "pe": 0.3302,
+          "n": 70
+        },
+        "infoGain": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.6324,
+          "po": 0.7286,
+          "pe": null,
+          "n": 70
+        },
+        "promotesUnderstanding": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.3813,
+          "po": 0.6,
+          "pe": null,
+          "n": 70
+        },
+        "socialEnergy": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.3243,
+          "po": 0.6571,
+          "pe": null,
+          "n": 70
+        },
+        "relationshipProgression": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.4048,
+          "po": 0.6714,
+          "pe": null,
+          "n": 70
+        }
+      },
+      "infoGainGap2Plus": 5,
+      "infoGainGap2PlusRate": "7.1%"
+    },
+    {
+      "pair": "orig↔r2",
+      "n": 70,
+      "allSixAgree": 22,
+      "allSixAgreeRate": "31.4%",
+      "allSixAgreeNote": "参考项（不再是 Gate 主指标）；口径敏感，不得当作标签准确率",
+      "perAxisRate": {
+        "semanticType": {
+          "agree": 52,
+          "total": 70,
+          "rate": "74.3%"
+        },
+        "topic": {
+          "agree": 55,
+          "total": 70,
+          "rate": "78.6%"
+        },
+        "infoGain": {
+          "agree": 56,
+          "total": 70,
+          "rate": "80.0%"
+        },
+        "promotesUnderstanding": {
+          "agree": 60,
+          "total": 70,
+          "rate": "85.7%"
+        },
+        "socialEnergy": {
+          "agree": 43,
+          "total": 70,
+          "rate": "61.4%"
+        },
+        "relationshipProgression": {
+          "agree": 43,
+          "total": 70,
+          "rate": "61.4%"
+        }
+      },
+      "perAxisCoefficient": {
+        "semanticType": {
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "value": 0.6605,
+          "po": 0.7429,
+          "pe": 0.2427,
+          "n": 70
+        },
+        "topic": {
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "value": 0.6863,
+          "po": 0.7857,
+          "pe": 0.3169,
+          "n": 70
+        },
+        "infoGain": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.6964,
+          "po": 0.8,
+          "pe": null,
+          "n": 70
+        },
+        "promotesUnderstanding": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.6316,
+          "po": 0.8571,
+          "pe": null,
+          "n": 70
+        },
+        "socialEnergy": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.2432,
+          "po": 0.6143,
+          "pe": null,
+          "n": 70
+        },
+        "relationshipProgression": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.3675,
+          "po": 0.6143,
+          "pe": null,
+          "n": 70
+        }
+      },
+      "infoGainGap2Plus": 4,
+      "infoGainGap2PlusRate": "5.7%"
+    },
+    {
+      "pair": "r1↔r2",
+      "n": 70,
+      "allSixAgree": 21,
+      "allSixAgreeRate": "30.0%",
+      "allSixAgreeNote": "参考项（不再是 Gate 主指标）；口径敏感，不得当作标签准确率",
+      "perAxisRate": {
+        "semanticType": {
+          "agree": 68,
+          "total": 70,
+          "rate": "97.1%"
+        },
+        "topic": {
+          "agree": 61,
+          "total": 70,
+          "rate": "87.1%"
+        },
+        "infoGain": {
+          "agree": 56,
+          "total": 70,
+          "rate": "80.0%"
+        },
+        "promotesUnderstanding": {
+          "agree": 48,
+          "total": 70,
+          "rate": "68.6%"
+        },
+        "socialEnergy": {
+          "agree": 51,
+          "total": 70,
+          "rate": "72.9%"
+        },
+        "relationshipProgression": {
+          "agree": 59,
+          "total": 70,
+          "rate": "84.3%"
+        }
+      },
+      "perAxisCoefficient": {
+        "semanticType": {
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "value": 0.96,
+          "po": 0.9714,
+          "pe": 0.2849,
+          "n": 70
+        },
+        "topic": {
+          "kind": "categorical",
+          "metric": "cohen kappa",
+          "value": 0.8127,
+          "po": 0.8714,
+          "pe": 0.3135,
+          "n": 70
+        },
+        "infoGain": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.7963,
+          "po": 0.8,
+          "pe": null,
+          "n": 70
+        },
+        "promotesUnderstanding": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.525,
+          "po": 0.6857,
+          "pe": null,
+          "n": 70
+        },
+        "socialEnergy": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.4509,
+          "po": 0.7286,
+          "pe": null,
+          "n": 70
+        },
+        "relationshipProgression": {
+          "kind": "ordered",
+          "metric": "linear weighted kappa",
+          "value": 0.76,
+          "po": 0.8429,
+          "pe": null,
+          "n": 70
+        }
+      },
+      "infoGainGap2Plus": 0,
+      "infoGainGap2PlusRate": "0.0%"
+    }
+  ],
+  "lean": {
+    "orig": {
+      "gainUp": 8,
+      "gainDown": 1,
+      "gainSame": 61,
+      "socialUp": 9,
+      "socialDown": 7,
+      "progUp": 17,
+      "progDown": 2
+    },
+    "r1": {
+      "gainUp": 8,
+      "gainDown": 2,
+      "gainSame": 60,
+      "socialUp": 5,
+      "socialDown": 3,
+      "progUp": 2,
+      "progDown": 2
+    },
+    "r2": {
+      "gainUp": 3,
+      "gainDown": 2,
+      "gainSame": 65,
+      "socialUp": 0,
+      "socialDown": 11,
+      "progUp": 0,
+      "progDown": 8
+    }
+  },
+  "drift": [
+    {
+      "gameType": "truth",
+      "n": 10,
+      "semanticConsensusRate": "90.0%",
+      "gainConsensusRate": "100.0%",
+      "origGainDeviations": 0,
+      "origDeviationRate": "0.0%",
+      "gainSpread": {
+        "高": 6,
+        "低": 24
+      }
+    },
+    {
+      "gameType": "most_likely",
+      "n": 10,
+      "semanticConsensusRate": "100.0%",
+      "gainConsensusRate": "100.0%",
+      "origGainDeviations": 0,
+      "origDeviationRate": "0.0%",
+      "gainSpread": {
+        "低": 30
+      }
+    },
+    {
+      "gameType": "pointing",
+      "n": 10,
+      "semanticConsensusRate": "90.0%",
+      "gainConsensusRate": "100.0%",
+      "origGainDeviations": 0,
+      "origDeviationRate": "0.0%",
+      "gainSpread": {
+        "低": 30
+      }
+    },
+    {
+      "gameType": "chemistry",
+      "n": 10,
+      "semanticConsensusRate": "90.0%",
+      "gainConsensusRate": "50.0%",
+      "origGainDeviations": 0,
+      "origDeviationRate": "0.0%",
+      "gainSpread": {
+        "高": 14,
+        "低": 7,
+        "中": 9
+      }
+    },
+    {
+      "gameType": "never_have_i",
+      "n": 10,
+      "semanticConsensusRate": "60.0%",
+      "gainConsensusRate": "70.0%",
+      "origGainDeviations": 1,
+      "origDeviationRate": "10.0%",
+      "gainSpread": {
+        "中": 11,
+        "低": 19
+      }
+    },
+    {
+      "gameType": "either_or",
+      "n": 10,
+      "semanticConsensusRate": "60.0%",
+      "gainConsensusRate": "20.0%",
+      "origGainDeviations": 1,
+      "origDeviationRate": "10.0%",
+      "gainSpread": {
+        "高": 14,
+        "中": 13,
+        "低": 3
+      }
+    },
+    {
+      "gameType": "dare",
+      "n": 10,
+      "semanticConsensusRate": "30.0%",
+      "gainConsensusRate": "30.0%",
+      "origGainDeviations": 7,
+      "origDeviationRate": "70.0%",
+      "gainSpread": {
+        "0": 23,
+        "中": 4,
+        "低": 3
+      }
+    }
+  ],
+  "disagreementSets": {
+    "autoHighDisagreement": {
+      "count": 5,
+      "definition": "自动判据筛出：infoGain 极差≥2 档，或 semanticType 三方全不同，或 socialEnergy 三方全不同",
+      "cardIds": [
+        "PN-DARE-032",
+        "PN-DARE-038",
+        "PN-DARE-043",
+        "PN-DARE-024",
+        "PN-CHEM-037"
+      ]
+    },
+    "adjudicationSet": {
+      "count": 23,
+      "definition": "实际进入仲裁的题（_calib/adjudication.jsonl 行数；含人工在自动集之外另挑的样本）",
+      "cardIds": [
+        "PN-DARE-032",
+        "PN-DARE-038",
+        "PN-DARE-043",
+        "PN-DARE-020",
+        "PN-DARE-037",
+        "PN-DARE-031",
+        "PN-DARE-024",
+        "PN-NHIE-030",
+        "PN-NHIE-027",
+        "PN-NHIE-032",
+        "PN-EITHER-027",
+        "PN-EITHER-033",
+        "PN-EITHER-046",
+        "PN-EITHER-012",
+        "PN-EITHER-010",
+        "PN-EITHER-016",
+        "PN-EITHER-017",
+        "PN-EITHER-031",
+        "PN-CHEM-015",
+        "PN-CHEM-006",
+        "PN-CHEM-011",
+        "PN-CHEM-037",
+        "PN-CHEM-002"
+      ]
+    },
+    "overlapCount": 5,
+    "note": "两个集合定义不同（自动规则 vs 实际仲裁样本），不是同一统计的两个值，禁止互相校验或暗示二者矛盾。"
+  },
+  "adjudicationGainDist": {
+    "0": 7,
+    "中": 7,
+    "低": 2,
+    "高": 7
+  },
+  "highDisagreementCount": 5,
+  "autoHighDisagreementCount": 5,
+  "adjudicationSetSize": 23,
+  "highDisagreement": [
+    {
+      "cardId": "PN-DARE-032",
+      "gameType": "dare",
+      "reasons": [
+        "infoGain 极差 2 档"
+      ],
+      "o": {
+        "semanticType": "暧昧推进",
+        "infoGain": "中",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "a": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "b": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      }
+    },
+    {
+      "cardId": "PN-DARE-038",
+      "gameType": "dare",
+      "reasons": [
+        "infoGain 极差 2 档"
+      ],
+      "o": {
+        "semanticType": "暧昧推进",
+        "infoGain": "中",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "a": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "b": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      }
+    },
+    {
+      "cardId": "PN-DARE-043",
+      "gameType": "dare",
+      "reasons": [
+        "infoGain 极差 2 档"
+      ],
+      "o": {
+        "semanticType": "暧昧推进",
+        "infoGain": "中",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "a": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      },
+      "b": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "高",
+        "relationshipProgression": "高"
+      }
+    },
+    {
+      "cardId": "PN-DARE-024",
+      "gameType": "dare",
+      "reasons": [
+        "infoGain 极差 2 档"
+      ],
+      "o": {
+        "semanticType": "暧昧推进",
+        "infoGain": "中",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "a": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      },
+      "b": {
+        "semanticType": "行动互动",
+        "infoGain": "0",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      }
+    },
+    {
+      "cardId": "PN-CHEM-037",
+      "gameType": "chemistry",
+      "reasons": [
+        "infoGain 极差 2 档"
+      ],
+      "o": {
+        "semanticType": "暧昧推进",
+        "infoGain": "低",
+        "socialEnergy": "低",
+        "relationshipProgression": "高"
+      },
+      "a": {
+        "semanticType": "相互了解",
+        "infoGain": "高",
+        "socialEnergy": "中",
+        "relationshipProgression": "高"
+      },
+      "b": {
+        "semanticType": "相互了解",
+        "infoGain": "中",
+        "socialEnergy": "中",
+        "relationshipProgression": "中"
+      }
+    }
+  ]
+}

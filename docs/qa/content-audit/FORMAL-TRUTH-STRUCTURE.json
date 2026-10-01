@@ -1,0 +1,146 @@
+{
+  "source": "truth-dare 生产牌堆 ∩ manifest formalFixedIdSet()（当前 Formal 全池）",
+  "scope": "current-formal-fixed-structure",
+  "totalFormal": 53,
+  "dimensions": {
+    "targets": {
+      "quick_know": {
+        "label": "quick_know",
+        "count": 18,
+        "pct": 34,
+        "cardIds": [
+          "PN-TRUTH-232",
+          "PN-TRUTH-233",
+          "PN-TRUTH-234",
+          "PN-TRUTH-244",
+          "PN-TRUTH-245",
+          "PN-TRUTH-248",
+          "PN-TRUTH-250",
+          "PN-TRUTH-252",
+          "PN-TRUTH-255",
+          "PN-TRUTH-256",
+          "PN-TRUTH-259",
+          "PN-TRUTH-261",
+          "PN-TRUTH-262",
+          "PN-TRUTH-264",
+          "PN-TRUTH-265",
+          "PN-TRUTH-266",
+          "PN-TRUTH-270",
+          "PN-TRUTH-271"
+        ]
+      },
+      "attraction": {
+        "label": "attraction",
+        "count": 7,
+        "pct": 13.2,
+        "cardIds": [
+          "PN-TRUTH-235",
+          "PN-TRUTH-237",
+          "PN-TRUTH-246",
+          "PN-TRUTH-247",
+          "PN-TRUTH-254",
+          "PN-TRUTH-282",
+          "PN-TRUTH-283"
+        ]
+      },
+      "flirt": {
+        "label": "flirt",
+        "count": 8,
+        "pct": 15.1,
+        "cardIds": [
+          "PN-TRUTH-238",
+          "PN-TRUTH-239",
+          "PN-TRUTH-240",
+          "PN-TRUTH-251",
+          "PN-TRUTH-253",
+          "PN-TRUTH-257",
+          "PN-TRUTH-258",
+          "PN-TRUTH-260"
+        ]
+      },
+      "body_preference": {
+        "label": "body_preference",
+        "count": 6,
+        "pct": 11.3,
+        "cardIds": [
+          "PN-TRUTH-241",
+          "PN-TRUTH-242",
+          "PN-TRUTH-243",
+          "PN-TRUTH-267",
+          "PN-TRUTH-268",
+          "PN-TRUTH-269"
+        ]
+      },
+      "follow_up_hook": {
+        "label": "follow_up_hook",
+        "count": 9,
+        "pct": 17,
+        "cardIds": [
+          "PN-TRUTH-272",
+          "PN-TRUTH-273",
+          "PN-TRUTH-274",
+          "PN-TRUTH-275",
+          "PN-TRUTH-276",
+          "PN-TRUTH-278",
+          "PN-TRUTH-279",
+          "PN-TRUTH-280",
+          "PN-TRUTH-281"
+        ]
+      }
+    },
+    "noPlanningCategory": {
+      "label": "无 planning category（KEEP 5 等）",
+      "count": 5,
+      "cardIds": [
+        "PN-TRUTH-203",
+        "PN-TRUTH-205",
+        "PN-TRUTH-209",
+        "PN-TRUTH-227",
+        "PN-TRUTH-229"
+      ]
+    },
+    "exits": {
+      "long_term_relationship": {
+        "label": "长期关系规则",
+        "pattern": "长期关系|长期伴侣|结婚|婚姻|五年后|以后的日子|理想的一天",
+        "count": 0,
+        "cardIds": []
+      },
+      "ex_partner": {
+        "label": "前任回忆",
+        "pattern": "前任|上一段|旧关系|前男友|前女友",
+        "count": 0,
+        "cardIds": []
+      },
+      "therapy_like": {
+        "label": "心理咨询式自我剖析",
+        "pattern": "心理咨询|原生家庭|童年|创伤|抑郁|焦虑|自我剖析",
+        "count": 0,
+        "cardIds": []
+      },
+      "complex_open_question": {
+        "label": "复杂人生规划开放题",
+        "pattern": "各占几成|哪三段|人生规划|未来.*(打算|计划)",
+        "count": 0,
+        "cardIds": []
+      }
+    }
+  },
+  "note": "当前 Formal 全池 53 张按 9 维度归类：5 类主线重点（planning category 真值）quick_know 18 / attraction 7 / flirt 8 / body_preference 6 / follow_up_hook 9；另有 5 张无 planning category（KEEP 5 等，非本 5 类）。4 类退出方向词面 screen 命中合计 0 张（0 —— 未发现退出方向漏入 Formal）。",
+  "p2SelectWhoConvergence": {
+    "source": "docs/review/RESEARCH_REVIEW-PACK1-FINAL-54.md §专项 2",
+    "registeredSubset": [
+      "PN-TRUTH-251",
+      "PN-TRUTH-257",
+      "PN-TRUTH-273",
+      "PN-TRUTH-276",
+      "PN-TRUTH-279",
+      "PN-TRUTH-280",
+      "PN-TRUTH-281"
+    ],
+    "verdict": "不退卡（单卡质量与 hook 真值均过线），登记风险",
+    "limitSuggestion": "第二包禁止继续大量堆「选谁」；后续单局限流（如单局 ≤2 张）或 280 / 281 / 273 轮换 —— 交编排者裁决。",
+    "followedUpHookCards": 9
+  },
+  "generatedBy": "scripts/audit-formal-truth-structure.ts"
+}

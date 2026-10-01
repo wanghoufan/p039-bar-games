@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 53,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "base",
+    "intensity": 5,
+    "players": 6,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "couple",
+      "label": "情侣 / 暧昧"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "情侣 / 暧昧",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：情侣 / 暧昧；氛围：放开玩；最高强度：5。\n可用玩法：compatibility-test。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 6583,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "compat-001",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果只能选一种约会方式，你们会同时选哪一个？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "轻松",
+          "日常"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-002",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "第一次见面时，你们觉得对方最可能的印象是什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "初印象",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-003",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果周末突然多出一天假期，你们会同时选择怎么过？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "周末",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-004",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你们觉得一段关系里最重要的是什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "价值观",
+          "开放题"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-005",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果一起养一只宠物，你们会同时选哪种？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "宠物",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-006",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你们同时说出一个最适合一起看的电影类型。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "电影",
+          "默契"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-007",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果只能用一个词形容你们现在的相处状态，你们会同时说什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "关系",
+          "开放题"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-008",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你们觉得对方最喜欢自己哪一点？同时回答。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "欣赏",
+          "开放题"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-009",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果一起规划一次一日游，你们会同时选哪种目的地？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "旅行",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-010",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你们同时回答：下一次约会最想尝试什么新活动？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "约会",
+          "开放题"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

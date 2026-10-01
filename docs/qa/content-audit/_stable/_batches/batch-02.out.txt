@@ -1,0 +1,19 @@
+[0m
+> build · muse-spark-1.3-contributor-free
+[0m
+独立标注中，只看题面判定五轴。
+[0m→ [0mRead docs/qa/content-audit/_stable/_batches/batch-02.jsonl
+{"cardId":"PN-DARE-015","infoGain":"低","semanticType":"行动互动","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-016","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"高","relationshipProgression":"低"}
+{"cardId":"PN-DARE-017","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-018","infoGain":"低","semanticType":"相互了解","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-019","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"高","relationshipProgression":"高"}
+{"cardId":"PN-DARE-022","infoGain":"0","semanticType":"纯看戏/低信息","topic":"无明确人物信息增量","socialEnergy":"高","relationshipProgression":"低"}
+{"cardId":"PN-DARE-023","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-DARE-024","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"中"}
+{"cardId":"PN-DARE-025","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-026","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-DARE-027","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"高","relationshipProgression":"低"}
+{"cardId":"PN-DARE-028","infoGain":"0","semanticType":"行动互动","topic":"无明确人物信息增量","socialEnergy":"中","relationshipProgression":"低"}
+{"cardId":"PN-DARE-029","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"中","relationshipProgression":"高"}
+{"cardId":"PN-DARE-031","infoGain":"低","semanticType":"暧昧推进","topic":"现场化学反应","socialEnergy":"高","relationshipProgression":"高"}

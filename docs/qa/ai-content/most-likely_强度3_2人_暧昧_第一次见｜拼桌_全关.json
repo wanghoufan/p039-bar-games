@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 12,
+    "packId": "most-likely",
+    "packName": "谁最可能",
+    "origin": "base",
+    "intensity": 3,
+    "players": 2,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "most-likely"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：第一次见 / 拼桌；氛围：暧昧；最高强度：3。\n可用玩法：most-likely。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 23048,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "mnl-001",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在拼桌时先开口打破沉默？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-002",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能记得对方点过的非酒精饮料？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-003",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能因为一个冷笑话偷偷笑出来？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-004",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在聊天时先移开视线，又很快看回来？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-005",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能把今晚的偶遇讲给朋友听，却先不说名字？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-006",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在下次见面时装作不记得对方的名字，其实记得很清楚？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-007",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在这局结束后还想再聊十分钟？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-008",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能先用玩笑掩饰认真？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-009",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能觉得对方的声音比预想中更好听？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mnl-010",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "谁最可能在道别时回头多看一眼？",
+        "instruction": "两人倒数三声后同时指向自己或对方。得票多者用一句话说明理由；平票则各说一个词。任何人不舒服都可以说“跳过”，无需解释。",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

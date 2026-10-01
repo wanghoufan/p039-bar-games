@@ -1,0 +1,41 @@
+$ playwright test tests/e2e/punishment-production.spec.ts tests/e2e/production-offline.spec.ts
+
+Running 2 tests using 2 workers
+
+(node:2989) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2990) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile-chromium] › tests/e2e/production-offline.spec.ts:6:5 › 已访问的当前 Session 可在完全离线后重载恢复 (840ms)
+  ✘  1 [mobile-chromium] › tests/e2e/punishment-production.spec.ts:3:5 › production offline reload preserves independent session and all core controls (5.5s)
+
+
+  1) [mobile-chromium] › tests/e2e/punishment-production.spec.ts:3:5 › production offline reload preserves independent session and all core controls 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.punishment-copy')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.punishment-copy') with timeout 5000ms
+      - waiting for locator('.punishment-copy')
+
+
+      4 |  await page.goto("/punishment"); await page.getByRole("button",{name:"开始",exact:true}).click();
+      5 |  await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+    > 6 |  await page.reload(); await expect(page.locator(".punishment-copy")).toBeVisible();
+        |                                                                      ^
+      7 |  const id=await page.locator(".punishment-card").getAttribute("data-card-id");
+      8 |  await context.setOffline(true); await page.reload();await expect(page.locator(".punishment-copy")).toBeVisible();
+      9 |  expect(await page.locator(".punishment-card").getAttribute("data-card-id")).toBe(id);
+        at /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/e2e/punishment-production.spec.ts:6:70
+
+    Error Context: test-results/punishment-production-prod-246e7-ssion-and-all-core-controls-mobile-chromium/error-context.md
+
+  1 failed
+    [mobile-chromium] › tests/e2e/punishment-production.spec.ts:3:5 › production offline reload preserves independent session and all core controls 
+  1 passed (6.0s)
+[ELIFECYCLE] Command failed with exit code 1.

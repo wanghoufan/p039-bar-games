@@ -1,0 +1,25 @@
+$ eslint .
+
+/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/scripts/audit-aggregate-v2-350.ts
+  45:7  warning  'pct' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  51:7  warning  'crossBy' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/scripts/audit-report-v2-350.ts
+  41:7  warning  'noGainN' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  42:7  warning  'zeroN' is assigned a value but never used    @typescript-eslint/no-unused-vars
+
+/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/scripts/decision/orca-decide.mjs
+    7:19  warning  'tmpdir' is defined but never used  @typescript-eslint/no-unused-vars
+  168:13  warning  'a' is defined but never used       @typescript-eslint/no-unused-vars
+  208:16  warning  '_lv' is defined but never used     @typescript-eslint/no-unused-vars
+  208:21  warning  'ctx' is defined but never used     @typescript-eslint/no-unused-vars
+
+/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/scripts/decision/run-shadow.mjs
+  7:10  warning  'tmpdir' is defined but never used  @typescript-eslint/no-unused-vars
+  8:10  warning  'join' is defined but never used    @typescript-eslint/no-unused-vars
+
+/Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏/tests/phone/dump-state.ts
+  5:25  warning  'Page' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 11 problems (0 errors, 11 warnings)
+

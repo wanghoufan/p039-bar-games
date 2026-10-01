@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 79,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "extra",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：刚认识；氛围：放开玩；最高强度：1。\n可用玩法：pointing-game。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 48537,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pointing-01",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向自己左手边的人，并向对方点头说“很高兴认识你”。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-02",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向房间里你最先记住名字的人，然后清楚叫出对方的名字。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-03",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向自己右手边的人，并用一个词描述对方给你的第一印象。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-04",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向一个你觉得此刻状态很放松的人，然后一起鼓掌三下。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-05",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向离自己最近的人，并对他说一句“今晚一起放开玩”。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-06",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向自己左边第二位的人，并与对方隔空击掌一次。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-07",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向一个你认为很会讲冷笑话的人，然后请他讲一个短笑话。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-08",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向自己右手边第二位的人，并夸对方一个不涉及外貌的优点。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-09",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向今晚想一起完成下一轮游戏的人，并说“下一轮一起吧”。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pointing-10",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人指向自己正对面的人，并用一个动作或表情向对方打招呼。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "pointing"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

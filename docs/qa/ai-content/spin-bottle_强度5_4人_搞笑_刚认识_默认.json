@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 61,
+    "packId": "spin-bottle",
+    "packName": "转瓶子",
+    "origin": "base",
+    "intensity": 5,
+    "players": 4,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "spin-bottle"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：刚认识；氛围：搞笑；最高强度：5。\n可用玩法：spin-bottle。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 33265,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "spin-01",
+        "packId": "spin-bottle",
+        "type": "破冰",
+        "content": "转瓶选中者用新闻主播语气，播报一句“刚认识也能很搞笑”的现场快讯。",
+        "instruction": "转动瓶子，选中者用夸张播音腔说满10秒；可跳过。",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "搞笑"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-02",
+        "packId": "spin-bottle",
+        "type": "模仿",
+        "content": "转瓶选中者模仿一种动物，让其他嘉宾猜，猜中前不能说出动物名。",
+        "instruction": "转动瓶子，选中者表演10秒动物叫声或动作；其他人抢答；可跳过。",
+        "intensity": 1,
+        "tags": [
+          "模仿",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-03",
+        "packId": "spin-bottle",
+        "type": "组队",
+        "content": "转瓶选中者与左侧嘉宾临时组队，给对方起一个不冒犯的搞笑组合名并一起喊口号。",
+        "instruction": "转动瓶子，选中者与左手边嘉宾商量10秒，然后喊出组合名和口号；可跳过。",
+        "intensity": 2,
+        "tags": [
+          "组队",
+          "取名"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-04",
+        "packId": "spin-bottle",
+        "type": "反应",
+        "content": "转瓶选中者发起反向指令：说“请举左手”，所有人要举右手，连续三轮。",
+        "instruction": "转动瓶子，选中者喊指令，其他人做相反动作；做错者学三秒猫叫；可跳过。",
+        "intensity": 2,
+        "tags": [
+          "反应",
+          "集体"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-05",
+        "packId": "spin-bottle",
+        "type": "冷笑话",
+        "content": "转瓶选中者用最严肃表情讲一个冷笑话，谁先笑，谁接龙再讲一个。",
+        "instruction": "转动瓶子，选中者讲一个无冒犯冷笑话；笑的人接龙；可跳过。",
+        "intensity": 2,
+        "tags": [
+          "冷笑话",
+          "接龙"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-06",
+        "packId": "spin-bottle",
+        "type": "辩论",
+        "content": "转瓶选中者指定两位嘉宾，进行30秒“泡面先放料包还是先放面”的胡说辩论。",
+        "instruction": "转动瓶子，选中者指定两人；双方轮流发言30秒，不能人身攻击；可跳过。",
+        "intensity": 2,
+        "tags": [
+          "辩论",
+          "胡说"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-07",
+        "packId": "spin-bottle",
+        "type": "表演",
+        "content": "转瓶选中者当导演，让另外两位嘉宾表演20秒无声短剧：“刚认识但突然要拼桌吃饭”。",
+        "instruction": "转动瓶子，选中者指定两位演员并给一个简单设定；演员只能做动作和表情；可跳过。",
+        "intensity": 3,
+        "tags": [
+          "表演",
+          "无声短剧"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-08",
+        "packId": "spin-bottle",
+        "type": "音乐",
+        "content": "全员轮流用一句歌词回答“我现在心情如何”，不能重复，跑调加分。",
+        "instruction": "从转瓶选中者开始，顺时针轮流唱一句；卡住或重复者表演一个搞怪表情；可跳过。",
+        "intensity": 3,
+        "tags": [
+          "唱歌",
+          "心情"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-09",
+        "packId": "spin-bottle",
+        "type": "不笑挑战",
+        "content": "转瓶选中者接受15秒不笑挑战，其他人轮流用搞笑语气说“你好”。",
+        "instruction": "转动瓶子，选中者保持严肃15秒；其他人依次问好或做鬼脸，不能触碰对方；笑了就换人当挑战者；可跳过。",
+        "intensity": 3,
+        "tags": [
+          "不笑挑战",
+          "表情"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-10",
+        "packId": "spin-bottle",
+        "type": "默契",
+        "content": "转瓶选中者说一个词，其他人同时用手势比出相关动作，最不合群的人获得“脑洞王”称号。",
+        "instruction": "转动瓶子，选中者说词后数三二一，其他人同时比动作；大家票选最特别的动作；可跳过。",
+        "intensity": 4,
+        "tags": [
+          "默契",
+          "手势"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

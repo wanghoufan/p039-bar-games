@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 63,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "extra",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：熟人局；氛围：暧昧；最高强度：3。\n可用玩法：truth-dare。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 29921,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "td-01",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "说出你对在场每个人第一印象里最特别的一点。",
+        "instruction": "当前玩家回答；可以只说其中两位，也可以说跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-02",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三个词形容你心中的理想型，但不能提到外貌、收入和具体职业。",
+        "instruction": "当前玩家完成；若觉得为难可直接跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-03",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "在场谁最容易让你产生“想多聊一会儿”的念头？只给一个名字或直接跳过。",
+        "instruction": "当前玩家回答；不解释也可以。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-04",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "对着你右手边的人，用最认真的语气说一句不含表白、但有点暧昧的台词。",
+        "instruction": "当前玩家对指定嘉宾说；对方只需听完，不必回应；可跳过。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-05",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "你最近一次心跳加速是因为什么？不需要说人名。",
+        "instruction": "当前玩家回答；可以只给关键词。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-06",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "和一位嘉宾对视10秒；期间可以笑，但不许说话。",
+        "instruction": "当前玩家选一位嘉宾完成；任何一方不适可立刻喊停并跳过。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-07",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果今晚只能和一个人组队完成一件小事，你会选谁？为什么？",
+        "instruction": "当前玩家回答；不想解释原因可以说跳过。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-08",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用一句不直接说“喜欢”的话，夸赞一位嘉宾，让其他人猜你夸的是谁。",
+        "instruction": "当前玩家说出一句夸赞；若无人猜中，可选择公布或不公布；可跳过。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-09",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果给今晚的暧昧氛围配一首歌，你会选哪首？并说出理由。",
+        "instruction": "当前玩家回答；可只唱歌名不解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-10",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "对一位嘉宾说一句“如果这不是游戏，我可能会想更了解你”，说完不再解释。",
+        "instruction": "当前玩家完成；对方只需听完，不必回应；可跳过。",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

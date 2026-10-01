@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 9,
+    "packId": "most-likely",
+    "packName": "谁最可能",
+    "origin": "base",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "most-likely"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：熟人局；氛围：随机；最高强度：1。\n可用玩法：most-likely。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 15488,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "ml-001",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能在群聊里发完消息后马上撤回？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-002",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能在聚餐时主动负责点菜？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-003",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能看电影时提前猜中结局？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-004",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能旅行前把行程整理成表格？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-005",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能在KTV里一直当观众，不太抢麦？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-006",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能在聊天中突然切换到新话题？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-007",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能记得别人随口提过的小事？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-008",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能在玩桌游前认真读完整本规则？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-009",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能出门前反复确认有没有带钥匙？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "ml-010",
+        "packId": "most-likely",
+        "type": "最可能投票",
+        "content": "谁最可能最后一个离开聚会？",
+        "instruction": "所有人倒数三秒，同时指向一位玩家；得票最多者积1分。任何玩家都可随时说“跳过”，不扣分；平票则平票者各积1分。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

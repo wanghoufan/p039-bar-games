@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 23,
+    "packId": "never-have",
+    "packName": "我从来没有",
+    "origin": "base",
+    "intensity": 3,
+    "players": 6,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "couple",
+      "label": "情侣 / 暧昧"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "情侣 / 暧昧",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "never-have"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：情侣 / 暧昧；氛围：放开玩；最高强度：3。\n可用玩法：never-have。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 50926,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "nh-01",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在KTV里把一首歌唱到破音。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-02",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未跟着音乐偷偷学过一段舞，却从没在别人面前跳过。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-03",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在看电影时中途睡着，醒来后假装自己看完了。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-04",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在洗澡时开过个人演唱会。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-05",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未因为追剧熬到天亮，第二天还嘴硬说不困。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-06",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在喜欢的人面前故意说反话。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-07",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在暧昧期假装看不懂对方的暗示。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-08",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未和喜欢的人对视超过十秒还不笑场。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-09",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在朋友起哄时脸红到耳朵，还假装是天气太热。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 2,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "nh-10",
+        "packId": "never-have",
+        "type": "never-have",
+        "content": "我从未在喜欢的人面前假装毫不在意，结果被朋友一眼看穿。",
+        "instruction": "若做过就举手或喊“我做过”；不想回答可随时跳过，不解释。",
+        "intensity": 3,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

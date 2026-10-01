@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 75,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "extra",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：熟人局；氛围：随机；最高强度：3。\n可用玩法：would-you-rather。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 37401,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-001",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "清晨去山顶看日出，但必须早起 VS 深夜在草地看星空，但必须晚睡",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "自然",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-002",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "拥有会飞的能力，但每次起飞前都要先深呼吸十秒 VS 拥有隐形的能力，但在黑暗中会不自觉地发光",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "幻想",
+          "趣味"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-003",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每餐都能吃到最爱的食物，但不能换口味 VS 每天都能尝试新菜式，但没有一道是熟悉的",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "饮食",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-004",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "能听懂所有动物说话，但它们会一直找你聊天 VS 能瞬间学会任何乐器，但只能在没人的时候演奏",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "能力",
+          "幽默"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-005",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "旅行只看壮丽自然风景，不去任何室内场所 VS 旅行只逛城市文化场馆，不看任何自然风景",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "旅行",
+          "偏好"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-006",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "永远不用排队，但每次都要提前一小时到 VS 永远不堵车，但每次出门都会遇到小雨",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "日常",
+          "脑洞"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-007",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "拥有无限观影机会，但只能看喜剧片 VS 拥有无限零食，但只能吃一种口味",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "娱乐",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-008",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "只能吃甜食，完全不能吃辣 VS 只能吃辣味，完全不能吃甜",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "饮食",
+          "二选一"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-009",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "和在场好友一起露营看星星，但帐篷要自己搭 VS 和在场好友一起在家电影马拉松，但只能看老片",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "朋友",
+          "活动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-010",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天多出一小时自由时间，但不能存起来 VS 每周多出一整天休息时间，但必须提前规划",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "时间",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

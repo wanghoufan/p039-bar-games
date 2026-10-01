@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 66,
+    "packId": "spin-bottle",
+    "packName": "转瓶子",
+    "origin": "extra",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "icebreaker",
+      "label": "破冰"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "破冰"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "spin-bottle"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：第一次见 / 拼桌；氛围：破冰；最高强度：3。\n可用玩法：spin-bottle。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 21473,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "spin-ice-01",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "用三个词介绍自己，并说明哪个词最希望今晚被大家记住。",
+        "instruction": "旋转瓶子，瓶口指向者回答；不愿可跳过。",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "自我介绍"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-02",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "分享最近一件让你微笑的小事，不超过两句话。",
+        "instruction": "旋转瓶子，瓶口指向者回答；不愿可跳过。",
+        "intensity": 1,
+        "tags": [
+          "轻松",
+          "分享"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-03",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "说出一个你最近想尝试但还没开始的兴趣。",
+        "instruction": "旋转瓶子，瓶口指向者回答，并可邀请一位嘉宾追问一个细节；不愿可跳过。",
+        "intensity": 1,
+        "tags": [
+          "兴趣",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-04",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "用“如果我是天气，我今天是……”造一个句子，并简单解释。",
+        "instruction": "旋转瓶子，瓶口指向者回答；不愿可跳过。",
+        "intensity": 1,
+        "tags": [
+          "想象",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-05",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "观察一圈，说出你觉得第一印象反差最大的一位嘉宾，并给出一个友善理由。",
+        "instruction": "旋转瓶子，瓶口指向者回答；不要评价外貌或隐私，不愿可跳过。",
+        "intensity": 2,
+        "tags": [
+          "观察",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-06",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "用三个线索描述你最喜欢的一种家乡小吃，让大家猜是什么。",
+        "instruction": "旋转瓶子，瓶口指向者描述，其他人可轮流猜；不愿可跳过。",
+        "intensity": 1,
+        "tags": [
+          "猜谜",
+          "饮食"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-07",
+        "packId": "spin-bottle",
+        "type": "task",
+        "content": "和瓶口指向者右边的人互相说出一个对彼此的第一印象关键词，并各补充一句。",
+        "instruction": "旋转瓶子，瓶口指向者与右边嘉宾配对完成；不评价外貌，任何一方不愿可跳过。",
+        "intensity": 2,
+        "tags": [
+          "配对",
+          "第一印象"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-08",
+        "packId": "spin-bottle",
+        "type": "task",
+        "content": "用一句话即兴编一个以“今晚之后”开头的小故事，不涉及真实隐私。",
+        "instruction": "旋转瓶子，瓶口指向者完成；不愿可跳过。",
+        "intensity": 2,
+        "tags": [
+          "即兴",
+          "故事"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-09",
+        "packId": "spin-bottle",
+        "type": "question",
+        "content": "选择一位嘉宾，猜他或她最喜欢的放松方式，对方只回答“接近”或“不对”，最多猜三次。",
+        "instruction": "旋转瓶子，瓶口指向者选择一位嘉宾进行；对方不愿可换人或跳过。",
+        "intensity": 2,
+        "tags": [
+          "猜测",
+          "互动"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-ice-10",
+        "packId": "spin-bottle",
+        "type": "group",
+        "content": "全桌用三个词给今晚起一个代号，由瓶口指向者汇总并说出理由。",
+        "instruction": "旋转瓶子，瓶口指向者负责组织，全桌一起完成；不愿参与可跳过。",
+        "intensity": 2,
+        "tags": [
+          "全桌",
+          "共创"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

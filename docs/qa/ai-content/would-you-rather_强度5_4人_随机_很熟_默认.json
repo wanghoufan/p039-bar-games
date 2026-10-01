@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 34,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 5,
+    "players": 4,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "close",
+      "label": "很熟"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "很熟",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 5,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：很熟；氛围：随机；最高强度：5。\n可用玩法：would-you-rather。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 25655,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wyr-001",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "瞬间掌握所有动物的语言，能和它们聊天 VS 瞬间掌握所有人类的语言，能和任何人交流",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "语言",
+          "想象"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-002",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "周末去一座从未去过的城市闲逛 VS 周末待在家把想看的剧一次看完",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "周末",
+          "消遣"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-003",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天可以隐身一小时 VS 每天可以飞行十分钟",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "超能力",
+          "趣味"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-004",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "未来一年只能吃火锅 VS 未来一年只能吃烧烤",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "美食",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-005",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "能记住所有读过的书 VS 能记住所有听过的歌",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "记忆",
+          "兴趣"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-006",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "这辈子永远不用排队 VS 这辈子永远不会堵车",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "日常",
+          "便利"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-007",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天效率翻倍，但必须早起 VS 每天灵感爆棚，但经常熬夜",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "习惯",
+          "效率"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-008",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "以后只能看经典老片 VS 以后只能看最新上映",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "影视",
+          "娱乐"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-009",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "每天能暂停时间十分钟，但自己也不能动 VS 每天能倒带三十秒，但一天只能用一次",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 4,
+        "tags": [
+          "时间",
+          "超能力"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wyr-010",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "人生可以重播任意一天 VS 人生可以快进到任意未来节点",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 5,
+        "tags": [
+          "人生",
+          "想象"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

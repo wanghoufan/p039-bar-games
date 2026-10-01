@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 30,
+    "packId": "would-you-rather",
+    "packName": "二选一",
+    "origin": "base",
+    "intensity": 3,
+    "players": 2,
+    "vibe": {
+      "key": "icebreaker",
+      "label": "破冰"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "all-off",
+      "label": "全关",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "破冰"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": false,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": false,
+        "noPublicPosting": false,
+        "noStrangerContact": false,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "would-you-rather"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：第一次见 / 拼桌；氛围：破冰；最高强度：3。\n可用玩法：would-you-rather。\n已开启的结构化雷区：无；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 17567,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "wr-001",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "认识新朋友时，你更愿意先主动打招呼 VS 先等对方开口，再自然接话",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-002",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "去陌生城市旅行，按攻略打卡知名景点 VS 随意走走，遇到什么算什么",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "旅行",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-003",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "聚会时一直喝气泡水或茶 VS 尝试不同口味的无酒精特调",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "饮料",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-004",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "周末宅家看剧或打游戏 VS 出门散步或逛展",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "周末",
+          "兴趣"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-005",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "用文字消息慢慢聊 VS 用语音或当面直接聊",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "沟通",
+          "性格"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-006",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "火锅或烧烤，热闹分享 VS 精致小馆，安静品尝",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 1,
+        "tags": [
+          "美食",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-007",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "瞬间学会一门新语言 VS 瞬间学会一种新乐器",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "想象",
+          "超能力"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-008",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "提前列好清单再行动 VS 临时决定，享受意外惊喜",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "计划",
+          "性格"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-009",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "看到美丽夕阳，静静看一会儿 VS 看到美丽夕阳，马上哼一首歌",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 2,
+        "tags": [
+          "感受",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "wr-010",
+        "packId": "would-you-rather",
+        "type": "would-you-rather",
+        "content": "用三个词介绍自己 VS 用一个最近的小故事介绍自己",
+        "instruction": "一起倒数三秒，说出你的选择",
+        "intensity": 3,
+        "tags": [
+          "自我介绍",
+          "破冰"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

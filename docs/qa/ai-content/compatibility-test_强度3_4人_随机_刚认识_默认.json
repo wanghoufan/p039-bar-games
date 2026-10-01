@@ -1,0 +1,243 @@
+{
+  "cell": {
+    "index": 49,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "base",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：刚认识；氛围：随机；最高强度：3。\n可用玩法：compatibility-test。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 24136,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "comp-001",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时说出一种最适合今晚聚会点的外卖口味。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "icebreaker",
+          "food"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-002",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果只能选一种，你们同时回答：周末更想宅家还是出门？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "preference",
+          "weekend"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-003",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时说出一个最想拥有的超能力。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "imagination"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-004",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你们同时回答：聚会时更愿意当组织者还是参与者？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "social-style"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-005",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时从‘猫’‘狗’‘鸟’中选一个最想养的宠物。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "preference",
+          "pets"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-006",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时说出一个最近让你笑出声的小事。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "story",
+          "light"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-007",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "如果现在立刻放假一天，你们同时选择：睡觉、看电影、逛公园。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "hypothetical",
+          "relax"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-008",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时回答：吃火锅时，更接受清汤还是辣汤？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "food",
+          "preference"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-009",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "同时说出一种你最喜欢的中文歌类型或歌手风格。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 3,
+        "tags": [
+          "music",
+          "taste"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "comp-010",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "你们同时回答：遇到新朋友时，更习惯先听还是先说？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 3,
+        "tags": [
+          "social-style",
+          "communication"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

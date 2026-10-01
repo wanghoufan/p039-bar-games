@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 启动屏背景色（PN = Party Night）。
+         色值来源：Web 主题真源 app/globals.css 的 color-bg-night 变量（深色主题值 #080b1a），
+         与 app/layout.tsx 的 viewport.themeColor "#080B1A" 同值。不另造颜色。
+         未复用 ic_launcher_background(#0C1025)：那是桌面图标的自适应图标底色，
+         不是 Web 首帧底色，混用会让「启动屏到网页」出现色差。 -->
+    <color name="pn_splash_background">#080B1A</color>
+</resources>

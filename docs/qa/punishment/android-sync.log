@@ -1,0 +1,9 @@
+$ cap sync android
+✔ Copying web assets from out to android/app/src/main/assets/public in 21.32ms
+✔ Creating capacitor.config.json in android/app/src/main/assets in 239.08μs
+✔ copy android in 26.68ms
+✔ Updating Android plugins in 1.20ms
+[info] Found 1 Capacitor plugin for android:
+       @capacitor/app@7.1.2
+✔ update android in 21.89ms
+[info] Sync finished in 0.058s

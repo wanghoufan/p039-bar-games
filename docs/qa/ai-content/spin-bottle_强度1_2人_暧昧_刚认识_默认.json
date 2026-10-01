@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 73,
+    "packId": "spin-bottle",
+    "packName": "转瓶子",
+    "origin": "extra",
+    "intensity": 1,
+    "players": 2,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "new",
+      "label": "刚认识"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "刚认识",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "spin-bottle"
+      ],
+      "mode": "single",
+      "playerCount": 2
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2；关系：刚认识；氛围：暧昧；最高强度：1。\n可用玩法：spin-bottle。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 22345,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "spin-01",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "第一印象关键词",
+        "instruction": "转动瓶子，瓶口指向的人用一个词形容对另一位嘉宾的第一印象，并说一句理由；另一位可以先猜这个词。任何一方都可以说“跳过”。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-02",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "此刻氛围三词",
+        "instruction": "转动瓶子，瓶口指向的人先说一个形容此刻氛围的词，另一位接一个不重复的词，再轮流补到三个词。可随时跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-03",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "好奇小细节",
+        "instruction": "转动瓶子，瓶口指向的人说出对方身上一个让你好奇的小细节，不评价外貌，并问一个温和的问题；对方可以选择回答或跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-04",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "电影台词自我介绍",
+        "instruction": "转动瓶子，瓶口指向的人用一句像电影台词的话介绍自己，另一位也来一句；最后各自选一句更喜欢的。可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-05",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "记住的瞬间",
+        "instruction": "转动瓶子，瓶口指向的人说：“如果今晚只能记住一个瞬间，我可能会记住……”然后停住，让对方猜后半句；猜完再由说话者公布答案。可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-06",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "对视十秒",
+        "instruction": "转动瓶子，瓶口指向的人邀请对方对视十秒；先笑的人夸对方一句。若不舒服可随时闭眼或跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-07",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "今晚昵称",
+        "instruction": "转动瓶子，瓶口指向的人给对方起一个今晚专用的昵称，并说明理由；对方可以接受，也可以换一个自己更喜欢的。可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-08",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "一见钟情或慢慢靠近",
+        "instruction": "转动瓶子，瓶口指向的人问对方：“你更相信一见钟情，还是慢慢靠近？”对方回答后，问的人也分享自己的答案。可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-09",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "我注意到你",
+        "instruction": "转动瓶子，瓶口指向的人用“我注意到你……”开头，说一个关于语气、节奏或小动作的观察，不评价外貌；对方只需回应“收到”或补充一句。可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "spin-10",
+        "packId": "spin-bottle",
+        "type": "spin",
+        "content": "温柔二选一",
+        "instruction": "转动瓶子，瓶口指向的人出一道二选一：更深的对视，还是更轻的笑声？两人分别选一个并说一句理由。可跳过。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

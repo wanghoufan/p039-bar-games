@@ -1,0 +1,265 @@
+{
+  "cell": {
+    "index": 72,
+    "packId": "pointing-game",
+    "packName": "指人游戏",
+    "origin": "extra",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "funny",
+      "label": "搞笑"
+    },
+    "relationship": {
+      "key": "first-meet",
+      "label": "第一次见 / 拼桌"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "第一次见 / 拼桌",
+      "vibes": [
+        "搞笑"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "pointing-game"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：第一次见 / 拼桌；氛围：搞笑；最高强度：3。\n可用玩法：pointing-game。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 30506,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "pnt-001",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：此刻表情最像刚听到一个烂梗的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-002",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：如果大家组队演小品，最像负责忘词的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-003",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：说话节奏最像综艺节目旁白的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-004",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：看起来最会把桌游规则讲成悬疑故事的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-005",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：笑起来最有喜剧配乐感的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-006",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：如果现场开一场即兴喜剧，最像第一位上台的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-007",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：现在坐姿最像在等颁奖结果的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 1,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-008",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：最能用一个表情演完一整部喜剧的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-009",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：如果大家演一段搞笑短剧，最像负责搞怪的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 2,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "pnt-010",
+        "packId": "pointing-game",
+        "type": "pointing",
+        "content": "请所有人同时指向：今晚最像会突然说出金句的人。",
+        "instruction": "倒数三秒，一起指向那个人",
+        "intensity": 3,
+        "tags": [
+          "搞笑",
+          "破冰",
+          "指人",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 3,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "cell": {
+    "index": 14,
+    "packId": "most-likely",
+    "packName": "谁最可能",
+    "origin": "base",
+    "intensity": 3,
+    "players": 6,
+    "vibe": {
+      "key": "random",
+      "label": "随机"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "随机"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "most-likely"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：随机；最高强度：3。\n可用玩法：most-likely。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 15807,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "mn-001",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能成为聚会的即兴气氛担当？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者可以分享一个轻松小故事，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "破冰",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-002",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能把冷笑话讲得停不下来？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者讲一个冷笑话，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "幽默",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-003",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能看剧看到忘记时间？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者说说最近在追的剧，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "日常",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-004",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能在唱歌时把副歌变成全场大合唱？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者领唱一句熟悉歌词，也可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "音乐",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-005",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能第一个提议玩桌游？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者推荐一个适合朋友聚会的桌游，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "桌游",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-006",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能把零食分享给所有人？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者说说自己最喜欢的零食，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "分享",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-007",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能模仿经典电影台词？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者模仿一句经典台词，也可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "表演",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-008",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能在团队游戏里记错规则？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者复述一条自己记得最牢的游戏规则，也可以跳过。",
+        "intensity": 1,
+        "tags": [
+          "游戏",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-009",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能用一句话让全场笑出来？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者说一句轻松的话逗大家笑，也可以跳过。",
+        "intensity": 2,
+        "tags": [
+          "幽默",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "mn-010",
+        "packId": "most-likely",
+        "type": "most-likely",
+        "content": "在座谁最可能成为下一次聚会的发起人？",
+        "instruction": "所有人同时投票，指认或说出名字；得票最高者提出一个安全的聚会点子，也可以跳过。",
+        "intensity": 3,
+        "tags": [
+          "聚会",
+          "投票"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

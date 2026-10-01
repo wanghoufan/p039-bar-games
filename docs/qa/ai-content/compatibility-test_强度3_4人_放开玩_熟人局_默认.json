@@ -1,0 +1,255 @@
+{
+  "cell": {
+    "index": 69,
+    "packId": "compatibility-test",
+    "packName": "默契测试",
+    "origin": "extra",
+    "intensity": 3,
+    "players": 4,
+    "vibe": {
+      "key": "wild",
+      "label": "放开玩"
+    },
+    "relationship": {
+      "key": "familiar",
+      "label": "熟人局"
+    },
+    "boundary": {
+      "mode": "default",
+      "label": "默认",
+      "flags": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "熟人局",
+      "vibes": [
+        "放开玩"
+      ],
+      "intensity": 3,
+      "boundaries": {
+        "noPhysicalContact": false,
+        "noAlcoholPenalty": true,
+        "noExPartners": false,
+        "noSexualHistory": false,
+        "noMoneyIncome": false,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": false,
+        "noSocialAccounts": false,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "compatibility-test"
+      ],
+      "mode": "single",
+      "playerCount": 4
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4；关系：熟人局；氛围：放开玩；最高强度：3。\n可用玩法：compatibility-test。\n已开启的结构化雷区：alcohol、phone-privacy、public-posting、stranger-contact；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 27331,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "compat-001",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果今晚只能选一种夜宵，你们会选什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "夜宵",
+          "选择",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-002",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：对方更像猫系还是犬系？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "性格",
+          "印象",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-003",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时说出：你们第一次见面时，对方给你的第一印象关键词。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "回忆",
+          "第一印象",
+          "熟人"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-004",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果组队参加综艺，你们最想参加哪一类？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "组队",
+          "综艺",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-005",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：对方最可能因为什么小事笑到停不下来？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "笑点",
+          "默契",
+          "观察"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-006",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果现在立刻出门散步，你们会往左还是往右？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 1,
+        "tags": [
+          "直觉",
+          "同步",
+          "轻松"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-007",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：对方在 KTV 里最可能唱哪类歌？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "音乐",
+          "娱乐",
+          "熟人"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-008",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时说出：一个你们都觉得最好笑的网络梗或口头禅。",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 2,
+        "tags": [
+          "梗",
+          "语言",
+          "共鸣"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-009",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：如果一起被困在商场一晚，第一件事会做什么？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 3,
+        "tags": [
+          "脑洞",
+          "选择",
+          "冒险"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "compat-010",
+        "packId": "compatibility-test",
+        "type": "compatibility",
+        "content": "两人同时回答：你们更想拥有读心术还是瞬间移动？",
+        "instruction": "两人同时回答，看是否一样",
+        "intensity": 3,
+        "tags": [
+          "脑洞",
+          "超能力",
+          "选择"
+        ],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}

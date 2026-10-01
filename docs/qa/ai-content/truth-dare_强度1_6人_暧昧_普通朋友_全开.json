@@ -1,0 +1,215 @@
+{
+  "cell": {
+    "index": 2,
+    "packId": "truth-dare",
+    "packName": "真心话大冒险",
+    "origin": "base",
+    "intensity": 1,
+    "players": 6,
+    "vibe": {
+      "key": "flirty",
+      "label": "暧昧"
+    },
+    "relationship": {
+      "key": "friends",
+      "label": "普通朋友"
+    },
+    "boundary": {
+      "mode": "all-on",
+      "label": "全开",
+      "flags": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true
+      }
+    }
+  },
+  "request": {
+    "service": "http://127.0.0.1:3000",
+    "endpoint": "/api/generate-session",
+    "targetCardCount": 10,
+    "provider": "opencode-go/deepseek-v4.1-flash",
+    "sessionConfig": {
+      "relationship": "普通朋友",
+      "vibes": [
+        "暧昧"
+      ],
+      "intensity": 1,
+      "boundaries": {
+        "noPhysicalContact": true,
+        "noAlcoholPenalty": true,
+        "noExPartners": true,
+        "noSexualHistory": true,
+        "noMoneyIncome": true,
+        "noPhonePrivacy": true,
+        "noPublicPosting": true,
+        "noStrangerContact": true,
+        "noPhotoVideo": true,
+        "noSocialAccounts": true,
+        "customText": ""
+      },
+      "enabledPackIds": [
+        "truth-dare"
+      ],
+      "mode": "single",
+      "playerCount": 6
+    },
+    "promptEcho": "玩家：嘉宾1、嘉宾2、嘉宾3、嘉宾4、嘉宾5、嘉宾6；关系：普通朋友；氛围：暧昧；最高强度：1。\n可用玩法：truth-dare。\n已开启的结构化雷区：physical-contact、alcohol、ex-partner、sexual-history、money、phone-privacy、public-posting、stranger-contact、photo-video、social-account；生成内容必须避开这些主题。\n自定义雷区：无；只需避开，不得把自定义文字写入 boundaryTags。"
+  },
+  "response": {
+    "status": 200,
+    "attempts": 1,
+    "latencyMs": 25547,
+    "provider": "opencode-go",
+    "code": null,
+    "generationSource": "ai",
+    "meta": {
+      "generatedCount": 10,
+      "provider": "configured-provider"
+    },
+    "cardCount": 10,
+    "cards": [
+      {
+        "id": "td-amb-01",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果你要用一句电影台词形容在场某个人给你的感觉，你会选哪句？为什么？",
+        "instruction": "被点到的嘉宾可选择回答、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-02",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用最温柔的语气念一句：‘今晚的你和平时不太一样。’念完后保持微笑三秒，再自然地把话题交给下一位。",
+        "instruction": "被点到的嘉宾可选择完成、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-03",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "说出在场某个人给你的第一印象，以及后来有没有一点点变化。不用点名，可以用‘那位刚才笑得很轻的人’这样描述。",
+        "instruction": "被点到的嘉宾可选择回答、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-04",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "选一位嘉宾，和他/她轮流用‘我猜你今晚会……’造三个不涉及隐私的小句子，对方只需回答‘被你说中了’或‘才不是’。",
+        "instruction": "被点到的嘉宾可选择完成、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-05",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果今晚只能和一个人多聊十分钟，你会更想听谁讲故事？为什么？可以用一个形容词形容你想听的理由。",
+        "instruction": "被点到的嘉宾可选择回答、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-06",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "用三个形容词形容此刻的氛围，其中至少一个要让在场的人觉得有点心跳加速；不能重复上一位说过的词。",
+        "instruction": "被点到的嘉宾可选择完成、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-07",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "所有人轮流说一个自己最近觉得‘有点好猜’的小习惯，例如爱把杯子放在桌角；不涉及私人信息。",
+        "instruction": "轮到的人可选择回答、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-08",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "选一位嘉宾，在双方都愿意的前提下，认真对视三秒，然后说一句‘你今天有点特别’，说完立刻聊一句天气。",
+        "instruction": "被点到的嘉宾可选择完成、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "pair",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-09",
+        "packId": "truth-dare",
+        "type": "truth",
+        "content": "如果给今晚起一个只有你们能懂的小标题，你会起什么？不能包含真实姓名或具体地点。",
+        "instruction": "被点到的嘉宾可选择回答、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "single",
+        "source": "ai"
+      },
+      {
+        "id": "td-amb-10",
+        "packId": "truth-dare",
+        "type": "dare",
+        "content": "每个人依次用‘我觉得今晚最有趣的是……’造句，不能重复上一个人的答案；如果轮到你时想不到，就说‘我保留答案’并跳过。",
+        "instruction": "轮到的人可选择完成、换成轻量版或跳过；跳过不解释、不惩罚。",
+        "intensity": 1,
+        "tags": [],
+        "boundaryTags": [],
+        "minPlayers": 2,
+        "participantMode": "all",
+        "source": "ai"
+      }
+    ]
+  },
+  "screen": {
+    "pass": true,
+    "issues": []
+  }
+}
