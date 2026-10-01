@@ -1,0 +1,12 @@
+# 项目机器身份 — 由 Project Steward 生成，请勿删除
+project_id: P039
+name_zh: 酒吧游戏
+slug: bar-games
+status: ing
+github: wanghoufan/p039-bar-games
+visibility: private
+created_at: 2026-10-01T18:43:27+08:00
+local_path: /Users/zzymima0000/Developer/coding/1.Active/039-ing-酒吧游戏
+default_branch: main
+repo_role: primary
+lifecycle: [ing, paused, done, archived]
