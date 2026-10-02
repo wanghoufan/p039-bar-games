@@ -9,7 +9,7 @@ import { eligibleCards } from "@/lib/punishment/filter";
 import { startTimer, pauseTimer, resumeTimer, remaining } from "@/lib/punishment/timer";
 describe("punishment independent core", () => {
     it("rejects duplicates, invalid data and missing translations", () => { expect(() => loadChallenges([...challenges, challenges[0]])).toThrow(); for (const field of [{ level: 6 }, { zh: "" }, { en: "" }, { timerSeconds: 0 }, { contentTags: ["unknown"] }, { riskLevel: 1 }])
-        expect(() => loadChallenges([{ ...challenges[0], ...field }])).toThrow(); expect(loadChallenges(challenges)).toHaveLength(20);
+        expect(() => loadChallenges([{ ...challenges[0], ...field }])).toThrow(); expect(loadChallenges(challenges)).toHaveLength(challenges.length);
         expect(loadChallenges([{...challenges[0],zh:"  原始文案  "}])[0].zh).toBe("  原始文案  "); });
     it("isolates every level over repeated cycles and avoids adjacent repeats", () => { for (const level of levels) {
         let s = { ...newSession(), selectedLevel: level };
@@ -41,7 +41,7 @@ describe("punishment independent core", () => {
             }
         }
     } });
-    it("handles a single eligible card and a completely empty pool", () => { const pool = [challenges[0]]; let s = drawCard(newSession(), pool, []); expect(drawCard(s, pool, []).currentCardId).toBe(pool[0].id); s = drawCard(s, pool, ["performance"]); expect(s.currentCardId).toBeNull(); });
+    it("handles a single eligible card and a completely empty pool", () => { const pool = [challenges[0]]; let s = drawCard(newSession(), pool, []); expect(drawCard(s, pool, []).currentCardId).toBe(pool[0].id); s = drawCard(newSession(), [{ ...pool[0], contentTags: ["performance"] }], ["performance"]); expect(s.currentCardId).toBeNull(); });
     it("honors absolute time, paused time and background jumps", () => { let t = startTimer(15, 1000); expect(t.status).toBe("running"); expect(remaining(t, 2000)).toBe(14000); t = pauseTimer(t, 2000); expect(remaining(t, 999000)).toBe(14000); t = resumeTimer(t, 999000); expect(remaining(t, 1000000)).toBe(13000); expect(remaining(t, 2000000)).toBe(0); });
     it("persists only separate preference/session keys and tolerates corrupt storage", () => { localStorage.clear(); sessionStorage.clear(); savePreferences({ ...defaults, language: "en", disabledTags: ["kiss"] }); expect(readPreferences().language).toBe("en"); const s = drawCard(newSession(), challenges, []); saveSession(s); expect(readSession()).toEqual(s); sessionStorage.setItem("party-night-punishment-session-v1", "bad"); expect(readSession()).toEqual(newSession()); });
 });

@@ -22,6 +22,7 @@ import { readPreferences } from "@/lib/punishment/preferences";
 import { newSession, readSession, saveSession } from "@/lib/punishment/session";
 import { idleTimer, startTimer, pauseTimer, resumeTimer, remaining, type Timer } from "@/lib/punishment/timer";
 import { play, unlockAudio } from "@/lib/audio";
+import { vibrate } from "@/lib/haptics";
 
 export default function PunishmentPlay() {
   const { preferences, update, ready } = usePreferences();
@@ -69,7 +70,7 @@ export default function PunishmentPlay() {
       setTimer(idleTimer);
       setFinished(true);
       if (preferences.sound) play("finish-chord", { ignoreMute: true });
-      if (preferences.vibration && navigator.vibrate) navigator.vibrate([120, 60, 120]);
+      if (preferences.vibration) void vibrate();
       finishTimeout.current = setTimeout(() => setFinished(false), 900);
     });
     return () => { cancelled = true; };

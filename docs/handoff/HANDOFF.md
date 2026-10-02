@@ -1,72 +1,73 @@
-# 小交接｜2026-10-01（Asia/Shanghai）｜开发暂停，恢复先读本段
+# 小交接｜2026-10-02（Asia/Shanghai）｜开发暂停，恢复先读本段
 
-> Human 最新要求：开发先到这里，暂时结束。当前暂停；不要自动恢复开发。本文件是当前唯一恢复入口。旧交接已移到 `archive/`，仅供追溯；日常恢复开发不读取归档。旧交接中的“adb 无设备”“未部署”“1.5.0”和旧多角色流程均不能覆盖本文件的当前状态。
+> Human 最新要求：开发先到这里，暂时结束。当前暂停；不要自动恢复开发。本文件是当前唯一恢复入口。旧交接已移到 `docs/handoff/archive/`，仅供追溯；日常恢复不读归档。归档中「20 条开发示范题」「Android 真机未测」「HEAD 018a368」等说法均已被本轮覆盖，不得再用。
 
-## 1. 当前工作进度
+## 1. 当前工作进展（截至 2026-10-02）
 
-- 本轮单开发者完成独立大冒险模式：`/punishment` 准备页、`/punishment/play` 题卡页；旧功能保留。入口为主页“大冒险”。没有接入旧 Heat、Mutual、关系算法或实时 AI。
-- 实现五档独立题池、低调小圆点切档、盾牌过滤、空状态、下一题/换题、周期内防重复、中/英/双语、深浅主题、题目字段计时、无 3/2/1、暂停/继续/结束、结束恢复同题、声音及浏览器支持时震动。当前仅 20 条开发示范题（每档 4 条），正式题库待 Human 提供。
-- 新模式主文件：`app/punishment/`、`components/punishment/`、`lib/punishment/`、`content/punishment/challenges.ts`；视觉样式在 `app/globals.css`。沿用原基础组件和配色。
-- 应用版本三处均为 1.6.0：`package.json`、`public/sw.js`、`public/version.json`。SW 增加新模式离线入口。静态导出脚本补齐遗漏测试文件的暂存/恢复。
-- 独立新生产站已 CLI 发布：https://p039-bar-games.vercel.app/punishment 。旧 https://party-night-v1-2.vercel.app/ 不属于本轮新副本发布目标，不要覆盖。Vercel 发布 Ready（dpl_7D5B3poDMNwk1iT4sRBXqVToBxoD）。
-- Spec Kit 等价文档已落 `.specify/memory/constitution.md`、`specs/001-dare-punishment/`；没有执行不可用的 slash command/init，也没有宣称工具级 Converged。
-- 技术测试（增加 Expo 壳前的主项目基线）：typecheck、build、static export 通过；unit 139 文件/1463 用例通过；完整 E2E 116 通过/7 条条件跳过；新增 12 项通过；本地生产离线 2 项通过；线上 13 项通过；lint 0 error/11 既有 warning。跳过项不是 PASS。Android release 资源同步通过，未生成或安装正式新 APK。
-- 证据与 AC 矩阵：`docs/qa/punishment/验收报告.md`，同目录保存日志和真实截图。首次发布最终 Human 体验签收尚未明确完成，不得称已正式完工。
+- **单开发者执行**：Human 明确要求单开发者连续执行，不派新 Agent、不伪装独立 Reviewer、不新增角色/治理流程/Gate。
+- **大冒险双题库已正式入库**：
+  - 普通题库 108 题 → `content/punishment/challenges.ts`（id 前缀 `DA-L{n}-xxx`）。
+  - 「一男一女」题库 108 题 → `content/punishment/couple.ts`（id 前缀 `DA-DUO-L{n}-xxx`）。
+  - 按 Human 决策：**两库 `contentTags` 全为空数组**（本轮不设盾牌标签；`phone`、`external_message`、`public_post`、`photo_video`、`stranger_interaction` 五类不映射）。
+  - 正式题库 JSON 不含 `source` 字段（App schema 为 `.strict()`，多余字段会报错）；追溯信息另存。
+- **Android 真机链路打通（Capacitor）**：
+  - 自定义原生震动插件 `android/app/src/main/java/night/party/app/AlertVibratePlugin.java`，用 `VibrationAttributes.USAGE_ALARM`（`navigator.vibrate` 在 WebView 不驱动马达；`@capacitor/haptics` 的 TOUCH 用法被系统触感开关拦截）。波形 `{0,120,60,120}`。
+  - `MainActivity.java` 已 `registerPlugin(AlertVibratePlugin.class)`；`AndroidManifest.xml` 已加 `VIBRATE` 权限。
+  - `lib/haptics.ts`：原生走 `registerPlugin("AlertVibrate")`，非原生降级 `navigator.vibrate([120,60,120])`；`/punishment/play` 的声音/震动入口接它。
+  - 真机实测：`dumpsys vibrator_manager` 出现 `opPkg=night.party.app`、`status: running`（触感反馈关=0 也真震）；声音走真实应用内导航，`AudioContext` 振荡器计数=3。
+  - Debug APK 已构建并安装到 Note 11T Pro+（`IN9LZTAYV4UGU4JF`）。**当前 `adb devices` 为空（设备已断开，恢复前须重连查）。**
+- **首页按钮重叠已修复**：`app/globals.css` 增加 `.home-primary + .home-primary { margin-top: .9rem; }`；390×844 实测两按钮间隙 14.4px。产品冻结样式未改动。
+- **过时文案已删**：`app/punishment/page.tsx` 去掉「开发示范题库 · 正式题目待人工审核」；`components/punishment/PunishmentSettingsSheet.tsx` 去掉「当前为开发示范题库，正式题库等待人工审核。」，保留「仅在本机保存偏好与本局进度，不采集玩家信息。」（E2E 断言仍满足）。
+- **测试全绿（本轮末次）**：unit 139 文件 / 1463 用例通过；E2E 118 passed / 7 skipped / 0 failed；`typecheck` 0 错误；`lint` 0 error / 11 既有 warning。skip 不计 PASS。
+- **版本三处同值 1.6.0**：`package.json`、`public/sw.js`(`CACHE_VERSION`)、`public/version.json`。Android `versionName="1.0"` 是原生壳版本，与 web 版本独立。
+- **Git 状态**：`main` HEAD `bb58bb9 feat: 导入 Party Night 应用源码并接入大冒险双题库（普通/一男一女）`。本轮未提交改动见第 6 节；**本轮已按 Human 授权 commit+push（见交接整理记录）**。
+- **首次发布 Human 签收尚未完成**：不得称已正式完工；签收属 Human Gate。
 
-## 2. 本轮后续手机预览与修复（最新状态）
+## 2. 运行态与服务
 
-- Human 要求 Expo Go 直接送到已连接手机，已创建独立 `mobile-preview/` WebView 预览壳（不是将主项目迁移为原生 React Native）。该目录已加入 `.gitignore` 和 `.vercelignore`，源码、package-lock、二维码都仅本机保留；后续搬机器时需要单独保留或重建。
-- Expo SDK 57.0.26，React 19.2.3，RN 0.86.3，WebView 13.16.1，safe-area-context ~5.7.0。Android/iOS export 均已通过；安卓返回键修改后再次 Android export 通过。
-- ADB 实际发现唯一设备 `indq5xfi6hovay4d`（系统型号 22101316C/ruby，Human 称 Note 11T Pro）；已安装 Expo Go。不要仅凭 Human 称呼更换设备目标，多设备时先重新查 `adb devices -l`。
-- 手机访问 Vercel 页面发生 `ERR_CONNECTION_TIMED_OUT`，因此预览壳现在打开 `http://127.0.0.1:3320/punishment`，通过 `adb reverse` 走 USB 本机生产服务；Expo Go 也以 `exp://127.0.0.1:8083` 打开。当前手机预览依赖数据线及本机两个服务，不能把原 LAN 二维码描述为独立可用的线上预览。
-- 修复安卓返回键直接退出 Expo Go：`mobile-preview/App.js` 接入 BackHandler；弹窗先 Escape 关闭；游戏返回准备页；准备页返回主页；主页保留系统退出行为。真机实际验证了“题卡 → 按返回 → 准备页 → 再按返回 → 主页”，没有退出。证据 `docs/qa/punishment/返回键游戏.png`、`返回键准备页.png`、`返回键主页.png`。弹窗返回逻辑已实现，本轮没有单独保存实测证据，不得扩大测试结论。
-- 此修复仅作用于 Expo Go 预览壳；正式 Capacitor APK 返回行为不能据此判定通过。声音/震动在该真机 WebView 尚未做完整体验验收。
+- 生产站（旧副本，CLI 发布）：https://p039-bar-games.vercel.app/punishment 。旧 https://party-night-v1-2.vercel.app/ 不属于本轮发布目标，不要覆盖。
+- 暂停时存在服务：Next 开发 3210（PID 99919，本仓库热更新用）；Next 生产 3320；Expo Metro 8083。PID 仅为快照，恢复必须重新查，不得擅杀其他项目服务（3000 为 `vercel dev`，非本仓库）。
+- 本仓库自包含 release 构建用 `out/` 静态导出（`trailingSlash: true`）。Capacitor 深链接在本地服务会回退首页，应用内客户端导航不受影响。
 
 ## 3. 下一步任务（收到 Human 恢复指令后才执行）
 
-1. 先恢复手机预览并检查实际运行状态，承接 Human 的 UI/现场操作反馈；当前最新反馈“安卓返回直接退出”已修复，不要重复从头开发。
-2. 对用户提出的后续问题做最小修复并真机验证，尤其计时声音/震动、弹窗返回、后台返回、深浅主题、双语可读性；主项目变更仍跑适用 typecheck/lint/unit/E2E/build 并保留证据。
-3. Human 提供正式人工审核题库后，按新五档 schema 做必要校验/入库/回归；不自行扩写正式题，不使用旧 Heat 题库治理链套新模式。
-4. 根据 Human 明确需求决定是否制作正式 APK；Expo 壳验证不等于正式 Android 包验证。不得未经要求执行 expo prebuild 或清理重建原生目录。
-5. 获明确授权后再整理本副本 Git 基线、commit/push。当前大量 app/docs/android 等为复制后未跟踪文件，不能盲目 git add .，不能 reset/clean/stash 现有工作。
-6. 最终 Human Gate 用于 UI、产品体验和现场操作签收；不要新增角色、治理流程或新 Gate。
+1. 先 `adb devices -l` 查实际设备：Note 11T Pro+（`IN9LZTAYV4UGU4JF`）当前已断开；Redmi Note 12 Pro（`indq5xfi6hovay4d`，系统型号 22101316C/ruby）此前未连接、未推送。设备称呼以实测为准，多设备先重查。
+2. 如需重新出包：`pnpm build:export` → `pnpm android:sync`（或 `pnpm android:release`）→ 安装到目标机；真机回归声音/震动/返回键/计时/切档。
+3. 承接 Human 后续 UI/现场反馈做最小修复并真机验证；主项目变更跑适用 `typecheck`/`lint`/`test`/`test:e2e`/`build` 并留证据到 `docs/qa/`。
+4. 待 Human 决定：盾牌设置页「关闭的内容不会出现在后续题目中」在空标签下不准确，是否改写。
+5. 首次发布 Human 体验签收（UI/产品/现场操作）；不要新增角色或 Gate。
 
-## 4. 快速恢复命令与当前服务
-
-暂停时检查：Next 开发 3210（PID 99919），Next 生产 3320（PID 31322），Expo Metro 8083（PID 35624）仍监听。PID 仅为此次快照，恢复必须重新查；本轮未关闭服务，便于手机继续查看。3000、8081、8082 曾有其他服务占用，不得擅自关闭。
+## 4. 快速恢复命令
 
 ```sh
-# 在项目根目录，先只读检查
- git -c core.quotepath=false status --short
- lsof -nP -iTCP:3320 -iTCP:8083 -sTCP:LISTEN
- adb devices -l
-# 服务已在则复用；不在且端口空闲才启动
- pnpm start --port 3320
-# 另一个终端
- cd mobile-preview
- npm start
-# 项目根目录/任意终端：仅当设备序列号仍与实际一致
- adb -s indq5xfi6hovay4d reverse tcp:3320 tcp:3320
- adb -s indq5xfi6hovay4d reverse tcp:8083 tcp:8083
- adb -s indq5xfi6hovay4d shell am start -a android.intent.action.VIEW -d exp://127.0.0.1:8083 -p host.exp.exponent
+# 项目根目录，先只读检查
+git -c core.quotepath=false status --short
+lsof -nP -iTCP:3210 -iTCP:3320 -iTCP:8083 -sTCP:LISTEN
+adb devices -l
+# 真机联调（设备序列号以实测为准）
+adb -s <serial> reverse tcp:3320 tcp:3320
+# 出包（JDK 21）
+export JAVA_HOME=$HOME/android-toolchain/jdk-21.0.12.1+1/Contents/Home
+pnpm build:export && pnpm android:sync
+cd android && ./gradlew assembleDebug
 ```
-
-若改端口，必须同步 WebView 地址和 adb reverse。主项目新 build 会使正在运行的生产服务资源失配，构建后应重启自己启动的服务并验证，不能杀其他项目服务。当前 Expo URL 固定 USB 回环地址；无需让 Human 扫码或手动投屏。
 
 ## 5. 注意事项与相关规矩
 
-- 优先级：Human 最新明确要求 > 本次 SDD V1.1 > 当前代码/复制来的历史规则。用户明确要求单开发者连续执行，不派新 Agent，不伪装独立 Reviewer；本次暂停是 Human 明确要求。
-- 源 SDD 和参考图在 `docs/plan/2026-10-01 丨 Mac Mini 丨 ChatGPT 丨 Party Night 大冒险惩罚工具-SDD四件套-交接上下文 丨 V1.1/`。恢复读取 Constitution → SPEC → PLAN → TASK → UI 图 → 当前代码及 Git。`docs/ui/punishment-mode/reference.png` 为已保存参考图。
-- 产品锁定：五个小圆点 1～5 档；五档不向下包含；大题卡/大英文；无大 Logo 挤占题卡；底部一排；普通题下一个/换一个；计时题加开始 XX 秒；0.3～0.5 秒内直接倒计时、无321；暂停/继续/结束；结束回同题且不加再来一次；深浅只变主题；三种语言；游戏内盾牌可修改；主持人切档无明显升级提示。
-- 中文沟通；改代码后测试；AC 与真实浏览器/真机证据落 `docs/qa/`。首次发布未经 Human 明确签收不能写完工。
-- 不改原旧版封存，不删除旧功能；不读/打印/提交 `.env*`、Token、密钥或隐私；`.vercel/` 与 `.env.local` 是部署生成的本地忽略内容。
-- 未获 Human 明确指令不执行 git commit/push。当前 main HEAD `018a368 chore: bootstrap 酒吧游戏 (P039)`；`.gitignore`、README.md 为 tracked 修改，大量源码未跟踪；本轮没有 commit/push，CLI 部署与 Git HEAD 不能混淆。
-- Android 操作先读 `~/.agents/rules/android.md` 与 `android-machine-profile.md`，查实际设备；不卸载应用、不改签名、不做 prebuild --clean。本轮 ADB 需要沙箱外授权，由工具 auto-review 正常批准；不存在遗留拒绝。
-- root lint/typecheck 的上述基线在 Expo 壳创建前取得；若恢复后根工具扫描嵌套 mobile-preview 产生干扰，应按独立预览目录处理，不能掩盖真实主项目错误。
-- 旧任务/派工实绩账本没有重写；schema 检查曾 LEDGER-OK（既有 warnings）。不要把单开发者自检冒充旧多角色链审批。
+- **优先级**：Human 最新明确要求 > AGENTS.md 治理母版 > 复制来的历史规则。单开发者连续执行，不派 Agent。
+- **产品锁定（不得破坏）**：五个小圆点 1～5 档；五档不向下包含；大题卡/大英文；无大 Logo 挤占题卡；底部按钮一排；普通题「下一个/换一个」；计时题「开始 XX 秒」；0.3～0.5s 直接倒计时、无 3/2/1；暂停/继续/结束；结束回同题且不加「再来一次」；深浅只变主题；三语言；游戏内盾牌可改；切档无升级提示。
+- **版本联动**：改 `package.json` version 必须同步 `public/sw.js` 的 `CACHE_VERSION` 与 `public/version.json`，三处同值（test 会卡）。
+- **红线**：未获 Human 明确指令不 commit/push；不 `git clean/reset/stash`；不读/打印/提交 `.env*`、Token、密钥、隐私（`.vercel/`、`.env.local` 为本地忽略）。不 push 到 main 之外未授权分支。
+- **Android**：先读 `docs/sop/android.md` 与 `docs/sop/android-machine-profile.md`；查实际设备；不卸载应用、不改签名、不做 `prebuild --clean`。ADB 需沙箱外授权。
+- **不覆盖旧版封存**：`docs/handoff/archive/` 只追溯；`mobile-preview/`（Expo 预览壳，gitignored）为早期产物，非正式包，验证不代表正式 Android。
+- **证据**：AC 与真实浏览器/真机截图落 `docs/qa/punishment/`（验收报告与追踪矩阵 `docs/qa/punishment/验收报告.md`）。
 
+## 6. 本轮未提交改动（commit+push 前的工作区）
 
+- 修改：`android/app/src/main/AndroidManifest.xml`、`android/app/src/main/java/night/party/app/MainActivity.java`、`app/globals.css`、`app/punishment/page.tsx`、`app/punishment/play/page.tsx`、`components/punishment/PunishmentSettingsSheet.tsx`、`tests/e2e/punishment.spec.ts`、`tests/unit/punishment.test.ts`，以及 `docs/qa/punishment/` 下 E2E 重写截图与日志。
+- 新增：`android/app/src/main/java/night/party/app/AlertVibratePlugin.java`、`lib/haptics.ts`。
 
 ## 交接整理记录
 
-2026-10-01 经 Human 授权，将旧项目及本轮早期交接原样移至 `archive/2026-10-01 丨 旧项目及本轮早期交接 丨 已失效.md`。HANDOFF.md 只保留最新小交接；归档不作为恢复入口。未删除历史内容，未改业务代码，未 commit/push。
+- 2026-10-01 经 Human 授权，将旧项目及本轮早期交接原样移至 `docs/handoff/archive/2026-10-01 丨 旧项目及本轮早期交接 丨 已失效.md`。未删除历史内容。
+- 2026-10-02 经 Human 授权（【大交接 2】）做 neat-freak 收尾：重写本 HANDOFF 为当前唯一权威恢复入口（覆盖 20 条示范题/Android 未测/HEAD 018a368 等旧说法）；修复首页按钮重叠；commit + push（main）。
