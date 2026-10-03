@@ -1,0 +1,119 @@
+﻿id,level,zh,en,timerSec,tags,originalRefs,status
+TR-L1-001,1,你觉得自己最吸引人的一点是什么？,What do you think is your most attractive quality?,,self_image,L1-005,APPROVED
+TR-L1-002,1,你最喜欢别人夸你什么？,What kind of compliment do you like hearing most?,,self_image,L1-006,APPROVED
+TR-L1-003,1,你觉得自己脸皮厚还是薄？,Would you say you're thick-skinned or thin-skinned?,,personality,L1-007,APPROVED
+TR-L1-004,1,你小时候最常被叫什么绰号？,What nickname did people call you most when you were a kid?,,background,L1-009,APPROVED
+TR-L1-005,1,什么事情最容易把你逗笑？,What makes you laugh most easily?,,personality,L1-010,APPROVED
+TR-L1-006,1,你最喜欢哪种拥抱？,What kind of hug do you like most?,,affection_preference,L1-011,APPROVED
+TR-L1-007,1,你最喜欢别人怎么叫你？,What do you like people to call you?,,social_preference,L1-012,APPROVED
+TR-L1-008,1,你觉得自己最大的优点是什么？,What do you think is your biggest strength?,,self_image,L1-014,APPROVED
+TR-L1-009,1,你更喜欢安静约会，还是热闹约会？,Do you prefer quiet dates or lively dates?,,dating_preference,L1-018,APPROVED
+TR-L1-010,1,你更喜欢白天出去玩，还是晚上出去玩？,Do you prefer going out during the day or at night?,,lifestyle,L1-019,APPROVED
+TR-L1-011,1,你平时几点睡？几点起床？,What time do you usually go to bed and wake up?,,lifestyle,L1-021,APPROVED
+TR-L1-012,1,周末你更喜欢宅着，还是出去玩？,"On weekends, do you prefer staying in or going out?",,lifestyle,L1-023,APPROVED
+TR-L1-013,1,你平时会健身或运动吗？,Do you usually work out or play sports?,,lifestyle|fitness,L1-024,APPROVED
+TR-L1-014,1,你吃东西偏清淡还是重口？,Do you prefer lighter food or stronger flavors?,,food,L1-027,APPROVED
+TR-L1-015,1,你能吃辣吗？,Can you handle spicy food?,,food,L1-028,APPROVED
+TR-L1-016,1,你更喜欢猫还是狗？,Do you prefer cats or dogs?,,hobby,L1-031,APPROVED
+TR-L1-017,1,你平时最常听什么类型的歌？,What kind of music do you listen to most?,,music,L1-032,APPROVED
+TR-L1-018,1,你更爱看电影、电视剧，还是短视频？,"Do you prefer movies, TV series, or short videos?",,entertainment,L1-033,APPROVED
+TR-L1-019,1,旅游你更喜欢海边、城市，还是山里？,"When you travel, do you prefer the beach, a city, or the mountains?",,travel,L1-036,APPROVED
+TR-L1-020,1,出门或旅行时，你更喜欢提前计划，还是到了再说？,"When going out or traveling, do you prefer planning ahead or deciding as you go?",,travel|planning_style,L1-037|free-出门提前计划还是临时决定,APPROVED
+TR-L1-021,1,你平时更喜欢热闹，还是安静？,Do you generally prefer lively places or quiet ones?,,social_style,L1-038|free-更喜欢热闹还是安静,APPROVED
+TR-L1-022,1,一个人休息的时候，你最喜欢干什么？,What do you like doing most when you're relaxing alone?,,lifestyle,L1-039,APPROVED
+TR-L1-023,1,最近你最上头的一个爱好是什么？,What's one hobby you're really into lately?,,hobby,L1-040,APPROVED
+TR-L1-024,1,你周末会睡懒觉吗？,Do you sleep in on weekends?,,lifestyle,free-周末会睡懒觉吗,APPROVED
+TR-L1-025,1,你更喜欢临时约，还是提前约？,Do you prefer spontaneous plans or making plans in advance?,,social_style,free-临时约还是提前约,APPROVED
+TR-L1-026,1,你平时一个人待着的时间多吗？,Do you spend a lot of time on your own?,,lifestyle,free-一个人待着时间多吗,APPROVED
+TR-L1-027,1,你喜欢甜食吗？,Do you like sweets?,,food,free-喜欢甜食吗,APPROVED
+TR-L1-028,1,你更喜欢火锅还是烧烤？,Do you prefer hot pot or barbecue?,,food,free-火锅还是烧烤,APPROVED
+TR-L1-029,1,你更喜欢啤酒还是鸡尾酒？,Do you prefer beer or cocktails?,,drink,free-啤酒还是鸡尾酒,APPROVED
+TR-L1-030,1,你更喜欢热闹有 DJ 的酒吧，还是安静的清吧？,Do you prefer a lively bar with a DJ or a quieter bar?,,nightlife,free-DJ酒吧还是清吧,APPROVED
+TR-L1-031,1,你喜欢滑雪、冲浪这类运动吗？,Do you like sports such as skiing or surfing?,,hobby|sports,free-滑雪冲浪,APPROVED
+TR-L1-032,1,旅行时你更喜欢拍照，还是专心玩？,"When traveling, do you prefer taking photos or just enjoying the moment?",,travel|photo,free-旅行拍照还是专心玩,APPROVED
+TR-L1-033,1,你平时听歌多吗？,Do you listen to music a lot?,,music,free-平时听歌多吗,APPROVED
+TR-L1-034,1,你更喜欢电影还是综艺？,Do you prefer movies or variety shows?,,entertainment,free-电影还是综艺,APPROVED
+TR-L1-035,1,你更喜欢喜剧还是悬疑？,Do you prefer comedy or mystery?,,entertainment,free-喜剧还是悬疑,APPROVED
+TR-L1-036,1,你更喜欢电影院，还是私人影院的体验？,Do you prefer a regular cinema or a private screening room?,,entertainment,free-电影院还是私人影院,APPROVED
+TR-L1-037,1,你更喜欢户外还是室内活动？,Do you prefer outdoor or indoor activities?,,lifestyle,free-户外还是室内,APPROVED
+TR-L1-038,1,你平时会经常拍照吗？,Do you take photos often?,,photo,free-经常拍照吗,APPROVED
+TR-L1-039,1,你在熟人面前话多还是话少？,Are you more talkative or quiet around people you know well?,,social_style,free-熟人面前话多还是话少,APPROVED
+TR-L1-040,1,你更喜欢两个人玩，还是一群人玩？,Do you prefer hanging out one-on-one or in a group?,,social_style,free-两个人还是一群人,APPROVED
+TR-L1-041,1,你更喜欢熟人局，还是认识新人的局？,Do you prefer hanging out with people you know or meeting new people?,,social_style,free-熟人局还是新人局,APPROVED
+TR-L1-042,1,你喝酒以后会变得更话多吗？,Do you get more talkative after drinking?,,nightlife|social_style,free-喝酒后话多,APPROVED
+TR-L1-043,1,你做决定一般很快，还是会纠结很久？,Do you usually decide quickly or overthink for a while?,,personality,free-做决定快还是纠结,APPROVED
+TR-L1-044,1,你属于容易和陌生人熟起来的人吗？,Do you warm up to strangers easily?,,social_style,free-容易和陌生人熟吗,APPROVED
+TR-L2-001,2,你更容易被外貌吸引，还是聊天感觉吸引？,Are you more drawn to looks or to the feeling you get from talking?,,attraction,L1-042|free-会聊天还是长得好看,APPROVED
+TR-L2-002,2,你喜欢主动一点的人，还是慢热一点的人？,Do you prefer someone who's more proactive or more slow-burning?,,attraction|initiative,L1-043|free-主动的人还是慢热的人,APPROVED
+TR-L2-003,2,你更喜欢成熟一点的，还是有少年感 / 少女感的？,Do you prefer someone more mature or someone with a youthful vibe?,,attraction,L1-045,APPROVED
+TR-L2-004,2,异性哪个小动作最容易让你加分？,What small gesture from someone you're attracted to earns the most points with you?,,attraction,L1-049,APPROVED
+TR-L2-005,2,异性什么行为最容易让你瞬间下头？,What behavior makes you lose interest in someone instantly?,,attraction,L1-050,APPROVED
+TR-L2-006,2,你更喜欢别人直接表达好感，还是慢慢试探？,Do you prefer someone to show interest directly or test the waters slowly?,,flirt|initiative,L1-052|free-喜欢直球还是慢慢暧昧|free-直球还是慢慢试探,APPROVED
+TR-L2-007,2,你喜欢对方话多一点，还是少一点？,Do you prefer someone who's more talkative or more quiet?,,attraction|social_style,L1-053,APPROVED
+TR-L2-008,2,你更喜欢对方有点强势，还是比较温柔？,Do you prefer someone a little more assertive or more gentle?,,attraction,L1-054,APPROVED
+TR-L2-009,2,你更喜欢别人夸你好看，还是夸你有趣？,Would you rather be told you're attractive or that you're fun?,,attraction|compliment,L1-056,APPROVED
+TR-L2-010,2,你第一次见异性，最先会看哪里？,"When you first meet someone you're attracted to, what do you notice first?",,attraction|first_impression,L1-057,APPROVED
+TR-L2-011,2,你更吃颜值、身材，还是气质？,"What matters more to you: looks, body, or overall vibe?",,attraction,L1-058,APPROVED
+TR-L2-012,2,什么样的异性最容易让你想继续聊下去？,What kind of person makes you want to keep the conversation going?,,attraction|conversation,L1-059,APPROVED
+TR-L2-013,2,你觉得男女之间有感觉，一般多久能感觉出来？,How quickly do you think you can tell when there's chemistry between two people?,,chemistry,L1-060,APPROVED
+TR-L2-014,2,你更喜欢异性什么类型的穿搭？,What kind of style do you like on someone you're attracted to?,,attraction|style,free-男生穿搭,APPROVED
+TR-L2-015,2,你会因为声音对一个人加分吗？,Can someone's voice make them more attractive to you?,,attraction,free-声音加分,APPROVED
+TR-L2-016,2,你更容易一见有感觉，还是越聊越有感觉？,Are you more likely to feel a spark right away or after talking for a while?,,chemistry,free-一见有感觉还是越聊越有感觉,APPROVED
+TR-L2-017,2,你会因为一个人的味道对 TA 有好感吗？,Can someone's scent make you more attracted to them?,,attraction,free-味道加分,APPROVED
+TR-L2-018,2,你会因为一个人的身材对 TA 有好感吗？,Can someone's body make you more attracted to them?,,attraction,free-身材加分,APPROVED
+TR-L2-019,2,你更喜欢会打扮的，还是自然一点的？,Do you prefer someone who's well-styled or more natural?,,attraction|style,free-会打扮还是自然,APPROVED
+TR-L2-020,2,你更喜欢对方有主见，还是随和一点？,Do you prefer someone with strong opinions or someone more easygoing?,,attraction|personality,free-有主见还是随和,APPROVED
+TR-L2-021,2,如果对一个人有好感，你会主动吗？,"If you like someone, do you usually make the first move?",,initiative,free-有好感会主动吗,APPROVED
+TR-L2-022,2,你更喜欢自己约人，还是等别人约？,Do you prefer asking someone out or waiting for them to ask you?,,initiative|dating,free-自己约还是等别人约,APPROVED
+TR-L2-023,2,第一次单独见面，你更喜欢喝东西、吃饭，还是喝酒？,"For a first one-on-one meetup, would you rather get drinks, eat, or have alcohol?",,dating,free-第一次单独见面,APPROVED
+TR-L2-024,2,目前为止，你觉得我们两个聊得合拍吗？,"So far, do you think the two of us click?",,current_chemistry|pair_specific,free-聊得合拍吗,APPROVED
+TR-L2-025,2,你有好感时会主动给信号吗？,"When you like someone, do you usually give them signals?",,initiative|flirt,free-有好感会给信号吗,APPROVED
+TR-L3-001,3,如果今晚只能夸我一个地方，你会夸哪里？,"If you could compliment just one thing about me tonight, what would it be?",,pair_specific|compliment|flirt,L2-003|L2-018,APPROVED
+TR-L3-002,3,你觉得我属于你平时会喜欢的类型吗？,Am I the kind of person you'd usually be attracted to?,,pair_specific|attraction,L2-005,APPROVED
+TR-L3-003,3,你觉得我最容易吸引异性的地方是什么？,What about me do you think is most likely to attract people?,,pair_specific|attraction,L2-007,APPROVED
+TR-L3-004,3,刚认识到现在，你对我的印象变好还是变差了？,"Since we met, has your impression of me gotten better or worse?",,pair_specific|current_chemistry,L2-013,APPROVED
+TR-L3-005,3,你喜欢别人主动一点，还是给你一点空间让你慢慢靠近？,"Do you prefer someone to move closer first, or give you space to approach at your own pace?",,proximity|initiative,L2-016,APPROVED
+TR-L3-006,3,你觉得我属于越看越顺眼的类型吗？,Do you think I'm the kind of person who gets more attractive the longer you look?,,pair_specific|attraction,free-越看越顺眼,APPROVED
+TR-L3-007,3,你觉得我笑起来加分吗？,Do you think my smile makes me more attractive?,,pair_specific|attraction,free-笑起来加分,APPROVED
+TR-L3-008,3,对方坐得很近，你会紧张吗？,Do you get nervous when someone you're attracted to sits very close?,,proximity|flirt,free-坐很近会紧张,APPROVED
+TR-L3-009,3,你喜欢对方靠近耳边说话吗？,Do you like it when someone leans in and talks close to your ear?,,proximity|flirt,free-耳边说话|L4-012,APPROVED
+TR-L3-010,3,现在这个距离，你觉得刚好还是有点远？,"Does the distance between us right now feel right, or a little too far?",,pair_specific|proximity,free-现在距离,APPROVED
+TR-L3-011,3,牵手时你喜欢普通牵，还是十指交扣？,"When holding hands, do you prefer a regular hold or interlocked fingers?",,touch_preference|hand_holding,free-普通牵还是十指交扣,APPROVED
+TR-L3-012,3,你更喜欢牵手还是靠肩？,Do you prefer holding hands or leaning on someone's shoulder?,,touch_preference,free-牵手还是靠肩,APPROVED
+TR-L3-013,3,你喜欢身体接触多一点，还是少一点？,Do you prefer more physical contact or less?,,touch_preference,free-身体接触多还是少,APPROVED
+TR-L3-014,3,别人在你耳边说什么最容易让你脸红？,What could someone whisper in your ear that would make you blush fastest?,,flirt|proximity,L3-006,APPROVED
+TR-L3-015,3,如果我们接吻，你觉得谁会先主动？,"If we kissed, who do you think would make the first move?",,pair_specific|kiss|flirt,L3-013,APPROVED
+TR-L3-016,3,牵手、拥抱、亲脸，只能选一个你选哪个？,"If you had to choose one—holding hands, hugging, or a kiss on the cheek—which would you pick?",,touch_preference|kiss,L3-017,APPROVED
+TR-L4-001,4,你喜欢慢一点的吻，还是直接一点的吻？,Do you prefer a slower kiss or a more direct one?,,kiss|intimacy_preference,L4-001|free-L3轻轻亲还是直接,APPROVED
+TR-L4-002,4,除了嘴唇，你最喜欢被亲哪里？,"Other than your lips, where do you most like being kissed?",,kiss|intimacy_preference,L4-003|free-L5身体哪里被亲,APPROVED
+TR-L4-003,4,接吻的时候，你喜欢被搂腰吗？,Do you like being held around the waist while kissing?,,kiss|touch_preference,L4-005,APPROVED
+TR-L4-004,4,接吻的时候，你喜欢对方的手放在哪里？,"When kissing, where do you like the other person's hands to be?",,kiss|touch_preference,L4-006,APPROVED
+TR-L4-005,4,你更喜欢正面贴近，还是从背后抱？,Do you prefer being close face-to-face or being hugged from behind?,,touch_preference|hug,L4-011,APPROVED
+TR-L4-006,4,亲密互动时，你喜欢对方更主动、更主导一点吗？,"During intimate moments, do you like the other person to take more of the lead?",,intimacy_preference|dominance_preference,free-强势一点,APPROVED
+TR-L4-007,4,你最喜欢哪种挑逗方式？,What kind of teasing turns you on most?,,flirt|intimacy_preference,free-挑逗方式|L5-008,APPROVED
+TR-L4-008,4,哪种触碰最容易让你兴奋？,What kind of touch turns you on most easily?,,touch_preference|adult,free-哪种触碰兴奋,APPROVED
+TR-L4-009,4,你身体哪个位置最敏感？,Which part of your body is the most sensitive?,,touch_preference|adult,free-最敏感位置,APPROVED
+TR-L4-010,4,你喜欢对方说暧昧的话吗？,Do you like it when someone says suggestive things to you?,,flirt|intimacy_preference,free-暧昧的话,APPROVED
+TR-L4-011,4,你现在最想摸我哪里？,Where would you most want to touch me right now?,,pair_specific|touch_preference|adult,L5-005,APPROVED
+TR-L5-001,5,你觉得前戏重要吗？,Do you think foreplay is important?,,adult|sexual_preference,free-L5-前戏重要,APPROVED
+TR-L5-002,5,你更喜欢长一点的前戏，还是快速进入状态？,Do you prefer longer foreplay or getting into it quickly?,,adult|sexual_preference,free-L5-长前戏还是快,APPROVED
+TR-L5-003,5,你喜欢被打屁股吗？,Do you like being spanked?,,adult|sexual_preference,free-L5-打屁股,APPROVED
+TR-L5-004,5,你更喜欢开灯还是关灯？,Do you prefer the lights on or off?,,adult|sexual_preference,free-L5-开灯关灯,APPROVED
+TR-L5-005,5,你更喜欢安静，还是放着音乐？,Do you prefer silence or having music on?,,adult|sexual_preference,free-L5-安静还是音乐,APPROVED
+TR-L5-006,5,你会直接说自己想要怎样被满足吗？,Do you directly say how you want to be pleased?,,adult|communication,free-L5-直接说需求,APPROVED
+TR-L5-007,5,你最喜欢别人夸你身体哪个部位？,Which part of your body do you most like being complimented on?,,adult|body_preference,free-L5-夸身体,APPROVED
+TR-L5-008,5,你有没有特别容易让你兴奋的特殊偏好？,Do you have any particular preference that turns you on especially quickly?,,adult|sexual_preference,free-L5-特殊偏好,APPROVED
+TR-L5-009,5,你对蒙眼有兴趣吗？,Are you interested in being blindfolded?,,adult|sexual_preference,free-L5-蒙眼,APPROVED
+TR-L5-010,5,你对轻度束缚有兴趣吗？,Are you interested in light bondage?,,adult|sexual_preference,free-L5-轻度束缚,APPROVED
+TR-L5-011,5,你对角色扮演有兴趣吗？,Are you interested in role-play?,,adult|sexual_preference,free-L5-角色扮演,APPROVED
+TR-L5-012,5,你对性玩具有兴趣吗？,Are you interested in sex toys?,,adult|sexual_preference,free-L5-性玩具,APPROVED
+TR-L5-013,5,你更喜欢在床上，还是别的地方？,Do you prefer sex in bed or somewhere else?,,adult|sexual_preference,free-L5-床上还是别处,APPROVED
+TR-L5-014,5,你更喜欢早上还是晚上？,Do you prefer sex in the morning or at night?,,adult|sexual_preference,free-L5-早上还是晚上,APPROVED
+TR-L5-015,5,你最喜欢哪种性爱节奏？,What kind of sexual pace do you like most?,,adult|sexual_preference,free-L5-性爱节奏,APPROVED
+TR-L5-016,5,你有没有特别想尝试的姿势？,Is there a position you especially want to try?,,adult|sexual_preference,free-L5-想尝试姿势,APPROVED
+TR-L5-017,5,你最想尝试的一种性幻想是什么？,What's one sexual fantasy you'd most like to try?,,adult|fantasy,free-L5-性幻想,APPROVED
+TR-L5-018,5,你最想试、但一直没试过的是什么？,What's something you've really wanted to try but haven't yet?,,adult|fantasy,L5-011,APPROVED
+TR-L5-019,5,你接受亲密时候说露骨一点的话吗？,Are you into more explicit talk during intimate moments?,,adult|communication,L5-013,APPROVED
+TR-L5-020,5,你觉得亲密的时候，时间长一点好，还是短一点但刺激更重要？,"During intimate moments, do you prefer longer sessions or shorter but more intense ones?",,adult|sexual_preference,L5-015,APPROVED
+TR-L5-021,5,你最喜欢哪一种姿势？,What's your favorite sex position?,,adult|sexual_preference,L5-016,APPROVED
+TR-L5-022,5,如果今晚完全不用害羞，你最想和我尝试什么？,"If you didn't have to feel shy at all tonight, what would you most want to try with me?",,adult|pair_specific|fantasy,L5-020,APPROVED

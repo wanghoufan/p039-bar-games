@@ -1,0 +1,2351 @@
+{
+  "schemaVersion": 1,
+  "bankId": "party-night-truth-pair-v1",
+  "title": "Party Night 一男一女真心话题库",
+  "audience": "one_male_one_female",
+  "type": "truth",
+  "languageModes": [
+    "zh",
+    "en",
+    "bilingual"
+  ],
+  "ageGate": "18+ for Level 5",
+  "levelIsolation": true,
+  "notes": [
+    "五档互相隔离；当前档位只抽当前档题。",
+    "本包由 Human 提供题目整理而来；已合并明显重复项并统一口语表达。",
+    "真心话默认不使用倒计时，因此 timerSec 全部为 null。",
+    "Level 5 为成人直球内容，仅面向成年人。"
+  ],
+  "stats": {
+    "level1": 44,
+    "level2": 25,
+    "level3": 16,
+    "level4": 11,
+    "level5": 22
+  },
+  "total": 118,
+  "cards": [
+    {
+      "id": "TR-L1-001",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你觉得自己最吸引人的一点是什么？",
+      "en": "What do you think is your most attractive quality?",
+      "timerSec": null,
+      "tags": [
+        "self_image"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-005"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-002",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你最喜欢别人夸你什么？",
+      "en": "What kind of compliment do you like hearing most?",
+      "timerSec": null,
+      "tags": [
+        "self_image"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-006"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-003",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你觉得自己脸皮厚还是薄？",
+      "en": "Would you say you're thick-skinned or thin-skinned?",
+      "timerSec": null,
+      "tags": [
+        "personality"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-007"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-004",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你小时候最常被叫什么绰号？",
+      "en": "What nickname did people call you most when you were a kid?",
+      "timerSec": null,
+      "tags": [
+        "background"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-009"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-005",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "什么事情最容易把你逗笑？",
+      "en": "What makes you laugh most easily?",
+      "timerSec": null,
+      "tags": [
+        "personality"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-010"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-006",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你最喜欢哪种拥抱？",
+      "en": "What kind of hug do you like most?",
+      "timerSec": null,
+      "tags": [
+        "affection_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-011"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-007",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你最喜欢别人怎么叫你？",
+      "en": "What do you like people to call you?",
+      "timerSec": null,
+      "tags": [
+        "social_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-012"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-008",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你觉得自己最大的优点是什么？",
+      "en": "What do you think is your biggest strength?",
+      "timerSec": null,
+      "tags": [
+        "self_image"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-014"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-009",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢安静约会，还是热闹约会？",
+      "en": "Do you prefer quiet dates or lively dates?",
+      "timerSec": null,
+      "tags": [
+        "dating_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-018"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-010",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢白天出去玩，还是晚上出去玩？",
+      "en": "Do you prefer going out during the day or at night?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-019"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-011",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时几点睡？几点起床？",
+      "en": "What time do you usually go to bed and wake up?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-021"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-012",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "周末你更喜欢宅着，还是出去玩？",
+      "en": "On weekends, do you prefer staying in or going out?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-023"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-013",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时会健身或运动吗？",
+      "en": "Do you usually work out or play sports?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle",
+        "fitness"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-024"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-014",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你吃东西偏清淡还是重口？",
+      "en": "Do you prefer lighter food or stronger flavors?",
+      "timerSec": null,
+      "tags": [
+        "food"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-027"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-015",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你能吃辣吗？",
+      "en": "Can you handle spicy food?",
+      "timerSec": null,
+      "tags": [
+        "food"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-028"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-016",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢猫还是狗？",
+      "en": "Do you prefer cats or dogs?",
+      "timerSec": null,
+      "tags": [
+        "hobby"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-031"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-017",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时最常听什么类型的歌？",
+      "en": "What kind of music do you listen to most?",
+      "timerSec": null,
+      "tags": [
+        "music"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-032"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-018",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更爱看电影、电视剧，还是短视频？",
+      "en": "Do you prefer movies, TV series, or short videos?",
+      "timerSec": null,
+      "tags": [
+        "entertainment"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-033"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-019",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "旅游你更喜欢海边、城市，还是山里？",
+      "en": "When you travel, do you prefer the beach, a city, or the mountains?",
+      "timerSec": null,
+      "tags": [
+        "travel"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-036"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-020",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "出门或旅行时，你更喜欢提前计划，还是到了再说？",
+      "en": "When going out or traveling, do you prefer planning ahead or deciding as you go?",
+      "timerSec": null,
+      "tags": [
+        "travel",
+        "planning_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-037",
+          "free-出门提前计划还是临时决定"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-021",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时更喜欢热闹，还是安静？",
+      "en": "Do you generally prefer lively places or quiet ones?",
+      "timerSec": null,
+      "tags": [
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-038",
+          "free-更喜欢热闹还是安静"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-022",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "一个人休息的时候，你最喜欢干什么？",
+      "en": "What do you like doing most when you're relaxing alone?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-039"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-023",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "最近你最上头的一个爱好是什么？",
+      "en": "What's one hobby you're really into lately?",
+      "timerSec": null,
+      "tags": [
+        "hobby"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-040"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-024",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你周末会睡懒觉吗？",
+      "en": "Do you sleep in on weekends?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-周末会睡懒觉吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-025",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢临时约，还是提前约？",
+      "en": "Do you prefer spontaneous plans or making plans in advance?",
+      "timerSec": null,
+      "tags": [
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-临时约还是提前约"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-026",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时一个人待着的时间多吗？",
+      "en": "Do you spend a lot of time on your own?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-一个人待着时间多吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-027",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你喜欢甜食吗？",
+      "en": "Do you like sweets?",
+      "timerSec": null,
+      "tags": [
+        "food"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-喜欢甜食吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-028",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢火锅还是烧烤？",
+      "en": "Do you prefer hot pot or barbecue?",
+      "timerSec": null,
+      "tags": [
+        "food"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-火锅还是烧烤"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-029",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢啤酒还是鸡尾酒？",
+      "en": "Do you prefer beer or cocktails?",
+      "timerSec": null,
+      "tags": [
+        "drink"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-啤酒还是鸡尾酒"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-030",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢热闹有 DJ 的酒吧，还是安静的清吧？",
+      "en": "Do you prefer a lively bar with a DJ or a quieter bar?",
+      "timerSec": null,
+      "tags": [
+        "nightlife"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-DJ酒吧还是清吧"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-031",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你喜欢滑雪、冲浪这类运动吗？",
+      "en": "Do you like sports such as skiing or surfing?",
+      "timerSec": null,
+      "tags": [
+        "hobby",
+        "sports"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-滑雪冲浪"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-032",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "旅行时你更喜欢拍照，还是专心玩？",
+      "en": "When traveling, do you prefer taking photos or just enjoying the moment?",
+      "timerSec": null,
+      "tags": [
+        "travel",
+        "photo"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-旅行拍照还是专心玩"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-033",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时听歌多吗？",
+      "en": "Do you listen to music a lot?",
+      "timerSec": null,
+      "tags": [
+        "music"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-平时听歌多吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-034",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢电影还是综艺？",
+      "en": "Do you prefer movies or variety shows?",
+      "timerSec": null,
+      "tags": [
+        "entertainment"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-电影还是综艺"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-035",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢喜剧还是悬疑？",
+      "en": "Do you prefer comedy or mystery?",
+      "timerSec": null,
+      "tags": [
+        "entertainment"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-喜剧还是悬疑"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-036",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢电影院，还是私人影院的体验？",
+      "en": "Do you prefer a regular cinema or a private screening room?",
+      "timerSec": null,
+      "tags": [
+        "entertainment"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-电影院还是私人影院"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-037",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢户外还是室内活动？",
+      "en": "Do you prefer outdoor or indoor activities?",
+      "timerSec": null,
+      "tags": [
+        "lifestyle"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-户外还是室内"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-038",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你平时会经常拍照吗？",
+      "en": "Do you take photos often?",
+      "timerSec": null,
+      "tags": [
+        "photo"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-经常拍照吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-039",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你在熟人面前话多还是话少？",
+      "en": "Are you more talkative or quiet around people you know well?",
+      "timerSec": null,
+      "tags": [
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-熟人面前话多还是话少"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-040",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢两个人玩，还是一群人玩？",
+      "en": "Do you prefer hanging out one-on-one or in a group?",
+      "timerSec": null,
+      "tags": [
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-两个人还是一群人"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-041",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你更喜欢熟人局，还是认识新人的局？",
+      "en": "Do you prefer hanging out with people you know or meeting new people?",
+      "timerSec": null,
+      "tags": [
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-熟人局还是新人局"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-042",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你喝酒以后会变得更话多吗？",
+      "en": "Do you get more talkative after drinking?",
+      "timerSec": null,
+      "tags": [
+        "nightlife",
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-喝酒后话多"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-043",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你做决定一般很快，还是会纠结很久？",
+      "en": "Do you usually decide quickly or overthink for a while?",
+      "timerSec": null,
+      "tags": [
+        "personality"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-做决定快还是纠结"
+        ]
+      }
+    },
+    {
+      "id": "TR-L1-044",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 1,
+      "zh": "你属于容易和陌生人熟起来的人吗？",
+      "en": "Do you warm up to strangers easily?",
+      "timerSec": null,
+      "tags": [
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-容易和陌生人熟吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-001",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更容易被外貌吸引，还是聊天感觉吸引？",
+      "en": "Are you more drawn to looks or to the feeling you get from talking?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-042",
+          "free-会聊天还是长得好看"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-002",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你喜欢主动一点的人，还是慢热一点的人？",
+      "en": "Do you prefer someone who's more proactive or more slow-burning?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "initiative"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-043",
+          "free-主动的人还是慢热的人"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-003",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢成熟一点的，还是有少年感 / 少女感的？",
+      "en": "Do you prefer someone more mature or someone with a youthful vibe?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-045"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-004",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "异性哪个小动作最容易让你加分？",
+      "en": "What small gesture from someone you're attracted to earns the most points with you?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-049"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-005",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "异性什么行为最容易让你瞬间下头？",
+      "en": "What behavior makes you lose interest in someone instantly?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-050"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-006",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢别人直接表达好感，还是慢慢试探？",
+      "en": "Do you prefer someone to show interest directly or test the waters slowly?",
+      "timerSec": null,
+      "tags": [
+        "flirt",
+        "initiative"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-052",
+          "free-喜欢直球还是慢慢暧昧",
+          "free-直球还是慢慢试探"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-007",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你喜欢对方话多一点，还是少一点？",
+      "en": "Do you prefer someone who's more talkative or more quiet?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "social_style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-053"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-008",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢对方有点强势，还是比较温柔？",
+      "en": "Do you prefer someone a little more assertive or more gentle?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-054"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-009",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢别人夸你好看，还是夸你有趣？",
+      "en": "Would you rather be told you're attractive or that you're fun?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "compliment"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-056"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-010",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你第一次见异性，最先会看哪里？",
+      "en": "When you first meet someone you're attracted to, what do you notice first?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "first_impression"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-057"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-011",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更吃颜值、身材，还是气质？",
+      "en": "What matters more to you: looks, body, or overall vibe?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-058"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-012",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "什么样的异性最容易让你想继续聊下去？",
+      "en": "What kind of person makes you want to keep the conversation going?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "conversation"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-059"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-013",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你觉得男女之间有感觉，一般多久能感觉出来？",
+      "en": "How quickly do you think you can tell when there's chemistry between two people?",
+      "timerSec": null,
+      "tags": [
+        "chemistry"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L1-060"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-014",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢异性什么类型的穿搭？",
+      "en": "What kind of style do you like on someone you're attracted to?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-男生穿搭"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-015",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你会因为声音对一个人加分吗？",
+      "en": "Can someone's voice make them more attractive to you?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-声音加分"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-016",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更容易一见有感觉，还是越聊越有感觉？",
+      "en": "Are you more likely to feel a spark right away or after talking for a while?",
+      "timerSec": null,
+      "tags": [
+        "chemistry"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-一见有感觉还是越聊越有感觉"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-017",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你会因为一个人的味道对 TA 有好感吗？",
+      "en": "Can someone's scent make you more attracted to them?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-味道加分"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-018",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你会因为一个人的身材对 TA 有好感吗？",
+      "en": "Can someone's body make you more attracted to them?",
+      "timerSec": null,
+      "tags": [
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-身材加分"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-019",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢会打扮的，还是自然一点的？",
+      "en": "Do you prefer someone who's well-styled or more natural?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "style"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-会打扮还是自然"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-020",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢对方有主见，还是随和一点？",
+      "en": "Do you prefer someone with strong opinions or someone more easygoing?",
+      "timerSec": null,
+      "tags": [
+        "attraction",
+        "personality"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-有主见还是随和"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-021",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "如果对一个人有好感，你会主动吗？",
+      "en": "If you like someone, do you usually make the first move?",
+      "timerSec": null,
+      "tags": [
+        "initiative"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-有好感会主动吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-022",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你更喜欢自己约人，还是等别人约？",
+      "en": "Do you prefer asking someone out or waiting for them to ask you?",
+      "timerSec": null,
+      "tags": [
+        "initiative",
+        "dating"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-自己约还是等别人约"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-023",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "第一次单独见面，你更喜欢喝东西、吃饭，还是喝酒？",
+      "en": "For a first one-on-one meetup, would you rather get drinks, eat, or have alcohol?",
+      "timerSec": null,
+      "tags": [
+        "dating"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-第一次单独见面"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-024",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "目前为止，你觉得我们两个聊得合拍吗？",
+      "en": "So far, do you think the two of us click?",
+      "timerSec": null,
+      "tags": [
+        "current_chemistry",
+        "pair_specific"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-聊得合拍吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L2-025",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 2,
+      "zh": "你有好感时会主动给信号吗？",
+      "en": "When you like someone, do you usually give them signals?",
+      "timerSec": null,
+      "tags": [
+        "initiative",
+        "flirt"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-有好感会给信号吗"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-001",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "如果今晚只能夸我一个地方，你会夸哪里？",
+      "en": "If you could compliment just one thing about me tonight, what would it be?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "compliment",
+        "flirt"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L2-003",
+          "L2-018"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-002",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你觉得我属于你平时会喜欢的类型吗？",
+      "en": "Am I the kind of person you'd usually be attracted to?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L2-005"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-003",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你觉得我最容易吸引异性的地方是什么？",
+      "en": "What about me do you think is most likely to attract people?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L2-007"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-004",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "刚认识到现在，你对我的印象变好还是变差了？",
+      "en": "Since we met, has your impression of me gotten better or worse?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "current_chemistry"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L2-013"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-005",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你喜欢别人主动一点，还是给你一点空间让你慢慢靠近？",
+      "en": "Do you prefer someone to move closer first, or give you space to approach at your own pace?",
+      "timerSec": null,
+      "tags": [
+        "proximity",
+        "initiative"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L2-016"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-006",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你觉得我属于越看越顺眼的类型吗？",
+      "en": "Do you think I'm the kind of person who gets more attractive the longer you look?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-越看越顺眼"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-007",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你觉得我笑起来加分吗？",
+      "en": "Do you think my smile makes me more attractive?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "attraction"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-笑起来加分"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-008",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "对方坐得很近，你会紧张吗？",
+      "en": "Do you get nervous when someone you're attracted to sits very close?",
+      "timerSec": null,
+      "tags": [
+        "proximity",
+        "flirt"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-坐很近会紧张"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-009",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你喜欢对方靠近耳边说话吗？",
+      "en": "Do you like it when someone leans in and talks close to your ear?",
+      "timerSec": null,
+      "tags": [
+        "proximity",
+        "flirt"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-耳边说话",
+          "L4-012"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-010",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "现在这个距离，你觉得刚好还是有点远？",
+      "en": "Does the distance between us right now feel right, or a little too far?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "proximity"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-现在距离"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-011",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "牵手时你喜欢普通牵，还是十指交扣？",
+      "en": "When holding hands, do you prefer a regular hold or interlocked fingers?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference",
+        "hand_holding"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-普通牵还是十指交扣"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-012",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你更喜欢牵手还是靠肩？",
+      "en": "Do you prefer holding hands or leaning on someone's shoulder?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-牵手还是靠肩"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-013",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "你喜欢身体接触多一点，还是少一点？",
+      "en": "Do you prefer more physical contact or less?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-身体接触多还是少"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-014",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "别人在你耳边说什么最容易让你脸红？",
+      "en": "What could someone whisper in your ear that would make you blush fastest?",
+      "timerSec": null,
+      "tags": [
+        "flirt",
+        "proximity"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L3-006"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-015",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "如果我们接吻，你觉得谁会先主动？",
+      "en": "If we kissed, who do you think would make the first move?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "kiss",
+        "flirt"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L3-013"
+        ]
+      }
+    },
+    {
+      "id": "TR-L3-016",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 3,
+      "zh": "牵手、拥抱、亲脸，只能选一个你选哪个？",
+      "en": "If you had to choose one—holding hands, hugging, or a kiss on the cheek—which would you pick?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference",
+        "kiss"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L3-017"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-001",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "你喜欢慢一点的吻，还是直接一点的吻？",
+      "en": "Do you prefer a slower kiss or a more direct one?",
+      "timerSec": null,
+      "tags": [
+        "kiss",
+        "intimacy_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L4-001",
+          "free-L3轻轻亲还是直接"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-002",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "除了嘴唇，你最喜欢被亲哪里？",
+      "en": "Other than your lips, where do you most like being kissed?",
+      "timerSec": null,
+      "tags": [
+        "kiss",
+        "intimacy_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L4-003",
+          "free-L5身体哪里被亲"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-003",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "接吻的时候，你喜欢被搂腰吗？",
+      "en": "Do you like being held around the waist while kissing?",
+      "timerSec": null,
+      "tags": [
+        "kiss",
+        "touch_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L4-005"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-004",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "接吻的时候，你喜欢对方的手放在哪里？",
+      "en": "When kissing, where do you like the other person's hands to be?",
+      "timerSec": null,
+      "tags": [
+        "kiss",
+        "touch_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L4-006"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-005",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "你更喜欢正面贴近，还是从背后抱？",
+      "en": "Do you prefer being close face-to-face or being hugged from behind?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference",
+        "hug"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L4-011"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-006",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "亲密互动时，你喜欢对方更主动、更主导一点吗？",
+      "en": "During intimate moments, do you like the other person to take more of the lead?",
+      "timerSec": null,
+      "tags": [
+        "intimacy_preference",
+        "dominance_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-强势一点"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-007",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "你最喜欢哪种挑逗方式？",
+      "en": "What kind of teasing turns you on most?",
+      "timerSec": null,
+      "tags": [
+        "flirt",
+        "intimacy_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-挑逗方式",
+          "L5-008"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-008",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "哪种触碰最容易让你兴奋？",
+      "en": "What kind of touch turns you on most easily?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference",
+        "adult"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-哪种触碰兴奋"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-009",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "你身体哪个位置最敏感？",
+      "en": "Which part of your body is the most sensitive?",
+      "timerSec": null,
+      "tags": [
+        "touch_preference",
+        "adult"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-最敏感位置"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-010",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "你喜欢对方说暧昧的话吗？",
+      "en": "Do you like it when someone says suggestive things to you?",
+      "timerSec": null,
+      "tags": [
+        "flirt",
+        "intimacy_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-暧昧的话"
+        ]
+      }
+    },
+    {
+      "id": "TR-L4-011",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 4,
+      "zh": "你现在最想摸我哪里？",
+      "en": "Where would you most want to touch me right now?",
+      "timerSec": null,
+      "tags": [
+        "pair_specific",
+        "touch_preference",
+        "adult"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L5-005"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-001",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你觉得前戏重要吗？",
+      "en": "Do you think foreplay is important?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-前戏重要"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-002",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你更喜欢长一点的前戏，还是快速进入状态？",
+      "en": "Do you prefer longer foreplay or getting into it quickly?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-长前戏还是快"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-003",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你喜欢被打屁股吗？",
+      "en": "Do you like being spanked?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-打屁股"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-004",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你更喜欢开灯还是关灯？",
+      "en": "Do you prefer the lights on or off?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-开灯关灯"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-005",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你更喜欢安静，还是放着音乐？",
+      "en": "Do you prefer silence or having music on?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-安静还是音乐"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-006",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你会直接说自己想要怎样被满足吗？",
+      "en": "Do you directly say how you want to be pleased?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "communication"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-直接说需求"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-007",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你最喜欢别人夸你身体哪个部位？",
+      "en": "Which part of your body do you most like being complimented on?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "body_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-夸身体"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-008",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你有没有特别容易让你兴奋的特殊偏好？",
+      "en": "Do you have any particular preference that turns you on especially quickly?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-特殊偏好"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-009",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你对蒙眼有兴趣吗？",
+      "en": "Are you interested in being blindfolded?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-蒙眼"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-010",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你对轻度束缚有兴趣吗？",
+      "en": "Are you interested in light bondage?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-轻度束缚"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-011",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你对角色扮演有兴趣吗？",
+      "en": "Are you interested in role-play?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-角色扮演"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-012",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你对性玩具有兴趣吗？",
+      "en": "Are you interested in sex toys?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-性玩具"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-013",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你更喜欢在床上，还是别的地方？",
+      "en": "Do you prefer sex in bed or somewhere else?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-床上还是别处"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-014",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你更喜欢早上还是晚上？",
+      "en": "Do you prefer sex in the morning or at night?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-早上还是晚上"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-015",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你最喜欢哪种性爱节奏？",
+      "en": "What kind of sexual pace do you like most?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-性爱节奏"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-016",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你有没有特别想尝试的姿势？",
+      "en": "Is there a position you especially want to try?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-想尝试姿势"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-017",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你最想尝试的一种性幻想是什么？",
+      "en": "What's one sexual fantasy you'd most like to try?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "fantasy"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "free-L5-性幻想"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-018",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你最想试、但一直没试过的是什么？",
+      "en": "What's something you've really wanted to try but haven't yet?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "fantasy"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L5-011"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-019",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你接受亲密时候说露骨一点的话吗？",
+      "en": "Are you into more explicit talk during intimate moments?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "communication"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L5-013"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-020",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你觉得亲密的时候，时间长一点好，还是短一点但刺激更重要？",
+      "en": "During intimate moments, do you prefer longer sessions or shorter but more intense ones?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L5-015"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-021",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "你最喜欢哪一种姿势？",
+      "en": "What's your favorite sex position?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "sexual_preference"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L5-016"
+        ]
+      }
+    },
+    {
+      "id": "TR-L5-022",
+      "type": "truth",
+      "audience": "one_male_one_female",
+      "level": 5,
+      "zh": "如果今晚完全不用害羞，你最想和我尝试什么？",
+      "en": "If you didn't have to feel shy at all tonight, what would you most want to try with me?",
+      "timerSec": null,
+      "tags": [
+        "adult",
+        "pair_specific",
+        "fantasy"
+      ],
+      "source": {
+        "kind": "human_curated",
+        "language": "zh",
+        "originalRefs": [
+          "L5-020"
+        ]
+      }
+    }
+  ]
+}

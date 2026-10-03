@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Party Night Truth Bank Schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "bankId",
+    "type",
+    "audience",
+    "levelIsolation",
+    "cards"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "bankId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "type": "string",
+      "const": "truth"
+    },
+    "audience": {
+      "type": "string",
+      "const": "one_male_one_female"
+    },
+    "levelIsolation": {
+      "type": "boolean",
+      "const": true
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "audience",
+          "level",
+          "zh",
+          "en",
+          "timerSec",
+          "tags",
+          "source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^TR-L[1-5]-[0-9]{3}$"
+          },
+          "type": {
+            "type": "string",
+            "const": "truth"
+          },
+          "audience": {
+            "type": "string",
+            "const": "one_male_one_female"
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "zh": {
+            "type": "string",
+            "minLength": 1
+          },
+          "en": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timerSec": {
+            "type": "null"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "kind",
+              "language",
+              "originalRefs"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "originalRefs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

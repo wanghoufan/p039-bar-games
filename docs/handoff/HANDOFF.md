@@ -15,12 +15,13 @@
   - `MainActivity.java` 已 `registerPlugin(AlertVibratePlugin.class)`；`AndroidManifest.xml` 已加 `VIBRATE` 权限。
   - `lib/haptics.ts`：原生走 `registerPlugin("AlertVibrate")`，非原生降级 `navigator.vibrate([120,60,120])`；`/punishment/play` 的声音/震动入口接它。
   - 真机实测：`dumpsys vibrator_manager` 出现 `opPkg=night.party.app`、`status: running`（触感反馈关=0 也真震）；声音走真实应用内导航，`AudioContext` 振荡器计数=3。
-  - Debug APK 已构建并安装到 Note 11T Pro+（`IN9LZTAYV4UGU4JF`）。**当前 `adb devices` 为空（设备已断开，恢复前须重连查）。**
-- **首页按钮重叠已修复**：`app/globals.css` 增加 `.home-primary + .home-primary { margin-top: .9rem; }`；390×844 实测两按钮间隙 14.4px。产品冻结样式未改动。
+  - Debug APK 已构建并安装到 Note 11T Pro+（`IN9LZTAYV4UGU4JF`）。**2026-10-02 10:38 经 WiFi adb 设备 `192.168.31.63:5555`（型号 `22041216UC`）重新出包并安装**（release 静态导出 → `./gradlew assembleDebug` → `adb install -r`）。恢复前一律先 `adb devices -l` 查实际设备。
+- **首页「今晚开局（AI 组局）」按钮已按 Human 指令移除（2026-10-02）**：只删 `app/page.tsx` 那一个 `<Link href="/setup">今晚开局（AI 组局）</Link>`（连同其无用的 `play` import）；**8 个玩法卡片、底部导航、`/setup` 路由与引擎全部保留**。因该按钮是自测主入口，同步改了 7 个 e2e（`helpers.ts` 的 `startLocalGame` 改为直达 `/setup`；`smoke/visual/setup-flow/accessibility/exit-confirm/v1-1-recovery` 改为点底部「组局」或断言「大冒险」）。曾误将其它功能整体物理删除，已用 `git checkout HEAD -- .` 全量恢复，未提交。
+- **首页按钮重叠已修复**：`app/globals.css` 增加 `.home-primary + .home-primary { margin-top: .9rem; }`；390×844 实测两按钮间隙 14.4px。产品冻结样式未改动。（移除上按钮后此规则对单个 `.home-primary` 无害。）
 - **过时文案已删**：`app/punishment/page.tsx` 去掉「开发示范题库 · 正式题目待人工审核」；`components/punishment/PunishmentSettingsSheet.tsx` 去掉「当前为开发示范题库，正式题库等待人工审核。」，保留「仅在本机保存偏好与本局进度，不采集玩家信息。」（E2E 断言仍满足）。
 - **测试全绿（本轮末次）**：unit 139 文件 / 1463 用例通过；E2E 118 passed / 7 skipped / 0 failed；`typecheck` 0 错误；`lint` 0 error / 11 既有 warning。skip 不计 PASS。
 - **版本三处同值 1.6.0**：`package.json`、`public/sw.js`(`CACHE_VERSION`)、`public/version.json`。Android `versionName="1.0"` 是原生壳版本，与 web 版本独立。
-- **Git 状态**：`main` HEAD `bb58bb9 feat: 导入 Party Night 应用源码并接入大冒险双题库（普通/一男一女）`。本轮未提交改动见第 6 节；**本轮已按 Human 授权 commit+push（见交接整理记录）**。
+- **Git 状态**：`main` HEAD `e0f7b06 feat(android): 接入原生震动插件，修复首页按钮重叠并收尾交接`（截至 2026-10-02 实测；旧文写的 `bb58bb9` 已过期）。当前「移除首页 AI 组局按钮」的改动**尚未 commit/push（未获授权）**，见第 6 节。
 - **首次发布 Human 签收尚未完成**：不得称已正式完工；签收属 Human Gate。
 
 ## 2. 运行态与服务
@@ -64,10 +65,14 @@ cd android && ./gradlew assembleDebug
 
 ## 6. 本轮未提交改动（commit+push 前的工作区）
 
-- 修改：`android/app/src/main/AndroidManifest.xml`、`android/app/src/main/java/night/party/app/MainActivity.java`、`app/globals.css`、`app/punishment/page.tsx`、`app/punishment/play/page.tsx`、`components/punishment/PunishmentSettingsSheet.tsx`、`tests/e2e/punishment.spec.ts`、`tests/unit/punishment.test.ts`，以及 `docs/qa/punishment/` 下 E2E 重写截图与日志。
-- 新增：`android/app/src/main/java/night/party/app/AlertVibratePlugin.java`、`lib/haptics.ts`。
+- （上一轮，已在 HEAD）修改：`AndroidManifest.xml`、`MainActivity.java`、`app/globals.css`、`app/punishment/page.tsx`、`app/punishment/play/page.tsx`、`PunishmentSettingsSheet.tsx`、`tests/e2e/punishment.spec.ts`、`tests/unit/punishment.test.ts`；新增：`AlertVibratePlugin.java`、`lib/haptics.ts`。
+- （本会话生效中，未提交）移除首页「今晚开局（AI 组局）」按钮：
+  - 修改：`app/page.tsx`（删按钮 + 删无用 `play` import）。
+  - 修改 7 个 e2e：`tests/e2e/helpers.ts`、`smoke.spec.ts`、`visual.spec.ts`、`setup-flow.spec.ts`、`accessibility.spec.ts`、`exit-confirm.spec.ts`、`v1-1-recovery.spec.ts`。
+  - 说明：本轮一度误删全部旧引擎/玩法，已 `git checkout HEAD -- .` 全量恢复（工作区曾回到干净 HEAD），随后只做上述最小删除。
 
 ## 交接整理记录
 
 - 2026-10-01 经 Human 授权，将旧项目及本轮早期交接原样移至 `docs/handoff/archive/2026-10-01 丨 旧项目及本轮早期交接 丨 已失效.md`。未删除历史内容。
 - 2026-10-02 经 Human 授权（【大交接 2】）做 neat-freak 收尾：重写本 HANDOFF 为当前唯一权威恢复入口（覆盖 20 条示范题/Android 未测/HEAD 018a368 等旧说法）；修复首页按钮重叠；commit + push（main）。
+- 2026-10-02 按 Human 指令只移除首页「今晚开局（AI 组局）」按钮（其余功能全留），同步改 7 个 e2e；重出 release 包装到 `192.168.31.63:5555`。曾误删全部旧引擎，已 git 全量恢复。本轮未 commit。

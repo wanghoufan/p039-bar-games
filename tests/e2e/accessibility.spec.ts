@@ -10,7 +10,7 @@ async function expectTouchTarget(locator: Locator) {
 
 test("核心操作具有语义、焦点样式与移动端触控面积", async ({ page }) => {
   await page.goto("/");
-  const start = page.getByRole("link", { name: /今晚开局/ });
+  const start = page.getByRole("link", { name: "大冒险", exact: true });
   await expectTouchTarget(start);
   await start.focus();
   await expect(start).toBeFocused();

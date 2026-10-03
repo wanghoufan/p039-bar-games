@@ -1,9 +1,8 @@
 import { expect, test } from "@playwright/test";
 
 test("无账号完成组局并进入生成状态", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/setup");
   await expect(page.getByText("登录")).toHaveCount(0);
-  await page.getByRole("link", { name: /今晚开局/ }).click();
   await page.getByLabel("增加玩家").click();
   await page.getByRole("button", { name: "情侣 / 暧昧" }).click();
   await page.getByRole("button", { name: "暧昧", exact: true }).click();

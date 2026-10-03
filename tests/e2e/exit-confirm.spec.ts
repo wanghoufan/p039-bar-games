@@ -75,7 +75,7 @@ test("顶层连点返回：只关框不误退，第三次才重新弹框", async
 
 test("/setup 这类有上一层的页面返回：不弹确认，正常退回首页", async ({ page, baseURL }) => {
   await gotoArmed(page);
-  await page.getByRole("link", { name: /今晚开局/ }).click();
+  await page.getByRole("navigation", { name: "主导航" }).getByRole("link", { name: "组局" }).click();
   await expect(page).toHaveURL(/\/setup/);
 
   await page.goBack();

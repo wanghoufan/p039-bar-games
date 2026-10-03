@@ -4,7 +4,7 @@ test("生成 7 类核心页面视觉检查截图", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
   await page.screenshot({ path: "test-results/visual/01-home-390.png", fullPage: true });
-  await page.getByRole("link", { name: /今晚开局/ }).click();
+  await page.goto("/setup");
   await expect(page).toHaveURL(/\/setup/);
   await page.screenshot({ path: "test-results/visual/02-setup-390.png", fullPage: true });
   await page.getByRole("button", { name: /下一步：雷区设置/ }).click();
@@ -38,7 +38,7 @@ test("首页适配 360 / 390 / 430 宽度且无横向溢出（T162 / V1.4 R-050�
   for (const width of [360, 390, 430]) {
     await page.setViewportSize({ width, height: 844 });
     await page.goto("/");
-    await expect(page.getByRole("link", { name: /今晚开局/ })).toBeVisible();
+    await expect(page.getByRole("link", { name: "大冒险", exact: true })).toBeVisible();
     await expect(page.getByRole("region", { name: "快捷工具" })).toBeVisible();
     // 7 个玩法 + 随机玩一个全部直出，且没有因为多出的卡片把首页撑出横向滚动
     for (const name of ["真心话大冒险", "谁最可能", "我从来没有", "二选一", "指人游戏", "默契测试", "转瓶子", "随机玩一个"]) {

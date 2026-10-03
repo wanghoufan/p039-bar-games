@@ -178,7 +178,7 @@ test("坏 Session：反序列化失败的记录被隔离，页面安全回首页
   await page.goto("/game?session=e2e-broken-session");
 
   // 安全落点：回首页（首页可点），而不是空白页或错误页
-  await expect(page.getByRole("link", { name: /今晚开局/ })).toBeVisible();
+  await expect(page.getByRole("link", { name: "大冒险", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "游戏包", exact: true })).toBeVisible();
 
   // 记录不是被删掉：原始内容进隔离区，sessions 里不再留下每次启动都会失败的坏记录

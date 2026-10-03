@@ -2,8 +2,7 @@ import { expect, type Page } from "@playwright/test";
 import type { GameSession } from "@/lib/domain/schemas";
 
 export async function startLocalGame(page: Page) {
-  await page.goto("/");
-  await page.getByRole("link", { name: /今晚开局/ }).click();
+  await page.goto("/setup");
   await expect(page).toHaveURL(/\/setup/);
   await page.getByRole("button", { name: /下一步：雷区设置/ }).click();
   await expect(page).toHaveURL(/\/boundaries/);
