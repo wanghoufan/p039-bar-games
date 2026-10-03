@@ -14,6 +14,8 @@ const paths: Record<string, React.ReactNode> = {
   point: <><path d="M10 10.5V4.2a1.6 1.6 0 0 1 3.2 0v6.3"/><path d="M13.2 10.5V9a1.5 1.5 0 0 1 3 0v1.5"/><path d="M16.2 11.4V15a6 6 0 0 1-6 6H9a5 5 0 0 1-4.1-2.2l-2.6-3.7a1.6 1.6 0 0 1 2.3-2.2l2.4 1.9"/></>,
   chevron: <path d="m9 18 6-6-6-6"/>,
   back: <path d="m15 18-6-6 6-6"/>,
+  // 双向箭头：真心话 ⇄ 大冒险 一键互切。
+  swap: <><path d="M4 8h13"/><path d="m14 5 3 3-3 3"/><path d="M20 16H7"/><path d="m10 13-3 3 3 3"/></>,
   trash: <><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14M10 11v6M14 11v6"/></>,
   eye: <><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></>,
   search: <><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></>,

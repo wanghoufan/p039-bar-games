@@ -65,9 +65,14 @@ export default function TruthPlay() {
     <NeonBackground className="punishment-bg">
       <main className="punishment-screen">
         <header className="punishment-header">
-          <button aria-label="返回设置" onClick={() => router.push("/truth")}><Icon name="back" /></button>
+          <div className="punishment-header-side">
+            <button aria-label="返回设置" onClick={() => router.push("/truth")}><Icon name="back" /></button>
+            <button aria-label="切换到大冒险" onClick={() => router.push("/punishment/play")}><Icon name="swap" /></button>
+          </div>
           <LevelDots level={session.selectedLevel} onChange={pickLevel} />
-          <button aria-label="切换语言" onClick={() => setSheet("language")}><span>Aa</span></button>
+          <div className="punishment-header-side is-end">
+            <button aria-label="切换语言" onClick={() => setSheet("language")}><span>Aa</span></button>
+          </div>
         </header>
 
         {card ? (

@@ -65,6 +65,21 @@ test("language modal switches while keeping the card", async ({ page }) => {
   await expect(page.locator(".punishment-zh")).toBeVisible();
 });
 
+test("one-tap switch between truth and dare keeps each game's own level", async ({ page }) => {
+  await page.goto("/truth/play");
+  await expect(page.locator(".punishment-card")).toBeVisible();
+  await page.getByLabel("选择 4", { exact: true }).click();
+  await page.getByLabel("切换到大冒险", { exact: true }).click();
+  await expect(page).toHaveURL(/punishment\/play/);
+  await expect(page.locator(".punishment-card")).toBeVisible();
+  // 大冒险保留它自己的档位（首次进入默认 L1），不被真心话的 L4 带跑。
+  await expect(page.getByLabel("选择 1", { exact: true })).toHaveAttribute("aria-pressed", "true");
+  await page.getByLabel("切换到真心话", { exact: true }).click();
+  await expect(page).toHaveURL(/truth\/play/);
+  // 回到真心话仍保留刚才选的 L4。
+  await expect(page.getByLabel("选择 4", { exact: true })).toHaveAttribute("aria-pressed", "true");
+});
+
 for (const width of [360, 390, 1280])
   test(`layout and reachable footer at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 844 });

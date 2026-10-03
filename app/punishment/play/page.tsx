@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { NeonBackground } from "@/components/brand/NeonBackground";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
@@ -25,6 +26,7 @@ import { play, unlockAudio } from "@/lib/audio";
 import { vibrate } from "@/lib/haptics";
 
 export default function PunishmentPlay() {
+  const router = useRouter();
   const { preferences, update, ready } = usePreferences();
   const cards = useMemo(() => loadChallenges(preferences.bank === "couple" ? coupleChallenges : normalChallenges), [preferences.bank]);
   const [session, setSession] = useState(newSession);
@@ -121,11 +123,16 @@ export default function PunishmentPlay() {
     <NeonBackground className="punishment-bg">
       <main className="punishment-screen">
         <header className="punishment-header">
-          <button aria-label="设置与盾牌" onClick={() => setSheet("settings")}><Icon name="settings" /></button>
+          <div className="punishment-header-side">
+            <button aria-label="设置与盾牌" onClick={() => setSheet("settings")}><Icon name="settings" /></button>
+            <button aria-label="切换到真心话" onClick={() => router.push("/truth/play")}><Icon name="swap" /></button>
+          </div>
           <LevelDots level={session.selectedLevel} onChange={selectedLevel => setSession(session =>
             session.currentCardId ? { ...session, selectedLevel } : drawCard({ ...session, selectedLevel }, cards, preferences.disabledTags)
           )} />
-          <button aria-label="切换语言" onClick={() => setSheet("language")}><span>Aa</span></button>
+          <div className="punishment-header-side is-end">
+            <button aria-label="切换语言" onClick={() => setSheet("language")}><span>Aa</span></button>
+          </div>
         </header>
 
         {card ? (
