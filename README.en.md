@@ -2,7 +2,7 @@
 
 [Simplified Chinese](./README.md) | English
 
-![Party Night mobile preview](./docs/design-assets/手机预览.png)
+<img src="./docs/design-assets/首页预览.jpg" alt="Party Night home preview" width="300" />
 
 A zero-account, offline-capable mobile party-game PWA for starting games quickly at bars, house parties, and icebreakers.
 
