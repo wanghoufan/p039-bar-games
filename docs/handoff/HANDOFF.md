@@ -63,16 +63,16 @@ cd android && ./gradlew assembleDebug
 - **不覆盖旧版封存**：`docs/handoff/archive/` 只追溯；`mobile-preview/`（Expo 预览壳，gitignored）为早期产物，非正式包，验证不代表正式 Android。
 - **证据**：AC 与真实浏览器/真机截图落 `docs/qa/punishment/`（验收报告与追踪矩阵 `docs/qa/punishment/验收报告.md`）。
 
-## 6. 本轮未提交改动（commit+push 前的工作区）
+## 6. 提交状态（2026-10-05 更新）
 
-- （上一轮，已在 HEAD）修改：`AndroidManifest.xml`、`MainActivity.java`、`app/globals.css`、`app/punishment/page.tsx`、`app/punishment/play/page.tsx`、`PunishmentSettingsSheet.tsx`、`tests/e2e/punishment.spec.ts`、`tests/unit/punishment.test.ts`；新增：`AlertVibratePlugin.java`、`lib/haptics.ts`。
-- （本会话生效中，未提交）移除首页「今晚开局（AI 组局）」按钮：
-  - 修改：`app/page.tsx`（删按钮 + 删无用 `play` import）。
-  - 修改 7 个 e2e：`tests/e2e/helpers.ts`、`smoke.spec.ts`、`visual.spec.ts`、`setup-flow.spec.ts`、`accessibility.spec.ts`、`exit-confirm.spec.ts`、`v1-1-recovery.spec.ts`。
-  - 说明：本轮一度误删全部旧引擎/玩法，已 `git checkout HEAD -- .` 全量恢复（工作区曾回到干净 HEAD），随后只做上述最小删除。
+- （已在 HEAD）移除首页「今晚开局（AI 组局）」按钮（2026-10-02 改动，随 `d204b30`/`24e6ead` 进入 main）：`app/page.tsx` + 7 个 e2e（`helpers.ts`、`smoke`、`visual`、`setup-flow`、`accessibility`、`exit-confirm`、`v1-1-recovery`）。**本地 HEAD 首页无该按钮，入口＝底部「组局」tab / 玩法卡片**。
+- （已在 HEAD）2026-10-02 震动插件批次：`AndroidManifest.xml`、`MainActivity.java`、`app/globals.css`、`app/punishment/*`、`PunishmentSettingsSheet.tsx`、`tests/*`、`AlertVibratePlugin.java`、`lib/haptics.ts`。
+- （已在 HEAD）2026-10-05：README 中英（首页截图限宽 300、在线试玩链接、修掉不存在的 `.env.example` 命令、入口改「组局」）+ ORCA 母版同步（AGENTS 增量、roles、账本校验脚本、`detect-client.sh` / `check-channel-preflight.sh` / `docs/sop/background-services.md` 新增）+ GitHub About（简介 67 字、8 个 topics）。
+- **运行态差异（遗留一句）**：生产站 `party-night-v1-2.vercel.app` 与 `p039-bar-games.vercel.app` 首页仍有「今晚开局（AI 组局）」大按钮（旧构建），与 HEAD 不一致；待下次发布同步，本轮未覆盖发布。
 
 ## 交接整理记录
 
 - 2026-10-01 经 Human 授权，将旧项目及本轮早期交接原样移至 `docs/handoff/archive/2026-10-01 丨 旧项目及本轮早期交接 丨 已失效.md`。未删除历史内容。
 - 2026-10-02 经 Human 授权（【大交接 2】）做 neat-freak 收尾：重写本 HANDOFF 为当前唯一权威恢复入口（覆盖 20 条示范题/Android 未测/HEAD 018a368 等旧说法）；修复首页按钮重叠；commit + push（main）。
-- 2026-10-02 按 Human 指令只移除首页「今晚开局（AI 组局）」按钮（其余功能全留），同步改 7 个 e2e；重出 release 包装到 `192.168.31.63:5555`。曾误删全部旧引擎，已 git 全量恢复。本轮未 commit。
+- 2026-10-02 按 Human 指令只移除首页「今晚开局（AI 组局）」按钮（其余功能全留），同步改 7 个 e2e；重出 release 包装到 `192.168.31.63:5555`。曾误删全部旧引擎，已 git 全量恢复；该批改动其后已随 `d204b30`/`24e6ead` 进入 main（原「本轮未 commit」已过期）。
+- 2026-10-05 按 Human 指令（【jcp】洁癖＋授权自决清理）：README 维护收口（修 `.env.example` 死命令、入口改「组局」、在线试玩链接、首页截图限宽）；GitHub About 写入（简介 67 字＋8 topics）；删除 8 份无引用 `*.旧版-*` 备份与 `temp/`，还原 `.trae` 文档纯格式重排；账本 `LEDGER-OK`、README `DOCUMENTATION_READY`；commit + push（main）。
