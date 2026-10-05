@@ -2,6 +2,8 @@
 
 [Simplified Chinese](./README.md) | English
 
+![Party Night mobile preview](./docs/design-assets/手机预览.png)
+
 A zero-account, offline-capable mobile party-game PWA for starting games quickly at bars, house parties, and icebreakers.
 
 ![Party Night](./public/brand/party-night-logo.svg)

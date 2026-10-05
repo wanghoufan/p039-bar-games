@@ -2,6 +2,8 @@
 
 简体中文 | [English](./README.en.md)
 
+![Party Night 手机预览](./docs/design-assets/手机预览.png)
+
 一个无需账号、可离线继续的移动端聚会游戏 PWA，帮助朋友在酒吧、家庭聚会和破冰场景中快速开局。
 
 ![Party Night](./public/brand/party-night-logo.svg)
