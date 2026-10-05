@@ -21,14 +21,16 @@ A zero-account, offline-capable mobile party-game PWA for starting games quickly
 
 ## Quick start
 
-Requires Node.js 24.x and pnpm 11.x.
+**Try it online**: open [https://party-night-v1-2.vercel.app](https://party-night-v1-2.vercel.app) and select **New Game** in the bottom bar. No install, no sign-up.
+
+Local development requires Node.js 24.x and pnpm 11.x.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) and select **Tonight's Game**. AI configuration is optional: choose the local seed-deck action on the generation screen to play without a provider.
+Open [http://localhost:3000](http://localhost:3000) and select **New Game** in the bottom bar. AI configuration is optional: choose the local seed-deck action on the generation screen to play without a provider.
 
 ## AI providers and API keys
 
@@ -44,15 +46,13 @@ To remove a key, use the separate red Danger Zone at the bottom of the settings 
 
 ### Development-only environment fallback
 
-Normal users do not need an `.env` file. For local integration work, copy the provided sample:
+Normal users do not need an `.env` file. For local integration work, create `.env.local` in the project root:
 
 ```bash
-cp .env.example .env.local
-```
-
-```dotenv
+cat > .env.local <<'EOF'
 PARTY_NIGHT_ENABLE_ENV_AI_FALLBACK=false
 PARTY_NIGHT_DEV_AI_API_KEY=
+EOF
 ```
 
 The sample defaults to off; change `false` to `true` for local integration work. This fallback is used only outside production, only when explicitly enabled, and only when the request does not carry a user key. Never commit `.env.local` or a real key, and never expose a secret through a `NEXT_PUBLIC_` variable.

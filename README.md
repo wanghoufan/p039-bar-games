@@ -21,14 +21,16 @@
 
 ## 快速开始
 
-需要 Node.js 24.x 和 pnpm 11.x。
+**在线试玩**：打开 [https://party-night-v1-2.vercel.app](https://party-night-v1-2.vercel.app)，点底部「组局」，不用安装、不用注册。
+
+本地运行需要 Node.js 24.x 和 pnpm 11.x。
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-打开 [http://localhost:3000](http://localhost:3000)，点击「今晚开局」。不配置 AI 也可在生成页选择「使用本地题库开始」。
+打开 [http://localhost:3000](http://localhost:3000)，点底部「组局」。不配置 AI 也可在生成页选择「使用本地题库开始」。
 
 ## AI Provider 与 API Key
 
@@ -44,15 +46,13 @@ pnpm dev
 
 ### 仅开发环境的 env fallback
 
-正常用户不需要 `.env`。如需本地联调，可复制配置样例：
+正常用户不需要 `.env`。如需本地联调，在项目根目录创建 `.env.local`：
 
 ```bash
-cp .env.example .env.local
-```
-
-```dotenv
+cat > .env.local <<'EOF'
 PARTY_NIGHT_ENABLE_ENV_AI_FALLBACK=false
 PARTY_NIGHT_DEV_AI_API_KEY=
+EOF
 ```
 
 样例默认关闭，需要联调时把 `false` 改为 `true`。只在非 production 环境、显式开启开关且请求未携带用户 Key 时才会使用该 fallback。不得将 `.env.local` 或真实 Key 提交到仓库，也不得使用 `NEXT_PUBLIC_` 前缀暴露密钥。
