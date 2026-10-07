@@ -17,6 +17,7 @@ import { PunishmentSettings } from "@/components/punishment/PunishmentSettingsSh
 import { usePreferences } from "@/components/punishment/usePreferences";
 import { challenges as normalChallenges } from "@/content/punishment/challenges";
 import { challenges as coupleChallenges } from "@/content/punishment/couple";
+import { challenges as oneManyChallenges } from "@/content/punishment/oneMany";
 import { loadChallenges } from "@/lib/punishment/loadChallenges";
 import { drawCard } from "@/lib/punishment/deck";
 import { readPreferences } from "@/lib/punishment/preferences";
@@ -28,7 +29,7 @@ import { vibrate } from "@/lib/haptics";
 export default function PunishmentPlay() {
   const router = useRouter();
   const { preferences, update, ready } = usePreferences();
-  const cards = useMemo(() => loadChallenges(preferences.bank === "couple" ? coupleChallenges : normalChallenges), [preferences.bank]);
+  const cards = useMemo(() => loadChallenges(preferences.bank === "couple" ? coupleChallenges : preferences.bank === "oneMany" ? oneManyChallenges : normalChallenges), [preferences.bank]);
   const [session, setSession] = useState(newSession);
   const [loaded, setLoaded] = useState(false);
   const [sheet, setSheet] = useState<"settings" | "language" | "shield" | null>(null);

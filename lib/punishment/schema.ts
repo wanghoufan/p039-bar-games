@@ -8,7 +8,7 @@ export const challengeSchema = z.object({ id: z.string().refine(value => value.t
     ])), timerSeconds: z.number().int().positive().nullable().default(null) }).strict();
 export type Challenge = z.infer<typeof challengeSchema>;
 export type Level = Challenge["level"];
-export const preferencesSchema = z.object({ language: z.enum(["zh", "bilingual", "en"]), disabledTags: z.array(z.string()), theme: z.enum(["system", "dark", "light"]), sound: z.boolean(), vibration: z.boolean(), bank: z.enum(["normal", "couple"]).default("normal") });
+export const preferencesSchema = z.object({ language: z.enum(["zh", "bilingual", "en"]), disabledTags: z.array(z.string()), theme: z.enum(["system", "dark", "light"]), sound: z.boolean(), vibration: z.boolean(), bank: z.enum(["normal", "couple", "oneMany"]).default("normal") });
 export type Preferences = z.infer<typeof preferencesSchema>;
 const byLevel = z.object({ 1: z.array(z.string()), 2: z.array(z.string()), 3: z.array(z.string()), 4: z.array(z.string()), 5: z.array(z.string()) });
 export const sessionSchema = z.object({ selectedLevel: levelSchema, currentCardId: z.string().nullable(), usedCardIdsByLevel: byLevel, orderByLevel: byLevel });
