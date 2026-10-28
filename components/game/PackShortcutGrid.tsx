@@ -18,7 +18,7 @@ export function PackShortcutGrid() {
   const router = useRouter();
   async function open(packId: string, launcher: boolean) {
     play(launcher ? "launcher-suspense" : "tap");
-    const route = await resolvePackRoute(packId);
+    const route = PACK_CARD_PLAYERS[packId] ?? (await resolvePackRoute(packId));
     if (launcher) play("launcher-reveal");
     router.push(route);
   }
@@ -26,7 +26,7 @@ export function PackShortcutGrid() {
   return (
     <section className="mode-grid" aria-label="玩法">
       {homePackCards().map(({ pack, launcher }) => (
-        <Link href={`/setup?pack=${pack.id}`} key={pack.id} onClick={(event) => { event.preventDefault(); void open(pack.id, launcher); }}>
+        <Link href={PACK_CARD_PLAYERS[pack.id] ?? `/setup?pack=${pack.id}`} key={pack.id} onClick={(event) => { event.preventDefault(); void open(pack.id, launcher); }}>
           <Icon name={packIconName(pack.icon)} />
           <strong>{pack.name}</strong>
           <small>{launcher ? "随机挑一个玩法" : pack.supportedCardTypes.join(" · ")}</small>
@@ -35,3 +35,6 @@ export function PackShortcutGrid() {
     </section>
   );
 }
+
+/** 已改成“大冒险式”卡牌界面的两个玩法：首页直接进卡牌页，不再走主局 setup。 */
+const PACK_CARD_PLAYERS: Record<string, string> = { "most-likely": "/most-likely", "never-have": "/never-have" };

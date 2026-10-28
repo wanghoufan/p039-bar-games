@@ -1,6 +1,6 @@
 import { preferencesSchema, type Preferences } from "./schema";
 export const PREFERENCES_KEY = "party-night-punishment-preferences-v1";
-export const defaults: Preferences = { language: "bilingual", disabledTags: [], theme: "dark", sound: true, vibration: true, bank: "normal" };
+export const defaults: Preferences = { language: "zh", disabledTags: [], theme: "dark", sound: true, vibration: true, bank: "normal" };
 export function readPreferences(): Preferences { try {
     return preferencesSchema.parse(JSON.parse(localStorage.getItem(PREFERENCES_KEY) ?? "null"));
 }

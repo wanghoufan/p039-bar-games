@@ -67,7 +67,7 @@ export default function TruthPlay() {
         <header className="punishment-header">
           <div className="punishment-header-side">
             <button aria-label="返回设置" onClick={() => router.push("/truth")}><Icon name="back" /></button>
-            <button aria-label="切换到大冒险" onClick={() => router.push("/punishment/play")}><Icon name="swap" /></button>
+            <button aria-label="切换到大冒险" onClick={() => { play("pack-switch"); router.push("/punishment/play"); }}><Icon name="swap" /></button>
           </div>
           <LevelDots level={session.selectedLevel} onChange={pickLevel} />
           <div className="punishment-header-side is-end">
