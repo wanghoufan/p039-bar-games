@@ -4,7 +4,7 @@ name_zh: 酒吧游戏
 slug: bar-games
 status: paused
 github: wanghoufan/p039-bar-games
-visibility: private
+visibility: public
 created_at: 2026-10-01T18:43:27+08:00
 local_path: /Users/zzymima0000/Developer/coding/1.Active/039-paused-酒吧游戏
 default_branch: main
